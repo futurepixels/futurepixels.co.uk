@@ -1,13 +1,61 @@
 ---
-layout: default
-title: Your New Jekyll Site
+layout: base
+title: Welcome
+description: Articles on general development and programming along with  other findings... oh, and a gallery.
+keywords: PHP, CSS, CSS3, OOCSS, Web Development, HTML, HTML5, Bash, Coding, development, Blog, Photography
+author: Nigel Greenway
+class: home
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="gw">
+{% for post in paginator.posts %}
+	<div class="g post">
+		<h1 class=beta>
+			<a href="{{ post.url }}" title="{{ post.title }}" class="post--link">{{ post.title }}</a>
+		</h1>
+		<p>{{ post.description }}</p>
+	</div>
+{% endfor %}
+{% for post in paginator.posts limit:1 %}
+	{% if forloop.length < 6 %}
+	<div class="g post">
+		<h1 class=beta>Hmmm, no more articles?</h1>
+		<p>You might want a look at blogs I like then...</p>
+		<ul class="nav nav--stacked">
+			<li><a href="http://csswizardry.com" class="post--link" target="new">CSS Wizardry</a></li>
+			<li><a href="http://css-tricks.com" class="post--link" target="new">CSS Tricks</a></li>
+			<li><a href="http://inuitcss.com" class="post--link" target="new">Inuit CSS</a></li>
+			<li><a href="http://alistapart.com" class="post--link" target="new">A List Apart</a></li>
+			<li><a href="http://littlebigdetails.com" class="post--link" target="new">Little Big Details</a></li>
+			<li><a href="http://davidwalsh.name" class="post--link" target="new">David Walsh</a></li>
+		</ul>
+		<p>... or not?</p>
+	</div>
+	{% endif %}
+{% endfor %}
 </div>
+
+{% if paginator.next_page %}
+<div class=gw>
+	<ol class="nav pagination" role="pagination">
+	    <li class="pagination__prev">
+		{% if paginator.previous_page %}
+		{% if paginator.previous_page == 1 %}
+		    <a href="">Previous</a>
+		{% else %}
+		    <a href="/page{{paginator.previous_page}}">Previous</a>
+		{% endif %}
+		{% else %}
+		    Previous
+		{% endif %}
+		</li>
+		<li class="pagination__next">
+		{% if paginator.next_page %}
+		    <a href="/page{{paginator.next_page}}">Next</a>
+		{% else %}
+		    Next
+		{% endif %}
+	    </li>
+	</ol>
+</div>
+{% endif %}

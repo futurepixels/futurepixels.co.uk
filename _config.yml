@@ -1,2 +1,21 @@
-name: Your New Jekyll Site
-pygments: true
+safe:        false
+port:        4000
+baseurl:     /
+url:         http://futurepixels.co.uk/
+lsi:         false
+paginate:    6
+permalink:   /:categories/:title
+pygments:    true
+markdown:    kramdown
+
+source:      .
+destination: ./_site
+
+author:
+  - name: Nigel Greenway
+  - twitter: @smilinmonki666
+
+description: This is the description...
+keywords: here, are, the, keywords
+
+exclude: ['inuit.css', 'logs', 'doc', 'logo.html', 'projects.html']

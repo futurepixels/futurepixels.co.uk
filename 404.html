@@ -1,0 +1,31 @@
+---
+layout: base
+title: Oops, not found so threw a 404
+author: Nigel Greenway
+class: 404
+---
+
+<div class="gw">
+    <div class="g one-whole desk-two-thirds">
+        <h1 class=beta>
+            Looks like what you are wanting is not here?
+        </h1>
+        <p>So, my posts are as follow, or you read another blog I read (Which are worth reading) in the `Worth a read` column to your right...</p>
+        <ul class="nav nav--stacked">
+        {% for post in site.posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="g one-whole desk-one-third">
+        <h2>Worth a read</h2>
+        <ul class="nav nav--stacked">
+            <li><a href="http://csswizardry.com" class="post--link" target="new">CSS Wizardry</a></li>
+            <li><a href="http://css-tricks.com" class="post--link" target="new">CSS Tricks</a></li>
+            <li><a href="http://inuitcss.com" class="post--link" target="new">Inuit CSS</a></li>
+            <li><a href="http://alistapart.com" class="post--link" target="new">A List Apart</a></li>
+            <li><a href="http://littlebigdetails.com" class="post--link" target="new">Little Big Details</a></li>
+            <li><a href="http://davidwalsh.name" class="post--link" target="new">David Walsh</a></li>
+        </ul>
+    </div>
+</div>

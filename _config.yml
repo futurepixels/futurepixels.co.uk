@@ -1,15 +1,12 @@
+auto:        true
+server:      true
 safe:        false
-port:        4000
-baseurl:     /
 url:         http://futurepixels.co.uk/
 lsi:         false
 paginate:    6
 permalink:   /:categories/:title
 pygments:    true
 markdown:    kramdown
-
-source:      .
-destination: ./_site
 
 author:
   - name: Nigel Greenway

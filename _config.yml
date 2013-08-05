@@ -1,5 +1,3 @@
-auto:        true
-server:      true
 safe:        false
 url:         http://futurepixels.co.uk/
 lsi:         false

@@ -5,7 +5,7 @@ description: Welcome to futurepixels.co.uk
 keywords: welcome, hello, hello world
 categories: welcome
 twitter:
-  author: @smilinmonki666
+  author: Nigel Greenway
 ---
 
 So, this is just a quick hello and to say thank's for visiting. I am currently in between writting some other articles and tutorials at the moment along with at the end of buying a house, so this may take some time as I also need to decorate the house... all good fun.

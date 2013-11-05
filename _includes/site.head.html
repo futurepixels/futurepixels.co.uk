@@ -1,7 +1,7 @@
 <meta charset=UTF-8>
 
 <title>{{ page.title }} ~ futurepixels.co.uk</title>
-    
+
 <link rel="stylesheet" href="/assets/css/futurepixels.min.css">
 <link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
 
@@ -31,13 +31,13 @@
 <meta name="description" content="{{ page.description }}">
 <meta name="keywords" content="{{ page.keywords }}">
 <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}">
-    
+
 <link type="text/plain" rel="author" href="humans.txt">
 <link rel="canonical" href="{{ page.url }}">
 
 {% if page.twitter.author %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@smilinmonki666">
+<meta name="twitter:site" content="@{{ site.author.twitter }}">
 <meta name="twitter:creator" content="{{ page.twitter.author}}">
 <meta name="twitter:url" content="{{ site.url}}{{ page.url }}">
 <meta name="twitter:title" content="{{ page.title }}">

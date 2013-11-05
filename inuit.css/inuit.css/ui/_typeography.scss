@@ -1,10 +1,17 @@
 h1,
-h2
-{
+h2{
     color:$brand-color--dark-grey;
 }
 
-.center
-{
+.center{
     text-align:center;
+}
+
+pre{
+    @extend pre;
+    padding-top:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    padding-left:25px;
+    border-radius:5px;
 }

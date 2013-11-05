@@ -19,6 +19,7 @@
 				Husband • Father • Developer • Geek • Hobby Photographer • Constantly Learning • Promoter Of All Things I Enjoy
 			</p>
 		</div>
+
 		<section class="content" role="main">
 			{{ content }}
 		</section>
@@ -27,6 +28,84 @@
 			{% include site.footer.html %}
 		</footer>
 	</div>
+
 	{% include site.scripts.html %}
+
+	{% if page.toc %}
+	<script>
+		$(document).ready(function() {
+			$('[id^="section"]').each(function() {
+				var
+					$this    = $(this),
+					$section = $this.attr('id').split(':')[1];
+
+				$('.js--dynatoc').append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a><ul class="js--dynatoc__sublist js--' + $section + '  |  nav--dynatoc__sublist dynatoc	"></ul></li>');
+
+				$('[data-section="' + $section + '"]').each(function() {
+					$('ul.js--' + $section).append('<li><a href="#' + $(this).attr('id') + '">' + $(this).text() + '</a></li>');
+				});
+			});
+
+			$('.js--stickem-container').stickem({
+			    item: '.js--stickem',
+			    container: '.js--stickem-container',
+				stickClass: 'stickit',
+				endStickClass: 'stickit-end',
+				isSticked: true,
+				offset: 0,
+				onStick: null,
+				onUnstick: null
+			});
+
+			$('.js--dynatoc > li > a').on('click', function() {
+                $('.js--dynatoc > li > a').removeClass('active');
+                $(this).addClass('active');
+			})
+
+            $('.js--dynatoc__sublist > li > a').on('click', function() {
+            	$('.js--dynatoc__sublist > li > a').removeClass('active');
+            	$(this).addClass('active');
+			});
+
+        });
+
+		$(function(){
+		    var
+		    	sections = {},
+		        i        = 0;
+
+		    // Grab positions of our sections
+		    $('[id^="section"]').each(function(){
+		    	sections[this.id] = {};
+		        sections[this.id]['href']       = this.id;
+		        sections[this.id]['offset']     = $(this).offset().top;
+		    });
+
+		    // Grab positions of our sub sections
+		    $('[id^="subsection"]').each(function(){
+		    	sections[this.id] = {};
+		        sections[this.id]['href']       = this.id;
+		        sections[this.id]['offset']     = $(this).offset().top;
+		        sections[this.id]['subsection'] = $(this).attr('data-section');
+
+		    });
+
+		    $(document).scroll(function(){
+		        var pos = $(this).scrollTop();
+		        for(i in sections){
+		            if(sections[i]['offset'] > pos && sections[i]['offset'] < pos + 150){
+		                $('.js--dynatoc > li > a').removeClass('active').removeClass('active--muted');
+		                $('.js--dynatoc__sublist > li > a').removeClass('active');
+		                if (typeof(sections[i]['subsection']) !== 'undefined') {
+		                	console.log(sections[i]['subsection']);
+			                $('li [href="#section:' + sections[i]['subsection'] + '"]').addClass('active--muted');
+		                }
+		                $('li [href="#' + sections[i]['href'] + '"]').addClass('active');
+		            }
+		        }
+		    });
+		});
+	</script>
+	{% endif %}
 </body>
 </html>

@@ -6,6 +6,6 @@
 # No minification
 #sass --watch style.scss:futurepixels.css --style expanded
 
-sass --watch style.scss:../assets/css/futurepixels.min.css --style compressed
+sass --watch style.scss:../assets/css/futurepixels.min.css --style compressed --no-cache
 
 exit 0

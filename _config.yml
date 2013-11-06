@@ -4,6 +4,7 @@ paginate:    6
 permalink:   /:categories/:title
 pygments:    true
 markdown:    kramdown
+environment: prod
 
 author:
   - name: Nigel Greenway

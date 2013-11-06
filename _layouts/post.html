@@ -36,13 +36,10 @@ class: post
 			  {% endif %}
 			{% endfor %}
 			<li>Other great reads:</li>
-			<li><a href="http://csswizardry.com" class="post--link" target="new">CSS Wizardry</a></li>
-			<li><a href="http://www.integralist.co.uk/" class="post--link" target="new">Integralist</a></li>
-			<li><a href="http://css-tricks.com" class="post--link" target="new">CSS Tricks</a></li>
-			<li><a href="http://inuitcss.com" class="post--link" target="new">Inuit CSS</a></li>
-			<li><a href="http://alistapart.com" class="post--link" target="new">A List Apart</a></li>
-			<li><a href="http://littlebigdetails.com" class="post--link" target="new">Little Big Details</a></li>
-			<li><a href="http://davidwalsh.name" class="post--link" target="new">David Walsh</a></li>
+			
+			{% for r in site.readingList %}
+				<li><a href="{{ r.url }}" class="post--link" target="new">{{ r.name }}</a></li>
+			{% endfor %}
 		</ul>
 	</div>
 </div>

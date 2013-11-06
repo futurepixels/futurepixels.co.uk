@@ -13,4 +13,20 @@ author:
 description: This is the description...
 keywords: here, are, the, keywords
 
+readingList:
+  - name: CSS Wizardry
+    url: http://csswizardry.com
+  - name: Integralist
+    url: http://integralist.co.uk
+  - name: CSS Tricks
+    url: http://css-tricks.com
+  - name: Inuit CSS
+    url: http://inuitcss.com
+  - name: A List Apart
+    url: http://alistapart.com
+  - name: Little Big Details
+    url: http://littlebigdetails.com
+  - name: David Walsh
+    url: http://davidwalsh.name
+
 exclude: ['inuit.css', 'logs', 'doc', 'logo.html', 'projects.html']

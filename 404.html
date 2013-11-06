@@ -20,12 +20,9 @@ class: 404
     <div class="g one-whole desk-one-third">
         <h2>Worth a read</h2>
         <ul class="nav nav--stacked">
-            <li><a href="http://csswizardry.com" class="post--link" target="new">CSS Wizardry</a></li>
-            <li><a href="http://css-tricks.com" class="post--link" target="new">CSS Tricks</a></li>
-            <li><a href="http://inuitcss.com" class="post--link" target="new">Inuit CSS</a></li>
-            <li><a href="http://alistapart.com" class="post--link" target="new">A List Apart</a></li>
-            <li><a href="http://littlebigdetails.com" class="post--link" target="new">Little Big Details</a></li>
-            <li><a href="http://davidwalsh.name" class="post--link" target="new">David Walsh</a></li>
+            {% for r in site.readingList %}
+                <li><a href="{{ r.url }}" class="post--link" target="new">{{ r.name }}</a></li>
+            {% endfor %}
         </ul>
     </div>
 </div>

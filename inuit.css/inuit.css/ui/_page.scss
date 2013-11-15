@@ -103,5 +103,29 @@ body{
 
 }
 
+.btn--round{
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    color: whitesmoke;
+    background-color:$brand-color;
+    border-width:1px;
+    border-style:solid;
+    border-color:darken($brand-color, 5%);
+    
+    &:hover{
+        border-radius:50%;
+        color:whitesmoke;
+        opacity:0.5;
+    }
+}
+
+    .btn--contact-me{
+        margin-top:45px;
+        padding-top:25px;
+        font-size:1.2em;
+        line-height:1.4em;
+    }
+
 .footer{
 }

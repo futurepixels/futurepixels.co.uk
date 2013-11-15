@@ -29,3 +29,24 @@ $(window).stellar();
 
 </script>
 {% endif %}
+
+
+<script>
+  var
+    p = [],
+    h = [];
+    
+    $('.js--post').each(function(i,v) {
+         p.push($(this).height());
+         h.push($('h1', this).height());
+    });
+
+    var
+      p_lrg = Math.max.apply(Math, p),
+      h_lrg = Math.max.apply(Math, h);
+
+    $('.js--post').each(function(i, v) {
+        $(this).css({'height':p_lrg});
+        $('h1', this).css({'height':h_lrg});
+    });
+</script>

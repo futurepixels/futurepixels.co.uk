@@ -19,24 +19,7 @@ class: post
 		<ul class="js--dynatoc  |  nav nav--stacked dynatoc">
 		</ul>
 		<ul class="nav nav--stacked">
-			{% comment %}
-				Following block credit to
-				http://stackoverflow.com/questions/10906574/filter-site-related-posts-in-jekyll#answer-10907814
-			{% endcomment %}
-			{% for post in site.related_posts limit:5 %}
-			  {% assign match = false %}
-			  {% for category in post.categories %}
-			    {% if page.categories contains category %}
-			      {% assign match = true %}
-			    {% endif %}
-			  {% endfor %}
-			  {% if match %}
-				<li>Related posts:</li>
-			    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-			  {% endif %}
-			{% endfor %}
 			<li>Other great reads:</li>
-			
 			{% for r in site.readingList %}
 				<li><a href="{{ r.url }}" class="post--link" target="new">{{ r.name }}</a></li>
 			{% endfor %}

@@ -56,7 +56,6 @@ body{
     margin:0;
 
     @include media-query(portable){
-        // display:none+"!important";
         height:100px;
     }
 

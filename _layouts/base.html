@@ -87,7 +87,6 @@
 		        sections[this.id]['href']       = this.id;
 		        sections[this.id]['offset']     = $(this).offset().top;
 		        sections[this.id]['subsection'] = $(this).attr('data-section');
-
 		    });
 
 		    $(document).scroll(function(){
@@ -97,7 +96,6 @@
 		                $('.js--dynatoc > li > a').removeClass('active').removeClass('active--muted');
 		                $('.js--dynatoc__sublist > li > a').removeClass('active');
 		                if (typeof(sections[i]['subsection']) !== 'undefined') {
-		                	console.log(sections[i]['subsection']);
 			                $('li [href="#section:' + sections[i]['subsection'] + '"]').addClass('active--muted');
 		                }
 		                $('li [href="#' + sections[i]['href'] + '"]').addClass('active');

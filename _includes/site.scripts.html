@@ -34,7 +34,7 @@ $(window).stellar();
   var
     p = [],
     h = [];
-    
+
     $('.js--post').each(function(i,v) {
          p.push($(this).height());
          h.push($('h1', this).height());
@@ -48,4 +48,6 @@ $(window).stellar();
         $(this).css({'height':p_lrg});
         $('h1', this).css({'height':h_lrg});
     });
+
+    $('table').addClass('table--bordered  table--striped  table--data');
 </script>

@@ -112,7 +112,7 @@ body{
     border-width:1px;
     border-style:solid;
     border-color:darken($brand-color, 5%);
-    
+
     &:hover{
         border-radius:50%;
         color:whitesmoke;
@@ -126,6 +126,15 @@ body{
         font-size:1.2em;
         line-height:1.4em;
     }
+
+.table--striped{
+    tbody tr:nth-of-type(odd){
+        background-color:lighten($brand-color, 45%);
+    }
+    tbody tr:hover{
+        opacity:0.75;
+    }
+}
 
 .footer{
 }

@@ -142,7 +142,7 @@ Apart from the obvious create/read/update and delete tasks, you will notice the 
 
 With the above information, I would also like to point out to allow for time to get back into your code after interruptions. If you are working on a development project and it is something that requires the majority of your concentration then you will want to factor in enough time to allow you to get your head back in the code which can often take up to 20 minutes depending on what your code is doing.
 
-If I was in the middle of writing a service which had a complicated amount of business logic then I should factor in time for toilet/drink breaks, code breaks and interuptions. Although this may sound daft when reading, breaks are important when working with screens and a fresh mind will work more efficiently.
+If I was in the middle of writing a service which had a complicated amount of business logic then I should factor in time for toilet/drink breaks, code breaks and interruptions. Although this may sound daft when reading, breaks are important when working with screens and a fresh mind will work more efficiently.
 
 If I think on a day to day basis, I could get up to 6 interruptions on a busy day. I would then look at the project, which for this example is estimated at 3 days. With the previous knowledge I could factor in 2 hours to the project each day, which in total will add 6 hours. You also need to take into consideration the project deadline and common sense. I personally would only add 3 hours and 30 minutes to the overall project in this case.
 
@@ -154,7 +154,7 @@ So, to go over the above in bullet points:
 
 * Break down into sections or bite size chunks
 * Estimate the time for each chunk and add extra time on the sections overall time
-* Factor in extra time to allow for interuptions and potential issues
+* Factor in extra time to allow for interruptions and potential issues
 * If there is an issue (related or not), record it either in the notes or as its own task
 * Prioritise tasks
 * Stay focused

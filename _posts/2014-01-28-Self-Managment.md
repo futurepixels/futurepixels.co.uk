@@ -161,4 +161,4 @@ So, to go over the above in bullet points:
 * Always be generous with your time
 * Take breaks. I have wasted hours at times trying to code something. After a walk or long break, I have found the issue immediatly and sort the problem
 
-I hope this has helped. If you think anything could be improved or found better ways of dealing with any of the above, please contact me on [twitter](http://twitter.com/smilinmonki666) as I always like to here other methods or practices.
+I hope this has helped. If you think anything could be improved or found better ways of dealing with any of the above, please contact me on [twitter](http://twitter.com/smilinmonki666) as I always like to hear other methods or practices.

@@ -2,7 +2,7 @@ url:         http://futurepixels.co.uk/
 lsi:         false
 paginate:    6
 permalink:   /:categories/:title
-pygments:    true
+highligher:  pygments
 markdown:    kramdown
 environment: prod
 

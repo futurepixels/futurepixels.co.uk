@@ -29,4 +29,4 @@ readingList:
   - name: David Walsh
     url: http://davidwalsh.name
 
-exclude: ['inuit.css', 'logs', 'doc', 'logo.html', 'projects.html']
+exclude: ['inuit.css', 'logs', 'doc']

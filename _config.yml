@@ -28,5 +28,11 @@ readingList:
     url: http://littlebigdetails.com
   - name: David Walsh
     url: http://davidwalsh.name
+  - name: Anthony Ferrara
+    url: http://blog.ircmaxell.com/
+  - name: Phil Sturgeon
+    url: https://philsturgeon.uk
+  - name: Mathias Verraes
+    url: http://verraes.net/
 
 exclude: ['inuit.css', 'logs', 'doc']

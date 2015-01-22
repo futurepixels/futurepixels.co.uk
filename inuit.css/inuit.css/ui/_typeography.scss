@@ -40,3 +40,25 @@ hr{
     border-bottom-color:hsla(0, 0%, 40%, 0.5);
     border-left-color:transparent;
 }
+
+blockquote{
+
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+
+    border-left: 3px solid lighten($brand-color--dark-grey, 50%);
+    text-indent: 0;
+
+    p:before,
+    p:after {
+        content: "";
+    }
+
+    p{
+        padding:1em;
+        font-style: italic;
+        font-weight: 200;
+    }
+}

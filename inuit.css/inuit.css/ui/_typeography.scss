@@ -27,6 +27,8 @@ pre{
 }
 
 p{
+    font-weight: 100;
+
 	code{
 		@extend .code-comment;
 	}

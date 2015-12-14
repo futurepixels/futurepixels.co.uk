@@ -33,6 +33,7 @@ skills:
       - BEM
       - Gulp
       - Grunts
+      - Browser Sync
 
   - title: Languages
     items:

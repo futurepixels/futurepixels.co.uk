@@ -59,9 +59,8 @@ skills:
       - Silex
       - Slim
 
-  - title: Methods/Patterns
+  - title: Miscellaneous 
     items:
-      - Object Orientated
       - PSR
       - TDD
       - BDD

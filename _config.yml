@@ -5,6 +5,9 @@ permalink:   /:categories/:title
 highligher:  pygments
 markdown:    kramdown
 environment: prod
+safe: false
+gems:
+  - jekyll-paginate
 
 author:
   - name: Nigel Greenway

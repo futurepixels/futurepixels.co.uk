@@ -13,6 +13,68 @@ author:
 description: This is the description...
 keywords: here, are, the, keywords
 
+current_os:
+  - title: Elementary OS
+  - url: http://elementary.io/
+
+skills:
+  - title: Frontend
+    items:
+      - HTML
+      - HTML5
+      - CSS2
+      - CSS3
+      - Javascript
+      - jQuery
+      - SASS
+      - BEM
+      - Gulp
+      - Grunts
+
+  - title: Languages
+    items:
+      - PHP
+      - Ruby
+      - Python
+      - Go
+      - NodeJS
+
+  - title: DevOps
+    items:
+      - MySQL
+      - Apache
+      - Git
+      - Bash
+      - ZSH
+      - Nginx
+      - Hiawatha
+      - Ansible
+
+  - title: Frameworks
+    items:
+      - Symfony2
+      - Silex
+      - Slim
+
+  - title: Methods/Patterns
+    items:
+      - Object Orientated
+      - PSR
+      - TDD
+      - BDD
+      - DDD
+
+  - title: Tools
+    items:
+    - Makefile
+    - Vagrant
+    - PHP Storm IDE
+    - Sublime Text
+    - Vim
+    - OS X
+    - Linux (Ubuntu | CentOS | Fedora)
+    - tmux
+
 readingList:
   - name: CSS Wizardry
     url: http://csswizardry.com

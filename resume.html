@@ -98,21 +98,14 @@ class: cv
 		</p>		
 		<hr>
 		
-		<h3 class="center">Skills Gained</h3>		
-		<p class="center">
-			HTML • HTML5 • CSS2 • CSS3 • Javascript • jQuery • PHP • Symfony2 • Silex • Slim • MySQL • Apache • SASS • BEM • Git • Bash
-		</p>		
-		<hr>
-		
-		<h3 class="center">Skills Gaining</h3>
-		<p class="center">
-			Ruby • Jekyll • Python • Go • Nginx • Hiawatha • NodeJS • Frontend Optimisation • Test/Behaviour Driven Development
-		</p>
-		<hr>
-
-		<h3 class="center">My weapons of choice</h3>
-		<p class="center">
-			Terminal • PHP Storm IDE • Sublime Text • Vim • OS X • Linux (Ubuntu | CentOS | Fedora) • Ruby Gems • Homebrew • tmux
-		</p>
+		<h3 class="center">Skills</h3>
+		{% for skillSet in site.skills %}
+			<h4 class="center">{{ skillSet.title }}</h4>
+			<p class="center head">
+			{% for item in skillSet.items %}
+				• {{ item }}
+			{% endfor %}
+			</p>
+		{% endfor %}
 	</div>
 </div>

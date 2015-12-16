@@ -23,16 +23,14 @@ current_os:
 skills:
   - title: Frontend
     items:
-      - HTML
-      - HTML5
-      - CSS2
-      - CSS3
+      - HTML/5
+      - CSS2/3
       - Javascript
       - jQuery
       - SASS
       - BEM
       - Gulp
-      - Grunts
+      - Grunt
       - Browser Sync
 
   - title: Languages
@@ -66,9 +64,11 @@ skills:
       - TDD
       - BDD
       - DDD
+      - ADR
 
   - title: Tools
     items:
+    - Composer
     - Makefile
     - Vagrant
     - PHP Storm IDE
@@ -77,6 +77,7 @@ skills:
     - OS X
     - Linux (Ubuntu | CentOS | Fedora)
     - tmux
+    - task warrior
 
 readingList:
   - name: CSS Wizardry

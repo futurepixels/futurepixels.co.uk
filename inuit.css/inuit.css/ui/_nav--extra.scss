@@ -28,7 +28,9 @@
     }
 }
 
-@each $page in home, projects, about{
+$pages: ('home', 'resume', 'bookshelf', 'projects', 'about');
+
+@each $page in $pages {
     .page--#{$page} .nav--extra__#{$page} {
         cursor:text;
         color:$brand-color;

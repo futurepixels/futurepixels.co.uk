@@ -20,7 +20,7 @@ class: post
 		</ul>
 		<ul class="nav nav--stacked hide--palm hide--lap">
 			<li>Other great reads:</li>
-			{% for r in site.readingList %}
+			{% for r in site.extraReadingList %}
 				<li><a href="{{ r.url }}" class="post--link" target="new">{{ r.name }}</a></li>
 			{% endfor %}
 		</ul>

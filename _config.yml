@@ -132,12 +132,12 @@ readingList:
     url: http://www.amazon.co.uk/dp/1457501198/ref=cm_sw_r_tw_dp_VuoHwb18DR790
     author: Eric Evans
     authorUrl: https://twitter.com/ericevans0
-
-wishList:
   - title: "Build APIs You Won't Hate"
     url: http://www.amazon.co.uk/dp/0692232699/ref=cm_sw_r_tw_dp_5GoHwb1562GN7
     author: Phil Sturgeon
     authorUrl: https://twitter.com/philsturgeon
+
+wishList:
   - title: Pro Vim
     url: http://www.amazon.co.uk/dp/1484202511/ref=cm_sw_r_tw_dp_yOoHwb1HKNTQN
     author: Mark McDonnell

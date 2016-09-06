@@ -16,20 +16,6 @@ class: home
 		<p>{{ post.description }}</p>
 	</div>
 {% endfor %}
-{% for post in paginator.posts limit:1 %}
-	{% if forloop.length < 6 %}
-	<div class="g post">
-		<h1 class=beta>Hmmm, no more articles?</h1>
-		<p>You might want a look at blogs I like then...</p>
-		<ul class="nav nav--stacked">
-			{% for r in site.readingList %}
-				<li><a href="{{ r.url }}" class="post--link" target="new">{{ r.name }}</a></li>
-			{% endfor %}
-		</ul>
-		<p>... or not?</p>
-	</div>
-	{% endif %}
-{% endfor %}
 </div>
 
 {% if paginator.next_page %}

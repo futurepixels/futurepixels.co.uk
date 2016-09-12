@@ -33,7 +33,7 @@ To install to a usb stick, you run `sudo dd if=/location/of/the.iso of=/dev/X`, 
 
 You are looking for the line `Disk /dev/xxx: x.xGiB ...`. Take note of what is already there...
 
-Now, insert you USB stick and run `[sudo] fdisk -l` again and you should get an extra addition. In my example above, I originally had `/dev/sda` which is my laptop HDD. After inserting the disk (below), I now have `/dev/sda` and `/dev/sdb`. `sdb` is my USB stick.
+Now, insert your USB stick and run `[sudo] fdisk -l` again and you should get an extra addition. In my example above, I originally had `/dev/sda` which is my laptop HDD. After inserting the disk (below), I now have `/dev/sda` and `/dev/sdb`. I now have`sdb` which is my USB stick.
 
 	→ sudo fdisk -l
 
@@ -61,7 +61,7 @@ Now, insert you USB stick and run `[sudo] fdisk -l` again and you should get an 
 	Device     Start      End  Sectors  Size Type
 	/dev/sdb1   2048 62519295 62517248 29.8G Linux filesystem
 
-I can now run `[sudo] dd if=/home/<username>/Downloads/some-live-disk.iso of=/dev/sdb`.
+I can now install my ISO to my usb stick via `[sudo] dd if=/home/<username>/Downloads/some-live-disk.iso of=/dev/sdb`.
 
 	→ sudo dd if=/home/nigel/Downloads/rancheros.iso of=/dev/sdb
 	83968+0 records in

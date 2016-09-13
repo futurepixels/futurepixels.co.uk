@@ -18,16 +18,18 @@ class: home
 {% endfor %}
 </div>
 
-{% if paginator.next_page %}
+
+
+{% if paginator.next_page or paginator.previous_page %}
 <div class=gw>
 	<ol class="nav pagination" role="pagination">
 	    <li class="pagination__prev">
 		{% if paginator.previous_page %}
-		{% if paginator.previous_page == 1 %}
-		    <a href="">Previous</a>
-		{% else %}
-		    <a href="/page{{paginator.previous_page}}">Previous</a>
-		{% endif %}
+			{% if paginator.previous_page == 1 %}
+			    <a href="/">Previous</a>
+			{% else %}
+			    <a href="/page{{paginator.previous_page}}">Previous</a>
+			{% endif %}
 		{% else %}
 		    Previous
 		{% endif %}

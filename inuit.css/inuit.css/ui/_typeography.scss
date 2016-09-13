@@ -46,12 +46,12 @@ hr{
 
 blockquote{
 
-    padding-top: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    padding-right: 1em;
+    padding-top: 0.1em;
+    padding-right: 0.1em;
+    padding-bottom: 0.1em;
+    padding-right: 0.1em;
 
-    border-left: 3px solid lighten($brand-color--dark-grey, 50%);
+    border-left: 6px solid lighten($brand-color--dark-grey, 50%);
     text-indent: 0;
 
     p:before,

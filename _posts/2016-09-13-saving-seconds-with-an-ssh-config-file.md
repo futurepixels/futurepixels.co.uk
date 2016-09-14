@@ -54,4 +54,18 @@ Now, run the same command and you will just get the server console, no password:
 
 As with anything in devops, it's the little things that allow you to be more efficient and enjoy work that little bit more...
 
+### Edited:
+
+On Wednesday, 14th September 2016
+
+For the added security, you can use the following configuration:
+
+	Host *
+		ForwardAgent   no
+		IdentitiesOnly yes
+
+This forces the ssh session to only use the given `IdentityFile`. From the docs:
+
+> Specifies that ssh(1) should only use the authentication identity files configured in the ssh_config files, even if ssh-agent(1) offers more identities. The argument to this keyword must be ''yes'' or ''no''. This option is intended for situations where ssh-agent offers many different identities. The default is ''no''.
+
 [github-ssh-key]: https://help.github.com/articles/generating-an-ssh-key/

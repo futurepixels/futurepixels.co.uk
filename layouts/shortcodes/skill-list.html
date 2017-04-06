@@ -1,0 +1,13 @@
+
+<ul>
+{{ range $.Site.Data.skills.skills }}
+    <li class="skill-list-item">
+        <h4>{{ .title }}</h4>
+        <p>
+        {{- range $key, $item := .items }}
+            {{ if eq $key 0 }} {{ $item }} {{ else }} <span style="color:#428bca">•</span> {{ $item }} {{ end }}
+        {{ end -}}
+        </p>
+    </li>
+{{ end }}
+</ul>

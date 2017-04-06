@@ -1,0 +1,7 @@
+<h4>Currenty Reading / Have it ready:</h4>
+
+<ul>
+{{ range $.Site.Data.readingLists.readingList }}
+    {{ partial "book_and_author_li.html" . }}
+{{ end }}
+</ul>

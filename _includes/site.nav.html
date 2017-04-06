@@ -1,0 +1,37 @@
+<div class="wrapper">
+	<div class="logo center">
+		<a href="/" class="logo">Fp</a>
+	</div>
+	<ul class="nav nav--banner nav--extra">
+		<li><a href="/" class="nav--extra__home">Home</a></li>
+		<li><a href="/resume" class="nav--extra__resume">Resume</a></li>
+		<li><a href="/book-shelf" class="nav--extra__bookshelf">Book Shelf</a></li>
+		{% comment %}<li><a href="/projects" class="nav--extra__projects">Projects</a></li>{% endcomment %}
+		<li><a href="#section:whoami" class="nav--extra__about {% unless page.title == 'About Me' %}js--about__cutout{% endunless %} informative">About</a></li>
+	</ul>
+</div>
+
+{% unless page.title == 'About Me' %}
+
+{% capture this_year %}{{ 'now' | date:"%Y" }}{% endcapture %}
+
+<div class="cutout  js--cutout">
+	<div class="wrapper">
+		<div class="gw">
+			<div class="g one-whole">
+				<p>
+					Hi there, I'm <a href="http://twitter.com/{{ site.author.twitter }}" title="Twitter: @{{ site.author.twitter }}">Nigel</a>, a full time developer of {{ this_year | minus:2009 }} years, a husband, a father, an <a href="http://www.flickr.com/photos/smilinmonki666/">amateur photographer</a> and fan of geeky stuff...<br>
+					You can <a href="/about" title="Futher information about me">read more</a> about me, but if you want you can catch me on the following:
+				</p>
+				<ul class="nav social-icons">
+					<li><a href="http://twitter.com/{{ site.author.twitter }}" title="Link to my Twitter profile: @{{ site.author.twitter }}" target="new"><img src="/assets/images/social-media-icons/twitter-logo.png" alt="Twitter Logo"></a></li>
+					<li><a href="http://www.flickr.com/photos/smilinmonki666/" title="Link to my Flickr profile" target="new"><img src="/assets/images/social-media-icons/flickr-logo.png" alt="Flickr Logo"></a></li>
+					<li><a href="http://github.com/NigelGreenway" title="Link to my Github.com profile" target="new"><img src="/assets/images/social-media-icons/github-logo.png" alt="GitHub.com Logo"></a></li>
+					<li><a href="http://www.linkedin.com/pub/nigel-greenway/45/10a/a57" title="Link to my LinkedIN profile" target="new"><img src="/assets/images/social-media-icons/linkedin-logo.png" alt="LinkedIN Logo"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endunless %}

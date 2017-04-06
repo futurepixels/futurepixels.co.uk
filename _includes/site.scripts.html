@@ -1,0 +1,53 @@
+<!--[if IE]>
+<script src="/assets/js/libs/html5shiv.min.js"></script>
+<![endif]-->
+<script src="/assets/js/vendor/jquery-1.8.0.min.js"></script>
+<script src="/assets/js/plugins/stellar.js"></script>
+<script src="/assets/js/plugins/stickem.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('.js--about__cutout').click(function(e) {
+		$('.js--cutout').stop().slideToggle();
+		e.preventDefault();
+	});
+  $('a[href^="http"]').attr('target', '_new');
+});
+$(window).stellar();
+</script>
+
+{% if site.environment == 'prod' %}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45501754-1', 'futurepixels.co.uk');
+  ga('send', 'pageview');
+
+</script>
+{% endif %}
+
+
+<script>
+  var
+    p = [],
+    h = [];
+
+    $('.js--post').each(function(i,v) {
+         p.push($(this).height());
+         h.push($('h1', this).height());
+    });
+
+    var
+      p_lrg = Math.max.apply(Math, p),
+      h_lrg = Math.max.apply(Math, h);
+
+    $('.js--post').each(function(i, v) {
+        $(this).css({'height':p_lrg});
+        $('h1', this).css({'height':h_lrg});
+    });
+
+    $('table').addClass('table--bordered  table--striped  table--data');
+</script>

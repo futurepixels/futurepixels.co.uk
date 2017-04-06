@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $LOGO
+\*------------------------------------*/
+
+.logo{
+    width:100%;
+    height:150px;
+
+    a{
+        @extend .giga;
+        width:150px;
+        height:150px;
+        margin:0 auto;
+        padding:25px;
+        text-align:center;
+        color:#444;
+        text-shadow:0px -1px 1px #000;
+        background-color:#fff;
+        border:2px dashed #444;
+
+        @include vendor(box-shadow, inset 0px 5px 1px #333);
+        @include vendor(border-radius, 50%);
+
+        @include media-query(portable) {
+            margin:25px auto 0 auto;
+        }
+
+        @include media-query(palm) {
+            margin:-50px auto 0 auto;
+        }
+
+        &:hover{
+            color:$brand-color;
+            border-color:$brand-color;
+        }
+    }
+}

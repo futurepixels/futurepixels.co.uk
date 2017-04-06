@@ -1,0 +1,146 @@
+url:         http://futurepixels.co.uk/
+lsi:         false
+paginate:    6
+permalink:   /:categories/:title
+highligher:  pygments
+markdown:    kramdown
+environment: prod
+safe: false
+gems:
+  - jekyll-paginate
+
+author:
+  name: Nigel Greenway
+  twitter: NigelGreenway
+
+description: This is the description...
+keywords: here, are, the, keywords
+
+current_os:
+  - title: Elementary OS
+  - url: http://elementary.io/
+
+skills:
+  - title: Frontend
+    items:
+      - HTML/5
+      - CSS2/3
+      - Javascript
+      - jQuery
+      - SASS
+      - BEM
+      - Gulp
+      - Grunt
+      - Browser Sync
+
+  - title: Languages
+    items:
+      - PHP
+      - Ruby
+      - Python
+      - Go
+      - NodeJS
+
+  - title: DevOps
+    items:
+      - MySQL
+      - Apache
+      - Git
+      - Bash
+      - ZSH
+      - Nginx
+      - Hiawatha
+      - Ansible
+
+  - title: Frameworks
+    items:
+      - Symfony2
+      - Silex
+      - Slim
+
+  - title: Miscellaneous 
+    items:
+      - PSR
+      - TDD
+      - BDD
+      - DDD
+      - ADR
+
+  - title: Tools
+    items:
+    - Composer
+    - Makefile
+    - Vagrant
+    - PHP Storm IDE
+    - Sublime Text
+    - Vim
+    - OS X
+    - Linux (Ubuntu | CentOS | Fedora)
+    - tmux
+    - task warrior
+
+extraReadingList:
+  - name: CSS Wizardry
+    url: http://csswizardry.com
+  - name: Integralist
+    url: http://integralist.co.uk
+  - name: CSS Tricks
+    url: http://css-tricks.com
+  - name: Inuit CSS
+    url: http://inuitcss.com
+  - name: A List Apart
+    url: http://alistapart.com
+  - name: Little Big Details
+    url: http://littlebigdetails.com
+  - name: David Walsh
+    url: http://davidwalsh.name
+  - name: Anthony Ferrara
+    url: http://blog.ircmaxell.com/
+  - name: Phil Sturgeon
+    url: https://philsturgeon.uk
+  - name: Mathias Verraes
+    url: http://verraes.net/
+
+readList:
+  - title: "The Clean Coder: A Code of Conduct for Professional Programmers"
+    url: http://www.amazon.co.uk/dp/0137081073/ref=cm_sw_r_tw_dp_42mHwb1B0SRSK
+    author: Robert C Marting
+    authorUrl: https://twitter.com/unclebobmartin
+  - title: Vagrant Cookbook
+    url: http://www.amazon.co.uk/dp/1326020153/ref=cm_sw_r_tw_dp_R6mHwb008H2X4
+    author:  Erika Heidi
+    authorUrl: https://twitter.com/erikaheidi
+  - title: Culture Of Respect
+    url: https://nomadphp.com/product/culture-of-respect-3/
+    author: Cal Evans
+    authorUrl: https://twitter.com/calevans
+
+readingList:
+  - title: "Extending and Embedding PHP (Developer's Library) by Sara Golemon"
+    url: http://www.amazon.co.uk/dp/067232704X/ref=cm_sw_r_tw_dp_5JoHwb1CJTWPP
+    author: Sara Goleman
+    authorUrl: https://twitter.com/SaraMG
+  - title: "Domain-driven Design: Tackling Complexity in the Heart of Software"
+    url: http://www.amazon.co.uk/dp/0321125215/ref=cm_sw_r_tw_dp_XtoHwb1M4ED5W
+    author: Eric Evans
+    authorUrl: https://twitter.com/ericevans0
+  - title: Implementing Domain-Driven Design
+    url: http://www.amazon.co.uk/dp/0321834577/ref=cm_sw_r_tw_dp_54dHwb1A67KTQ
+    author: Vaughn Vernon
+    authorUrl: https://twitter.com/vaughnvernon
+  - title: "Domain-Driven Design : Reference Definitions and Pattern Summaries"
+    url: http://www.amazon.co.uk/dp/1457501198/ref=cm_sw_r_tw_dp_VuoHwb18DR790
+    author: Eric Evans
+    authorUrl: https://twitter.com/ericevans0
+  - title: "Build APIs You Won't Hate"
+    url: http://www.amazon.co.uk/dp/0692232699/ref=cm_sw_r_tw_dp_5GoHwb1562GN7
+    author: Phil Sturgeon
+    authorUrl: https://twitter.com/philsturgeon
+
+wishList:
+  - title: Pro Vim
+    url: http://www.amazon.co.uk/dp/1484202511/ref=cm_sw_r_tw_dp_yOoHwb1HKNTQN
+    author: Mark McDonnell
+    authorUrl: https://twitter.com/integralist
+
+exclude: ['inuit.css', 'logs', 'doc']

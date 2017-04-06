@@ -1,0 +1,7 @@
+<h4>Have already read:</h4>
+
+<ul>
+{{ range $.Site.Data.readingLists.readList }}
+    {{ partial "book_and_author_li.html" . }}
+{{ end }}
+</ul>

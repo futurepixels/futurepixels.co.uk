@@ -1,0 +1,62 @@
+skills:
+  - title: Frontend
+    items:
+      - HTML4/5
+      - CSS2/3
+      - Javascript
+      - jQuery
+      - ReactJS
+      - SASS
+      - Gulp
+      - Grunt
+      - Browser Sync
+
+  - title: Languages
+    items:
+      - PHP
+      - Ruby
+      - Python
+      - Go
+      - NodeJS
+      - Nix Shell (Bash, ZSH)
+
+  - title: DevOps
+    items:
+      - MySQL
+      - Apache
+      - Git
+      - Nginx
+      - Hiawatha
+      - Ansible
+
+  - title: Frameworks
+    items:
+      - Symfony2
+      - Silex
+      - Slim2/3
+
+  - title: Methodolgies
+    items:
+      - PSR (PHP Standard Recommendation)
+      - TDD (Test Driven Development)
+      - BDD (Behaviour Driven Development)
+      - DDD (Domain Driven Development)
+      - ADR (Action Domain Responder)
+      - BEM (Block Element Modifier)
+      - SOA (Service Orientated Architecture)
+
+  - title: Tools
+    items:
+    - editorconfig
+    - Composer
+    - Makefile
+    - Vagrant
+    - Docker
+    - PHP Storm IDE
+    - Sublime Text
+    - Visual Studio Code
+    - Vi(m)
+    - OS X
+    - Linux (Ubuntu | CentOS | Fedora | Solus Project)
+    - tmux
+    - Task Warrior

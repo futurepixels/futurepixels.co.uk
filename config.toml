@@ -1,0 +1,31 @@
+baseurl = "https://futurepixels.co.uk"
+theme = "cocoa-eh"
+builddrafts = true
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "docs"
+author = "Nigel Greenway"
+title = "Futurepixels"
+disqusshortname = ""
+pluralizelisttitles = false
+
+[permalinks]
+posts = "posts/:slug/"
+
+[params]
+dateform = "Jan 2, 2006"
+dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+description = "Articles on general development and programming along with other findings... oh, and a gallery."
+logofile = "img/logo.png"
+faviconfile = "img/logo.png"
+highlightjs = true
+jobTitle = "Software Engineer"
+placeOfWork = "First Utility"
+lang = "en"
+github = "https://github.com/NigelGreenway"
+email = "github@futurepixels.co.uk"
+linkedin = "https://uk.linkedin.com/in/nigel-greenway-a5710a45"
+twitter = "https://twitter.com/NigelGreenway"
+primaryOS = "[Solus-Project](https://solus-project.com)"

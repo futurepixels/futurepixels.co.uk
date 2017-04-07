@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body>
+
+{{ if .IsPage }}
+<section class="header"> 
+{{ else }}
+<section class="header header-home"> 
+{{ end }}
+    <div class="container">
+        <a href="{{ .Site.BaseURL }}"><img class="logo" src="{{ .Site.Params.logofile | absURL }}" /></a>
+        <div class="content">
+            <a href="{{ .Site.BaseURL }}"><div class="name"><h1>{{ .Site.Title }}</h1></div></a>
+            <nav>
+<<<<<<< HEAD
+                <ul>
+<<<<<<< HEAD
+=======
+>>>>>>> bf8e5ac857be90ad6105ea8e2b04c137db636743
+                    <a href="{{ .Site.BaseURL }}posts/"><li {{ if eq (lower .Title) "posts"}}style="font-weight:800;"{{ end }}>Posts</li></a>
+                    <a href="{{ .Site.BaseURL }}bookshelf/"><li {{ if eq (lower .Title) "book shelf"}}style="font-weight:800;"{{ end }}>Book Shelf</li></a>
+                    <a href="{{ .Site.BaseURL }}whoami/"><li {{ if eq (lower .Title) "whoami"}}style="font-weight:800;"{{ end }}>Whoami</li></a>
+=======
+                    <a href="{{ .Site.BaseURL }}blog/"><li>Blog</li></a>
+                    {{ range .Site.Sections }}
+                        {{ range first 1 (where .Pages "Section" "ne" "")}}
+                            {{ if ne .Section "blog"}}
+                            <a href="{{ .Section | urlize }}"><li>{{ .Section }}</li></a>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    {{ range where .Site.Pages "Section" ""}}
+                        {{ if ne .Title "Home"}}
+                            <a href="{{ .Permalink }}"><li>{{ .Title }}</li></a>
+                        {{ end }}
+                    {{ end }}
+>>>>>>> parent of 84427d3... [updates]
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        {{ if .Site.Params.github }}
+            <a href="{{ .Site.Params.github }}" target="_blank">
+                <i class="icon ion-social-github"></i>
+            </a>
+        {{ end }}
+        
+        {{ if .Site.Params.twitter }}
+            <a href="{{ .Site.Params.twitter }}" target="_blank">
+                <i class="icon ion-social-twitter"></i>
+            </a>
+        {{ end }}
+
+        {{ if .Site.Params.linkedin }}
+            <a href="{{ .Site.Params.linkedin }}" target="_blank">
+                <i class="icon ion-social-linkedin"></i>
+            </a>
+        {{ end }}
+
+        {{ if .Site.Params.email }}
+            <a href="mailto:{{ .Site.Params.email }}">
+                <i class="icon ion-ios-email larger"></i>
+            </a>
+        {{ end }}
+
+        {{ if .Site.RSSLink }}
+            <a href="{{ .Site.RSSLink }}">
+                <i class="icon ion-social-rss larger"></i>
+            </a>
+        {{ end }}
+        </div>
+    </div>
+</section>

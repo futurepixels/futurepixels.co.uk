@@ -1,0 +1,46 @@
+baseurl = "https://example.com/"
+<<<<<<< HEAD
+theme = "cocoa-eh"
+=======
+theme = "cocoa-eh-hugo-theme"
+>>>>>>> parent of 84427d3... [updates]
+builddrafts = true
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "public"
+author = "Alexis Tacnet"
+title = "Cocoa Enhanced"
+disqusshortname = ""
+pluralizelisttitles = false
+
+[permalinks]
+blog = "blog/:slug/"
+
+[params]
+dateform = "Jan 2, 2006"
+dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+description = "Example blog"
+<<<<<<< HEAD
+copyright = "Copyright © 2015 Nishanth Shanmugham"
+logofile = "img/logo.png"
+faviconfile = "img/logo.png"
+highlightjs = true
+progressively = true
+latestpostcount = 5
+github = "example"
+email = "you@example.com"
+linkedin = "john-example-aa80ue8è"
+twitter = "example"
+social_banner = "img/banner.png"
+=======
+logofile = "img/logo.png"
+faviconfile = "img/logo.png"
+highlightjs = true
+lang = "en"
+github = "https://github.com/example"
+email = "you@example.com"
+linkedin = "example"
+twitter = "@example"
+>>>>>>> parent of 84427d3... [updates]

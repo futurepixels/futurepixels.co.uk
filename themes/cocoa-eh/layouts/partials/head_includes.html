@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/reset.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
 
-<<<<<<< HEAD
 <link rel="shortcut icon" href="{{ .Site.BaseURL }}futurepixels--icon.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ .Site.BaseURL }}apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ .Site.BaseURL }}apple-touch-icon-114x114.png">
@@ -18,24 +17,6 @@
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ .Site.BaseURL }}apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon-precomposed" href="{{ .Site.BaseURL }}apple-touch-icon.png">
 <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicon.png">
-<<<<<<< HEAD
-=======
-
->>>>>>> bf8e5ac857be90ad6105ea8e2b04c137db636743
-=======
-{{range .Site.Params.extracssfiles}}
-    <link rel="stylesheet" href="{{.}}">
-{{end}}
-
-<!-- Icon -->
-<link rel="shortcut icon"
-{{ if .Site.Params.faviconfile }}
-    href="{{ .Site.Params.faviconfile | absURL }}"
-{{ else }}
-    href="{{ .Site.BaseURL }}img/favicon.ico"
-{{ end }}
->
->>>>>>> parent of 84427d3... [updates]
 
 <!-- RSS -->
 {{ if .RSSLink }}

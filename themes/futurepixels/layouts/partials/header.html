@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body>
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="{{ .Site.BaseURL }}"><div class="name"><h1>{{ .Site.Title }}</h1></div></a>
+            <nav>
+                <ul>
+                    <a href="{{ .Site.BaseURL }}posts/"><li {{ if eq (lower .Title) "posts"}}style="font-weight:800;"{{ end }}>Posts</li></a>
+                    <a href="{{ .Site.BaseURL }}bookshelf/"><li {{ if eq (lower .Title) "book shelf"}}style="font-weight:800;"{{ end }}>Book Shelf</li></a>
+                    <a href="{{ .Site.BaseURL }}whoami/"><li {{ if eq (lower .Title) "whoami"}}style="font-weight:800;"{{ end }}>Whoami</li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>

@@ -1,4 +1,4 @@
-baseurl = "https://futurepixels.co.uk"
+baseurl = "https://futurepixels.co.uk/"
 theme = "futurepixels"
 builddrafts = true
 canonifyurls = true

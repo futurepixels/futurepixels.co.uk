@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Futurepixels</title>
-    <link>https://futurepixels.co.uk/index.xml</link>
+    <link>http://futurepixels.co.uk/index.xml</link>
     <description>Recent content on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Fri, 04 Nov 2016 10:00:00 +0000</lastBuildDate>
-    <atom:link href="https://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Making a career in programming is hard, enough to kill it</title>
-      <link>https://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</link>
+      <link>http://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</link>
       <pubDate>Fri, 04 Nov 2016 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</guid>
+      <guid>http://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</guid>
       <description>
 
 &lt;h3 id=&#34;tl-dr&#34;&gt;tl;dr&lt;/h3&gt;
@@ -23,7 +23,7 @@
 
 &lt;h3 id=&#34;what&#34;&gt;What?&lt;/h3&gt;
 
-&lt;p&gt;Since I started becoming a developer, I have struggled in such a way that I thought I was alone in working with people who are unprofessional by being a bully or just damn right pig headed. I&amp;rsquo;ve wrote a few articles on this, &lt;a href=&#34;https://futurepixels.co.uk/experience/coming-of-age-as-a-php-developer&#34;&gt;Coming of age as a PHP developer&lt;/a&gt; and then &lt;a href=&#34;https://futurepixels.co.uk/experience/being-a-professional-developer&#34;&gt;Being a professional developer&lt;/a&gt;. I have also presented a talk to two local user groups about this exact issue, which was great and had more outcome on the conversations and questions afterwards than I thought it would.&lt;/p&gt;
+&lt;p&gt;Since I started becoming a developer, I have struggled in such a way that I thought I was alone in working with people who are unprofessional by being a bully or just damn right pig headed. I&amp;rsquo;ve wrote a few articles on this, &lt;a href=&#34;http://futurepixels.co.uk/experience/coming-of-age-as-a-php-developer&#34;&gt;Coming of age as a PHP developer&lt;/a&gt; and then &lt;a href=&#34;http://futurepixels.co.uk/experience/being-a-professional-developer&#34;&gt;Being a professional developer&lt;/a&gt;. I have also presented a talk to two local user groups about this exact issue, which was great and had more outcome on the conversations and questions afterwards than I thought it would.&lt;/p&gt;
 
 &lt;p&gt;In my current time of seven years being a developer, I have had five placements as a php developer. My first was a junior role; it is not until looking back that I realise the state of the development industry and what was to come.&lt;/p&gt;
 
@@ -98,10 +98,10 @@
     
     <item>
       <title>Saving seconds with an ssh config file</title>
-      <link>https://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</link>
+      <link>http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</link>
       <pubDate>Tue, 13 Sep 2016 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</guid>
+      <guid>http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</guid>
       <description>
 
 &lt;h3 id=&#34;the-problem&#34;&gt;The problem&lt;/h3&gt;
@@ -175,10 +175,10 @@ btables@server-name:~$
     
     <item>
       <title>Installing an ISO to a USB stick</title>
-      <link>https://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</link>
+      <link>http://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</link>
       <pubDate>Mon, 12 Sep 2016 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</guid>
+      <guid>http://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;I am working from Linux, please submit a pull request to add instructions for Windows/Mac&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -271,10 +271,10 @@ Device Boot Start End Sectors Size Id Type
     
     <item>
       <title>Rewriting your git history</title>
-      <link>https://futurepixels.co.uk/posts/rewriting-your-git-history/</link>
+      <link>http://futurepixels.co.uk/posts/rewriting-your-git-history/</link>
       <pubDate>Tue, 06 Sep 2016 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/rewriting-your-git-history/</guid>
+      <guid>http://futurepixels.co.uk/posts/rewriting-your-git-history/</guid>
       <description>
 
 &lt;h3 id=&#34;editing-the-latest-commit&#34;&gt;Editing the latest commit:&lt;/h3&gt;
@@ -371,10 +371,10 @@ Remember, this should only be done &lt;em&gt;before&lt;/em&gt; pushing your chan
     
     <item>
       <title>Thank you to all the people that have helped me</title>
-      <link>https://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</link>
+      <link>http://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</link>
       <pubDate>Fri, 15 Jan 2016 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</guid>
+      <guid>http://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</guid>
       <description>
 
 &lt;h1 id=&#34;thank-you&#34;&gt;Thank you&lt;/h1&gt;
@@ -425,10 +425,10 @@ Remember, this should only be done &lt;em&gt;before&lt;/em&gt; pushing your chan
     
     <item>
       <title>Migrating from Mac OS to Linux</title>
-      <link>https://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</link>
+      <link>http://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</link>
       <pubDate>Thu, 14 Jan 2016 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</guid>
+      <guid>http://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</guid>
       <description>
 
 &lt;h1 id=&#34;preface&#34;&gt;Preface&lt;/h1&gt;
@@ -508,10 +508,10 @@ Remember, this should only be done &lt;em&gt;before&lt;/em&gt; pushing your chan
     
     <item>
       <title>Being a professional developer</title>
-      <link>https://futurepixels.co.uk/posts/being-a-professional-developer/</link>
+      <link>http://futurepixels.co.uk/posts/being-a-professional-developer/</link>
       <pubDate>Tue, 25 Aug 2015 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/being-a-professional-developer/</guid>
+      <guid>http://futurepixels.co.uk/posts/being-a-professional-developer/</guid>
       <description>
 
 &lt;p&gt;This is something I touched on briefly in my last post, &amp;lsquo;&lt;a href=&#34;http://futurepixels.co.uk/experience/coming-of-age-as-a-php-developer/#from-junior-to-now&#34;&gt;Coming of age as a php developer&lt;/a&gt;&amp;rsquo;, but it is something I would like to extend on.&lt;/p&gt;
@@ -613,10 +613,10 @@ Remember, this should only be done &lt;em&gt;before&lt;/em&gt; pushing your chan
     
     <item>
       <title>Coming of age as a PHP developer</title>
-      <link>https://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</link>
+      <link>http://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</link>
       <pubDate>Sun, 11 Jan 2015 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</guid>
+      <guid>http://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</guid>
       <description>
 
 &lt;p&gt;Back in 2009, I was fortunate to find an advert in the paper for a junior PHP developer. I had been using PHP for around a year at this point. I had not been to University or collage to learn any programming, it was all self taught. I applied and was a successful candidate and worked there for just over a year and a half.&lt;/p&gt;
@@ -655,7 +655,7 @@ Remember, this should only be done &lt;em&gt;before&lt;/em&gt; pushing your chan
 
 &lt;p&gt;My first year here seemed good, I was involved in a fair few projects which was great; or so I thought. I yet again learned more about myself. Within a year into my position, I found I was trying to fit in with the team which was effecting my performance and judgement for what I was getting paid for; developing the business, it&amp;rsquo;s applications and tools.&lt;/p&gt;
 
-&lt;p&gt;I had a discussion with the other developer I worked closely with, I explained that I didn&amp;rsquo;t feel I was where I wanted to be and explained my concerns. I asked him how he manages his time and creates estimations. Over the Christmas break I started to work on my time management and wrote an article, &lt;a href=&#34;https://futurepixels.co.uk/back-to-basics/Self-Managment&#34;&gt;self management&lt;/a&gt;, about what I had learnt. I then started to apply this in my job.&lt;/p&gt;
+&lt;p&gt;I had a discussion with the other developer I worked closely with, I explained that I didn&amp;rsquo;t feel I was where I wanted to be and explained my concerns. I asked him how he manages his time and creates estimations. Over the Christmas break I started to work on my time management and wrote an article, &lt;a href=&#34;http://futurepixels.co.uk/back-to-basics/Self-Managment&#34;&gt;self management&lt;/a&gt;, about what I had learnt. I then started to apply this in my job.&lt;/p&gt;
 
 &lt;p&gt;2014 was the year I started to become a &lt;em&gt;professional&lt;/em&gt;.&lt;/p&gt;
 
@@ -691,10 +691,10 @@ Remember, this should only be done &lt;em&gt;before&lt;/em&gt; pushing your chan
     
     <item>
       <title>Self management</title>
-      <link>https://futurepixels.co.uk/posts/self-management/</link>
+      <link>http://futurepixels.co.uk/posts/self-management/</link>
       <pubDate>Tue, 28 Jan 2014 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/self-management/</guid>
+      <guid>http://futurepixels.co.uk/posts/self-management/</guid>
       <description>
 
 &lt;h1 id=&#34;self-management&#34;&gt;Self management&lt;/h1&gt;
@@ -1053,10 +1053,10 @@ Remember, this should only be done &lt;em&gt;before&lt;/em&gt; pushing your chan
     
     <item>
       <title>An introduction to using Git</title>
-      <link>https://futurepixels.co.uk/posts/an-introduction-to-using-git/</link>
+      <link>http://futurepixels.co.uk/posts/an-introduction-to-using-git/</link>
       <pubDate>Sat, 05 Oct 2013 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/an-introduction-to-using-git/</guid>
+      <guid>http://futurepixels.co.uk/posts/an-introduction-to-using-git/</guid>
       <description>
 
 &lt;h1 id=&#34;setting-up-git&#34;&gt;Setting up Git&lt;/h1&gt;
@@ -1387,10 +1387,10 @@ Stage this hunk [y,n,q,a,d,/,K,g,e,?]? y
     
     <item>
       <title>Welcome to futurepixels.co.uk</title>
-      <link>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</link>
+      <link>http://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</link>
       <pubDate>Tue, 26 Feb 2013 10:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</guid>
+      <guid>http://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</guid>
       <description>&lt;p&gt;So, this is just a quick hello and to say thank&amp;rsquo;s for visiting. I am currently in between writting some other articles and tutorials at the moment along with at the end of buying a house, so this may take some time as I also need to decorate the house&amp;hellip; all good fun.&lt;/p&gt;
 
 &lt;p&gt;So, a thank you for visiting the site and I hope you come here every now and then, and if you would like to drop me a &lt;a href=&#34;NigelGreenway&#34; target=&#34;_new&#34;&gt;tweet&lt;/a&gt;, you are most welcome. I will be sure to reply to you.&lt;/p&gt;
@@ -1401,10 +1401,10 @@ Stage this hunk [y,n,q,a,d,/,K,g,e,?]? y
     
     <item>
       <title>Book Shelf</title>
-      <link>https://futurepixels.co.uk/bookshelf/</link>
+      <link>http://futurepixels.co.uk/bookshelf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/bookshelf/</guid>
+      <guid>http://futurepixels.co.uk/bookshelf/</guid>
       <description>&lt;p&gt;This is just a list of book that I am wanting to read, am reading and have read. That&amp;rsquo;s it, nothing more. Oh, I may add a review/thoughts about book part to depending on the book.&lt;/p&gt;
 
 &lt;h4&gt;Have already read:&lt;/h4&gt;
@@ -1465,23 +1465,23 @@ Stage this hunk [y,n,q,a,d,/,K,g,e,?]? y
     
     <item>
       <title>Resume</title>
-      <link>https://futurepixels.co.uk/resume/</link>
+      <link>http://futurepixels.co.uk/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/resume/</guid>
+      <guid>http://futurepixels.co.uk/resume/</guid>
       <description>
 
-&lt;h3 id=&#34;a-id-profile-href-resume-profile-profile-a&#34;&gt;&lt;a id=&#34;profile&#34; href=&#34;https://futurepixels.co.uk/resume/#profile&#34;&gt;Profile&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;a-id-profile-href-resume-profile-profile-a&#34;&gt;&lt;a id=&#34;profile&#34; href=&#34;http://futurepixels.co.uk/resume/#profile&#34;&gt;Profile&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;A keen and dedicated developer to create web applications and sites that are based upon concepts and standards to help produce well documented/commented code, a code-base that ensures ease of maintainability using the &lt;code&gt;DRY&lt;/code&gt; concept along with researching technologies to better fit the product needed.&lt;/p&gt;
 
-&lt;h3 id=&#34;a-id-education-href-resume-education-education-a&#34;&gt;&lt;a id=&#34;education&#34; href=&#34;https://futurepixels.co.uk/resume/#education&#34;&gt;Education&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;a-id-education-href-resume-education-education-a&#34;&gt;&lt;a id=&#34;education&#34; href=&#34;http://futurepixels.co.uk/resume/#education&#34;&gt;Education&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Stoke Park School and Community College &lt;em&gt;1994-2000&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;a-id-employment-href-resume-employment-employment-a&#34;&gt;&lt;a id=&#34;employment&#34; href=&#34;https://futurepixels.co.uk/resume/#employment&#34;&gt;Employment&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;a-id-employment-href-resume-employment-employment-a&#34;&gt;&lt;a id=&#34;employment&#34; href=&#34;http://futurepixels.co.uk/resume/#employment&#34;&gt;Employment&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h4 id=&#34;a-id-current-employment-href-resume-current-employment-first-utility-2016-present-a&#34;&gt;&lt;a id=&#34;current-employment&#34; href=&#34;https://futurepixels.co.uk/resume/#current-employment&#34;&gt;First Utility &lt;em&gt;(2016 - present)&lt;/em&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-id-current-employment-href-resume-current-employment-first-utility-2016-present-a&#34;&gt;&lt;a id=&#34;current-employment&#34; href=&#34;http://futurepixels.co.uk/resume/#current-employment&#34;&gt;First Utility &lt;em&gt;(2016 - present)&lt;/em&gt;&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;• • •&lt;/p&gt;
 
@@ -1533,10 +1533,10 @@ Stage this hunk [y,n,q,a,d,/,K,g,e,?]? y
     
     <item>
       <title>Skills</title>
-      <link>https://futurepixels.co.uk/skills/</link>
+      <link>http://futurepixels.co.uk/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/skills/</guid>
+      <guid>http://futurepixels.co.uk/skills/</guid>
       <description>
 &lt;ul&gt;
 
@@ -1664,10 +1664,10 @@ Stage this hunk [y,n,q,a,d,/,K,g,e,?]? y
     
     <item>
       <title>Whoami</title>
-      <link>https://futurepixels.co.uk/whoami/</link>
+      <link>http://futurepixels.co.uk/whoami/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/whoami/</guid>
+      <guid>http://futurepixels.co.uk/whoami/</guid>
       <description>
 
 &lt;p&gt;Hi there, I&amp;rsquo;m &lt;a href=&#34;http://twitter.com/NigelGreenway&#34; title=&#34;Twitter: @NigelGreenway&#34; target=&#34;_new&#34;&gt;Nigel&lt;/a&gt;, a developer, a husband, a father and fan of geeky stuff&amp;hellip;&lt;/p&gt;

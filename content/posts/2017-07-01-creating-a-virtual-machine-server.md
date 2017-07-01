@@ -131,4 +131,15 @@ You could use the command line, but I have not gone down that road and will be u
             searchValue = this.value;
         }
     });
+    var tasks = document.querySelectorAll('input[type="checkbox"]');
+    for (i=0; i<tasks.length;i++) {
+        var task = tasks[i];
+        task.addEventListener('change', function(event) {
+            if (this.checked === true) {
+                this.parentNode.style.color='#85D385';
+            } else {
+                this.parentNode.style.color='#313537';
+            }
+        });
+    }
 </script>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</loc>
+    <lastmod>2017-07-01T01:11:57+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</loc>
     <lastmod>2017-06-14T21:31:00+00:00</lastmod>
   </url>
@@ -73,13 +78,13 @@
   
   <url>
     <loc>http://futurepixels.co.uk/</loc>
-    <lastmod>2017-06-14T21:31:00+00:00</lastmod>
+    <lastmod>2017-07-01T01:11:57+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://futurepixels.co.uk/posts/</loc>
-    <lastmod>2017-06-14T21:31:00+00:00</lastmod>
+    <lastmod>2017-07-01T01:11:57+00:00</lastmod>
     <priority>0</priority>
   </url>
   

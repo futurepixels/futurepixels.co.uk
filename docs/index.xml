@@ -6,10 +6,21 @@
     <description>Recent content on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 14 Jun 2017 21:31:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jul 2017 01:11:57 +0000</lastBuildDate>
     
 	<atom:link href="http://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creating a Linux virtual machine server with the HP microserver gen 8 server</title>
+      <link>http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</link>
+      <pubDate>Sat, 01 Jul 2017 01:11:57 +0000</pubDate>
+      
+      <guid>http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</guid>
+      <description>I am using:
+ HP MicroServer Gen 8 Ubuntu Server A laptop with Linux installed as my local machine (This means that I can only provide Linux commands and software that I will be using)  My HP MicroServer  8GB Ram Intel Celeron Processor (2 core) 1x 320 HDD 2x 1TB HDD   Precursor:
+I have set up my server a while ago and am not sure what I did during the config.</description>
+    </item>
     
     <item>
       <title>Thank you to all involved in the 3 PHP South Coast Conferences</title>

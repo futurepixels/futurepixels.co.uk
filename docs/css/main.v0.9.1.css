@@ -859,3 +859,18 @@ section.main .content .markdown tbody tr:nth-child(odd) td,
 section.main .content .markdown tbody tr:nth-child(odd) th {
   background-color: #f7f7f7;
 }
+
+label {
+    display: inline-block;
+}
+input[type="text"] {
+    border-left-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #2a6496;
+    color: #428bca;
+    padding:4px 6px;
+    vertical-align:top;
+}

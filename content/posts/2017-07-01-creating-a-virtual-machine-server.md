@@ -73,7 +73,7 @@ I simply follow [this](http://www.havetheknowhow.com/Configure-the-server/Networ
 
 ## Step three - Setup my first Virtual Machine
 
-First, lets check that [KVM][KVM] has been installed correctly by running `virsh --connect qemu:///system list --all`
+First, lets check that [KVM](https://www.linux-kvm.org/) has been installed correctly by running `virsh --connect qemu:///system list --all`
 
 Now, get your OS ISO and run `scp /path/to/os.iso <server-name>:/home/<user>/` to get the ISO on the server.
 

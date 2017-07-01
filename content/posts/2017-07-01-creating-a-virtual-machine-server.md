@@ -45,9 +45,9 @@ Download the Ubuntu Server ISO [here][Ubuntu server] and follow [this](futurepix
 
 Using a USB input on the server (I used the internal one), insert the USB with the Ubuntu Server installer.
 
- - <label><input type="checkbox" /> **Ensure you have enabled the `Open SSH Server` and the `Virtual Machine Host` option's on installation**</label>
+ <label> -<input type="checkbox" /> **Ensure you have enabled the `Open SSH Server` and the `Virtual Machine Host` option's on installation**</label>
 
- - <label><input type="checkbox" /> **Take note of your server's hostname** <input
+ <label> -<input type="checkbox" /> **Take note of your server's hostname** <input
     type="text"
     name="server-name"
     id="server-name"

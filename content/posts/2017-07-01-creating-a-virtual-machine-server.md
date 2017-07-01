@@ -84,6 +84,10 @@ Now, get your OS ISO and run `scp /path/to/os.iso <server-name>:/home/<user>/` t
 
 You could use the command line, but I have not gone down that road and will be using [virt-manager.org] which I've installed locally. I was installed [RancherOS][Rancheros] as I want to learn Docker and devops orientated skills, but through [virt-manager.org] it is
 
+## What's next?
+
+As I have stated in the previous step, I said for you to get your chosen OS. My OS will be mainly [Rancheros] for running [Docker][docker] containers in order for me to extend my skills. As well as writing about installing and configuring [Rancheros], I will be writing about getting the RAID array configured to allow for extra storage/persistance for containers.
+
 
 ### Caveats
 
@@ -96,6 +100,7 @@ You could use the command line, but I have not gone down that road and will be u
 [SSH config post]: http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/
 [virt-manager.org]: http://virt-manager.org/
 [Rancheros]: http://rancher.com
+[Docker]: http://docker.com
 
 
 <script>

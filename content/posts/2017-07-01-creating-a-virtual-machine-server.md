@@ -96,14 +96,16 @@ You could use the command line, but I have not gone down that road and will be u
 <script>
     var serverName = document.getElementById('server-name'), searchValue = '&lt;server-name&gt;';
     serverName.addEventListener('blur', function(event) {
-        var pTags = document.querySelectorAll('p,pre');
-        for (var i=0; i < pTags.length; i++) {
-            var tag = pTags[i];
-            if (tag.innerHTML.search(searchValue) !== -1) {
-                var replacement = tag.innerHTML.replace(searchValue, this.value);
-                tag.innerHTML = replacement;
+        if (this.value !== "") {
+            var pTags = document.querySelectorAll('p,pre');
+            for (var i=0; i < pTags.length; i++) {
+                var tag = pTags[i];
+                if (tag.innerHTML.search(searchValue) !== -1) {
+                    var replacement = tag.innerHTML.replace(searchValue, this.value);
+                    tag.innerHTML = replacement;
+                }
             }
+            searchValue = this.value;
         }
-        searchValue = this.value;
     });
 </script>

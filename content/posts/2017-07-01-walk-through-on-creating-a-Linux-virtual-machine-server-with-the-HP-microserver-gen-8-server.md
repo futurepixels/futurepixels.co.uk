@@ -1,6 +1,6 @@
 +++
-title = "Creating a home virtual machine server"
-description = "My walk through on creating a server to host virtual machines"
+title = "Creating a Linux virtual machine server with the HP microserver gen 8 server"
+description = "My walk through on creating a Linux virtual machine server with the HP microserver gen 8 server"
 date = "2017-07-01T01:11:57Z"
 +++
 

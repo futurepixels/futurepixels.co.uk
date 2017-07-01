@@ -55,7 +55,7 @@ Last login: Fri Jun 30 18:22:57 2017 from <your-client-ip-address>
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
-<user>@pixel-lab:~$
+<user>@<server-name>:~$
 
 ```
 

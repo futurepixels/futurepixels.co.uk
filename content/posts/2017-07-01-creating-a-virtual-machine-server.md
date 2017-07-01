@@ -5,6 +5,23 @@ date = "2017-07-01T01:11:57Z"
 draft = true
 +++
 
+<style>
+label {
+    display: inline-block;
+}
+input[type="text"] {
+    border-left-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #2a6496;
+    color: #428bca;
+    padding:4px 6px;
+    vertical-align:top;
+}
+</style>
+
 I am using:
 
  - [HP MicroServer Gen 8][HP MicroServer]
@@ -28,9 +45,15 @@ Download the Ubuntu Server ISO [here][Ubuntu server] and follow [this](futurepix
 
 Using a USB input on the server (I used the internal one), insert the USB with the Ubuntu Server installer.
 
- - <input type="checkbox" /> **Ensure you have enabled the `Open SSH Server` and the `Virtual Machine Host` option's on installation**
+ - <label><input type="checkbox" /> **Ensure you have enabled the `Open SSH Server` and the `Virtual Machine Host` option's on installation**</label>
 
- - <input type="checkbox" /> **Take note of your server's hostname** <input type="text" name="server-name" id="server-name" placeholder="Add your server name here"/>
+ - <label><input type="checkbox" /> **Take note of your server's hostname** <input
+    type="text"
+    name="server-name"
+    id="server-name"
+    placeholder="Add your server name here"
+    title="add your servername here and I will replace '<server-name' to give more context to the article"/>
+</label>
 
 Turn on your server and wait for it to boot - you may need to press `F11` to boot the USB drive. Follow the on screen instructions to install your Ubuntu Server instance.
 

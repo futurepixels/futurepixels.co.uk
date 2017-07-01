@@ -4,23 +4,6 @@ description = "My walk through on creating a server to host virtual machines"
 date = "2017-07-01T01:11:57Z"
 +++
 
-<style>
-label {
-    display: inline-block;
-}
-input[type="text"] {
-    border-left-width: 0;
-    border-top-width: 0;
-    border-right-width: 0;
-    border-bottom-width: 1px;
-    border-style: solid;
-    border-color: #2a6496;
-    color: #428bca;
-    padding:4px 6px;
-    vertical-align:top;
-}
-</style>
-
 I am using:
 
  - [HP MicroServer Gen 8][HP MicroServer]

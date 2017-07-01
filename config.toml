@@ -1,6 +1,6 @@
 baseurl = "http://futurepixels.co.uk/"
 theme = "futurepixels"
-builddrafts = true
+builddrafts = false
 canonifyurls = true
 contentdir = "content"
 languageCode = "en-GB"

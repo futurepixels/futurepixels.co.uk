@@ -113,7 +113,7 @@
 @font-face {
   font-family: 'Nexa Bold';
   src: url('../fonts/Nexa Bold.otf');
-}0
+}
 .dark {
   color: #333333 !important;
 }
@@ -714,6 +714,7 @@ section.main .content .markdown pre {
   font-family: 'Ubuntu Mono', 'Menlo', monospace;
   font-size: 0.98rem;
   background-color: #f7f7f7;
+  overflow: scroll;
 }
 section.main .content .markdown code {
   /* enclosed by single backtick (`) */

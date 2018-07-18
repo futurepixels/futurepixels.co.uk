@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://futurepixels.co.uk/posts/creating-a-ci--cd-pipeline-with-gitlab-rancher-and-digital-ocean/</loc>
+    <lastmod>2018-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</loc>
+    <lastmod>2018-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</loc>
     <lastmod>2017-07-01T01:11:57+00:00</lastmod>
   </url>
@@ -78,13 +88,13 @@
   
   <url>
     <loc>http://futurepixels.co.uk/</loc>
-    <lastmod>2017-07-01T01:11:57+00:00</lastmod>
+    <lastmod>2018-07-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://futurepixels.co.uk/posts/</loc>
-    <lastmod>2017-07-01T01:11:57+00:00</lastmod>
+    <lastmod>2018-07-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

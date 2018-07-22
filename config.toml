@@ -10,6 +10,7 @@ author = "Nigel Greenway"
 title = "Futurepixels"
 disqusshortname = ""
 pluralizelisttitles = false
+googleAnalytics = "UA-45501754-1"
 
 [permalinks]
 posts = "posts/:slug/"

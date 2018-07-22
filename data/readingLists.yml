@@ -34,9 +34,9 @@ readingList:
     url: http://www.amazon.co.uk/dp/0692232699/ref=cm_sw_r_tw_dp_5GoHwb1562GN7
     author: Phil Sturgeon
     authorUrl: https://twitter.com/philsturgeon
-
-wishList:
   - title: Pro Vim
     url: http://www.amazon.co.uk/dp/1484202511/ref=cm_sw_r_tw_dp_yOoHwb1HKNTQN
     author: Mark McDonnell
     authorUrl: https://twitter.com/integralist
+
+wishList:

@@ -39,9 +39,9 @@ I've decided that the best way to do this would be by breaking each part of the 
 So, I've broken them down into the following:
 
  - [An overview of my GitLab pipeline](/posts/my-gitlab-ci-cd-pipeline-overview)
+ - [Setting up Rancher with Digital Ocean](/posts/setting-up-rancher-with-digital-ocean/)
  - Deploying GitLab to a self hosted instance on Digital Ocean
  - What are the benefits of GitLab?
- - Setting up Rancher
  - Creating the droplet (VM) for your application deployment destination
  - Set up review zones
  - Set up staging zone

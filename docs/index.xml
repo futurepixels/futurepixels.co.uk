@@ -6,10 +6,31 @@
     <description>Recent content on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 17 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setting up Rancher (with Digital Ocean)</title>
+      <link>http://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</guid>
+      <description>What is Rancher? Rancher comes in two parts (the first being optional). You have the Rancher Distro and the Rancher Orchestration Tool.
+The first part is the Rancher Distro. This is pretty awesome. I know, &amp;ldquo;another distro&amp;rdquo; I can hear you say - but this is pretty clever: it is a distro for Docker. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker.</description>
+    </item>
+    
+    <item>
+      <title>My GitLab CI CD Pipeline overview</title>
+      <link>http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</guid>
+      <description>My pipeline This is a continued post from Creating a CI &amp;amp; CD pipeline with GitLab, Rancher and Digital Ocean.
+So, I am using the following tools:
+ GitLab Docker  GitLab is an alternative to GitHub. I&amp;rsquo;ve been trying it out for about 6 to 8 months and finding it very well thought out and fully featured. The main bonus is that you can host it yourself so your code can be truly private and controlled.</description>
+    </item>
     
     <item>
       <title>Creating a CI &amp; CD pipeline with GitLab, Rancher and Digital Ocean</title>
@@ -19,17 +40,6 @@
       <guid>http://futurepixels.co.uk/posts/creating-a-ci--cd-pipeline-with-gitlab-rancher-and-digital-ocean/</guid>
       <description>Setting the scene Over the past 2 years I&amp;rsquo;ve been working at First Utility and in that time I have worked with an awesome team - which, in turn has allowed me to pick up a lot of useful methods and learn some pretty amazing stuff.
 One thing I got into was running my own servers for things like OwnCloud, GitLab and other useful tools. I have a HP MicroServer which allowed me to practice on but I was fed up of running a server from home with running both a server and a nameserver.</description>
-    </item>
-    
-    <item>
-      <title>My GitLab CI CD Pipeline overview</title>
-      <link>http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</link>
-      <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</guid>
-      <description>My pipeline This is a continued post from Creating a CI &amp;amp; CD pipeline with GitLab, Rancher and Digital Ocean.
-So, I am using the following tools:
- GitLab Docker  GitLab is an alternative to GitHub. I&amp;rsquo;ve been trying it out for about 6 to 8 months and finding it very well thought out and fully featured. The main bonus is that you can host it yourself so your code can be truly private and controlled.</description>
     </item>
     
     <item>

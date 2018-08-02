@@ -1,7 +1,7 @@
 +++
 description = "An initial overview of my GitLab CI pipeline"
 title = "My GitLab CI CD Pipeline overview"
-date = "2018-07-17T00:00:00Z"
+date = "2018-07-18T00:00:00Z"
 +++
 
 ## My pipeline

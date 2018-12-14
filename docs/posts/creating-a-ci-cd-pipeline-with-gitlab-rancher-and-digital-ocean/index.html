@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Articles on general development and programming along with other findings... oh, and a gallery.">
+
+
+    <meta property="twitter:site" content="@NigelGreenway">
+
+<meta property="twitter:title" content="Creating a CI &amp; CD pipeline with GitLab, Rancher and Digital Ocean">
+
+    <meta property="twitter:card" content="summary">
+
+<meta property="twitter:description" content="A documentation of my initial set up and discovery of dev ops tooling">
+
+<title>
+
+
+     Futurepixels - Creating a CI &amp; CD pipeline with GitLab, Rancher and Digital Ocean 
+
+</title>
+<link rel="canonical" href="http://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/">
+
+
+<link rel="stylesheet" href="http://futurepixels.co.uk/css/main.v0.9.1.css">
+<link rel="stylesheet" href="http://futurepixels.co.uk/css/ionicons.min.css">
+
+
+  <link rel="stylesheet" href="http://futurepixels.co.uk/css/highlight.min.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon"
+
+    href="http://futurepixels.co.uk/img/logo.png"
+
+>
+
+
+
+
+</head>
+
+
+<body>
+
+<section class="header">
+    <div class="container" style="border: 1px solid #428bca; padding: 5px 10px; background-color: #428bca1a;">
+        <div class="content">
+            <p>okay, shameless plug time… My wife is doing a 3 day trek of Mount Toubkal in Morocco next September and needs to raise £2000 for https://www.ssafa.org.uk/. Please donate to <a href="https://mydonate.bt.com/fundraisers/emmagreenway1">mydonate.bt.com</a> to help her on this amazing experience - Thank you</p>
+        </div>
+    </div>
+</section>
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="http://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <nav>
+                <ul>
+                    <a href="http://futurepixels.co.uk/posts/"><li >Posts</li></a>
+                    <a href="http://futurepixels.co.uk/bookshelf/"><li >Book Shelf</li></a>
+                    <a href="http://futurepixels.co.uk/whoami/"><li >Whoami</li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Creating a CI &amp; CD pipeline with GitLab, Rancher and Digital Ocean
+
+</div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Tue Jul 17 2018 00:00:00 UTC">Jul 17, 2018</div>
+                    <div class="reading-time"><div class="middot"></div>4 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    
+
+<h2 id="a-href-setting-the-scene-id-setting-the-scene-setting-the-scene-a"><a href="#setting-the-scene" id="setting-the-scene">Setting the scene</a></h2>
+
+<p>Over the past 2 years I&rsquo;ve been working at First Utility and in that time I have worked with an awesome team - which, in turn has allowed me to pick up a lot of useful methods and learn some pretty amazing stuff.</p>
+
+<p>One thing I got into was running my own servers for things like OwnCloud, GitLab and other useful tools. I have a HP MicroServer which allowed me to practice on but I was fed up of running a server from home with running both a server and a nameserver. So, after much playing around I decided to have a play around with <a href="https://m.do.co/c/7ceb48d8e994">Digital Ocean</a>.</p>
+
+<p>This is some documentation to show what I&rsquo;ve got set up and how I got to where I am today. There will be some follow up post&rsquo;s on how to set up each application to show my configurations and setup.</p>
+
+<h2 id="a-href-continuous-integration-id-continuous-integration-continuous-integration-a"><a href="#continuous-integration" id="continuous-integration">Continuous Integration</a></h2>
+
+<p>I&rsquo;m not going to get into what this is as its better explained <a href="https://martinfowler.com/articles/continuousIntegration.html">here</a>, but the gist of it is:</p>
+
+<blockquote>
+<p>Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly. This article is a quick overview of Continuous Integration summarizing the technique and its current usage.</p>
+</blockquote>
+
+<p>In simpler terms, you create your feature with tests, push to your code&rsquo;s repository and something will run the tests for you as well as using other tools like linting and so on.</p>
+
+<p>For me, it&rsquo;s a way of coding and pushing my code to allow my build server/service to run the tests for me as I don&rsquo;t want to be running both unit and functional tests locally. I generally work with my implementation and unit test side-by-side with the test framework watching for file changes so it can re-run the tests automatically so I can see bugs/failures quickly. I don&rsquo;t want my functional tests running as well, making me wait for these to run. <em>(Some people will disagree withis style, but for me it&rsquo;s about learning your tradeoffs and where certain tools can assist you)</em></p>
+
+<h2 id="a-href-continuous-deployments-id-continuous-deployments-continuous-deployments-a"><a href="#continuous-deployments" id="continuous-deployments">Continuous Deployments</a></h2>
+
+<p>Continuous deployment can be confused with continuous delivery (well, I got confused between the two for a while). They are different only by a single phase in the delivery process.</p>
+
+<p>With continuous delivery, you prove that your feature or release has passed the unit, user acceptance and feature tests and <em>can</em> be released.</p>
+
+<p>Continuous deployment is where you do the above, but you have automatic deployments (which means you should have confidence in your tests and product). The downside is that if something is missed you have bugs being deployed - but that is no different to the manual process of regression and deployments. The upside to this, is that if a bug does slip though the net - and lets be honest, <em>everyone</em> does it from time-to-time - then you can fix this &ldquo;quickly&rdquo; and release the patch. Sometimes within minutes of it happening.</p>
+
+<p><em>(This is providing you are working with the web, or something/somewhere which you have full control of, of course - like the web or an internal business tool)</em></p>
+
+<h2 id="a-href-show-me-the-pipeline-id-show-me-the-pipeline-show-me-the-pipeline-a"><a href="#show-me-the-pipeline" id="show-me-the-pipeline">Show me the pipeline</a></h2>
+
+<p>I&rsquo;ve decided that the best way to do this would be by breaking each part of the workflow/process or whatever you want to call it down into smaller articles. This <em>should</em> make it easier to both take in what I&rsquo;m doing and trying to achieve as well as making the articles smaller to read&hellip; <em>Not a fan of these huge articles.</em></p>
+
+<p>So, I&rsquo;ve broken them down into the following:</p>
+
+<ul>
+<li><a href="http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview">An overview of my GitLab pipeline</a></li>
+<li><a href="http://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/">Setting up Rancher with Digital Ocean</a></li>
+<li>Deploying GitLab to a self hosted instance on Digital Ocean</li>
+<li>What are the benefits of GitLab?</li>
+<li>Creating the droplet (VM) for your application deployment destination</li>
+<li>Set up review zones</li>
+<li>Set up staging zone</li>
+<li>Set up production zone</li>
+</ul>
+
+
+                <br>
+                <p>
+                
+                    <a href="http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/" style="float:left;">Previous</a>
+                
+                
+                    <a href="http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/" style="float:right;">Next</a>
+                
+                </p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="img-viewer" class="image-viewer">
+    <img src="">
+</div>
+
+<script>
+    var articleImages = document.querySelectorAll('section.main img'),
+        imageViewer = document.getElementById('img-viewer');
+
+    articleImages.forEach( function (img) {
+        img.addEventListener('click', function (event) {
+            imageViewer.querySelector('img').src = img.src;
+            imageViewer.style.display="block";
+        });
+    });
+
+    imageViewer.addEventListener('click', function (event) {
+        this.style.display="none";
+    });
+</script>
+
+<section class="footer">
+    <div class="container">
+        <div class="copyright">
+
+        
+
+        </div>
+        <div class="icons">
+
+        
+            <a href="https://github.com/NigelGreenway" target="_blank">
+                <i class="icon ion-social-github" title="github"></i>
+            </a>
+        
+
+        
+            <a href="https://twitter.com/NigelGreenway" target="_blank">
+                <i class="icon ion-social-twitter" title="twitter"></i>
+            </a>
+        
+
+        
+            <a href="https://www.linkedin.com/in/nigel-greenway-a5710a45" target="_blank">
+                <i class="icon ion-social-linkedin" title="linkedin"></i>
+            </a>
+        
+
+        
+            <a href="mailto:github@futurepixels.co.uk">
+                <i class="icon ion-ios-email larger" title="email"></i>
+            </a>
+        
+
+        
+            <a href="http://futurepixels.co.uk/index.xml">
+                <i class="icon ion-social-rss larger" title="rss"></i>
+            </a>
+        
+
+        </div>
+    </div>
+</section>
+
+
+  <script src="http://futurepixels.co.uk/js/highlight.min.js" defer></script>
+  
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+  };
+</script>
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-45501754-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+</body>
+</html>
+

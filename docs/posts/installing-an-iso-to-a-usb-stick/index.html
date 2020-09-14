@@ -55,13 +55,6 @@
 <body>
 
 <section class="header">
-    <div class="container" style="border: 1px solid #428bca; padding: 5px 10px; background-color: #428bca1a;">
-        <div class="content">
-            <p>okay, shameless plug time… My wife is doing a 3 day trek of Mount Toubkal in Morocco next September and needs to raise £2000 for <a href="https://www.ssafa.org.uk/">ssafa.org.uk</a>. Please donate to <a href="https://mydonate.bt.com/fundraisers/emmagreenway1">mydonate.bt.com</a> to help her on this amazing experience - Thank you</p>
-        </div>
-    </div>
-</section>
-<section class="header">
     <div class="container">
         <div class="content">
             <a href="http://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
@@ -98,91 +91,72 @@
     <blockquote>
 <p>I am working from Linux, please submit a pull request to add instructions for Windows/Mac</p>
 </blockquote>
-
 <p>First thing is first, download the iso you want to use as a live disk.</p>
-
 <p>To install to a usb stick, you run <code>sudo dd if=/location/of/the.iso of=/dev/X</code>, where <code>x</code> is the USB stick. To find the device you want to install, before inserting the stick run <code>[sudo] fdisk -l</code>. You should be given the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">→ sudo fdisk -l
 
-<pre><code class="language-bash">→ sudo fdisk -l
-
-Disk /dev/sda: 119.2 GiB, 128035676160 bytes, 250069680 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk /dev/sda: 119.2 GiB, <span style="color:#ae81ff">128035676160</span> bytes, <span style="color:#ae81ff">250069680</span> sectors
+Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">4096</span> bytes
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">4096</span> bytes / <span style="color:#ae81ff">4096</span> bytes
 Disklabel type: gpt
 Disk identifier: xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
 
 Device        Start       End   Sectors  Size Type
-/dev/sda1      2048  58593279  58591232   28G Linux filesystem
-/dev/sda2  58593280  58597375      4096    2M BIOS boot
-/dev/sda3  74217472 250068991 175851520 83.9G Linux filesystem
-/dev/sda4  58597376  74217471  15620096  7.5G Linux swap
+/dev/sda1      <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">58593279</span>  <span style="color:#ae81ff">58591232</span>   28G Linux filesystem
+/dev/sda2  <span style="color:#ae81ff">58593280</span>  <span style="color:#ae81ff">58597375</span>      <span style="color:#ae81ff">4096</span>    2M BIOS boot
+/dev/sda3  <span style="color:#ae81ff">74217472</span> <span style="color:#ae81ff">250068991</span> <span style="color:#ae81ff">175851520</span> 83.9G Linux filesystem
+/dev/sda4  <span style="color:#ae81ff">58597376</span>  <span style="color:#ae81ff">74217471</span>  <span style="color:#ae81ff">15620096</span>  7.5G Linux swap
 
 Partition table entries are not in disk order.
-</code></pre>
-
-<p>You are looking for the line <code>Disk /dev/xxx: x.xGiB ...</code>. Take note of what is already there&hellip;</p>
-
+</code></pre></div><p>You are looking for the line <code>Disk /dev/xxx: x.xGiB ...</code>. Take note of what is already there&hellip;</p>
 <p>Now, insert your USB stick and run <code>[sudo] fdisk -l</code> again and you should get an extra addition. In my example above, I originally had <code>/dev/sda</code> which is my laptop HDD. After inserting the disk (below), I now have <code>/dev/sda</code> and <code>/dev/sdb</code>. I now have<code>sdb</code> which is my USB stick.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">→ sudo fdisk -l
 
-<pre><code class="language-bash">→ sudo fdisk -l
-
-Disk /dev/sda: 119.2 GiB, 128035676160 bytes, 250069680 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk /dev/sda: 119.2 GiB, <span style="color:#ae81ff">128035676160</span> bytes, <span style="color:#ae81ff">250069680</span> sectors
+Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">4096</span> bytes
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">4096</span> bytes / <span style="color:#ae81ff">4096</span> bytes
 Disklabel type: gpt
 Disk identifier: xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
 
 Device        Start       End   Sectors  Size Type
-/dev/sda1      2048  58593279  58591232   28G Linux filesystem
-/dev/sda2  58593280  58597375      4096    2M BIOS boot
-/dev/sda3  74217472 250068991 175851520 83.9G Linux filesystem
-/dev/sda4  58597376  74217471  15620096  7.5G Linux swap
+/dev/sda1      <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">58593279</span>  <span style="color:#ae81ff">58591232</span>   28G Linux filesystem
+/dev/sda2  <span style="color:#ae81ff">58593280</span>  <span style="color:#ae81ff">58597375</span>      <span style="color:#ae81ff">4096</span>    2M BIOS boot
+/dev/sda3  <span style="color:#ae81ff">74217472</span> <span style="color:#ae81ff">250068991</span> <span style="color:#ae81ff">175851520</span> 83.9G Linux filesystem
+/dev/sda4  <span style="color:#ae81ff">58597376</span>  <span style="color:#ae81ff">74217471</span>  <span style="color:#ae81ff">15620096</span>  7.5G Linux swap
 
 Partition table entries are not in disk order.
-Disk /dev/sdb: 29.8 GiB, 32010928128 bytes, 62521344 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk /dev/sdb: 29.8 GiB, <span style="color:#ae81ff">32010928128</span> bytes, <span style="color:#ae81ff">62521344</span> sectors
+Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
 Disklabel type: gpt
 Disk identifier: xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
 
 Device     Start      End  Sectors  Size Type
-/dev/sdb1   2048 62519295 62517248 29.8G Linux filesystem
-</code></pre>
-
-<p>I can now install my ISO to my usb stick via <code>[sudo] dd if=/home/&lt;username&gt;/Downloads/some-live-disk.iso of=/dev/sdb</code>.</p>
-
-<pre><code class="language-bash">→ sudo dd if=/home/nigel/Downloads/rancheros.iso of=/dev/sdb
+/dev/sdb1   <span style="color:#ae81ff">2048</span> <span style="color:#ae81ff">62519295</span> <span style="color:#ae81ff">62517248</span> 29.8G Linux filesystem
+</code></pre></div><p>I can now install my ISO to my usb stick via <code>[sudo] dd if=/home/&lt;username&gt;/Downloads/some-live-disk.iso of=/dev/sdb</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">→ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/home/nigel/Downloads/rancheros.iso of<span style="color:#f92672">=</span>/dev/sdb
 83968+0 records in
 83968+0 records out
-42991616 bytes (43 MB) copied, 9.68235 s, 4.4 MB/s
-</code></pre>
-
-<p>You can now see above that the ISO has been copied above. You should now be able to insert onto you server/laptop/desktop and boot directly for that USB stick. Great for testing a new Linux distrubution outside of a virtual machine.</p>
-
-<pre><code class="language-bash">$ sudo fdisk -l
-Disk /dev/sda: 298.1 GiB, 320072933376 bytes, 625142448 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
+<span style="color:#ae81ff">42991616</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">43</span> MB<span style="color:#f92672">)</span> copied, 9.68235 s, 4.4 MB/s
+</code></pre></div><p>You can now see above that the ISO has been copied above. You should now be able to insert onto you server/laptop/desktop and boot directly for that USB stick. Great for testing a new Linux distrubution outside of a virtual machine.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo fdisk -l
+Disk /dev/sda: 298.1 GiB, <span style="color:#ae81ff">320072933376</span> bytes, <span style="color:#ae81ff">625142448</span> sectors
+Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
 Disklabel type: dos
 Disk identifier: 0x5bbb7b73
 
 Device Boot Start End Sectors Size Id Type
-/dev/sda1 * 2048 625142447 625140400 298.1G 83 Linux
-</code></pre>
-
-<p>Above, it shows I have a disk that is /dev/sda. I now want to delete this partition. There are two ways of doing this; via command line or a graphical display.</p>
-
-<p>To do via a graphical display, simply create a live CD/DVD/USB linux disc (think Ubuntu/ElementaryOS live disc) and fire up <a href="http://gparted.org/" target="_blank">GParted</a> and format the disk.</p>
-
+/dev/sda1 * <span style="color:#ae81ff">2048</span> <span style="color:#ae81ff">625142447</span> <span style="color:#ae81ff">625140400</span> 298.1G <span style="color:#ae81ff">83</span> Linux
+</code></pre></div><p>Above, it shows I have a disk that is /dev/sda. I now want to delete this partition. There are two ways of doing this; via command line or a graphical display.</p>
+<p>To do via a graphical display, simply create a live CD/DVD/USB linux disc (think Ubuntu/ElementaryOS live disc) and fire up <!-- raw HTML omitted -->GParted<!-- raw HTML omitted --> and format the disk.</p>
 <p>To do via the command line, I use fdisk.</p>
-
-<pre><code class="language-bash">$ sudo fdisk /dev/sda
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo fdisk /dev/sda
+</code></pre></div>
 
                 <br>
                 <p>

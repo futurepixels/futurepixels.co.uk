@@ -55,13 +55,6 @@
 <body>
 
 <section class="header">
-    <div class="container" style="border: 1px solid #428bca; padding: 5px 10px; background-color: #428bca1a;">
-        <div class="content">
-            <p>okay, shameless plug time… My wife is doing a 3 day trek of Mount Toubkal in Morocco next September and needs to raise £2000 for <a href="https://www.ssafa.org.uk/">ssafa.org.uk</a>. Please donate to <a href="https://mydonate.bt.com/fundraisers/emmagreenway1">mydonate.bt.com</a> to help her on this amazing experience - Thank you</p>
-        </div>
-    </div>
-</section>
-<section class="header">
     <div class="container">
         <div class="content">
             <a href="http://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
@@ -95,118 +88,71 @@
             </div>
             <div class="markdown">
                 
-    
-
-<h1 id="a-href-what-is-rancher-id-what-is-rancher-what-is-rancher-a"><a href="#what-is-rancher" id="what-is-rancher">What is Rancher?</a></h1>
-
-<p><a href="https://rancher.com">Rancher</a> comes in two parts (the first being optional). You have the <a href="https://rancher.com/rancher-os/">Rancher Distro</a> and the <a href="I am currently using 1.6, which is where the docs point too">Rancher Orchestration Tool</a>.</p>
-
+    <h1 id="a-hrefwhat-is-rancher-idwhat-is-rancherwhat-is-ranchera"><!-- raw HTML omitted -->What is Rancher?<!-- raw HTML omitted --></h1>
+<p><a href="https://rancher.com">Rancher</a> comes in two parts (the first being optional). You have the <a href="https://rancher.com/rancher-os/">Rancher Distro</a> and the <a href="https://rancher.com/docs/rancher/v1.6/en/">Rancher Orchestration Tool</a> (I am currently using 1.6, which is where the docs point too).</p>
 <p>The first part is the <a href="https://rancher.com/rancher-os/">Rancher Distro</a>. This is pretty awesome. I know, &ldquo;<em>another distro</em>&rdquo; I can hear you say - but this is pretty clever: it is a distro for <a href="https://docker.com">Docker</a>. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker. Want to use the Debian, Ubuntu or Centos console for example, you can do. Configuration is easy enough too as it uses a <a href="https://cloud-init.io">cloud-init</a> based configuration which is a standard for system templates. <em>Note that this won&rsquo;t be required in this walk through.</em></p>
-
 <p>For example, if you want to provision a new instance you can set your SSH keys in the <code>cloud-init.yml</code> like so:</p>
-
 <pre><code>ssh_authorized_keys:
   - ssh-rsa AAA...ZZZ user@example
-</code></pre>
-
-<p>This way, when you provision the new server, you will have your ssh key set up straight away on that instance. This can extend to things like DNS settings, static IP addresses and so on.</p>
-
+</code></pre><p>This way, when you provision the new server, you will have your ssh key set up straight away on that instance. This can extend to things like DNS settings, static IP addresses and so on.</p>
 <blockquote>
 <p>I&rsquo;ve used this locally on my <a href="http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-serve:rboard.org/k">HP Micro Server</a> and it worked really well but my home connection was a dynamic IP address and the server is not much of a spec for what I wanted. So, if you have a server at home you can replace the <a href="https://digitalocean.com">Digital-Ocean</a> parts with the steps you need to run on your server.</p>
-
 <p>Alternatively, if you have Virtual Box or similar installed then you can grab <a href="https://github.com/rancher/os/releases">RancherOS</a> and try it out.</p>
 </blockquote>
-
 <p>The second part is the management portal. This is the UI that allows you to manage multiple hosts with multiple containers. I have three hosts currently, one which runs my <a href="https://rancher.com/docs/rancher/v1.6/en/">Rancher Orchestration Tool</a> and <a href="https://kanboard.org">Kanboard</a> and another for my <a href="https://gitlab.com">GitLab</a> instance. The third is for someone I manage a website for.</p>
-
 <p>When running <a href="https://rancher.com">Rancher</a> you are able to manage all your containers on a single host but are still able separate them out. These are called stacks.</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/stack-example.png" alt="An example of a Rancher stack" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/stack-example.png" alt="An example of a Rancher stack">
 [fig 1.1]</p>
-
 <p>As you can see above (fig 1.1), I have two stacks. The first is for my certificates via <a href="https://letsencrypt.org/">LetsEncrypt</a> and the second is my <a href="https://gitlab.com">GitLab</a> stack, this contains GitLab, a runner and the load balancer.</p>
-
 <p>I am able to drill down into each service and modify as I need (fig 1.2).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/service-example.png" alt="An example of a service in Rancher" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/service-example.png" alt="An example of a service in Rancher">
 [fig 1.2]</p>
-
 <p>You get a fair amount of control and access:</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/container-context-menu.png" alt="Container context menu" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/container-context-menu.png" alt="Container context menu">
 [fig 1.3]</p>
-
 <p>You can manage the container by restarting, stopping or deleting it as well as executing the shell and viewing the logs (providing the container has been set up with logs being sent to stdout and stderr) (fig 1.3). You are able to then drill down further into the container to see system statistics and other information (fig 1.4).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/container-example.png" alt="An example of container information" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/container-example.png" alt="An example of container information">
 [fig 1.4]</p>
-
 <p>One of the favourable parts of <a href="https://rancher.com">Rancher</a> from my point of view is the upgrading process. Out of the box, it supports <a href="https://www.martinfowler.com/bliki/BlueGreenDeployment.html">Blue Green Deployments</a>. In a nut shell, it allows ease of rollbacks when deploying new versions of software whilst harnessing the power of <a href="https://docker.com">Docker</a>. For example; if I have a web site and I want to change the background from white to grey, I build the docker image via <a href="http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/">my CI pipepline</a> and then deploy it via the Rancher API and tell it to <em>not</em> finish the upgrade process. As you can see in fig 1.5, I have two containers which are both the same application but different tags. If the new tag was broken for what ever reason after the deployment then I can easily rollback to the last working state by clicking on &ldquo;Rollback&rdquo; on the context menu for the service (fig 1.2).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/upgrading-container-example.png" alt="An example of a container upgrade" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/upgrading-container-example.png" alt="An example of a container upgrade">
 [fig 1.5]</p>
-
 <blockquote>
 <p>The Rancher API is <em>very</em> powerful and allows you to do a fair amount of automation with it, which is great from a DevOps point of view. To help with this there is a great tool out there <a href="https://github.com/cdrx/rancher-gitlab-deploy#help">cdrx/rancher-gitlab-deploy</a> where if you use Docker as part of you pipeline, you are able to run this to do most of the communication to your Rancher API.</p>
 </blockquote>
-
 <p><em>You can run <a href="https://rancher.com">Rancher</a> locally (providing you have <a href="https://docker.com">Docker</a> installed) by running:</em></p>
-
 <pre><code>sudo docker run -d -v ./:/var/lib/mysql --restart=unless-stopped -p 80:8080 rancher/server
-</code></pre>
-
-<p>and then point to <code>localhost</code> and you should see the UI ready for you to set up.</p>
-
-<h1 id="a-href-setting-it-up-with-digital-ocean-id-setting-it-up-with-digital-ocean-setting-it-up-with-digital-ocean-a"><a href="#setting-it-up-with-digital-ocean" id="setting-it-up-with-digital-ocean">Setting it up with Digital Ocean</a></h1>
-
+</code></pre><p>and then point to <code>localhost</code> and you should see the UI ready for you to set up.</p>
+<h1 id="a-hrefsetting-it-up-with-digital-ocean-idsetting-it-up-with-digital-oceansetting-it-up-with-digital-oceana"><!-- raw HTML omitted -->Setting it up with Digital Ocean<!-- raw HTML omitted --></h1>
 <p>Now, for people that have not used <a href="https://digitalocean.com">Digital-Ocean</a> this is a great tool for cloud based infrastructure. It makes building an infrastructure quick and easy, and gives you management for the VM&rsquo;s as well as DNS management, load balancing, firewalls and so on&hellip;</p>
-
 <p>I&rsquo;m not going into it more than that as they have so much to give - including an amazing range of <a href="https://www.digitalocean.com/community/tutorials">community tutorials</a> to help you along (which have helped me a numerous amount of times).</p>
-
 <p><em>The following section is for people with a <a href="https://digitalocean.com">Digital-Ocean</a> account. If you don&rsquo;t have one, I have a <a href="https://m.do.co/c/7ceb48d8e994">Digital-Ocean referral link</a> which will give you $10 credit. It really is cheap to spin up droplets, even if you wanted to try something for a few hours.</em></p>
-
 <p><em><strong>Please be warned, this could charge you money depending on if your account has a credit or not</strong></em></p>
-
 <p>To get the <a href="https://rancher.com/docs/rancher/v1.6/en/">Rancher Orchestration Tool</a> up and running on <a href="https://digitalocean.com">Digital-Ocean</a>, follow these steps:</p>
-
 <ul>
 <li>Select a project you already have or create a new one for this particular exercise.</li>
 <li>Click on &ldquo;Create a Droplet&rdquo; (once this starts running, you will be charged by the hour)</li>
 <li>Select the tab named &ldquo;Container distributions&rdquo; and then choose &ldquo;RancherOS&rdquo; then &ldquo;v1.4.0&rdquo; (fig 2.1)</li>
 </ul>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/choosing-rancheros-in-digital-ocean.png" alt="Choosing RancherOS as the OS for a Digital Ocean Droplet" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/choosing-rancheros-in-digital-ocean.png" alt="Choosing RancherOS as the OS for a Digital Ocean Droplet">
 [fig 2.1]</p>
-
 <ul>
 <li>Next, select the Droplet you want to run with. <em>I am running mine on a Droplet that is 2GB of memory and 2vCPUs and is $10/mo or $0.015/hr, so even for four hours of playing around then it will still only cost $0.06</em></li>
 <li>Select the data center region (I&rsquo;ve chosen &ldquo;London&rdquo; as I&rsquo;m a UK resident)</li>
 <li>The next part is important, &ldquo;Add your SSH keys&rdquo;. On this particular Droplet you must use your (local) SSH key otherwise you will not be able to create the Droplet. If you haven&rsquo;t uploaded one yet, click the &ldquo;New SSH Key&rdquo; and you can paste the contents of you <em>public</em>  key within this process. Please remember to only paste the contents of your <code>.pub</code> key.</li>
 <li>Then, under &ldquo;Finalize and create&rdquo; keep the Droplet count at one. Update the hostname if you wish and add some tags like &ldquo;ci cicd-management rancher&rdquo;</li>
 </ul>
-
 <p>Now, hit that &ldquo;Create&rdquo; button and you will be taken to your project page with the Droplet having been created (fig 2.2).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/droplet-created.png" alt="A successful Droplet created" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/droplet-created.png" alt="A successful Droplet created">
 [fig 2.2]</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/droplet-dashboard-header.png" alt="The Droplet dashboard header" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/droplet-dashboard-header.png" alt="The Droplet dashboard header">
 [fig 2.3]</p>
-
 <p>Once you Droplet has booted, copy the IP address and you should now be able to SSH into your local machine with <code>ssh rancher@&lt;droplet-ip-address&gt;</code> and you will be asked the following, type in &ldquo;yes&rdquo; and you should now be logged into you Rancher OS droplet.</p>
-
 <pre><code>The authenticity of host '&lt;droplet-ip-address&gt; (&lt;droplet-ip-address&gt;)' can't be established.
 ECDSA key fingerprint is SHA256:ABC...XYZ.
 Are you sure you want to continue connecting (yes/no)?
-</code></pre>
-
-<p>Once in, paste the following snippet to get your UI up and running:</p>
-
+</code></pre><p>Once in, paste the following snippet to get your UI up and running:</p>
 <pre><code>sudo docker run -d -v /var/lib/mysql:/var/lib/mysql --restart=unless-stopped -p 80:8080 rancher/server
-</code></pre>
-
-<p>Broken down, it does the following:</p>
-
+</code></pre><p>Broken down, it does the following:</p>
 <ul>
 <li><code>docker run -d</code>: run the container in the background and print the container ID</li>
 <li><code>-v /var/lib/mysql:/var/lib/mysql</code>: mount a volume between the host OS and the guest OS</li>
@@ -214,70 +160,44 @@ Are you sure you want to continue connecting (yes/no)?
 <li><code>--restart=unless-stopped</code>: this is like a fail over, so if it crashed then start the container back up, unless you as the user runs <code>docker stop {docker-id}</code></li>
 <li><code>rancher/server</code>: the Docker image name to be downloaded and used</li>
 </ul>
-
 <p>After about a minute or 2 copy the IP address in your Droplets dashboard and paste &amp; go in your browser and you should see a &ldquo;Welcome to Rancher&rdquo; modal (fig 2.4).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/rancher-welcome-modal.png" alt="Welcome to Rancher modal" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/rancher-welcome-modal.png" alt="Welcome to Rancher modal">
 [fig 2.4]</p>
-
-<h1 id="a-href-setting-up-rancher-setting-up-rancher-a"><a href="#setting-up-rancher">Setting up Rancher</a></h1>
-
+<h1 id="a-hrefsetting-up-ranchersetting-up-ranchera"><!-- raw HTML omitted -->Setting up Rancher<!-- raw HTML omitted --></h1>
 <p>Now you have it up and running, you need to set up your instance.</p>
-
 <blockquote>
-<p>[Optional]<br />
+<p>[Optional]<br>
 Point something like <code>infra.your-domain.com</code> at your Droplets IP address and then add that in the &ldquo;Host Registration URL&rdquo; under the &ldquo;Something else&rdquo; input (fig 2.5). Save that then you are ready to set up security.</p>
 </blockquote>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/host-registration.png" alt="Adding your URL to Rancher" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/host-registration.png" alt="Adding your URL to Rancher">
 [fig 2.5]</p>
-
 <p>In the top menu you will see &ldquo;Admin&rdquo; in there, then you should see &ldquo;Access Control&rdquo;, click it. Here you have an array of options (fig 2.6).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/choosing-authentication.png" alt="Choosing your preferred authentication" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/choosing-authentication.png" alt="Choosing your preferred authentication">
 [fig 2.6]</p>
-
 <blockquote>
 <p>I&rsquo;ve gone with GitHub as I am able to manage users with ease when I need to add/remove access.</p>
 </blockquote>
-
 <p>Once you have followed the instructions for your preferred method, you are now ready to add a host. The path I am taking is with a new host via <a href="https://digitalocean.com">Digital-Ocean</a> for simplicity. Create another Droplet within your project and this time select &ldquo;One-click apps&rdquo; and select &ldquo;Docker 17.12.0~ce on 16.04&rdquo; and select the 1GB, 1vCPU for $5.00/mo. Once that has generated take note of the IP address of the new Droplet. Within Rancher, select &ldquo;Infrastructure&rdquo; &gt; &ldquo;Hosts&rdquo; and select the &ldquo;Add Host&rdquo; option (fig 2.7).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/add-host-for-rancher-to-manage.png" alt="Add a host for Rancher to manage" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/add-host-for-rancher-to-manage.png" alt="Add a host for Rancher to manage">
 [fig 2.7]</p>
-
 <p>You will notice that there are 4 options to create a host - these are Machine drivers. They allow you to connect to your infrastructure with ease, so for example; we&rsquo;ve created a Droplet via the <a href="https://digitalocean.com">Digital-Ocean</a> dashboard where we <em>could</em> use an API key for our account and to have <a href="https://rancher.com">Rancher</a> create is for us&hellip; Awesome! However, I would like to go with creating it via <a href="https://digitalocean.com">Digital-Ocean</a> so we understand what is happening under the hood.</p>
-
 <p>You will start this process with &ldquo;Custom&rdquo; selected, keep that option selected and paste the IP address of the Docker Droplet we created in the <a href="https://digitalocean.com">Digital-Ocean</a> dashboard. Once pasted, the content in step 5 will have updated and this IP address will be added to the command. Copy that, click &ldquo;Close&rdquo; and open up a terminal on your local machine and type <code>ssh root@&lt;droplet-ip-address&gt;</code> and then it will ask the following:</p>
-
 <pre><code>The authenticity of host '&lt;droplet-ip-address&gt; (&lt;droplet-ip-address&gt;)' can't be established.
 ECDSA key fingerprint is SHA256:ABC...XYZ.
 Are you sure you want to continue connecting (yes/no)?
-</code></pre>
-
-<p>Type <code>yes</code> and you should now be logged into your droplet. Now paste the command you copied from your <a href="https://rancher.com">Rancher</a> UI and you should now see that host appear in your <a href="https://rancher.com">Rancher</a> UI.</p>
-
+</code></pre><p>Type <code>yes</code> and you should now be logged into your droplet. Now paste the command you copied from your <a href="https://rancher.com">Rancher</a> UI and you should now see that host appear in your <a href="https://rancher.com">Rancher</a> UI.</p>
 <p>Now we are going to set up our first deployment of an app. We are going basic and will deploy WordPress.</p>
-
 <p>Click on &ldquo;Catalogue&rdquo; and search for WordPress. When you&rsquo;ve found it click on &ldquo;View Details&rdquo; and leave fields as they are with the default values and click &ldquo;Launch&rdquo;.</p>
-
 <p>You should now see something similar to fig 2.8. Once the status&rsquo; on the left column are all showing as &ldquo;Active&rdquo; then head over to the IP of the new host. Go to <code>/admin</code> for the admin panel and use &ldquo;admin&rdquo; and &ldquo;bitnami&rdquo; as the username and password.</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/provisioning-host.png" alt="Provisioning a host for Rancher to manage" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/provisioning-host.png" alt="Provisioning a host for Rancher to manage">
 [Fig 2.8]</p>
-
 <p>You <em>should</em> now see the WordPress admin panel like below (fig.2.9).</p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/wordpress-admin.png" alt="Successfully deployed WordPress via Rancher" />
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/wordpress-admin.png" alt="Successfully deployed WordPress via Rancher">
 [Fig 2.9]</p>
-
 <p>If so you have successfully deployed your first app via <a href="https://rancher.com">Rancher</a>, congrats.</p>
-
-<p><img src="https://media.giphy.com/media/wZjlCH43M3M0U/giphy.gif" alt="Congratulations and thank you for reading" /></p>
-
+<p><img src="https://media.giphy.com/media/wZjlCH43M3M0U/giphy.gif" alt="Congratulations and thank you for reading"></p>
 <p><em><strong>Please don&rsquo;t forget to destroy them Droplets!! You can do this by selecting the &ldquo;Destroy&rdquo; option in the Droplet&rsquo;s context menu [fig 2.10].</strong></em></p>
-
-<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/destroy-droplets.png" alt="Don't forget to destroy the droplet" /></p>
+<p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/destroy-droplets.png" alt="Don&rsquo;t forget to destroy the droplet"></p>
 
 
                 <br>

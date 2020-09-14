@@ -55,13 +55,6 @@
 <body>
 
 <section class="header">
-    <div class="container" style="border: 1px solid #428bca; padding: 5px 10px; background-color: #428bca1a;">
-        <div class="content">
-            <p>okay, shameless plug time… My wife is doing a 3 day trek of Mount Toubkal in Morocco next September and needs to raise £2000 for <a href="https://www.ssafa.org.uk/">ssafa.org.uk</a>. Please donate to <a href="https://mydonate.bt.com/fundraisers/emmagreenway1">mydonate.bt.com</a> to help her on this amazing experience - Thank you</p>
-        </div>
-    </div>
-</section>
-<section class="header">
     <div class="container">
         <div class="content">
             <a href="http://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
@@ -95,32 +88,22 @@
             </div>
             <div class="markdown">
                 
-    
-
-<h2 id="my-pipeline">My pipeline</h2>
-
+    <h2 id="my-pipeline">My pipeline</h2>
 <p>This is a continued post from <a href="http://futurepixels.co.uk/posts/creating-a-ci--cd-pipeline-with-gitlab-rancher-and-digital-ocean/">Creating a CI &amp; CD pipeline with GitLab, Rancher and Digital Ocean</a>.</p>
-
 <p>So, I am using the following tools:</p>
-
 <ul>
 <li><a href="https://gitlab.com">GitLab</a></li>
 <li><a href="https://docker.com">Docker</a></li>
 </ul>
-
 <p><a href="https://gitlab.com">GitLab</a> is an alternative to <a href="https://github.com">GitHub</a>. I&rsquo;ve been trying it out for about 6 to 8 months and finding it very well thought out and fully featured. The main bonus is that you can host it yourself so your code can be truly private and controlled. The features I&rsquo;m using for my pipeline are:</p>
-
 <ul>
 <li>The repository (obviously)</li>
 <li>The docker registry</li>
 <li>The Build service</li>
 <li>The integration services</li>
 </ul>
-
-<h3 id="a-href-linting-and-test-runners-id-linting-and-test-runners-linting-and-test-runners-a"><a href="#linting-and-test-runners" id ="linting-and-test-runners">Linting and test runners</a></h3>
-
+<h3 id="a-hreflinting-and-test-runners-id-linting-and-test-runnerslinting-and-test-runnersa"><!-- raw HTML omitted -->Linting and test runners<!-- raw HTML omitted --></h3>
 <p>In a basic overview I do the following:</p>
-
 <pre><code>Commit code =&gt;
     push to gitlab =&gt;
     run linter =&gt;
@@ -128,90 +111,73 @@
     build docker image =&gt;
     push to registry =&gt;
     hit Rancher API to inform there is an image ready and waiting
-</code></pre>
-
-<p>If my linting, unit tests or UI tests fail, then the build fails. The first to fail will stop the pipeline jobs and report as a failure. With GitLab I use Cypress for my UI tests and this allows me to save images and videos of failed tests as artifacts for the time specified of my liking. So, if a build fails on UI tests, I will save them for 7 days and after that GitLab will remove them automatically. \o/</p>
-
+</code></pre><p>If my linting, unit tests or UI tests fail, then the build fails. The first to fail will stop the pipeline jobs and report as a failure. With GitLab I use Cypress for my UI tests and this allows me to save images and videos of failed tests as artifacts for the time specified of my liking. So, if a build fails on UI tests, I will save them for 7 days and after that GitLab will remove them automatically. \o/</p>
 <p>A snippet of a current project I am working on:</p>
-
-<pre><code class="language-yaml">linter:
-    image: node:8.11
-    stage: linting
-    tags:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">linter</span>:
+    <span style="color:#66d9ef">image</span>: node:<span style="color:#ae81ff">8.11</span>
+    <span style="color:#66d9ef">stage</span>: linting
+    <span style="color:#66d9ef">tags</span>:
         - test
-    script:
+    <span style="color:#66d9ef">script</span>:
         - npm install
         - npm run lint
 
-unit_tests:
-    image: node:8.11
-    stage: test
-    script:
+<span style="color:#66d9ef">unit_tests</span>:
+    <span style="color:#66d9ef">image</span>: node:<span style="color:#ae81ff">8.11</span>
+    <span style="color:#66d9ef">stage</span>: test
+    <span style="color:#66d9ef">script</span>:
         - npm install
         - npm run test::unit
-    tags:
+    <span style="color:#66d9ef">tags</span>:
         - test
 
-user_tests:
-    image: cypress/base:10
-    stage: test
-    script:
+<span style="color:#66d9ef">user_tests</span>:
+    <span style="color:#66d9ef">image</span>: cypress/base:<span style="color:#ae81ff">10</span>
+    <span style="color:#66d9ef">stage</span>: test
+    <span style="color:#66d9ef">script</span>:
         - npm install
         - npm run build
-        - npm start --quiet &gt; /dev/null &amp;
+        - npm start --quiet &gt; /dev/<span style="color:#66d9ef">null</span> &amp;
         - npm run test::ui
-    artifacts:
-        when: on_failure
-        expire_in: 1 week
-        paths:
+    <span style="color:#66d9ef">artifacts</span>:
+        <span style="color:#66d9ef">when</span>: on_failure
+        <span style="color:#66d9ef">expire_in</span>: <span style="color:#ae81ff">1</span> week
+        <span style="color:#66d9ef">paths</span>:
             - ./__tests__/UI/cypress/screenshots
             - ./__tests__/UI/cypress/videos
-    tags:
+    <span style="color:#66d9ef">tags</span>:
         - test
-</code></pre>
-
-<h3 id="a-href-docker-id-docker-docker-a"><a href="#docker" id="docker">Docker</a></h3>
-
+</code></pre></div><h3 id="a-hrefdocker-iddockerdockera"><!-- raw HTML omitted -->Docker<!-- raw HTML omitted --></h3>
 <p>Next is the Docker image for my application/site. Using secret keys stored in GitLab, it will login to the configured registry, build the image locally and then push the image to it&rsquo;s registry.</p>
-
-<pre><code class="language-yaml">build_review:
-    stage: build
-    image: docker:stable
-    services:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">build_review</span>:
+    <span style="color:#66d9ef">stage</span>: build
+    <span style="color:#66d9ef">image</span>: docker:stable
+    <span style="color:#66d9ef">services</span>:
         - docker:dind
-    script:
-        - docker login -u gitlab-ci-token -p &quot;${CI_BUILD_TOKEN:-$CI_JOB_TOKEN}&quot; $CI_REGISTRY
+    <span style="color:#66d9ef">script</span>:
+        - docker login -u gitlab-ci-token -p <span style="color:#e6db74">&#34;${CI_BUILD_TOKEN:-$CI_JOB_TOKEN}&#34;</span> $CI_REGISTRY
         - docker build -t $DEVELOPMENT_IMAGE_TAG .
-# This will overwrite the tag with the latest build!
+<span style="color:#75715e"># This will overwrite the tag with the latest build!</span>
         - docker push $DEVELOPMENT_IMAGE_TAG
-    tags:
+    <span style="color:#66d9ef">tags</span>:
         - build
 
-</code></pre>
-
-<p>In the preceding code, I am using Docker to build a Docker container via the <code>dind</code> service (Docker in Docker), this allowed me to do what I needed to do, but be aware of <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">this article</a>.</p>
-
-<h3 id="a-href-variables-id-variables-variables-a"><a href="#variables" id="variables">Variables</a></h3>
-
+</code></pre></div><p>In the preceding code, I am using Docker to build a Docker container via the <code>dind</code> service (Docker in Docker), this allowed me to do what I needed to do, but be aware of <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">this article</a>.</p>
+<h3 id="a-hrefvariables-idvariablesvariablesa"><!-- raw HTML omitted -->Variables<!-- raw HTML omitted --></h3>
 <p>I am then running three scripts, <code>docker login</code>, <code>docker build</code> and <code>docker push</code>. I am using the secret - and built in - variables which are prefixed with <code>CI_</code>, then I have my own variables defined at the top of my file to allow me to create images tagged with the branch name for demos and a timestamp for staging and production. I then use that same tagged image to push it to the registry that is already configured.</p>
-
-<pre><code class="language-yaml">before_script:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">before_script</span>:
     - export TARGET_STACK=gitlab-demo-stack
     - export REVIEW_TARGET_STACK=gitlab-demo-stack--review
     - export REVIEW_FRONTEND_URL=review.demo.local
-    - export BRANCH_REVIEW_FRONTEND_URL=&quot;${CI_COMMIT_REF_NAME}.review.demo.local&quot;
+    - export BRANCH_REVIEW_FRONTEND_URL=<span style="color:#e6db74">&#34;${CI_COMMIT_REF_NAME}.review.demo.local&#34;</span>
     - export DEVELOPMENT_IMAGE_TAG=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
     - export VERSION=$(date +%Y.%m.%d.%H.%m)
-</code></pre>
-
-<p>All this information is contained in a file <code>.gitlab-ci.yml</code> (<a href="https://git.futurepixels.co.uk/snippets/1">view example</a>) which lives in the root of my project.
+</code></pre></div><p>All this information is contained in a file <code>.gitlab-ci.yml</code> (<a href="https://git.futurepixels.co.uk/snippets/1">view example</a>) which lives in the root of my project.
 There are two different build versions of this I am currently setting up:</p>
-
 <ul>
 <li><strong>review</strong>: Builds and pushes a branch tagged version of the app</li>
 <li><strong>uat</strong>: Builds and pushes a staging version for viewing/testing several features that are merged together</li>
 </ul>
-
 <p>The next part will be setting up <a href="https://gitlab.com">GitLab</a> on <a href="https://digitalocean.com">Digital-Ocean</a> for your personal/business usage.</p>
 
 

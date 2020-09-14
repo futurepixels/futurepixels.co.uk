@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Futurepixels</title>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</guid>
-      <description>What is Rancher? Rancher comes in two parts (the first being optional). You have the Rancher Distro and the Rancher Orchestration Tool.
+      <description>What is Rancher? Rancher comes in two parts (the first being optional). You have the Rancher Distro and the Rancher Orchestration Tool (I am currently using 1.6, which is where the docs point too).
 The first part is the Rancher Distro. This is pretty awesome. I know, &amp;ldquo;another distro&amp;rdquo; I can hear you say - but this is pretty clever: it is a distro for Docker. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker.</description>
     </item>
     
@@ -81,8 +81,8 @@ What? Since I started becoming a developer, I have struggled in such a way that 
       
       <guid>http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</guid>
       <description>The problem There is nothing more time consuming than typing:
-→ ssh &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&#39;s password:  - or -
-→ ssh -i /some/path/to/my/ssh/key &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;  Seriously, do this multiple times a day, with the added annoyance of entering long server hostname&amp;rsquo;s like btables@lower.low.some-env.dept-name.my-company.co.uk along with passwords incorrectly entered (and done so in multiple time&amp;rsquo;s). That, as well as logging into the wrong server can cause lost time and on them rare occasions, headaches caused by working on the wrong server.</description>
+→ ssh &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&amp;#39;s password: - or -
+→ ssh -i /some/path/to/my/ssh/key &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; Seriously, do this multiple times a day, with the added annoyance of entering long server hostname&amp;rsquo;s like btables@lower.low.some-env.dept-name.my-company.co.uk along with passwords incorrectly entered (and done so in multiple time&amp;rsquo;s). That, as well as logging into the wrong server can cause lost time and on them rare occasions, headaches caused by working on the wrong server.</description>
     </item>
     
     <item>
@@ -164,9 +164,9 @@ Me, a junior? Cool!  I had only really been a hobby developer in my spare time.<
       
       <guid>http://futurepixels.co.uk/posts/an-introduction-to-using-git/</guid>
       <description>Setting up Git Installing Git There are few ways to install Git on a mac (I will eventually add guides on Windows and Linux).
- Install Xcode (and install the command line tools for an added bonus) Simply install via the App Store App.
- Install via brew Providing you have brew installed (installation instructions on the site), then; once installed run [sudo] brew install git
- Download direct from git-scm.</description>
+  Install Xcode (and install the command line tools for an added bonus) Simply install via the App Store App.
+  Install via brew Providing you have brew installed (installation instructions on the site), then; once installed run [sudo] brew install git
+  Download direct from git-scm.</description>
     </item>
     
     <item>
@@ -186,7 +186,7 @@ So, a thank you for visiting the site and I hope you come here every now and the
       
       <guid>http://futurepixels.co.uk/bookshelf/</guid>
       <description>This is just a list of book that I am wanting to read, am reading and have read. That&amp;rsquo;s it, nothing more. Oh, I may add a review/thoughts about book part to depending on the book.
-Have already read:  The Clean Coder: A Code of Conduct for Professional Programmers - Robert C Marting  Vagrant Cookbook - Erika Heidi  Culture Of Respect - Cal Evans   Currenty Reading / Have it ready:  Extending and Embedding PHP (Developer&amp;#39;s Library) by Sara Golemon - Sara Goleman  Domain-driven Design: Tackling Complexity in the Heart of Software - Eric Evans  Implementing Domain-Driven Design - Vaughn Vernon  Domain-Driven Design : Reference Definitions and Pattern Summaries - Eric Evans  Build APIs You Won&amp;#39;t Hate - Phil Sturgeon  Pro Vim - Mark McDonnell   My wish list:   </description>
+&amp;lt;li class=&amp;quot;book-list-item&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;http://www.amazon.co.uk/dp/0137081073/ref=cm_sw_r_tw_dp_42mHwb1B0SRSK&amp;quot; target=&amp;quot;_new&amp;quot;&amp;gt;The Clean Coder: A Code of Conduct for Professional Programmers&amp;lt;/a&amp;gt; - &amp;lt;a href=&amp;quot;https://twitter.com/unclebobmartin&amp;quot; target=&amp;quot;_new&amp;quot;&amp;gt;Robert C Marting&amp;lt;/a&amp;gt;  &amp;lt;li class=&amp;quot;book-list-item&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;http://www.amazon.co.uk/dp/1326020153/ref=cm_sw_r_tw_dp_R6mHwb008H2X4&amp;quot; target=&amp;quot;_new&amp;quot;&amp;gt;Vagrant Cookbook&amp;lt;/a&amp;gt; - &amp;lt;a href=&amp;quot;https://twitter.com/erikaheidi&amp;quot; target=&amp;quot;_new&amp;quot;&amp;gt;Erika Heidi&amp;lt;/a&amp;gt;  &amp;lt;li class=&amp;quot;book-list-item&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://nomadphp.</description>
     </item>
     
     <item>
@@ -197,7 +197,7 @@ Have already read:  The Clean Coder: A Code of Conduct for Professional Programm
       <guid>http://futurepixels.co.uk/resume/</guid>
       <description>Profile A keen and dedicated developer to create web applications and sites that are based upon concepts and standards to help produce well documented/commented code, a code-base that ensures ease of maintainability using the DRY concept along with researching technologies to better fit the product needed.
 Education Stoke Park School and Community College 1994-2000
-Employment First Utility (2016 - present) • • •
+Employment First Utility _(2016 - present)_ • • •
 Presto Classical Ltd (2014 - 2016) My first task was to build an internal application to deal with how the business handles purchase orders with suppliers.</description>
     </item>
     
@@ -207,7 +207,7 @@ Presto Classical Ltd (2014 - 2016) My first task was to build an internal applic
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://futurepixels.co.uk/skills/</guid>
-      <description>  Frontend  HTML4/5 • CSS2/3 • Javascript • jQuery • ReactJS • SASS • Gulp • Grunt • Browser Sync  Languages  PHP • Ruby • Python • Go • NodeJS • Nix Shell (Bash, ZSH)  DevOps  MySQL • Apache • Git • Nginx • Hiawatha • Ansible  Frameworks  Symfony2 • Silex • Slim2/3  Methodolgies  PSR (PHP Standard Recommendation) • TDD (Test Driven Development) • BDD (Behaviour Driven Development) • DDD (Domain Driven Development) • ADR (Action Domain Responder) • BEM (Block Element Modifier) • SOA (Service Orientated Architecture)  Tools  editorconfig • Composer • Makefile • Vagrant • Docker • PHP Storm IDE • Sublime Text • Visual Studio Code • Vi(m) • OS X • Linux (Ubuntu | CentOS | Fedora | Solus Project) • tmux • Task Warrior   </description>
+      <description>&amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Frontend&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; HTML4/5 &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; CSS2/3 &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Javascript &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; jQuery &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; ReactJS &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; SASS &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Gulp &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Grunt &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Browser Sync &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Languages&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; PHP &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Ruby &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Python &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Go &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; NodeJS &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Nix Shell (Bash, ZSH) &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;DevOps&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; MySQL &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Apache &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Git &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Nginx &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Hiawatha &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Ansible &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Frameworks&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; Symfony2 &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Silex &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Slim2/3 &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Methodolgies&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; PSR (PHP Standard Recommendation) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; TDD (Test Driven Development) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; BDD (Behaviour Driven Development) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; DDD (Domain Driven Development) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; ADR (Action Domain Responder) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; BEM (Block Element Modifier) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; SOA (Service Orientated Architecture) &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Tools&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; editorconfig &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Composer &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Makefile &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Vagrant &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Docker &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; PHP Storm IDE &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Sublime Text &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Visual Studio Code &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Vi(m) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; OS X &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Linux (Ubuntu | CentOS | Fedora | Solus Project) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; tmux &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Task Warrior &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt;  </description>
     </item>
     
     <item>
@@ -216,8 +216,8 @@ Presto Classical Ltd (2014 - 2016) My first task was to build an internal applic
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://futurepixels.co.uk/whoami/</guid>
-      <description>Hi there, I&amp;rsquo;m Nigel, a developer, a husband, a father and fan of geeky stuff&amp;hellip;
-Whoami as a developer&amp;hellip; A full time web developer for 9 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
+      <description>Hi there, I&amp;rsquo;m Nigel, a developer, a father and fan of geeky stuff&amp;hellip;
+Whoami as a developer&amp;hellip; A full time web developer for 11 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
     </item>
     
   </channel>

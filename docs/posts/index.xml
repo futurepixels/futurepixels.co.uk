@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Futurepixels</title>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</guid>
-      <description>What is Rancher? Rancher comes in two parts (the first being optional). You have the Rancher Distro and the Rancher Orchestration Tool.
+      <description>What is Rancher? Rancher comes in two parts (the first being optional). You have the Rancher Distro and the Rancher Orchestration Tool (I am currently using 1.6, which is where the docs point too).
 The first part is the Rancher Distro. This is pretty awesome. I know, &amp;ldquo;another distro&amp;rdquo; I can hear you say - but this is pretty clever: it is a distro for Docker. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker.</description>
     </item>
     
@@ -81,8 +81,8 @@ What? Since I started becoming a developer, I have struggled in such a way that 
       
       <guid>http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</guid>
       <description>The problem There is nothing more time consuming than typing:
-→ ssh &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&#39;s password:  - or -
-→ ssh -i /some/path/to/my/ssh/key &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;  Seriously, do this multiple times a day, with the added annoyance of entering long server hostname&amp;rsquo;s like btables@lower.low.some-env.dept-name.my-company.co.uk along with passwords incorrectly entered (and done so in multiple time&amp;rsquo;s). That, as well as logging into the wrong server can cause lost time and on them rare occasions, headaches caused by working on the wrong server.</description>
+→ ssh &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&amp;#39;s password: - or -
+→ ssh -i /some/path/to/my/ssh/key &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; Seriously, do this multiple times a day, with the added annoyance of entering long server hostname&amp;rsquo;s like btables@lower.low.some-env.dept-name.my-company.co.uk along with passwords incorrectly entered (and done so in multiple time&amp;rsquo;s). That, as well as logging into the wrong server can cause lost time and on them rare occasions, headaches caused by working on the wrong server.</description>
     </item>
     
     <item>
@@ -164,9 +164,9 @@ Me, a junior? Cool!  I had only really been a hobby developer in my spare time.<
       
       <guid>http://futurepixels.co.uk/posts/an-introduction-to-using-git/</guid>
       <description>Setting up Git Installing Git There are few ways to install Git on a mac (I will eventually add guides on Windows and Linux).
- Install Xcode (and install the command line tools for an added bonus) Simply install via the App Store App.
- Install via brew Providing you have brew installed (installation instructions on the site), then; once installed run [sudo] brew install git
- Download direct from git-scm.</description>
+  Install Xcode (and install the command line tools for an added bonus) Simply install via the App Store App.
+  Install via brew Providing you have brew installed (installation instructions on the site), then; once installed run [sudo] brew install git
+  Download direct from git-scm.</description>
     </item>
     
     <item>

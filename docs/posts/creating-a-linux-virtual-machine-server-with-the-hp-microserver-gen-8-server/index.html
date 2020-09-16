@@ -108,9 +108,14 @@
 <h2 id="step-one---install-the-server">Step one - Install the server</h2>
 <p>Download the Ubuntu Server ISO <a href="https://www.ubuntu.com/download/server">here</a> and follow <a href="futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/">this</a> guide.</p>
 <p>Using a USB input on the server (I used the internal one), insert the USB with the Ubuntu Server installer.</p>
-<p><!-- raw HTML omitted --> -<!-- raw HTML omitted --> <strong>Ensure you have enabled the <code>Open SSH Server</code> and the <code>Virtual Machine Host</code> option&rsquo;s on installation</strong><!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted --> -<!-- raw HTML omitted --> <strong>Take note of your server&rsquo;s hostname</strong> <!-- raw HTML omitted -->
-<!-- raw HTML omitted --></p>
+<p><label> -<input type="checkbox" /> <strong>Ensure you have enabled the <code>Open SSH Server</code> and the <code>Virtual Machine Host</code> option&rsquo;s on installation</strong></label></p>
+<p><label> -<input type="checkbox" /> <strong>Take note of your server&rsquo;s hostname</strong> <input
+type="text"
+name="server-name"
+id="server-name"
+placeholder="Add your server name here"
+title="add your servername here and I will replace '<server-name' to give more context to the article"/>
+</label></p>
 <p>Turn on your server and wait for it to boot - you may need to press <code>F11</code> to boot the USB drive. Follow the on screen instructions to install your Ubuntu Server instance.</p>
 <h3 id="bonus-step">Bonus step</h3>
 <p><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generate your SSH key</a> if you haven&rsquo;t got one and then edit add an entry to your <a href="http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/">SSH config file</a> with <code>Host &lt;server-name&gt;</code>.</p>
@@ -146,10 +151,34 @@ See <span style="color:#e6db74">&#34;man sudo_root&#34;</span> <span style="colo
 <ul>
 <li>When using <a href="http://virt-manager.org/">virt-manager.org</a>, ensure you have the <code>Network source</code> set as the bridge, in my case it was <code>Bridge br0: Host device eno1</code>.</li>
 </ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<blockquote>
+<!-- Reuseable Link shortcuts -->
+<script>
+    var serverName = document.getElementById('server-name'), searchValue = '&lt;server-name&gt;';
+    serverName.addEventListener('blur', function(event) {
+        if (this.value !== "") {
+            var pTags = document.querySelectorAll('p,pre');
+            for (var i=0; i < pTags.length; i++) {
+                var tag = pTags[i];
+                if (tag.innerHTML.search(searchValue) !== -1) {
+                    var replacement = tag.innerHTML.replace(searchValue, this.value);
+                    tag.innerHTML = replacement;
+                }
+            }
+            searchValue = this.value;
+        }
+    });
+    var tasks = document.querySelectorAll('input[type="checkbox"]');
+    for (i=0; i<tasks.length;i++) {
+        var task = tasks[i];
+        task.addEventListener('change', function(event) {
+            if (this.checked === true) {
+                this.parentNode.style.color='#85D385';
+            } else {
+                this.parentNode.style.color='#313537';
+            }
+        });
+    }
+</script><blockquote>
 </blockquote>
 
 

@@ -102,7 +102,7 @@
 <li>The Build service</li>
 <li>The integration services</li>
 </ul>
-<h3 id="a-hreflinting-and-test-runners-id-linting-and-test-runnerslinting-and-test-runnersa"><!-- raw HTML omitted -->Linting and test runners<!-- raw HTML omitted --></h3>
+<h3 id="a-hreflinting-and-test-runners-id-linting-and-test-runnerslinting-and-test-runnersa"><a href="#linting-and-test-runners" id ="linting-and-test-runners">Linting and test runners</a></h3>
 <p>In a basic overview I do the following:</p>
 <pre><code>Commit code =&gt;
     push to gitlab =&gt;
@@ -147,7 +147,7 @@
             - ./__tests__/UI/cypress/videos
     <span style="color:#66d9ef">tags</span>:
         - test
-</code></pre></div><h3 id="a-hrefdocker-iddockerdockera"><!-- raw HTML omitted -->Docker<!-- raw HTML omitted --></h3>
+</code></pre></div><h3 id="a-hrefdocker-iddockerdockera"><a href="#docker" id="docker">Docker</a></h3>
 <p>Next is the Docker image for my application/site. Using secret keys stored in GitLab, it will login to the configured registry, build the image locally and then push the image to it&rsquo;s registry.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">build_review</span>:
     <span style="color:#66d9ef">stage</span>: build
@@ -163,7 +163,7 @@
         - build
 
 </code></pre></div><p>In the preceding code, I am using Docker to build a Docker container via the <code>dind</code> service (Docker in Docker), this allowed me to do what I needed to do, but be aware of <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">this article</a>.</p>
-<h3 id="a-hrefvariables-idvariablesvariablesa"><!-- raw HTML omitted -->Variables<!-- raw HTML omitted --></h3>
+<h3 id="a-hrefvariables-idvariablesvariablesa"><a href="#variables" id="variables">Variables</a></h3>
 <p>I am then running three scripts, <code>docker login</code>, <code>docker build</code> and <code>docker push</code>. I am using the secret - and built in - variables which are prefixed with <code>CI_</code>, then I have my own variables defined at the top of my file to allow me to create images tagged with the branch name for demos and a timestamp for staging and production. I then use that same tagged image to push it to the registry that is already configured.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">before_script</span>:
     - export TARGET_STACK=gitlab-demo-stack

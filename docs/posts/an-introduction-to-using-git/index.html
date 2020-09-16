@@ -160,13 +160,13 @@ git push
 <li>testing &ndash;or&ndash; test</li>
 <li>development &ndash;or&ndash; dev</li>
 </ul>
-<p>These will be the branches in which you merge into when dev for your dev server, then test for your testing server followed by <!-- raw HTML omitted -->UAT<!-- raw HTML omitted --> and then into your master branch for release.</p>
+<p>These will be the branches in which you merge into when dev for your dev server, then test for your testing server followed by <abbr title="User Acceptence Testing">UAT</abbr> and then into your master branch for release.</p>
 <h4 id="git-pull">Git pull</h4>
 <p><code>git pull</code> will update your current repository to match that of the remote repository. In this, I mean it will <code>git fetch</code> and then <code>git merge</code> the remote changes into your local copy of the repository. This is fine if you are wanting to update your local copy.</p>
 <p>A good example of this would be if you have finished your recent changes to &lsquo;my-great-new-feature&rsquo; and you want to create a new [branch][] called &lsquo;even-better-feature&rsquo;. You would simply <code>git checkout dev</code> (or your main working branch) and then <code>git pull</code>. You can then <code>git checkout -b even-better-feature</code> and rock on with your new feature code.</p>
 <p>Do not use this if you want to [fetch][] the changes from remote to local without running the risk of merging remote files into local files you have already changed.</p>
 <h4 id="git-fetch">Git fetch</h4>
-<p><code>git fetch</code> is the safer way of managing your repository when working with a <!-- raw HTML omitted -->dirty<!-- raw HTML omitted --> repository. For example, you are half way through a modification which will could possibly be affected by a change made by another team member, without running the risk of changing anyfiles you have worked on, you would run <code>git fetch</code> on your <!-- raw HTML omitted -->dirty<!-- raw HTML omitted --> repository knowing you are safe from any unwanted merges.</p>
+<p><code>git fetch</code> is the safer way of managing your repository when working with a <abbr title="Term used when the repository has modified, deleted or added files">dirty</abbr> repository. For example, you are half way through a modification which will could possibly be affected by a change made by another team member, without running the risk of changing anyfiles you have worked on, you would run <code>git fetch</code> on your <abbr title="Term used when the repository has modified, deleted or added files">dirty</abbr> repository knowing you are safe from any unwanted merges.</p>
 <h4 id="branch-management">Branch management</h4>
 <p>Say we want a new feature or a bug fix, instead of working directly on the <code>master</code> branch of the project we create a new branch like so:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout dev

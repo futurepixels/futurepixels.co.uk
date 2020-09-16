@@ -7,28 +7,35 @@ title = "Resume"
 A keen and dedicated developer to create web applications and sites that are based upon concepts and standards to help produce well documented/commented code, A code-base that ensures ease of maintainability using the `DRY` concept along with researching technologies to better fit the product needed.
 
 ### <a id="skills" href="/resume/#skills">Skills</a>
+<details>
+  <summary>Languages</summary>
+  <ul>
+   <li>HTML</li>
+   <li>CSS</li>
+   <li>PHP</li>
+   <li>NodeJS</li>
+   <li>JavaScript</li>
+   <li>GoLang</li>
+   <li>Rust</li>
+   <li>bash</li>
+  <ul>
+</details>
 
-#### Languages
-
- - HTML
- - CSS
- - PHP
- - NodeJS
- - JavaScript
- - GoLang
- - Rust
- - bash
-
+<details>
+  <summary>Tools</summary>
+  <ul>
+   <li>Postman</li>
+   <li>Insomnia</li>
+   <li>Docker</li>
+   <li>Linux</li>
+   <li>MacOS</li>
+   <li>React</li>
+   <li>vim</li>
+   <li>tmux</li>
+  <ul>
+</details>
 #### Tools
 
- - Docker
- - Linux
- - MacOS
- - React
- - Rancher
- - vim
- - PHPStorm
- - VS Code
 
 #### Methodolgies
 
@@ -43,7 +50,7 @@ Stoke Park School and Community College _1994-2000_
 
 ### <a id="employment" href="/resume/#employment">Employment</a>
 
-#### <a id="current-employment" href="/resume/#current-employment">Shell Energy (First Utility 2016-2019) _(2016 - present)_</a>
+#### Shell Energy (First Utility 2016-2019) _(2016 - present)_
 
 Since my time at Shell Energy (Formally First Utility) I have been able to work with many great and talented people. Starting as a Software Engineer, I was brought in to help with the main functionality of the web site, I helped deliver new features to the system as well as bug fixes. This was a monolithic PHP MVC application using Symfony and Zend components via Composer and based on the Yii framework as a base. Since then I've supported team members with bigger features and worked to become a Senior Software Engineer and to my current role of a Lead Software Engineer.
 

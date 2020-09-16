@@ -32,5 +32,4 @@ twitter = "NigelGreenway"
 primaryOS_href = "https://solus-project.com"
 primaryOS_name = "Solus Project"
 
-[markup.goldmark.renderer] 
-unsafe= true
+[markup.goldmark.renderer] unsafe= true

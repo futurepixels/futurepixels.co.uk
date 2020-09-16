@@ -7,35 +7,44 @@ title = "Resume"
 A keen and dedicated developer to create web applications and sites that are based upon concepts and standards to help produce well documented/commented code, A code-base that ensures ease of maintainability using the `DRY` concept along with researching technologies to better fit the product needed.
 
 ### <a id="skills" href="/resume/#skills">Skills</a>
+<details>
+  <summary>Languages</summary>
+  <ul>
+   <li>HTML</li>
+   <li>CSS</li>
+   <li>PHP</li>
+   <li>NodeJS</li>
+   <li>JavaScript</li>
+   <li>GoLang</li>
+   <li>Rust</li>
+   <li>bash</li>
+  <ul>
+</details>
 
-#### Languages
+<details>
+  <summary>Tools</summary>
+  <ul>
+   <li>Postman</li>
+   <li>Insomnia</li>
+   <li>Docker</li>
+   <li>Linux</li>
+   <li>MacOS</li>
+   <li>React</li>
+   <li>vim</li>
+   <li>tmux</li>
+  <ul>
+</details>
 
- - HTML
- - CSS
- - PHP
- - NodeJS
- - JavaScript
- - GoLang
- - Rust
- - bash
+<details>
+  <summary>Methodologies</summary>
+  <ul>
+   <li>TDD</li>
+   <li>BDD</li>
+   <li>DDD</li>
+   <li>MVC</li>
+  <ul>
+</details>
 
-#### Tools
-
- - Docker
- - Linux
- - MacOS
- - React
- - Rancher
- - vim
- - PHPStorm
- - VS Code
-
-#### Methodolgies
-
- - TDD
- - BDD
- - DDD
- - MVC
 
 ### <a id="education" href="/resume/#education">Education</a>
 

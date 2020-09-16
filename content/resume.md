@@ -8,34 +8,43 @@ A keen and dedicated developer to create web applications and sites that are bas
 
 ### <a id="skills" href="/resume/#skills">Skills</a>
 
-#### Languages
+<details>
+  <summary>Languages</summary>
+  <ul>
+   <li>HTML</li>
+   <li>CSS</li>
+   <li>PHP</li>
+   <li>NodeJS</li>
+   <li>JavaScript</li>
+   <li>GoLang</li>
+   <li>Rust</li>
+   <li>bash</li>
+  <ul>
+</details>
 
- - HTML
- - CSS
- - PHP
- - NodeJS
- - JavaScript
- - GoLang
- - Rust
- - bash
+<details>
+  <summary>Tools</summary>
+  <ul>
+   <li>Postman</li>
+   <li>Insomnia</li>
+   <li>Docker</li>
+   <li>Linux</li>
+   <li>MacOS</li>
+   <li>React</li>
+   <li>vim</li>
+   <li>tmux</li>
+  <ul>
+</details>
 
-#### Tools
-
- - Docker
- - Linux
- - MacOS
- - React
- - Rancher
- - vim
- - PHPStorm
- - VS Code
-
-#### Methodolgies
-
- - TDD
- - BDD
- - DDD
- - MVC
+<details>
+  <summary>Methodologies</summary>
+  <ul>
+   <li>TDD</li>
+   <li>BDD</li>
+   <li>DDD</li>
+   <li>MVC</li>
+  <ul>
+</details>
 
 ### <a id="education" href="/resume/#education">Education</a>
 

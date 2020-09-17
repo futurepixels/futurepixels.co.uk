@@ -88,7 +88,7 @@
             </div>
             <div class="markdown">
                 
-    <h1 id="a-hrefwhat-is-rancher-idwhat-is-rancherwhat-is-ranchera"><!-- raw HTML omitted -->What is Rancher?<!-- raw HTML omitted --></h1>
+    <h1 id="a-hrefwhat-is-rancher-idwhat-is-rancherwhat-is-ranchera"><a href="#what-is-rancher" id="what-is-rancher">What is Rancher?</a></h1>
 <p><a href="https://rancher.com">Rancher</a> comes in two parts (the first being optional). You have the <a href="https://rancher.com/rancher-os/">Rancher Distro</a> and the <a href="https://rancher.com/docs/rancher/v1.6/en/">Rancher Orchestration Tool</a> (I am currently using 1.6, which is where the docs point too).</p>
 <p>The first part is the <a href="https://rancher.com/rancher-os/">Rancher Distro</a>. This is pretty awesome. I know, &ldquo;<em>another distro</em>&rdquo; I can hear you say - but this is pretty clever: it is a distro for <a href="https://docker.com">Docker</a>. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker. Want to use the Debian, Ubuntu or Centos console for example, you can do. Configuration is easy enough too as it uses a <a href="https://cloud-init.io">cloud-init</a> based configuration which is a standard for system templates. <em>Note that this won&rsquo;t be required in this walk through.</em></p>
 <p>For example, if you want to provision a new instance you can set your SSH keys in the <code>cloud-init.yml</code> like so:</p>
@@ -122,7 +122,7 @@
 <p><em>You can run <a href="https://rancher.com">Rancher</a> locally (providing you have <a href="https://docker.com">Docker</a> installed) by running:</em></p>
 <pre><code>sudo docker run -d -v ./:/var/lib/mysql --restart=unless-stopped -p 80:8080 rancher/server
 </code></pre><p>and then point to <code>localhost</code> and you should see the UI ready for you to set up.</p>
-<h1 id="a-hrefsetting-it-up-with-digital-ocean-idsetting-it-up-with-digital-oceansetting-it-up-with-digital-oceana"><!-- raw HTML omitted -->Setting it up with Digital Ocean<!-- raw HTML omitted --></h1>
+<h1 id="a-hrefsetting-it-up-with-digital-ocean-idsetting-it-up-with-digital-oceansetting-it-up-with-digital-oceana"><a href="#setting-it-up-with-digital-ocean" id="setting-it-up-with-digital-ocean">Setting it up with Digital Ocean</a></h1>
 <p>Now, for people that have not used <a href="https://digitalocean.com">Digital-Ocean</a> this is a great tool for cloud based infrastructure. It makes building an infrastructure quick and easy, and gives you management for the VM&rsquo;s as well as DNS management, load balancing, firewalls and so on&hellip;</p>
 <p>I&rsquo;m not going into it more than that as they have so much to give - including an amazing range of <a href="https://www.digitalocean.com/community/tutorials">community tutorials</a> to help you along (which have helped me a numerous amount of times).</p>
 <p><em>The following section is for people with a <a href="https://digitalocean.com">Digital-Ocean</a> account. If you don&rsquo;t have one, I have a <a href="https://m.do.co/c/7ceb48d8e994">Digital-Ocean referral link</a> which will give you $10 credit. It really is cheap to spin up droplets, even if you wanted to try something for a few hours.</em></p>
@@ -163,7 +163,7 @@ Are you sure you want to continue connecting (yes/no)?
 <p>After about a minute or 2 copy the IP address in your Droplets dashboard and paste &amp; go in your browser and you should see a &ldquo;Welcome to Rancher&rdquo; modal (fig 2.4).</p>
 <p><img src="http://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/rancher-welcome-modal.png" alt="Welcome to Rancher modal">
 [fig 2.4]</p>
-<h1 id="a-hrefsetting-up-ranchersetting-up-ranchera"><!-- raw HTML omitted -->Setting up Rancher<!-- raw HTML omitted --></h1>
+<h1 id="a-hrefsetting-up-ranchersetting-up-ranchera"><a href="#setting-up-rancher">Setting up Rancher</a></h1>
 <p>Now you have it up and running, you need to set up your instance.</p>
 <blockquote>
 <p>[Optional]<br>

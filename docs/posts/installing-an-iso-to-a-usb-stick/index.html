@@ -153,7 +153,7 @@ Disk identifier: 0x5bbb7b73
 Device Boot Start End Sectors Size Id Type
 /dev/sda1 * <span style="color:#ae81ff">2048</span> <span style="color:#ae81ff">625142447</span> <span style="color:#ae81ff">625140400</span> 298.1G <span style="color:#ae81ff">83</span> Linux
 </code></pre></div><p>Above, it shows I have a disk that is /dev/sda. I now want to delete this partition. There are two ways of doing this; via command line or a graphical display.</p>
-<p>To do via a graphical display, simply create a live CD/DVD/USB linux disc (think Ubuntu/ElementaryOS live disc) and fire up <!-- raw HTML omitted -->GParted<!-- raw HTML omitted --> and format the disk.</p>
+<p>To do via a graphical display, simply create a live CD/DVD/USB linux disc (think Ubuntu/ElementaryOS live disc) and fire up <a href="http://gparted.org/" target="_blank">GParted</a> and format the disk.</p>
 <p>To do via the command line, I use fdisk.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo fdisk /dev/sda
 </code></pre></div>

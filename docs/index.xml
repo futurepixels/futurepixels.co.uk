@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Futurepixels</title>
-    <link>http://futurepixels.co.uk/</link>
+    <link>https://futurepixels.co.uk/</link>
     <description>Recent content on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Thu, 02 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setting up Rancher (with Digital Ocean)</title>
-      <link>http://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</link>
+      <link>https://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</link>
       <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</guid>
+      <guid>https://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</guid>
       <description>What is Rancher? Rancher comes in two parts (the first being optional). You have the Rancher Distro and the Rancher Orchestration Tool (I am currently using 1.6, which is where the docs point too).
 The first part is the Rancher Distro. This is pretty awesome. I know, &amp;ldquo;another distro&amp;rdquo; I can hear you say - but this is pretty clever: it is a distro for Docker. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker.</description>
     </item>
     
     <item>
       <title>My GitLab CI CD Pipeline overview</title>
-      <link>http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</link>
+      <link>https://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</guid>
+      <guid>https://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</guid>
       <description>My pipeline This is a continued post from Creating a CI &amp;amp; CD pipeline with GitLab, Rancher and Digital Ocean.
 So, I am using the following tools:
  GitLab Docker  GitLab is an alternative to GitHub. I&amp;rsquo;ve been trying it out for about 6 to 8 months and finding it very well thought out and fully featured. The main bonus is that you can host it yourself so your code can be truly private and controlled.</description>
@@ -34,20 +34,20 @@ So, I am using the following tools:
     
     <item>
       <title>Creating a CI &amp; CD pipeline with GitLab, Rancher and Digital Ocean</title>
-      <link>http://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</link>
+      <link>https://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</guid>
+      <guid>https://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</guid>
       <description>Setting the scene Over the past 2 years I&amp;rsquo;ve been working at First Utility and in that time I have worked with an awesome team - which, in turn has allowed me to pick up a lot of useful methods and learn some pretty amazing stuff.
 One thing I got into was running my own servers for things like OwnCloud, GitLab and other useful tools. I have a HP MicroServer which allowed me to practice on but I was fed up of running a server from home with running both a server and a nameserver.</description>
     </item>
     
     <item>
       <title>Creating a Linux virtual machine server with the HP microserver gen 8 server</title>
-      <link>http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</link>
+      <link>https://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</link>
       <pubDate>Sat, 01 Jul 2017 01:11:57 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</guid>
+      <guid>https://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</guid>
       <description>I am using:
  HP MicroServer Gen 8 Ubuntu Server A laptop with Linux installed as my local machine (This means that I can only provide Linux commands and software that I will be using)  My HP MicroServer  8GB Ram Intel Celeron Processor (2 core) 1x 320 HDD 2x 1TB HDD   Precursor:
 I have set up my server a while ago and am not sure what I did during the config.</description>
@@ -55,10 +55,10 @@ I have set up my server a while ago and am not sure what I did during the config
     
     <item>
       <title>Thank you to all involved in the 3 PHP South Coast Conferences</title>
-      <link>http://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</link>
+      <link>https://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</link>
       <pubDate>Wed, 14 Jun 2017 21:31:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</guid>
+      <guid>https://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</guid>
       <description>There is no simpler way to say this, but thank you.
 Thank you to all involved in all three PHP South Coast conferences. You have all played a big part in who I am today as a software engineer. The speakers were fantastic and the organisers have been great!
 On a personal level, I want to say thank you as PHP South Coast was my first conference back in 2015 after first getting involved with my local user group PHP Warwickshire.</description>
@@ -66,20 +66,20 @@ On a personal level, I want to say thank you as PHP South Coast was my first con
     
     <item>
       <title>Making a career in programming is hard, enough to kill it</title>
-      <link>http://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</link>
+      <link>https://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</link>
       <pubDate>Fri, 04 Nov 2016 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</guid>
+      <guid>https://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</guid>
       <description>tl;dr People are shit at being people.
 What? Since I started becoming a developer, I have struggled in such a way that I thought I was alone in working with people who are unprofessional by being a bully or just damn right pig headed. I&amp;rsquo;ve wrote a few articles on this, Coming of age as a PHP developer and then Being a professional developer. I have also presented a talk to two local user groups about this exact issue, which was great and had more outcome on the conversations and questions afterwards than I thought it would.</description>
     </item>
     
     <item>
       <title>Saving seconds with an ssh config file</title>
-      <link>http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</link>
+      <link>https://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</link>
       <pubDate>Tue, 13 Sep 2016 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</guid>
+      <guid>https://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</guid>
       <description>The problem There is nothing more time consuming than typing:
 → ssh &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&amp;#39;s password: - or -
 → ssh -i /some/path/to/my/ssh/key &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; Seriously, do this multiple times a day, with the added annoyance of entering long server hostname&amp;rsquo;s like btables@lower.low.some-env.dept-name.my-company.co.uk along with passwords incorrectly entered (and done so in multiple time&amp;rsquo;s). That, as well as logging into the wrong server can cause lost time and on them rare occasions, headaches caused by working on the wrong server.</description>
@@ -87,10 +87,10 @@ What? Since I started becoming a developer, I have struggled in such a way that 
     
     <item>
       <title>Installing an ISO to a USB stick</title>
-      <link>http://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</link>
+      <link>https://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</link>
       <pubDate>Mon, 12 Sep 2016 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</guid>
+      <guid>https://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</guid>
       <description>I am working from Linux, please submit a pull request to add instructions for Windows/Mac
  First thing is first, download the iso you want to use as a live disk.
 To install to a usb stick, you run sudo dd if=/location/of/the.iso of=/dev/X, where x is the USB stick. To find the device you want to install, before inserting the stick run [sudo] fdisk -l. You should be given the following:</description>
@@ -98,10 +98,10 @@ To install to a usb stick, you run sudo dd if=/location/of/the.iso of=/dev/X, wh
     
     <item>
       <title>Rewriting your git history</title>
-      <link>http://futurepixels.co.uk/posts/rewriting-your-git-history/</link>
+      <link>https://futurepixels.co.uk/posts/rewriting-your-git-history/</link>
       <pubDate>Tue, 06 Sep 2016 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/rewriting-your-git-history/</guid>
+      <guid>https://futurepixels.co.uk/posts/rewriting-your-git-history/</guid>
       <description>Editing the latest commit:  Important The following tip is about changing previous commits. If these commits are pushed to the remote, I would strongly advise to not mess with your history as it could break stuff
  Pretty easy to do so as stated on the git scm book#Changing the last commit. But a quick overview shows the simplicity:
 $ git commit --amend &amp;quot;Your new message&amp;quot;  Editing a commit earlier in your commit history That is great for the last commit message you just created, but what about a message type of reword that is after your latest commit message.</description>
@@ -109,10 +109,10 @@ $ git commit --amend &amp;quot;Your new message&amp;quot;  Editing a commit earl
     
     <item>
       <title>Thank you to all the people that have helped me</title>
-      <link>http://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</link>
+      <link>https://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</link>
       <pubDate>Fri, 15 Jan 2016 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</guid>
+      <guid>https://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</guid>
       <description>Thank you This is simply a thank you to people, who have got me to where I am today, and are part of the PHP, HTML, CSS and other communities.
 It is basically a list that would take a fair few tweets to do, so I wanted it in one place.
 So, thank you to all the people at PHP Warwickshire and PHP East Midlands as they were the people who have encouraged me to do talks and helped with my initial confidence and my general progression/sanity as a developer.</description>
@@ -120,49 +120,49 @@ So, thank you to all the people at PHP Warwickshire and PHP East Midlands as the
     
     <item>
       <title>Migrating from Mac OS to Linux</title>
-      <link>http://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</link>
+      <link>https://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</link>
       <pubDate>Thu, 14 Jan 2016 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</guid>
+      <guid>https://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</guid>
       <description>Preface I have now been a Mac OS user for around 8 years now. Don&amp;rsquo;t get me wrong, I have enjoyed using it. However, I have recently wanted to change for two reasons.
 The first; I want to advance on my skills as a developer/devops, so I feel like using a pure Linux operating system will help with that in regards to being familiar with the OS, structure, kernel and so on&amp;hellip;</description>
     </item>
     
     <item>
       <title>Being a professional developer</title>
-      <link>http://futurepixels.co.uk/posts/being-a-professional-developer/</link>
+      <link>https://futurepixels.co.uk/posts/being-a-professional-developer/</link>
       <pubDate>Tue, 25 Aug 2015 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/being-a-professional-developer/</guid>
+      <guid>https://futurepixels.co.uk/posts/being-a-professional-developer/</guid>
       <description>This is something I touched on briefly in my last post, &amp;lsquo;Coming of age as a php developer&amp;rsquo;, but it is something I would like to extend on.
 What do people expect from a developer? Every one has a different view of what to expect from a developer. Me, personally, I expect to be able to approach another developer and gain knowledge from them as well as be able to ask questions or suggest a possible solution to a problem without being treated like I suggested setting up a production server and allowing everyone to use root as the login user.</description>
     </item>
     
     <item>
       <title>Coming of age as a PHP developer</title>
-      <link>http://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</link>
+      <link>https://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</link>
       <pubDate>Sun, 11 Jan 2015 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</guid>
+      <guid>https://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</guid>
       <description>Back in 2009, I was fortunate to find an advert in the paper for a junior PHP developer. I had been using PHP for around a year at this point. I had not been to University or collage to learn any programming, it was all self taught. I applied and was a successful candidate and worked there for just over a year and a half.
 Me, a junior? Cool!  I had only really been a hobby developer in my spare time.</description>
     </item>
     
     <item>
       <title>Self management</title>
-      <link>http://futurepixels.co.uk/posts/self-management/</link>
+      <link>https://futurepixels.co.uk/posts/self-management/</link>
       <pubDate>Tue, 28 Jan 2014 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/self-management/</guid>
+      <guid>https://futurepixels.co.uk/posts/self-management/</guid>
       <description>Self management Why I have written this post Since moving from a hobby developer with the most basic of HTML knowledge since school, I have set targets on improvement of my knowledge within programming. Although my knowledge has improved to a certain degree, along with my workflow, my self management however has got no better. Sure, you can have all the tools you need and within the 4 years (at the time of writing this) of my commercial experience, I think I have only just found the tools that suit me best and I am still learning new tools.</description>
     </item>
     
     <item>
       <title>An introduction to using Git</title>
-      <link>http://futurepixels.co.uk/posts/an-introduction-to-using-git/</link>
+      <link>https://futurepixels.co.uk/posts/an-introduction-to-using-git/</link>
       <pubDate>Sat, 05 Oct 2013 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/an-introduction-to-using-git/</guid>
+      <guid>https://futurepixels.co.uk/posts/an-introduction-to-using-git/</guid>
       <description>Setting up Git Installing Git There are few ways to install Git on a mac (I will eventually add guides on Windows and Linux).
   Install Xcode (and install the command line tools for an added bonus) Simply install via the App Store App.
   Install via brew Providing you have brew installed (installation instructions on the site), then; once installed run [sudo] brew install git
@@ -171,49 +171,49 @@ Me, a junior? Cool!  I had only really been a hobby developer in my spare time.<
     
     <item>
       <title>Welcome to futurepixels.co.uk</title>
-      <link>http://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</link>
+      <link>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</link>
       <pubDate>Tue, 26 Feb 2013 10:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</guid>
+      <guid>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</guid>
       <description>So, this is just a quick hello and to say thank&amp;rsquo;s for visiting. I am currently in between writting some other articles and tutorials at the moment along with at the end of buying a house, so this may take some time as I also need to decorate the house&amp;hellip; all good fun.
 So, a thank you for visiting the site and I hope you come here every now and then, and if you would like to drop me a tweet, you are most welcome.</description>
     </item>
     
     <item>
       <title>Book Shelf</title>
-      <link>http://futurepixels.co.uk/bookshelf/</link>
+      <link>https://futurepixels.co.uk/bookshelf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/bookshelf/</guid>
+      <guid>https://futurepixels.co.uk/bookshelf/</guid>
       <description>This is just a list of book that I am wanting to read, am reading and have read. That&amp;rsquo;s it, nothing more. Oh, I may add a review/thoughts about book part to depending on the book.
 Have already read:  &amp;lt;li class=&amp;quot;book-list-item&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;http://www.amazon.co.uk/dp/0137081073/ref=cm_sw_r_tw_dp_42mHwb1B0SRSK&amp;quot; target=&amp;quot;_new&amp;quot;&amp;gt;The Clean Coder: A Code of Conduct for Professional Programmers&amp;lt;/a&amp;gt; - &amp;lt;a href=&amp;quot;https://twitter.com/unclebobmartin&amp;quot; target=&amp;quot;_new&amp;quot;&amp;gt;Robert C Marting&amp;lt;/a&amp;gt;   &amp;lt;li class=&amp;quot;book-list-item&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;http://www.amazon.co.uk/dp/1326020153/ref=cm_sw_r_tw_dp_R6mHwb008H2X4&amp;quot; target=&amp;quot;_new&amp;quot;&amp;gt;Vagrant Cookbook&amp;lt;/a&amp;gt; - &amp;lt;a href=&amp;quot;https://twitter.</description>
     </item>
     
     <item>
       <title>Resume</title>
-      <link>http://futurepixels.co.uk/resume/</link>
+      <link>https://futurepixels.co.uk/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/resume/</guid>
+      <guid>https://futurepixels.co.uk/resume/</guid>
       <description>Profile A keen and dedicated developer to create web applications and sites that are based upon concepts and standards to help produce well documented/commented code, A code-base that ensures ease of maintainability using the DRY concept along with researching technologies to better fit the product needed.
 Skills  Languages  HTML CSS PHP NodeJS JavaScript GoLang Rust bash    Tools  Postman Insomnia Docker Linux MacOS React vim tmux    Methodologies  TDD BDD DDD MVC   Education Stoke Park School and Community College 1994-2000</description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>http://futurepixels.co.uk/skills/</link>
+      <link>https://futurepixels.co.uk/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/skills/</guid>
+      <guid>https://futurepixels.co.uk/skills/</guid>
       <description> &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Frontend&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; HTML4/5 &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; CSS2/3 &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Javascript &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; jQuery &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; ReactJS &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; SASS &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Gulp &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Grunt &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Browser Sync &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Languages&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; PHP &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Ruby &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Python &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Go &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; NodeJS &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Nix Shell (Bash, ZSH) &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;DevOps&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; MySQL &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Apache &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Git &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Nginx &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Hiawatha &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Ansible &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Frameworks&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; Symfony2 &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Silex &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Slim2/3 &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Methodolgies&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; PSR (PHP Standard Recommendation) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; TDD (Test Driven Development) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; BDD (Behaviour Driven Development) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; DDD (Domain Driven Development) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; ADR (Action Domain Responder) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; BEM (Block Element Modifier) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; SOA (Service Orientated Architecture) &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;skill-list-item&amp;quot;&amp;gt; &amp;lt;h4&amp;gt;Tools&amp;lt;/h4&amp;gt; &amp;lt;p&amp;gt; editorconfig &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Composer &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Makefile &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Vagrant &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Docker &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; PHP Storm IDE &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Sublime Text &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Visual Studio Code &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Vi(m) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; OS X &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Linux (Ubuntu | CentOS | Fedora | Solus Project) &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; tmux &amp;lt;span style=&amp;quot;color:#428bca&amp;quot;&amp;gt;•&amp;lt;/span&amp;gt; Task Warrior &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt;  </description>
     </item>
     
     <item>
       <title>Whoami</title>
-      <link>http://futurepixels.co.uk/whoami/</link>
+      <link>https://futurepixels.co.uk/whoami/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://futurepixels.co.uk/whoami/</guid>
+      <guid>https://futurepixels.co.uk/whoami/</guid>
       <description>Hi there, I&amp;rsquo;m Nigel, a developer, a father and fan of geeky stuff&amp;hellip;
 Whoami as a developer&amp;hellip; A full time web developer for 11 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
     </item>

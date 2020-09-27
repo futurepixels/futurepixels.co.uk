@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Futurepixels</title>
-    <link>http://futurepixels.co.uk/tags/</link>
+    <link>https://futurepixels.co.uk/tags/</link>
     <description>Recent content in Tags on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     
-	<atom:link href="http://futurepixels.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://futurepixels.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

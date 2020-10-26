@@ -96,7 +96,7 @@
   - ssh-rsa AAA...ZZZ user@example
 </code></pre><p>This way, when you provision the new server, you will have your ssh key set up straight away on that instance. This can extend to things like DNS settings, static IP addresses and so on.</p>
 <blockquote>
-<p>I&rsquo;ve used this locally on my <a href="https://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-serve:rboard.org/k">HP Micro Server</a> and it worked really well but my home connection was a dynamic IP address and the server is not much of a spec for what I wanted. So, if you have a server at home you can replace the <a href="https://digitalocean.com">Digital-Ocean</a> parts with the steps you need to run on your server.</p>
+<p>I&rsquo;ve used this locally on my <a href="https://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server">HP Micro Server</a> and it worked really well but my home connection was a dynamic IP address and the server is not much of a spec for what I wanted. So, if you have a server at home you can replace the <a href="https://digitalocean.com">Digital-Ocean</a> parts with the steps you need to run on your server.</p>
 <p>Alternatively, if you have Virtual Box or similar installed then you can grab <a href="https://github.com/rancher/os/releases">RancherOS</a> and try it out.</p>
 </blockquote>
 <p>The second part is the management portal. This is the UI that allows you to manage multiple hosts with multiple containers. I have three hosts currently, one which runs my <a href="https://rancher.com/docs/rancher/v1.6/en/">Rancher Orchestration Tool</a> and <a href="https://kanboard.org">Kanboard</a> and another for my <a href="https://gitlab.com">GitLab</a> instance. The third is for someone I manage a website for.</p>
@@ -188,7 +188,7 @@ Are you sure you want to continue connecting (yes/no)?
 </code></pre><p>Type <code>yes</code> and you should now be logged into your droplet. Now paste the command you copied from your <a href="https://rancher.com">Rancher</a> UI and you should now see that host appear in your <a href="https://rancher.com">Rancher</a> UI.</p>
 <p>Now we are going to set up our first deployment of an app. We are going basic and will deploy WordPress.</p>
 <p>Click on &ldquo;Catalogue&rdquo; and search for WordPress. When you&rsquo;ve found it click on &ldquo;View Details&rdquo; and leave fields as they are with the default values and click &ldquo;Launch&rdquo;.</p>
-<p>You should now see something similar to fig 2.8. Once the status&rsquo; on the left column are all showing as &ldquo;Active&rdquo; then head over to the IP of the new host. Go to <code>/admin</code> for the admin panel and use &ldquo;admin&rdquo; and &ldquo;bitnami&rdquo; as the username and password.</p>
+<p>You should now see something similar to fig 2.8. Once the status' on the left column are all showing as &ldquo;Active&rdquo; then head over to the IP of the new host. Go to <code>/admin</code> for the admin panel and use &ldquo;admin&rdquo; and &ldquo;bitnami&rdquo; as the username and password.</p>
 <p><img src="https://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/provisioning-host.png" alt="Provisioning a host for Rancher to manage">
 [Fig 2.8]</p>
 <p>You <em>should</em> now see the WordPress admin panel like below (fig.2.9).</p>

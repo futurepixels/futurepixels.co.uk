@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Thu, 02 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 02 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up Rancher (with Digital Ocean)</title>
       <link>https://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</link>

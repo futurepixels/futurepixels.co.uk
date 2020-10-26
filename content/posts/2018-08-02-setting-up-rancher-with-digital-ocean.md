@@ -185,7 +185,7 @@ _**Please don't forget to destroy them Droplets!! You can do this by selecting t
  [Digital-Ocean referral link]: https://m.do.co/c/7ceb48d8e994
  [Docker]: https://docker.com
  [cloud-init]: https://cloud-init.io
- [HP Micro Server]: /posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-serve:rboard.org/k
+ [HP Micro Server]: /posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server
  [Kanboard]: https://kanboard.org
  [GitLab]: https://gitlab.com
  [LetsEncrypt]: https://letsencrypt.org/

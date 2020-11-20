@@ -217,6 +217,20 @@ body {
 .icon {
   text-rendering: geometricPrecision !important;
 }
+.icon-list { }
+.icon-list li {
+  display: inline-block;
+  padding: 3px;
+  float: left;
+  height: 32px;
+}
+.icon-social-gitlab {
+  display: block;
+  background: url(../fonts/gitlab-icon-1-color-black-rgb.svg) no-repeat;
+  background-position: center center;
+  width: 17px;
+  height: 32px;
+}
 section {
   display: -webkit-flex;
   display: -moz-flex;

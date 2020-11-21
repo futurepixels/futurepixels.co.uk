@@ -7,47 +7,28 @@ title = "Resume"
 A keen and dedicated developer to create web applications and sites that are based upon concepts and standards to help produce well documented/commented code, A code-base that ensures ease of maintainability using the `DRY` concept along with researching technologies to better fit the product needed.
 
 ### <a id="skills" href="/resume/#skills">Skills</a>
-<details>
-  <summary>Languages</summary>
-  <ul>
-   <li>HTML</li>
-   <li>CSS</li>
-   <li>PHP</li>
-   <li>NodeJS</li>
-   <li>JavaScript</li>
-   <li>GoLang</li>
-   <li>Rust</li>
-   <li>bash</li>
-  <ul>
-</details>
 
-<details>
-  <summary>Tools</summary>
-  <ul>
-   <li>Postman</li>
-   <li>Insomnia</li>
-   <li>Docker</li>
-   <li>Linux</li>
-   <li>MacOS</li>
-   <li>React</li>
-   <li>vim</li>
-   <li>tmux</li>
-  <ul>
-</details>
-
-<details>
-  <summary>Methodologies</summary>
-  <ul>
-   <li>TDD</li>
-   <li>BDD</li>
-   <li>DDD</li>
-   <li>MVC</li>
-  <ul>
-</details>
+{{% skill-list %}}
 
 ### <a id="education" href="/resume/#education">Education</a>
 
 Stoke Park School and Community College _1994-2000_
+
+### <a id="open-source" href="/resume/#open-source">Open Source Contribution</a>
+
+With the many methodolgies around, one of the most important to me is the open source community. I try to take this approach when leading on projects to ensure you code for the next person/team to pick up a feature that might be added to a micro front end or service the team have created. These skills have been gained mainly when working on open-source projects along side respected people within the PHP Community for projects like <a href="https://thephpleague.com/" target="_blank">The PHP League</a>. Some of my projects can be seen below:
+
+ - https://github.com/NigelGreenway/Demander
+ - https://github.com/NigelGreenway/inuitcss.plugins.iglu
+ - https://github.com/NigelGreenway/Demander-Container-Plugin
+ - https://github.com/NigelGreenway/signa
+ - https://github.com/NigelGreenway/Tutis
+ - https://github.com/NigelGreenway/route-generator-plugin
+
+Projects I've worked on in the past:
+
+ - https://github.com/slimphp/Twig-View/pulls/NigelGreenway
+ - https://github.com/AndrewCarterUK/SimpleRoute/pulls/NigelGreenway
 
 ### <a id="employment" href="/resume/#employment">Employment</a>
 

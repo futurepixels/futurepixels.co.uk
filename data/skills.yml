@@ -11,14 +11,17 @@ skills:
       - Grunt
       - Browser Sync
 
-  - title: Languages
+  - title: Languages/Scripting
     items:
+      - HTML
+      - CSS
       - PHP
       - Ruby
       - Python
-      - Go
+      - GoLang
       - NodeJS
       - Nix Shell (Bash, ZSH)
+      - Rust
 
   - title: DevOps
     items:
@@ -28,12 +31,17 @@ skills:
       - Nginx
       - Hiawatha
       - Ansible
+      - GitLab CI
+      - Jenkins
+      - Rundeck
+      - Terraform
 
   - title: Frameworks
     items:
       - Symfony2
       - Silex
       - Slim2/3
+      - NextJS
 
   - title: Methodolgies
     items:
@@ -44,6 +52,7 @@ skills:
       - ADR (Action Domain Responder)
       - BEM (Block Element Modifier)
       - SOA (Service Orientated Architecture)
+      - SOLID
 
   - title: Tools
     items:
@@ -58,5 +67,6 @@ skills:
     - Vi(m)
     - OS X
     - Linux (Ubuntu | CentOS | Fedora | Solus Project)
+    - Linux Subsystem for Windows
     - tmux
     - Task Warrior

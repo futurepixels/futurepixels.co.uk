@@ -34,3 +34,5 @@ However, a new role plus the fact my marriage ended as well as the lost time wit
 One thing I will say is the support from close friends and my direct and in-direct management. This is something that was a key part and re-enforced why I was in the right place.
 
 As I tried to distract my self personally with various dating apps and finding myself again I slowly found myself drifting from my job and found I hadn't had the interest I once had, it wasn't until later on that I discovered that I had lost interest due to my personal life years before that...
+
+[Continued...](/posts/becoming-a-lead-part-2-trials-and-tribulations/)

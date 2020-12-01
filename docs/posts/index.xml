@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Becoming a lead, part 2: trials and tribulations</title>
+      <link>https://futurepixels.co.uk/posts/becoming-a-lead-part-2-trials-and-tribulations/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://futurepixels.co.uk/posts/becoming-a-lead-part-2-trials-and-tribulations/</guid>
+      <description>This is part two of a series. Go read part one if you haven&amp;rsquo;t already&amp;hellip;
+Over the next few months we would finish a project which was one of the best projects I was involved in. This was lead by my predecessor. I&amp;rsquo;ve very much been mentored my Leigh the past four years and he has taught me a lot around aspects of my role as an engineer. During this project I pushed for various things within our team; detailed mocks, accessibility as well as other things.</description>
+    </item>
+    
     <item>
       <title>Becoming a lead, part 1: The Prelude</title>
       <link>https://futurepixels.co.uk/posts/becoming-a-lead-part-1-the-prelude/</link>
@@ -184,6 +194,15 @@ Me, a junior? Cool!  I had only really been a hobby developer in my spare time.<
       <guid>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</guid>
       <description>So, this is just a quick hello and to say thank&amp;rsquo;s for visiting. I am currently in between writting some other articles and tutorials at the moment along with at the end of buying a house, so this may take some time as I also need to decorate the house&amp;hellip; all good fun.
 So, a thank you for visiting the site and I hope you come here every now and then, and if you would like to drop me a tweet, you are most welcome.</description>
+    </item>
+    
+    <item>
+      <title>Becoming a lead, part 2: ?</title>
+      <link>https://futurepixels.co.uk/posts/becoming-a-lead-part-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://futurepixels.co.uk/posts/becoming-a-lead-part-2/</guid>
+      <description>October was meant to be the delivery of a brand new micro front end. This was extracting some functionality from our legacy codebase as well as helping tackle an issue within the business. During this time I wanted to limit the dependency on our legacy codebase and get another service out to extract that functionality. On top of that I&amp;rsquo;ve been aware of how long it currently takes to deliver a new micro front end as well as the issues that come with it.</description>
     </item>
     
   </channel>

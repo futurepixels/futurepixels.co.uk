@@ -196,14 +196,5 @@ Me, a junior? Cool!  I had only really been a hobby developer in my spare time.<
 So, a thank you for visiting the site and I hope you come here every now and then, and if you would like to drop me a tweet, you are most welcome.</description>
     </item>
     
-    <item>
-      <title>Becoming a lead, part 2: ?</title>
-      <link>https://futurepixels.co.uk/posts/becoming-a-lead-part-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/becoming-a-lead-part-2/</guid>
-      <description>October was meant to be the delivery of a brand new micro front end. This was extracting some functionality from our legacy codebase as well as helping tackle an issue within the business. During this time I wanted to limit the dependency on our legacy codebase and get another service out to extract that functionality. On top of that I&amp;rsquo;ve been aware of how long it currently takes to deliver a new micro front end as well as the issues that come with it.</description>
-    </item>
-    
   </channel>
 </rss>

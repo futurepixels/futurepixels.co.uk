@@ -1,16 +1,6 @@
 <!-- CSS -->
 
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.v0.9.1.css">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}css/ionicons.min.css">
-
-{{ if .Site.Params.highlightjs }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.min.css">
-{{ end }}
-
-{{ if .Site.Params.progressively }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/progressively.min.css">
-{{ end }}
-
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
 {{ range .Site.Params.extracssfiles }}
   <link rel="stylesheet" href="{{ . | absURL }}">
 {{ end }}

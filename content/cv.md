@@ -1,5 +1,8 @@
 +++
 title = "Curriculum Vitae: Nigel Greenway"
+aliases = [
+  "/resume/"
+]
 +++
 
 As a Lead Software Engineer, I look to see what can be done to deliver what is needed whilst thinking about the end user first and then what impact it will have on the business. Dealing with requirements from the business, I help get solution with a skilled team and deliver value in iterations.
@@ -20,7 +23,7 @@ I am a passionate engineer who takes pride in what he delivers. In my spare time
 
 Above all, I am loyal and get excited with a good team.
 
-Please also read any recommendations I have via <a href="https://www.linkedin.com/in/nigel-greenway-a5710a45/" target="_blank">LinkedIn</a>.
+Please also read any recommendations I have via <a href="https://www.linkedin.com/in/nigel-greenway-a5710a45/" target="_blank" rel="noreferrer">LinkedIn</a>.
 
 You can <a href="/whoami">read more</a> about me too...
 

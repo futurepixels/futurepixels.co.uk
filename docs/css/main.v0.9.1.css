@@ -318,7 +318,10 @@ section.header nav ul {
   display: -ms-inline-flex;
   display: inline-flex;
 }
-section.header nav ul a {
+section.header nav ul li {
+  padding-right: 10px;
+}
+section.header nav ul li a {
   margin-left: 6px;
   margin-right: 6px;
 }
@@ -907,4 +910,8 @@ input[type="text"] {
     display: block;
     margin: 25% auto;
     border: 1px solid #2a6496;
+}
+
+li.skill-list-item {
+  list-style: none;
 }

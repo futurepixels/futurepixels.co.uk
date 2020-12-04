@@ -11,7 +11,7 @@
     <ul class="icon-list">
       {{ if .Site.Params.gitlab }}
       <li>
-        <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank">
+        <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank" rel="noreferrer">
           <i class="icon-social-gitlab" title="github"></i>
         </a>
       </li>
@@ -19,7 +19,7 @@
 
       {{ if .Site.Params.github }}
       <li>
-        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank">
+        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" rel="noreferrer">
           <i class="icon ion-social-github" title="github"></i>
         </a>
       </li>
@@ -27,7 +27,7 @@
 
       {{ if .Site.Params.twitter }}
       <li>
-        <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank">
+        <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank" rel="noreferrer">
           <i class="icon ion-social-twitter" title="twitter"></i>
         </a>
       </li> 
@@ -35,7 +35,7 @@
 
       {{ if .Site.Params.linkedin }}
       <li>
-        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">
+        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" rel="noreferrer">
           <i class="icon ion-social-linkedin" title="linkedin"></i>
         </a>
       </li>
@@ -52,7 +52,8 @@
       <li>
         <a href="{{ .Site.RSSLink }}">
           <i class="icon ion-social-rss larger" title="rss"></i>
-      </li>        </a>
+        </a>
+      </li>
       {{ end }}
 
   </div>

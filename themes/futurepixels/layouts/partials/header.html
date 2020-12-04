@@ -11,9 +11,10 @@
             <a href="{{ .Site.BaseURL }}"><div class="name"><h1>{{ .Site.Title }}</h1></div></a>
             <nav>
                 <ul>
-                    <a href="{{ .Site.BaseURL }}posts/"><li {{ if eq (lower .Title) "posts"}}style="font-weight:800;"{{ end }}>Posts</li></a>
-                    <a href="{{ .Site.BaseURL }}bookshelf/"><li {{ if eq (lower .Title) "book shelf"}}style="font-weight:800;"{{ end }}>Book Shelf</li></a>
-                    <a href="{{ .Site.BaseURL }}whoami/"><li {{ if eq (lower .Title) "whoami"}}style="font-weight:800;"{{ end }}>Whoami</li></a>
+                    <li {{ if eq (lower .Title) "posts"}}style="font-weight:900;font-style:underline;"{{ end }}><a href="{{ .Site.BaseURL }}posts/">Posts</a></li>
+                    <li {{ if eq (lower .Title) "book shelf"}}style="font-weight:900;"{{ end }}><a href="{{ .Site.BaseURL }}bookshelf/">Book Shelf</a></li>
+                    <li {{ if eq (lower .Title) "whoami"}}style="font-weight:900;"{{ end }}><a href="{{ .Site.BaseURL }}whoami/">Whoami</a></li>
+                    <li {{ if eq (lower .Title) "Curriculum Vitae: Nigel Greenway"}}style="font-weight:900;"{{ end }}><a href="{{ .Site.BaseURL }}cv/">CV</a></li>
                 </ul>
             </nav>
         </div>

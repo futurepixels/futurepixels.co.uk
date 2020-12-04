@@ -3,33 +3,23 @@ skills:
     items:
       - HTML4/5
       - CSS2/3
-      - Javascript
-      - jQuery
-      - ReactJS
       - SASS
-      - Gulp
-      - Grunt
-      - Browser Sync
+      - Javascript
+      - ReactJS
+      - Accessibility
 
   - title: Languages/Scripting
     items:
-      - HTML
-      - CSS
       - PHP
       - Ruby
       - Python
       - GoLang
       - NodeJS
-      - Nix Shell (Bash, ZSH)
       - Rust
+      - Nix Shell (Bash, ZSH)
 
   - title: DevOps
     items:
-      - MySQL
-      - Apache
-      - Git
-      - Nginx
-      - Hiawatha
       - Ansible
       - GitLab CI
       - Jenkins
@@ -42,6 +32,14 @@ skills:
       - Silex
       - Slim2/3
       - NextJS
+
+  - title: Other
+    items:
+      - MySQL
+      - Apache
+      - Git
+      - Nginx
+      - Hiawatha
 
   - title: Methodolgies
     items:

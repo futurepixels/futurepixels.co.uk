@@ -908,3 +908,7 @@ input[type="text"] {
     margin: 25% auto;
     border: 1px solid #2a6496;
 }
+
+li.skill-list-item {
+  list-style: none;
+}

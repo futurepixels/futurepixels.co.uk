@@ -216,13 +216,13 @@ Have already read:  The Clean Coder: A Code of Conduct for Professional Programm
     </item>
     
     <item>
-      <title>Resume</title>
-      <link>https://futurepixels.co.uk/resume/</link>
+      <title>Curriculum Vitae: Nigel Greenway</title>
+      <link>https://futurepixels.co.uk/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://futurepixels.co.uk/resume/</guid>
-      <description>Profile A keen and dedicated developer to create web applications and sites that are based upon concepts and standards to help produce well documented/commented code, A code-base that ensures ease of maintainability using the DRY concept along with researching technologies to better fit the product needed.
-Skills  Frontend HTML4/5  CSS2/3  Javascript  jQuery  ReactJS  SASS  Gulp  Grunt  Browser Sync    Languages/Scripting HTML  CSS  PHP  Ruby  Python  GoLang  NodeJS  Nix Shell (Bash, ZSH)  Rust    DevOps MySQL  Apache  Git  Nginx  Hiawatha  Ansible  GitLab CI  Jenkins  Rundeck  Terraform    Frameworks Symfony2  Silex  Slim2/3  NextJS    Methodolgies PSR (PHP Standard Recommendation)  TDD (Test Driven Development)  BDD (Behaviour Driven Development)  DDD (Domain Driven Development)  ADR (Action Domain Responder)  BEM (Block Element Modifier)  SOA (Service Orientated Architecture)  SOLID    Tools editorconfig  Composer  Makefile  Vagrant  Docker  PHP Storm IDE  Sublime Text  Visual Studio Code  Vi(m)  OS X  Linux (Ubuntu | CentOS | Fedora | Solus Project)  Linux Subsystem for Windows  tmux  Task Warrior   Education Stoke Park School and Community College 1994-2000</description>
+      <guid>https://futurepixels.co.uk/cv/</guid>
+      <description>As a Lead Software Engineer, I look to see what can be done to deliver what is needed whilst thinking about the end user first and then what impact it will have on the business. Dealing with requirements from the business, I help get solution with a skilled team and deliver value in iterations.
+I am a believer in single source of truth around digital journeys with knowledge bases to help empower the team and business so everyone has a keen interest in helping each other as well as using the skills available to ensure the right product is delivered.</description>
     </item>
     
     <item>
@@ -231,7 +231,7 @@ Skills  Frontend HTML4/5  CSS2/3  Javascript  jQuery  ReactJS  SASS  Gulp  Grunt
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://futurepixels.co.uk/skills/</guid>
-      <description> Frontend HTML4/5  CSS2/3  Javascript  jQuery  ReactJS  SASS  Gulp  Grunt  Browser Sync    Languages/Scripting HTML  CSS  PHP  Ruby  Python  GoLang  NodeJS  Nix Shell (Bash, ZSH)  Rust    DevOps MySQL  Apache  Git  Nginx  Hiawatha  Ansible  GitLab CI  Jenkins  Rundeck  Terraform    Frameworks Symfony2  Silex  Slim2/3  NextJS    Methodolgies PSR (PHP Standard Recommendation)  TDD (Test Driven Development)  BDD (Behaviour Driven Development)  DDD (Domain Driven Development)  ADR (Action Domain Responder)  BEM (Block Element Modifier)  SOA (Service Orientated Architecture)  SOLID    Tools editorconfig  Composer  Makefile  Vagrant  Docker  PHP Storm IDE  Sublime Text  Visual Studio Code  Vi(m)  OS X  Linux (Ubuntu | CentOS | Fedora | Solus Project)  Linux Subsystem for Windows  tmux  Task Warrior   </description>
+      <description> Frontend HTML4/5  CSS2/3  SASS  Javascript  ReactJS  Accessibility    Languages/Scripting PHP  Ruby  Python  GoLang  NodeJS  Rust  Nix Shell (Bash, ZSH)    DevOps Ansible  GitLab CI  Jenkins  Rundeck  Terraform    Frameworks Symfony2  Silex  Slim2/3  NextJS    Other MySQL  Apache  Git  Nginx  Hiawatha    Methodolgies PSR (PHP Standard Recommendation)  TDD (Test Driven Development)  BDD (Behaviour Driven Development)  DDD (Domain Driven Development)  ADR (Action Domain Responder)  BEM (Block Element Modifier)  SOA (Service Orientated Architecture)  SOLID    Tools editorconfig  Composer  Makefile  Vagrant  Docker  PHP Storm IDE  Sublime Text  Visual Studio Code  Vi(m)  OS X  Linux (Ubuntu | CentOS | Fedora | Solus Project)  Linux Subsystem for Windows  tmux  Task Warrior   </description>
     </item>
     
     <item>

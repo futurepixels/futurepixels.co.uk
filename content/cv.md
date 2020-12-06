@@ -5,21 +5,18 @@ aliases = [
 ]
 +++
 
-As a Lead Software Engineer, I look to see what can be done to deliver what is needed whilst thinking about the end user first and then what impact it will have on the business. Dealing with requirements from the business, I help get solution with a skilled team and deliver value in iterations.
 
-I am a believer in single source of truth around digital journeys with knowledge bases to help empower the team and business so everyone has a keen interest in helping each other as well as using the skills available to ensure the right product is delivered. Being customer centric I ensure I listen to the advice of User Experience as well as the Product Owner to ensure I deliver something we can learn from as a business and listen to the customer.
+As a Lead Software Engineer, I strive to ensure the correct approach for the end user is delivered whilst providing business value. I am a positive and motivational person who likes to lead a team to build products around motivated individuals and give them the environment and support they need along with the trust to get the task completed. This is done with open communication and utilising the best of peoples skill sets.
 
-I am passionate about being able to deliver products and features fast enough to make a difference and to learn from, yet in a timely manner where the user experience is focused on with the sign off from a quality assurance team - where all people involved have the chance to say they are not happy with the quality and either push back or put something in the back log to refine or set a value against.
+My current way of working are Lean but have recently started to implement Agile methodologies to strengthen my ways of working. By working with both the product owner and user experience, we work out the effort vs the value collaboratively and ensure there is no wastage. The value is then delivered fast enough to enable us to learn from the feature whilst also engineered to a quality for ease of adapting when we go through our learnings.
 
-To allow a decent delivery I very much believe in a pipeline for continuous integration - but not only that, I believe continuous deployment can help where monitoring is at the forefront to give you the confidence that you can deploy on a Friday afternoon.
+Documentation is a first class citizen, as is test driven design and quality assurance. Dealing with micro front ends, you can quickly have many to manage so documenting domain knowledge specific to it can help when context switching. This allows the team to have the ability to work on a small codebase quickly, effectively and deliver value quickly.
 
-As a lead, I am enthusiastic and a team player. I would never ask of anyone something that I wouldn't do myself. I believe transparency and fairness is key to a great team which is a key to a successful product being delivered. I like to ensure everyone gets on with each other and to understand we are in it together.
-
-I understand to be able to release and iterate on a product and learn fast and fail fast you need to be quick at implementing them changes. This means a good code base that's easy to understand and read when you are context switching through the day between pieces of work. This takes a team effort as well as agility to enable this.
+As a Lead, I believe the need for a single source of truth and a knowledge base will empower the team and autonomy. Collaboration is also key, and collaborating with both User Experience and the Product Owner ensures nothing is delivered without the agreed value and effort.
 
 ### Whoami
 
-I am a passionate engineer who takes pride in what he delivers. In my spare time I am listening to music, taking my daughter out on the bikes or teaching her skateboarding. If I'm not doing that, I'm learning how to use my camera, playing games or nerding/writing on my PC to reflect on what I've learned or pushing my skill sets. I am infallible and can make mistakes. I admit when I'm wrong and question things I don't know or am uncertain of. The chances are when I'm at my desk my headphones are on, and are probably too loud. 
+I am a passionate engineer who takes pride in what he delivers. In my spare time I am listening to music, taking my daughter out cycling or teaching her to skateboard. If I'm not doing that, I'm learning how to use my camera, playing games, experimenting with new programming projects and concepts to extend my skill set or writing to reflect on what I've learned. I admit when I'm wrong and question things I don't know or am uncertain of.
 
 Above all, I am loyal and get excited with a good team.
 
@@ -29,7 +26,7 @@ You can <a href="/whoami">read more</a> about me too...
 
 ### Skills
 
-My skills have adapted and changed over the years. I understand a language should be used for certain tasks and there is not a one size fits all. This is the same for best practice and methodologies. Having worked slightly with Terraform, GoLang and Rust, I can see the benefits of infrastructure as code as well as using GoLang and Rust to help with certain tasks or tool chains.
+My skills have adapted and changed over the years. I understand a language should be used for certain tasks and there is not a one size fits all. This is the same for best practice and methodologies. Having worked with Terraform, GoLang and Rust, I can see the benefits of infrastructure as code as well as using GoLang and Rust to help with certain tasks or tool chains.
 
 {{% skill-list %}}
 
@@ -57,38 +54,35 @@ With the many methodologies around, one of the most important to me is the open 
 
 #### Shell Energy (First Utility 2016-2019) _(2016 - present)_
 
-Since my time at Shell Energy (Formally First Utility) I have been able to work with many great and talented people. Starting as a Software Engineer, I was brought in to help with the main functionality of the web site, I helped deliver new features to the system as well as bug fixes. This was a monolithic PHP MVC application using Symfony and Zend components via Composer and based on the Yii framework as a base. Since then I've supported team members with bigger features and worked to become a Senior Software Engineer and to my current role of a Lead Software Engineer.
+Since my time at Shell Energy (formerly First Utility) I have been able to work with many great and talented people where I've been able to extend on current skill sets as ewll as gain new ones. Starting as a Software Engineer, I was brought in to help with the main functionality of the web site where people would manage their meter readings by submitting online, change their tariff, as well as other general account areas. These are journeys used by hundreds of people a day. I helped deliver new features to the system as well as bug fixes. This was a monolithic PHP MVC application using Symfony and Zend components via Composer and based on the Yii framework as a base. Since then I've supported team members with bigger features like our refer-a-friend, smart awareness and booking portal, loyalty scheme, the display of weekly usage and more. During these products, in recognition of my efforts I've been promoted twice in four years - first to Senior Software Engineer and then to my current role of a Lead Software Engineer.
 
-My role of Lead Software Engineer has pushed me out of my comfort where I lead a team of software, UX, QA and API engineers to help deliver the right and best
- digital experience for our user base. Whether this is a new web app or a complete re-platforming of current systems, I try ensure that the team have the right tools and information to hand and ensure MVP's are sensibly set. Working closely with the team I ensure we deliver value to both the customer and the business. We deliver apps that are delivering value instantly. Once the initial app is delivered we iterate as a team and deploy multiple changes which are driven by data taken from our internal analytic's and data collated from UX via our feedback and insight from the customer.
+My role as Lead Software Engineer initially pushed me out of my comfort zone. I lead a team of software, User Experience, Quality Assurance and API engineers to help deliver the right and best digital experience for our user base. Whether this is a new web app like our smart booking portal or a complete re-platforming of current systems like our monolithic codebase being split into micro front ends, I try ensure that the team have the right tools and information to hand and ensure MVPs are sensibly set. Working closely with the team I ensure we deliver value to both the customer and the business. We deliver apps that are adding value instantly. Once the initial app is delivered we iterate as a team and deploy multiple changes which are driven by analytics and data collated from UX.
 
 #### Presto Classical Ltd _(2014 - 2016)_
 
 My first task was to build an internal application to deal with how the business handles purchase orders with suppliers. Since then, I worked on rewriting the current website by converting the current procedural code into a fully object orientated application based on Domain Driven Design.
 
-Within the first year, I have implemented Jenkins, a git work flow, PHPUnit and Test Driven Design along with documenting everything from code to hardware assets to requirement specifications using Dokuwiki. Working with the front end developer, I have implemented build scripts to ease the compiling of CSS from SASS, installing all server-side/front-end assets and browser-sync to allow testing of multiple devices with ease, media queries and front end functionality.
+Within the first year, I have implemented Jenkins, a git workflow, PHPUnit and Test Driven Design along with DokuWiki documentation covering everything from code to hardware assets to requirement specifications using Dokuwiki. Working with the front end developer, I have implemented build scripts to ease the compiling of CSS from SASS, installing all server-side/front-end assets and Browsersync to allow testing of multiple devices with ease, media queries and front end functionality.
 
-Technically, I have designed the architecture for the new site and business application with ADR, CQRS and DDD whilst implementing [StackPHP](http://stackphp.com/) for the core whilst using packages from [The PHP League](https://thephpleague.com/) and other resources as well as building our own or contributing to projects where they can aid in easing our development.
+I designed the architecture for the new site and business application with ADR, CQRS and DDD whilst implementing [StackPHP](http://stackphp.com/) for the core whilst using packages from [The PHP League](https://thephpleague.com/) and other resources as well as building our own or contributing to projects where they can aid in easing our development.
 
 #### Resource Development International Ltd _(2012 - 2014)_
 
 Based in Coventry, RDI are an on-line educational company that delivers university qualifications worldwide.
 
-It is here where I have been able to extend my knowledge even further due to a great team. It is here I have been able to pick up knowledge on best practice, coding standards, knowledge of languages and further myself as a better and efficient developer.
+It is here where I extended my knowledge even further due to a great team. I was able to pick up knowledge on best practice, coding standards, a deeper knowledge of PHP and further myself as a better and more efficient developer.
 
-Since arriving here, I have had the opportunity to create modifications and enhancements to the internal system which is based on the Symfony2 framework whilst working with Git for the version control. I have also had the pleasure of creating small business web tools to help with importing/exporting data, conversion of flash based questionnaires to pure HTML using JavaScript to work with the current data and be involved with 2 separate releases of our sales site.
+I took the opportunity to create modifications and enhancements to the internal system which was based on the Symfony2 framework whilst working with Git for the version control. I have also had the pleasure of creating small business web tools to help with importing/exporting data, conversion of Flash based questionnaires to pure HTML using JavaScript to work with the current data and be involved with numerous releases of our sales site.
 
-I have also had chance to work on our Moodle platform by creating modifications, help with the theming of the new site and extend on the API connectors between our internal system and Moodle platform.
+I also had the chance to work on our Moodle platform by creating modifications, help with the theming of the new site and expand on the API connectors between our internal system and Moodle platform.
 
 #### Caroco Marketing Ltd _(2011 - 2012)_
 
-Originally just based in Birmingham, Caroco Marketing specialised on web marketing from PPC, SEO, web design, social media services and the alike.
+Originally based in Birmingham, Caroco Marketing specialised in web marketing from PPC, SEO, web design, social media services and the alike.
 
-My time at Caroco Marketing gave me the chance to jump into project management and start working directly with my first PHP Framework; Symfony2. It gave me the chance to understand what is needed when planning a large project along with how to prioritise certain tasks with both immediate and higher level managers.
+My time at Caroco Marketing gave me the chance to jump into project management and start working directly with my first PHP Framework; Symfony2. It gave me the chance to understand what is required when planning a large project along with how to prioritise tasks with both immediate and higher level managers.
 
-Throughout working for Caroco, I was asked to build a web app to improve business efficiency with the help of API's to feed information into our custom CRM along with creating short scripts to work with Google API's to import data into our custom reporting system.
-
-On the odd occasion I would also be asked to either modify current client web sites or create new ones with the typo3 micro cms framework.
+I was part of an effort to create a new in-house system to manage Google PPC as well as keyword analytics and would also be asked to either modify current client web sites or create new ones with the TYPO3 micro CMS framework.
 
 #### ITC Ltd _(2010 - 2011)_
 
@@ -98,4 +92,4 @@ I was part of a team that created modifications for the internal system or modif
 
 Through each modification given, there was a process I learnt and found to be of great value to a developer; create the modification to the specification given, test locally and report on the test process in order for this to be passed to the test team and then liaise with the user acceptance team for further tweaks/modifications before being signed off and released.
 
-Starting out as junior developer; this was my first roll in the world of development. Then, at the age of 26 I wanted a career I can excel in and gain rewards on a basis I can control, be that daily, weekly or monthly. Here, I learnt PHP at a deeper level and started to move from procedural code to the MVC pattern but on a basic level.
+Starting out as junior ; this was my first role in the world of development. Then, at the age of 26 I wanted a career I can excel in and gain rewards on a basis I can control, be that daily, weekly or monthly. Here, I learnt PHP at a deeper level and started to move from procedural code to the MVC pattern.

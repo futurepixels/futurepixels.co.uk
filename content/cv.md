@@ -12,7 +12,7 @@ My current way of working are Lean but have recently started to implement Agile 
 
 Documentation is a first class citizen, as is test driven design and quality assurance. Dealing with micro front ends, you can quickly have many to manage so documenting domain knowledge specific to it can help when context switching. This allows the team to have the ability to work on a small codebase quickly, effectively and deliver value quickly.
 
-As a Lead, I believe the need for a single source of truth and a knowledge base will empower the team and autonomy. Collaboration is also key, and collaborating with both User Experience and the Product Owner ensures nothing is delivered without the agreed value and effort.
+As a Lead, I believe the need for a single source of truth and a knowledge base will empower the team and autonomy. Collaboration is also key, and collaborating with both User Experience and the Product Owner ensures nothing is delivered without the agreed value and effort. From these beliefs I've been able to enable a design system to be created by collaboration between the engineers and user experience/design to create a solution that's fits everyone, help push for a new knowledge base to allow for our single source of truth for key documentation and processes within the digital team. This has all been achievable with a good working culture where collaboration is key with cross-functional teams, something that is close to my ways of working to allow for well thought out solutions and above all a great team to work in.
 
 ### Whoami
 

@@ -1,10 +1,12 @@
-{{ range $.Site.Data.skills.skills }}
-<details>
-  <summary>{{ .title }}</summary>
-    {{ range $skill := .items }}
-<li class="skill-list-item">
-  {{ $skill }}
-</li>
+<h4>My skill sets:</h4>
+<div style="column-count: 5;">
+  {{ range $.Site.Data.skills.skills }}
+  {{ range $skill := .items }}
+  <ul>
+    <li class="skill-list-item">
+      {{ $skill }}
+    </li>
     {{ end }}
-</details>
-{{ end }}
+  </ul>
+  {{ end }}
+</div>

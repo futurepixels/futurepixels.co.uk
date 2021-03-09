@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Articles on general development and programming along with other findings... oh, and a gallery.">
+
+
+    <meta property="twitter:site" content="@NigelGreenway">
+
+<meta property="twitter:title" content="Fixing issues with Linux kernel not updating and killing boot sequence">
+
+    <meta property="twitter:card" content="summary">
+
+<meta property="twitter:description" content="Fixing issues with Linux kernel not updating and killing boot sequence">
+
+<title>
+
+
+     Futurepixels - Fixing issues with Linux kernel not updating and killing boot sequence 
+
+</title>
+<link rel="canonical" href="https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/">
+
+
+<link rel="stylesheet" href="https://futurepixels.co.uk/css/style.css">
+
+
+
+<link rel="shortcut icon"
+
+    href="https://futurepixels.co.uk/img/logo.png"
+
+>
+
+
+
+
+</head>
+
+
+<body>
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="https://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <nav>
+                <ul>
+                    <li ><a href="https://futurepixels.co.uk/posts/">Posts</a></li>
+                    <li ><a href="https://futurepixels.co.uk/bookshelf/">Book Shelf</a></li>
+                    <li ><a href="https://futurepixels.co.uk/whoami/">Whoami</a></li>
+                    <li ><a href="https://futurepixels.co.uk/cv/">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Fixing issues with Linux kernel not updating and killing boot sequence
+
+</div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Tue Mar 9 2021 00:00:00 UTC">Mar 9, 2021</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    <p>Over the weekend I updated my favourite rolling release of my Linux distro, <a href="https://getsol.us/blog/">Solus-Project</a>. I looked through the updates, like I always do and seen there were some updates - one including the Linux kernel! Later that day I shut the PC down and went about the rest of my day.</p>
+<p>Yesterday I needed to get back on my PC to do something and it wasn&rsquo;t booting - God damn it! Not all is lost though, this is Linux and with the power of Linux there is <em>something</em> out there on the big web that can help - before I use my small circle of friends if they&rsquo;ve had this.</p>
+<p>After some searching on <a href="https://duckduckgo.com/">DDG</a> I found the command I was trying to get to for when booting failed once it passed the boot screen and boot loader - <code>ctrl+alt+F2</code>. Once I logged in with my normal user credentials I found <a href="https://getsol.us/articles/troubleshooting/general-troubleshooting/en/">this</a> article on the Solus Project help forum and run the suggested command; <code>CBM_DEBUG=1 clr-boot-manager update</code>. This allowed me to run the <code>update</code> command and get the debug output I needed - thank you to people who add good logging!</p>
+<p>The results shown that there was no space on my device&hellip; odd. Then the dredd hit me - I didn&rsquo;t set the boot partion to a large size, because.. well I thought it would be fine. The size you ask, it was 512Mb&hellip; I know.</p>
+<p>So as I dual boot, I booted into my Windows partion downloaded <a href="https://rufus.ie">Rufus</a> and the <a href="https://getsol.us/download/">Solus-Project ISO</a> and set them to work together to create me a bootable USB. Once booted I tried to re-size my partition labeled <code>BOOT</code> and quickly found &hellip; I can&rsquo;t.</p>
+<p>Next step, purge the old versions. I thought that <code>clr-boot-manager</code> would have a command to purge something by date or &ldquo;keep recent versions&rdquo; but it doesn&rsquo;t have that:</p>
+<pre><code>$ clr-boot-manager -h
+Usage: clr-boot-manager
+
+        version - Print the version and quit
+  report-booted - Report the current kernel as successfully booted
+           help - Show help message
+         update - Perform post-update configuration of the system
+    set-timeout - Set the timeout to be used by the bootloader
+    get-timeout - Get the timeout to be used by the bootloader
+     set-kernel - Configure kernel to be used at next boot
+   list-kernels - Display currently selectable kernels to boot
+
+Options:
+  -p, --path           Set the base path for boot management operations.
+  -i, --image          Force clr-boot-manager to run in image mode.
+  -n, --no-efi-update  Don't update efi vars when using shim-systemd backend.
+</code></pre><p>So, I had to do it myself. Boot into my USB drive and the Solus Live image worked a treat -</p>
+<pre><code>sudo su
+mount /dev/MY_BOOT_PARTITION /boot
+xdg-open /boot
+</code></pre><p>In here had all my boot partitions under <code>/EFI</code>. Once I am in there <code>com.solus-project</code> and then change to a list view and order by most recent. Here I could remove the oldest ones from the past few years. Once that was done I needed to set the kernel to the latest version with <code>clr-boot-manager set-kernel com.solus-project.current.5.10.15.172</code> (find your available kernels with <code>clr-boot-manager list-kernels</code> - the one with the <code>*</code> on the left is the one that is set).</p>
+<p>Once done, <code>reboot now</code> and all works again!</p>
+<p>The lesson I was taught here; set something more sensible for the boot partition - 512Mb is just stupid when using a rolling release. The bonus is if I do need to re-install Linux (and Windows in tthis case) then I have a partition <code>/home</code> so that wouldn&rsquo;t be affected - my Windows partition would though from what I can tell&hellip;</p>
+
+
+                <br>
+                <p>
+                
+                    <a href="https://futurepixels.co.uk/posts/becoming-a-lead-part-2-trials-and-tribulations/" style="float:left;">Previous</a>
+                
+                
+                </p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="img-viewer" class="image-viewer">
+    <img src="">
+</div>
+
+<script>
+    var articleImages = document.querySelectorAll('section.main img'),
+        imageViewer = document.getElementById('img-viewer');
+
+    articleImages.forEach( function (img) {
+        img.addEventListener('click', function (event) {
+            imageViewer.querySelector('img').src = img.src;
+            imageViewer.style.display="block";
+        });
+    });
+
+    imageViewer.addEventListener('click', function (event) {
+        this.style.display="none";
+    });
+</script>
+
+<section class="footer">
+  <div class="container">
+    <div class="copyright">
+
+      
+
+    </div>
+
+    <ul class="icon-list">
+      
+      <li>
+        <a href="https://gitlab.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon-social-gitlab" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://github.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-github" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://twitter.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-twitter" title="twitter"></i>
+        </a>
+      </li> 
+      
+
+      
+      <li>
+        <a href="https://www.linkedin.com/in/nigel-greenway-a5710a45" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-linkedin" title="linkedin"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="mailto:github@futurepixels.co.uk">
+          <i class="icon ion-ios-email larger" title="email"></i>
+        </a>
+      </li>
+
+      
+      <li>
+        <a href="https://futurepixels.co.uk/index.xml">
+          <i class="icon ion-social-rss larger" title="rss"></i>
+        </a>
+      </li>
+      
+
+  </div>
+</section>
+
+
+  <script src="https://futurepixels.co.uk/js/highlight.min.js" defer></script>
+  
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+  };
+</script>
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-45501754-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+</body>
+</html>
+

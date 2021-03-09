@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixing issues with Linux kernel not updating and killing boot sequence</title>
+      <link>https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</guid>
+      <description>Over the weekend I updated my favourite rolling release of my Linux distro, Solus-Project. I looked through the updates, like I always do and seen there were some updates - one including the Linux kernel! Later that day I shut the PC down and went about the rest of my day.
+Yesterday I needed to get back on my PC to do something and it wasn&amp;rsquo;t booting - God damn it!</description>
+    </item>
+    
     <item>
       <title>Becoming a lead, part 2: trials and tribulations</title>
       <link>https://futurepixels.co.uk/posts/becoming-a-lead-part-2-trials-and-tribulations/</link>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Articles on general development and programming along with other findings... oh, and a gallery.">
+
+
+    <meta property="twitter:site" content="@NigelGreenway">
+
+<meta property="twitter:title" content="Adding a mount point on boot under Linux">
+
+    <meta property="twitter:card" content="summary">
+
+<meta property="twitter:description" content="Adding a mount point on boot under Linux">
+
+<title>
+
+
+     Futurepixels - Adding a mount point on boot under Linux 
+
+</title>
+<link rel="canonical" href="https://futurepixels.co.uk/posts/adding-a-mount-point-on-boot-under-linux/">
+
+
+<link rel="stylesheet" href="https://futurepixels.co.uk/css/style.css">
+
+
+
+<link rel="shortcut icon"
+
+    href="https://futurepixels.co.uk/img/logo.png"
+
+>
+
+
+
+
+</head>
+
+
+<body>
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="https://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <nav>
+                <ul>
+                    <li ><a href="https://futurepixels.co.uk/posts/">Posts</a></li>
+                    <li ><a href="https://futurepixels.co.uk/bookshelf/">Book Shelf</a></li>
+                    <li ><a href="https://futurepixels.co.uk/whoami/">Whoami</a></li>
+                    <li ><a href="https://futurepixels.co.uk/cv/">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Adding a mount point on boot under Linux
+
+</div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Wed Jul 14 2021 00:00:00 UTC">Jul 14, 2021</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    <p>Working with linux over the past few years has been fun but it certainly comes with it&rsquo;s frustrations. One of them for me is having to mount the drive when I need it, but this is because its not been that important to me to learn. So, tonight I decided to do a bit of reading up about it and learn then put that learning in to place.</p>
+<p>For myself, I have two drives I would like to mount on boot as it would in Windows and macOS; &ldquo;Linux Games&rdquo; and &ldquo;Media&rdquo;.</p>
+<p>To start, I will need directories to mount the drives too. To do this I went and created the following.</p>
+<pre><code>mkdir /games /photos
+</code></pre><p>The next part is to add the drives to the boot process. This can be done in multiple places, but I am adding them to the <code>/etc/fstab</code> configuration. My reasons being that using <code>/etc/fstab.d</code> doesn&rsquo;t exist on my distribution and using systemd is going to use the <code>/etc/fstab</code> config anyway.</p>
+<p>You will want to first get the details for the drive(s) you are mounting, this is done via <code>blkid</code> which should give an output like so:</p>
+<pre><code>/dev/loop0: TYPE=&quot;squashfs&quot;
+/dev/loop1: TYPE=&quot;squashfs&quot;
+/dev/loop2: TYPE=&quot;squashfs&quot;
+/dev/loop3: TYPE=&quot;squashfs&quot;
+/dev/loop4: TYPE=&quot;squashfs&quot;
+/dev/loop5: TYPE=&quot;squashfs&quot;
+/dev/loop6: TYPE=&quot;squashfs&quot;
+/dev/nvme0n1p1: UUID=&quot;6EFE-AF5A&quot; TYPE=&quot;vfat&quot; PARTLABEL=&quot;BOOT&quot; PARTUUID=&quot;1e14628f-5553-41bc-b6a5-87bb9bdc5854&quot;
+/dev/nvme0n1p2: UUID=&quot;747adbc0-cf6b-45dc-8be6-4860321a199a&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;7739a89a-7d02-4aae-8b27-36d30111306f&quot;
+/dev/nvme0n1p3: LABEL=&quot;Windows&quot; UUID=&quot;102ADBF10527806C&quot; TYPE=&quot;ntfs&quot; PTTYPE=&quot;dos&quot; PARTUUID=&quot;90483ddd-d0c2-4885-b557-1d5d5255ece5&quot;
+/dev/sdc2: LABEL=&quot;Games&quot; UUID=&quot;50FE5C80FE5C5FF0&quot; TYPE=&quot;ntfs&quot; PARTLABEL=&quot;Windows Games&quot; PARTUUID=&quot;e933c8d2-a825-4186-b077-460e22e861dd&quot;
+/dev/sdc3: LABEL=&quot;Linux Games&quot; UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;09a79ba0-08d4-430d-827a-eb5a382fe7b5&quot;
+/dev/sda1: LABEL=&quot;spare&quot; UUID=&quot;BCB4F111B4F0CEC0&quot; TYPE=&quot;ntfs&quot; PARTLABEL=&quot;home&quot; PARTUUID=&quot;f181f4e0-02b1-48af-8aee-17c3bed3b803&quot;
+/dev/sdb1: LABEL=&quot;media&quot; UUID=&quot;1fe37fc3-d7f0-43c1-8b6c-60dab8792c11&quot; TYPE=&quot;ext4&quot; PARTLABEL=&quot;media&quot; PARTUUID=&quot;279c5731-e0ea-431d-9c43-af3c4a1a142c&quot;
+/dev/sdd: UUID=&quot;6f546c4e-80a9-444d-a83d-668b4183bf2f&quot; TYPE=&quot;ext4&quot;
+</code></pre><p>It is from this list that you need the <code>UUID</code> and the <code>TYPE</code> for your file system table [fstab] config. To make sure you get the correct data you can do the following:</p>
+<pre><code>blkid | grep &quot;Linux Games&quot; | xclip -selection clipboard
+</code></pre><p>This will add the following line in this example to your clipboard directly:</p>
+<pre><code>/dev/sdc3: LABEL=&quot;Linux Games&quot; UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;09a79ba0-08d4-430d-827a-eb5a382fe7b5&quot;
+</code></pre><p>With your favourite editor open <code>/etc/fstab</code>, paste the line in your clipboard to the end of the file and create the following lines:</p>
+<pre><code># /dev/sdc3 at time of setup
+UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; /games ext4 rw,relatime,errors=remount-ro 0 2
+</code></pre><p>Lets break that down to understand it further.</p>
+<p><em>UUID</em> - Most Linux systems don&rsquo;t use the device as much these days which is why we are using <code>UUID</code> instead of <code>/dev/sdc3</code> (the device) as that is what is preferred<br>
+<em>mount point</em> - This is where the filesystem will attach to; in this case <code>/games</code><br>
+<em>Filesystem type</em> - This is the <code>TYPE</code> value so is <code>ext4</code> in my example<br>
+<em>options</em> - The options are comma separated and a full list can be found at <a href="https://en.wikipedia.org/wiki/Fstab#Options_common_to_all_filesystems">Wikipedia</a><br>
+<em>Backup information</em> - We use <code>0</code> here as we want to indicate that the filesystem will never be backed up in this example
+<em>Integerity test order</em> - This is to indicate which order the <a href="https://en.wikipedia.org/wiki/Fsck">fsck</a> program will check the device for errors. We use <code>2</code> here to check <em>after</em> boot as it&rsquo;s not a root filesystem</p>
+<p>Once we have added all the relevant disks that are permanant, save the file and test it works with <code>sudo mount -a</code>. Once that&rsquo;s run you should be able to access the drive and the content via <code>ls -l /games</code> within the context of this example.</p>
+<p>If you made any errors you will see the following type of error which should give more insight on what to look at fixing:</p>
+<pre><code>mount: /nopes can't find UUID=&quot;1234&quot;
+</code></pre>
+
+                <br>
+                <p>
+                
+                    <a href="https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/" style="float:left;">Previous</a>
+                
+                
+                </p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="img-viewer" class="image-viewer">
+    <img src="">
+</div>
+
+<script>
+    var articleImages = document.querySelectorAll('section.main img'),
+        imageViewer = document.getElementById('img-viewer');
+
+    articleImages.forEach( function (img) {
+        img.addEventListener('click', function (event) {
+            imageViewer.querySelector('img').src = img.src;
+            imageViewer.style.display="block";
+        });
+    });
+
+    imageViewer.addEventListener('click', function (event) {
+        this.style.display="none";
+    });
+</script>
+
+<section class="footer">
+  <div class="container">
+    <div class="copyright">
+
+      
+
+    </div>
+
+    <ul class="icon-list">
+      
+      <li>
+        <a href="https://gitlab.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon-social-gitlab" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://github.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-github" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://twitter.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-twitter" title="twitter"></i>
+        </a>
+      </li> 
+      
+
+      
+      <li>
+        <a href="https://www.linkedin.com/in/nigel-greenway-a5710a45" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-linkedin" title="linkedin"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="mailto:github@futurepixels.co.uk">
+          <i class="icon ion-ios-email larger" title="email"></i>
+        </a>
+      </li>
+
+      
+      <li>
+        <a href="https://futurepixels.co.uk/index.xml">
+          <i class="icon ion-social-rss larger" title="rss"></i>
+        </a>
+      </li>
+      
+
+  </div>
+</section>
+
+
+  <script src="https://futurepixels.co.uk/js/highlight.min.js" defer></script>
+  
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+  };
+</script>
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-45501754-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+</body>
+</html>
+

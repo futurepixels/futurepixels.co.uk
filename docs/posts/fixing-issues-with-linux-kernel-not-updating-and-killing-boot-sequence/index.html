@@ -40,7 +40,6 @@
 
 
 
-
 </head>
 
 
@@ -87,7 +86,7 @@
 <p>The results shown that there was no space on my device&hellip; odd. Then the dredd hit me - I didn&rsquo;t set the boot partion to a large size, because.. well I thought it would be fine. The size you ask, it was 512Mb&hellip; I know.</p>
 <p>So as I dual boot, I booted into my Windows partion downloaded <a href="https://rufus.ie">Rufus</a> and the <a href="https://getsol.us/download/">Solus-Project ISO</a> and set them to work together to create me a bootable USB. Once booted I tried to re-size my partition labeled <code>BOOT</code> and quickly found &hellip; I can&rsquo;t.</p>
 <p>Next step, purge the old versions. I thought that <code>clr-boot-manager</code> would have a command to purge something by date or &ldquo;keep recent versions&rdquo; but it doesn&rsquo;t have that:</p>
-<pre><code>$ clr-boot-manager -h
+<pre tabindex="0"><code>$ clr-boot-manager -h
 Usage: clr-boot-manager
 
         version - Print the version and quit
@@ -102,9 +101,9 @@ Usage: clr-boot-manager
 Options:
   -p, --path           Set the base path for boot management operations.
   -i, --image          Force clr-boot-manager to run in image mode.
-  -n, --no-efi-update  Don't update efi vars when using shim-systemd backend.
+  -n, --no-efi-update  Don&#39;t update efi vars when using shim-systemd backend.
 </code></pre><p>So, I had to do it myself. Boot into my USB drive and the Solus Live image worked a treat -</p>
-<pre><code>sudo su
+<pre tabindex="0"><code>sudo su
 mount /dev/MY_BOOT_PARTITION /boot
 xdg-open /boot
 </code></pre><p>In here had all my boot partitions under <code>/EFI</code>. Once I am in there <code>com.solus-project</code> and then change to a list view and order by most recent. Here I could remove the oldest ones from the past few years. Once that was done I needed to set the kernel to the latest version with <code>clr-boot-manager set-kernel com.solus-project.current.5.10.15.172</code> (find your available kernels with <code>clr-boot-manager list-kernels</code> - the one with the <code>*</code> on the left is the one that is set).</p>

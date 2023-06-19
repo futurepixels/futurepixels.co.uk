@@ -1,7 +1,7 @@
 +++
 title = "The golden moment of a Friday delivery in software"
 description = "The golden moment of a Friday delivery in software"
-date = "2023-06-19T9:45:00Z"
+date = "2023-06-19T21:45:00Z"
 +++
 
 Having been in software engineering for around 15 years, there's been a lot of talk around Friday deployments - in that you should be able to do them without worries. This is all well and good, but there are some things that you need, and steps you need to make in order to get to the "holy grail" of software delivery in my eyes.

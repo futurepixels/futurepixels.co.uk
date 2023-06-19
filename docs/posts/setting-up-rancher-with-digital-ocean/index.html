@@ -139,7 +139,7 @@
 <p><img src="https://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/droplet-dashboard-header.png" alt="The Droplet dashboard header">
 [fig 2.3]</p>
 <p>Once you Droplet has booted, copy the IP address and you should now be able to SSH into your local machine with <code>ssh rancher@&lt;droplet-ip-address&gt;</code> and you will be asked the following, type in &ldquo;yes&rdquo; and you should now be logged into you Rancher OS droplet.</p>
-<pre tabindex="0"><code>The authenticity of host &#39;&lt;droplet-ip-address&gt; (&lt;droplet-ip-address&gt;)&#39; can&#39;t be established.
+<pre tabindex="0"><code>The authenticity of host '&lt;droplet-ip-address&gt; (&lt;droplet-ip-address&gt;)' can't be established.
 ECDSA key fingerprint is SHA256:ABC...XYZ.
 Are you sure you want to continue connecting (yes/no)?
 </code></pre><p>Once in, paste the following snippet to get your UI up and running:</p>
@@ -174,13 +174,13 @@ Point something like <code>infra.your-domain.com</code> at your Droplets IP addr
 [fig 2.7]</p>
 <p>You will notice that there are 4 options to create a host - these are Machine drivers. They allow you to connect to your infrastructure with ease, so for example; we&rsquo;ve created a Droplet via the <a href="https://digitalocean.com">Digital-Ocean</a> dashboard where we <em>could</em> use an API key for our account and to have <a href="https://rancher.com">Rancher</a> create is for us&hellip; Awesome! However, I would like to go with creating it via <a href="https://digitalocean.com">Digital-Ocean</a> so we understand what is happening under the hood.</p>
 <p>You will start this process with &ldquo;Custom&rdquo; selected, keep that option selected and paste the IP address of the Docker Droplet we created in the <a href="https://digitalocean.com">Digital-Ocean</a> dashboard. Once pasted, the content in step 5 will have updated and this IP address will be added to the command. Copy that, click &ldquo;Close&rdquo; and open up a terminal on your local machine and type <code>ssh root@&lt;droplet-ip-address&gt;</code> and then it will ask the following:</p>
-<pre tabindex="0"><code>The authenticity of host &#39;&lt;droplet-ip-address&gt; (&lt;droplet-ip-address&gt;)&#39; can&#39;t be established.
+<pre tabindex="0"><code>The authenticity of host '&lt;droplet-ip-address&gt; (&lt;droplet-ip-address&gt;)' can't be established.
 ECDSA key fingerprint is SHA256:ABC...XYZ.
 Are you sure you want to continue connecting (yes/no)?
 </code></pre><p>Type <code>yes</code> and you should now be logged into your droplet. Now paste the command you copied from your <a href="https://rancher.com">Rancher</a> UI and you should now see that host appear in your <a href="https://rancher.com">Rancher</a> UI.</p>
 <p>Now we are going to set up our first deployment of an app. We are going basic and will deploy WordPress.</p>
 <p>Click on &ldquo;Catalogue&rdquo; and search for WordPress. When you&rsquo;ve found it click on &ldquo;View Details&rdquo; and leave fields as they are with the default values and click &ldquo;Launch&rdquo;.</p>
-<p>You should now see something similar to fig 2.8. Once the status&rsquo; on the left column are all showing as &ldquo;Active&rdquo; then head over to the IP of the new host. Go to <code>/admin</code> for the admin panel and use &ldquo;admin&rdquo; and &ldquo;bitnami&rdquo; as the username and password.</p>
+<p>You should now see something similar to fig 2.8. Once the status' on the left column are all showing as &ldquo;Active&rdquo; then head over to the IP of the new host. Go to <code>/admin</code> for the admin panel and use &ldquo;admin&rdquo; and &ldquo;bitnami&rdquo; as the username and password.</p>
 <p><img src="https://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/provisioning-host.png" alt="Provisioning a host for Rancher to manage">
 [Fig 2.8]</p>
 <p>You <em>should</em> now see the WordPress admin panel like below (fig.2.9).</p>
@@ -189,7 +189,7 @@ Are you sure you want to continue connecting (yes/no)?
 <p>If so you have successfully deployed your first app via <a href="https://rancher.com">Rancher</a>, congrats.</p>
 <p><img src="https://media.giphy.com/media/wZjlCH43M3M0U/giphy.gif" alt="Congratulations and thank you for reading"></p>
 <p><em><strong>Please don&rsquo;t forget to destroy them Droplets!! You can do this by selecting the &ldquo;Destroy&rdquo; option in the Droplet&rsquo;s context menu [fig 2.10].</strong></em></p>
-<p><img src="https://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/destroy-droplets.png" alt="Don&amp;rsquo;t forget to destroy the droplet"></p>
+<p><img src="https://futurepixels.co.uk/img/posts/setting-up-rancher-with-digital-ocean/destroy-droplets.png" alt="Don&rsquo;t forget to destroy the droplet"></p>
 
 
                 <br>

@@ -105,65 +105,66 @@
     hit Rancher API to inform there is an image ready and waiting
 </code></pre><p>If my linting, unit tests or UI tests fail, then the build fails. The first to fail will stop the pipeline jobs and report as a failure. With GitLab I use Cypress for my UI tests and this allows me to save images and videos of failed tests as artifacts for the time specified of my liking. So, if a build fails on UI tests, I will save them for 7 days and after that GitLab will remove them automatically. \o/</p>
 <p>A snippet of a current project I am working on:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">linter</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">node:8.11</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">linting</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">test</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">script</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm install</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm run lint</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">unit_tests</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">node:8.11</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">test</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">script</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm install</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm run test::unit</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">test</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">user_tests</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">cypress/base:10</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">test</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">script</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm install</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm run build</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm start --quiet &gt; /dev/null &amp;</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">npm run test::ui</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">artifacts</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">when</span>: <span style="color:#ae81ff">on_failure</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">expire_in</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">week</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">paths</span>:
-</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">./__tests__/UI/cypress/screenshots</span>
-</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">./__tests__/UI/cypress/videos</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">test</span>
-</span></span></code></pre></div><h3 id="a-hrefdocker-iddockerdockera"><a href="#docker" id="docker">Docker</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">linter</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">node:8.11</span>
+    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">linting</span>
+    <span style="color:#f92672">tags</span>:
+        - <span style="color:#ae81ff">test</span>
+    <span style="color:#f92672">script</span>:
+        - <span style="color:#ae81ff">npm install</span>
+        - <span style="color:#ae81ff">npm run lint</span>
+
+<span style="color:#f92672">unit_tests</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">node:8.11</span>
+    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">test</span>
+    <span style="color:#f92672">script</span>:
+        - <span style="color:#ae81ff">npm install</span>
+        - <span style="color:#ae81ff">npm run test::unit</span>
+    <span style="color:#f92672">tags</span>:
+        - <span style="color:#ae81ff">test</span>
+
+<span style="color:#f92672">user_tests</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">cypress/base:10</span>
+    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">test</span>
+    <span style="color:#f92672">script</span>:
+        - <span style="color:#ae81ff">npm install</span>
+        - <span style="color:#ae81ff">npm run build</span>
+        - <span style="color:#ae81ff">npm start --quiet &gt; /dev/null &amp;</span>
+        - <span style="color:#ae81ff">npm run test::ui</span>
+    <span style="color:#f92672">artifacts</span>:
+        <span style="color:#f92672">when</span>: <span style="color:#ae81ff">on_failure</span>
+        <span style="color:#f92672">expire_in</span>: <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">week</span>
+        <span style="color:#f92672">paths</span>:
+            - <span style="color:#ae81ff">./__tests__/UI/cypress/screenshots</span>
+            - <span style="color:#ae81ff">./__tests__/UI/cypress/videos</span>
+    <span style="color:#f92672">tags</span>:
+        - <span style="color:#ae81ff">test</span>
+</code></pre></div><h3 id="a-hrefdocker-iddockerdockera"><a href="#docker" id="docker">Docker</a></h3>
 <p>Next is the Docker image for my application/site. Using secret keys stored in GitLab, it will login to the configured registry, build the image locally and then push the image to it&rsquo;s registry.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">build_review</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">docker:stable</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">docker:dind</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">script</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">docker login -u gitlab-ci-token -p &#34;${CI_BUILD_TOKEN:-$CI_JOB_TOKEN}&#34; $CI_REGISTRY</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">docker build -t $DEVELOPMENT_IMAGE_TAG .</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This will overwrite the tag with the latest build!</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">docker push $DEVELOPMENT_IMAGE_TAG</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">build</span>
-</span></span></code></pre></div><p>In the preceding code, I am using Docker to build a Docker container via the <code>dind</code> service (Docker in Docker), this allowed me to do what I needed to do, but be aware of <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">this article</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">build_review</span>:
+    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">docker:stable</span>
+    <span style="color:#f92672">services</span>:
+        - <span style="color:#ae81ff">docker:dind</span>
+    <span style="color:#f92672">script</span>:
+        - <span style="color:#ae81ff">docker login -u gitlab-ci-token -p &#34;${CI_BUILD_TOKEN:-$CI_JOB_TOKEN}&#34; $CI_REGISTRY</span>
+        - <span style="color:#ae81ff">docker build -t $DEVELOPMENT_IMAGE_TAG .</span>
+<span style="color:#75715e"># This will overwrite the tag with the latest build!</span>
+        - <span style="color:#ae81ff">docker push $DEVELOPMENT_IMAGE_TAG</span>
+    <span style="color:#f92672">tags</span>:
+        - <span style="color:#ae81ff">build</span>
+
+</code></pre></div><p>In the preceding code, I am using Docker to build a Docker container via the <code>dind</code> service (Docker in Docker), this allowed me to do what I needed to do, but be aware of <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">this article</a>.</p>
 <h3 id="a-hrefvariables-idvariablesvariablesa"><a href="#variables" id="variables">Variables</a></h3>
 <p>I am then running three scripts, <code>docker login</code>, <code>docker build</code> and <code>docker push</code>. I am using the secret - and built in - variables which are prefixed with <code>CI_</code>, then I have my own variables defined at the top of my file to allow me to create images tagged with the branch name for demos and a timestamp for staging and production. I then use that same tagged image to push it to the registry that is already configured.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">before_script</span>:
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export TARGET_STACK=gitlab-demo-stack</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export REVIEW_TARGET_STACK=gitlab-demo-stack--review</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export REVIEW_FRONTEND_URL=review.demo.local</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export BRANCH_REVIEW_FRONTEND_URL=&#34;${CI_COMMIT_REF_NAME}.review.demo.local&#34;</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export DEVELOPMENT_IMAGE_TAG=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export VERSION=$(date +%Y.%m.%d.%H.%m)</span>
-</span></span></code></pre></div><p>All this information is contained in a file <code>.gitlab-ci.yml</code> (<a href="https://git.futurepixels.co.uk/snippets/1">view example</a>) which lives in the root of my project.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">before_script</span>:
+    - <span style="color:#ae81ff">export TARGET_STACK=gitlab-demo-stack</span>
+    - <span style="color:#ae81ff">export REVIEW_TARGET_STACK=gitlab-demo-stack--review</span>
+    - <span style="color:#ae81ff">export REVIEW_FRONTEND_URL=review.demo.local</span>
+    - <span style="color:#ae81ff">export BRANCH_REVIEW_FRONTEND_URL=&#34;${CI_COMMIT_REF_NAME}.review.demo.local&#34;</span>
+    - <span style="color:#ae81ff">export DEVELOPMENT_IMAGE_TAG=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME</span>
+    - <span style="color:#ae81ff">export VERSION=$(date +%Y.%m.%d.%H.%m)</span>
+</code></pre></div><p>All this information is contained in a file <code>.gitlab-ci.yml</code> (<a href="https://git.futurepixels.co.uk/snippets/1">view example</a>) which lives in the root of my project.
 There are two different build versions of this I am currently setting up:</p>
 <ul>
 <li><strong>review</strong>: Builds and pushes a branch tagged version of the app</li>

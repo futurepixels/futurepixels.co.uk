@@ -112,24 +112,25 @@ title="add your servername here and I will replace '<server-name' to give more c
 <h3 id="bonus-step">Bonus step</h3>
 <p><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generate your SSH key</a> if you haven&rsquo;t got one and then edit add an entry to your <a href="http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/">SSH config file</a> with <code>Host &lt;server-name&gt;</code>.</p>
 <p>Login to your server via <code>ssh &lt;server-name&gt;</code> and then enter your password when asked - this is due to the key not being on that server yet - via your main machine to ensure SSH is working correctly. It will ask you to answer <code>(yes/no)</code>, just confirm and you should be in your servers shell. You should now see something similar to the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Welcome to Ubuntu 16.04.2 LTS <span style="color:#f92672">(</span>GNU/Linux 4.4.0-62-generic x86_64<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> * Documentation:  https://help.ubuntu.com
-</span></span><span style="display:flex;"><span> * Management:     https://landscape.canonical.com
-</span></span><span style="display:flex;"><span> * Support:        https://ubuntu.com/advantage
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">131</span> packages can be updated.
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">61</span> updates are security updates.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Last login: Fri Jun <span style="color:#ae81ff">30</span> 18:22:57 <span style="color:#ae81ff">2017</span> from &lt;your-client-ip-address&gt;
-</span></span><span style="display:flex;"><span>To run a command as administrator <span style="color:#f92672">(</span>user <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">)</span>, use <span style="color:#e6db74">&#34;sudo &lt;command&gt;&#34;</span>.
-</span></span><span style="display:flex;"><span>See <span style="color:#e6db74">&#34;man sudo_root&#34;</span> <span style="color:#66d9ef">for</span> details.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;user&gt;@&lt;server-name&gt;:~$
-</span></span></code></pre></div><p>Log out by pressing <code>ctrl-d</code> (saves you having to write <code>exit</code> in the servers shell environment) and run the following on you local machines shell:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id &lt;server-name&gt;
-</span></span></code></pre></div><p>You should then be able now run <code>ssh &lt;server-name&gt;</code> and gain access straight away - without having to enter your password ever again - unless you have created an SSH key with a password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Welcome to Ubuntu 16.04.2 LTS <span style="color:#f92672">(</span>GNU/Linux 4.4.0-62-generic x86_64<span style="color:#f92672">)</span>
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+<span style="color:#ae81ff">131</span> packages can be updated.
+<span style="color:#ae81ff">61</span> updates are security updates.
+
+
+Last login: Fri Jun <span style="color:#ae81ff">30</span> 18:22:57 <span style="color:#ae81ff">2017</span> from &lt;your-client-ip-address&gt;
+To run a command as administrator <span style="color:#f92672">(</span>user <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">)</span>, use <span style="color:#e6db74">&#34;sudo &lt;command&gt;&#34;</span>.
+See <span style="color:#e6db74">&#34;man sudo_root&#34;</span> <span style="color:#66d9ef">for</span> details.
+
+&lt;user&gt;@&lt;server-name&gt;:~$
+
+</code></pre></div><p>Log out by pressing <code>ctrl-d</code> (saves you having to write <code>exit</code> in the servers shell environment) and run the following on you local machines shell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id &lt;server-name&gt;
+</code></pre></div><p>You should then be able now run <code>ssh &lt;server-name&gt;</code> and gain access straight away - without having to enter your password ever again - unless you have created an SSH key with a password.</p>
 <h2 id="step-two---setup-the-networking">Step two - Setup the networking</h2>
 <p>I simply follow <a href="http://www.havetheknowhow.com/Configure-the-server/Network-Bridge.html">this</a> article as it gives you all you need. I&rsquo;ve settled for relying on DHCP at the moment but I will set it to static IP addresses eventually.</p>
 <h2 id="step-three---setup-my-first-virtual-machine">Step three - Setup my first Virtual Machine</h2>

@@ -6,7 +6,17 @@
     <description>Recent content on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 21:45:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The golden moment of a Friday delivery in software</title>
+      <link>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</link>
+      <pubDate>Mon, 19 Jun 2023 21:45:00 +0000</pubDate>
+      
+      <guid>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</guid>
+      <description>Having been in software engineering for around 15 years, there&amp;rsquo;s been a lot of talk around Friday deployments - in that you should be able to do them without worries. This is all well and good, but there are some things that you need, and steps you need to make in order to get to the &amp;ldquo;holy grail&amp;rdquo; of software delivery in my eyes.
+In a recent discussion with someone in our team, it was suggested that they&amp;rsquo;d be more comfortable to wait to deploy on a Monday and not at 4:30 on a sunny Friday afternoon&amp;hellip; understandable.</description>
+    </item>
+    
     <item>
       <title>Getting a good desk setup</title>
       <link>https://futurepixels.co.uk/posts/getting-a-good-desk-setup/</link>
@@ -270,7 +280,7 @@ Have already read:  The Clean Coder: A Code of Conduct for Professional Programm
       
       <guid>https://futurepixels.co.uk/whoami/</guid>
       <description>Hi there, I&amp;rsquo;m Nigel, a developer, a father and fan of geeky stuff&amp;hellip;
-Whoami as a developer&amp;hellip; A full time web developer for 13 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
+Whoami as a developer&amp;hellip; A full time web developer for 14 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
     </item>
     
   </channel>

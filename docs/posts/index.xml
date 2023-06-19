@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 21:45:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The golden moment of a Friday delivery in software</title>
+      <link>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</link>
+      <pubDate>Mon, 19 Jun 2023 21:45:00 +0000</pubDate>
+      
+      <guid>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</guid>
+      <description>Having been in software engineering for around 15 years, there&amp;rsquo;s been a lot of talk around Friday deployments - in that you should be able to do them without worries. This is all well and good, but there are some things that you need, and steps you need to make in order to get to the &amp;ldquo;holy grail&amp;rdquo; of software delivery in my eyes.
+In a recent discussion with someone in our team, it was suggested that they&amp;rsquo;d be more comfortable to wait to deploy on a Monday and not at 4:30 on a sunny Friday afternoon&amp;hellip; understandable.</description>
+    </item>
+    
     <item>
       <title>Getting a good desk setup</title>
       <link>https://futurepixels.co.uk/posts/getting-a-good-desk-setup/</link>

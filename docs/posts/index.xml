@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Futurepixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Mon, 19 Jun 2023 21:45:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 22:10:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using --legacy-peer-deps in NodeJS</title>
+      <link>https://futurepixels.co.uk/posts/using-legacy-peer-deps-in-nodejs/</link>
+      <pubDate>Wed, 18 Oct 2023 22:10:00 +0000</pubDate>
+      
+      <guid>https://futurepixels.co.uk/posts/using-legacy-peer-deps-in-nodejs/</guid>
+      <description>Let me set the scene… At the time of writing this, I&amp;rsquo;d have been writing code for a little over two decades. Professionally, I’ve been doing it for thirteen years, and the past two years I’ve been working purely in the wonderful land of JavaScript as both a senior software engineer and then a lead engineer.
+Why is this important? Well, two weeks ago I was doing a routine update on bumping versions of our NPM packages - as an engineer I understand that keeping packages up-to-date is good practice for reasons like being able to use the latest API’s from packages, as well as ensuring any security holes are filled in when a Common Vulnerabilities and Exposures [CVE] is created.</description>
+    </item>
+    
     <item>
       <title>The golden moment of a Friday delivery in software</title>
       <link>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</link>

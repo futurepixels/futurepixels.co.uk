@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://futurepixels.co.uk/</loc>
-    <lastmod>2023-06-19T21:45:00+00:00</lastmod>
+    <lastmod>2023-10-18T22:10:00+00:00</lastmod>
   </url><url>
     <loc>https://futurepixels.co.uk/posts/</loc>
-    <lastmod>2023-06-19T21:45:00+00:00</lastmod>
+    <lastmod>2023-10-18T22:10:00+00:00</lastmod>
+  </url><url>
+    <loc>https://futurepixels.co.uk/posts/using-legacy-peer-deps-in-nodejs/</loc>
+    <lastmod>2023-10-18T22:10:00+00:00</lastmod>
   </url><url>
     <loc>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</loc>
     <lastmod>2023-06-19T21:45:00+00:00</lastmod>

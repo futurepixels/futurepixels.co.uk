@@ -8,6 +8,6 @@ A full time web developer for {{< years-in-service >}} years, I have started wit
 
 I believe in efficient coding, keeping to standards, exploring new technologies and helping others where I can.
 
-Mentoring is a core value to me, both in my proffesion and personal life. It is something that works two ways for me where I get to share knowledge, as well as gain it from everyone around me.
+Mentoring is a core value to me, both in my professional, and personal life. It is something that works two ways for me where I get to share knowledge, as well as gain it from everyone around me.
 
 {{% when-i-am-not-coding %}}

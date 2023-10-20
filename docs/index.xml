@@ -247,22 +247,19 @@ So, a thank you for visiting the site and I hope you come here every now and the
     </item>
     
     <item>
-      <title>Becoming a lead, part 2: ?</title>
-      <link>https://futurepixels.co.uk/drafts/2020-11-26-becoming-a-lead-part-3-twelve-months-later/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/drafts/2020-11-26-becoming-a-lead-part-3-twelve-months-later/</guid>
-      <description>October was meant to be the delivery of a brand new micro front end. This was extracting some functionality from our legacy codebase as well as helping tackle an issue within the business. During this time I wanted to limit the dependency on our legacy codebase and get another service out to extract that functionality. On top of that I&amp;rsquo;ve been aware of how long it currently takes to deliver a new micro front end as well as the issues that come with it.</description>
-    </item>
-    
-    <item>
       <title>Book Shelf</title>
       <link>https://futurepixels.co.uk/bookshelf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://futurepixels.co.uk/bookshelf/</guid>
-      <description>This is just a list of book that I am wanting to read, am reading and have read. That&amp;rsquo;s it, nothing more. Oh, I may add a review/thoughts about book part to depending on the book.
-Have already read:  The Clean Coder: A Code of Conduct for Professional Programmers - Robert C Marting  Vagrant Cookbook - Erika Heidi  Culture Of Respect - Cal Evans   Currenty Reading / Have it ready:  Extending and Embedding PHP (Developer&amp;#39;s Library) by Sara Golemon - Sara Goleman  Domain-driven Design: Tackling Complexity in the Heart of Software - Eric Evans  Implementing Domain-Driven Design - Vaughn Vernon  Domain-Driven Design : Reference Definitions and Pattern Summaries - Eric Evans  Build APIs You Won&amp;#39;t Hate - Phil Sturgeon  Pro Vim - Mark McDonnell   My wish list:   </description>
+      <description>This is just a list of book that I am wanting to read, am reading and have read.
+ The Clean Coder: A Code of Conduct for Professional Programmers
+Author: Robert C Martin  Vagrant Cookbook
+Author: Erika Heidi  Culture Of Respect
+Author: Cal Evans  Build APIs You Won&amp;#39;t Hate
+Author: Phil Sturgeon  Pro Vim
+Author: Mark McDonnell  The Pheonix Poject
+Author: Gene Kim  The Unicorn Poject</description>
     </item>
     
     <item>
@@ -280,7 +277,8 @@ Have already read:  The Clean Coder: A Code of Conduct for Professional Programm
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://futurepixels.co.uk/skills/</guid>
-      <description>My skill sets:  HTML4/5   CSS2/3   SASS   Javascript   ReactJS   Accessibility    PHP   Ruby   Python   GoLang   Javascript   NodeJS   Rust   Nix Shell (Bash, ZSH)    Ansible   GitLab CI   Jenkins   Rundeck   Terraform   Rancher    Symfony2   Silex   Slim2/3   NextJS   ReactJS    MySQL   Apache   Git   Nginx   Hiawatha    TDD   BDD   DDD   ADR   BEM   SOA   SOLID    </description>
+      <description>Skills set&#39;s I&#39;ve managed to add to my tool belt for front end are the usual; HTML4/5 *, CSS2/3 *, SASS, Javascript *, ReactJS *, Accessibility *. For languages and scripting I am proficient in PHP *, Ruby, Python *, GoLang, Javascript *, NodeJS, Rust, Nix Shell (Bash, ZSH) *, Lua, Typescript *.
+I am a big believer in the DevOps mentality and have learnt the following tools: Ansible, GitLab CI, Jenkins, Rundeck, Terraform, Rancher, ArgoCD *, Azure *, .</description>
     </item>
     
     <item>
@@ -290,7 +288,7 @@ Have already read:  The Clean Coder: A Code of Conduct for Professional Programm
       
       <guid>https://futurepixels.co.uk/whoami/</guid>
       <description>Hi there, I&amp;rsquo;m Nigel, a developer, a father and fan of geeky stuff&amp;hellip;
-Whoami as a developer&amp;hellip; A full time web developer for 14 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
+A full time web developer for 14 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
     </item>
     
   </channel>

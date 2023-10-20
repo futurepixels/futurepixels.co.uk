@@ -32,8 +32,6 @@ My skills have adapted and changed over the years. I understand a language shoul
 
 ### Open Source Contribution
 
-With the many methodologies around, one of the most important to me is the open source community. I try to take this approach when leading on projects to ensure you code for the next person/team to pick up a feature that might be added to a micro front end or service the team have created. These skills have been gained mainly when working on open-source projects along side respected people within the PHP Community for projects like <a href="https://thephpleague.com/" target="_blank">The PHP League</a>. Some of my projects can be seen below:
-
 <details>
   <summary>Personal projects I've created and implemented previously:</summary>
   <a href="https://github.com/NigelGreenway/Demander" target="_blank">https://github.com/NigelGreenway/Demander</a><br>
@@ -52,9 +50,13 @@ With the many methodologies around, one of the most important to me is the open 
 
 ### Employment
 
-#### Shell Energy (First Utility 2016-2019) _(2016 - present)_
+#### drivvn _(2020 - present)_
 
-Since my time at Shell Energy (formerly First Utility) I have been able to work with many great and talented people where I've been able to extend on current skill sets as ewll as gain new ones. Starting as a Software Engineer, I was brought in to help with the main functionality of the web site where people would manage their meter readings by submitting online, change their tariff, as well as other general account areas. These are journeys used by hundreds of people a day. I helped deliver new features to the system as well as bug fixes. This was a monolithic PHP MVC application using Symfony and Zend components via Composer and based on the Yii framework as a base. Since then I've supported team members with bigger features like our refer-a-friend, smart awareness and booking portal, loyalty scheme, the display of weekly usage and more. During these products, in recognition of my efforts I've been promoted twice in four years - first to Senior Software Engineer and then to my current role of a Lead Software Engineer.
+Starting as a Senior Software Engineer, I was teamed up with others to build a new tool to help people compare vehicles in a way that would help them understand the benefits from moving from a traditional engine (deisel/petrol) with a hybrid or pure electric engine. I was then promoted to Lead Software Engineer. My challenges were always taken head on in a way that the team would be taken on the journey where we ensured collaboration and transparency was key. It was during this project that I focused on on boarding for when new team members joined, ensured that the value was always delivered and ensured no-one was a key dependency on the product - including myself.
+
+#### Shell Energy (First Utility 2016-2019) _(2016 - 2020)_
+
+My time at Shell Energy (formerly First Utility) I was been able to work with many great and talented people where I've been able to extend on current skill sets as ewll as gain new ones. Starting as a Software Engineer, I was brought in to help with the main functionality of the web site where people would manage their meter readings by submitting online, change their tariff, as well as other general account areas. These are journeys used by hundreds of people a day. I helped deliver new features to the system as well as bug fixes. This was a monolithic PHP MVC application using Symfony and Zend components via Composer and based on the Yii framework as a base. Since then I've supported team members with bigger features like our refer-a-friend, smart awareness and booking portal, loyalty scheme, the display of weekly usage and more. During these products, in recognition of my efforts I've been promoted twice in four years - first to Senior Software Engineer and then to my current role of a Lead Software Engineer.
 
 My role as Lead Software Engineer initially pushed me out of my comfort zone. I lead a team of software, User Experience, Quality Assurance and API engineers to help deliver the right and best digital experience for our user base. Whether this is a new web app like our smart booking portal or a complete re-platforming of current systems like our monolithic codebase being split into micro front ends, I try ensure that the team have the right tools and information to hand and ensure MVPs are sensibly set. Working closely with the team I ensure we deliver value to both the customer and the business. We deliver apps that are adding value instantly. Once the initial app is delivered we iterate as a team and deploy multiple changes which are driven by analytics and data collated from UX.
 
@@ -92,4 +94,4 @@ I was part of a team that created modifications for the internal system or modif
 
 Through each modification given, there was a process I learnt and found to be of great value to a developer; create the modification to the specification given, test locally and report on the test process in order for this to be passed to the test team and then liaise with the user acceptance team for further tweaks/modifications before being signed off and released.
 
-Starting out as junior ; this was my first role in the world of development. Then, at the age of 26 I wanted a career I can excel in and gain rewards on a basis I can control, be that daily, weekly or monthly. Here, I learnt PHP at a deeper level and started to move from procedural code to the MVC pattern.
+At the age of 26, I started out as junior ; this was my first role in the world of development. I wanted a career I could excel in and gain rewards on a basis I can control, be that daily, weekly or monthly. Here, I learnt PHP at a deeper level and started to move from procedural code to the MVC pattern.

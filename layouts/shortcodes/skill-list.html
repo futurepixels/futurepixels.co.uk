@@ -1,12 +1,10 @@
-<h4>My skill sets:</h4>
-<div style="column-count: 5;">
-  {{ range $.Site.Data.skills.skills }}
-  {{ range $skill := .items }}
-  <ul>
-    <li class="skill-list-item">
-      {{ $skill }}
-    </li>
-    {{ end }}
-  </ul>
-  {{ end }}
-</div>
+{{ $Skills := $.Site.Data.skills }}
+
+<p>Skills set's I've managed to add to my tool belt for front end are the usual; {{ range $k, $frontend := $Skills.frontend }}{{ if $k }}, {{ end }} {{ $frontend }}{{ end }}. For languages and scripting I am proficient in {{ range $k, $ls := $Skills.languages_and_scripting }}{{ if $k }}, {{ end }}{{ $ls }}{{ end }}.</p>
+<p>I am a big believer in the DevOps mentality and have learnt the following tools: {{ range $devops := $Skills.devops }}{{ $devops }}, {{ end }}.</p>
+<p>For web frameworks, I've worked in {{ range $k, $framework := $Skills.frameworks }}{{ if $k }}, {{ end }}{{ $framework }}{{ end }}.</p>
+<p>I also understand {{ range $k, $other := $Skills.other }}{{ if $k }}, {{ end }}{{ $other }}{{ end }}.</p>
+
+<sub>* - I am currently using on a daily basis</sub>
+
+<p>I also practice the following methodolgies daily; {{ range $k, $v := $.Site.Data.skills.methodologies }}{{ if $k }}, {{ end }}{{ $v }}{{ end }}. I am a big believer in ensuring that any code is built to the highest quality, for this ensures code is easier to debug, refactor, onboard new members to the team and above all push for a high level of dev joy and ensure developer experience is as high as it can be.</p>

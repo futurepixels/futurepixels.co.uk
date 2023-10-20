@@ -1,55 +1,49 @@
-skills:
-  - title: Frontend
-    items:
-      - HTML4/5
-      - CSS2/3
-      - SASS
-      - Javascript
-      - ReactJS
-      - Accessibility
+frontend:
+  - HTML4/5 *
+  - CSS2/3 *
+  - SASS
+  - Javascript *
+  - ReactJS *
+  - Accessibility *
 
-  - title: Languages/Scripting
-    items:
-      - PHP
-      - Ruby
-      - Python
-      - GoLang
-      - Javascript
-      - NodeJS
-      - Rust
-      - Nix Shell (Bash, ZSH)
+languages_and_scripting:
+  - PHP *
+  - Ruby
+  - Python *
+  - GoLang
+  - Javascript *
+  - NodeJS
+  - Rust
+  - Nix Shell (Bash, ZSH) *
+  - Lua
+  - Typescript *
 
-  - title: DevOps
-    items:
-      - Ansible
-      - GitLab CI
-      - Jenkins
-      - Rundeck
-      - Terraform
-      - Rancher
+devops:
+  - Ansible
+  - GitLab CI
+  - Jenkins
+  - Rundeck
+  - Terraform
+  - Rancher
+  - ArgoCD *
+  - Azure *
 
-  - title: Frameworks
-    items:
-      - Symfony2
-      - Silex
-      - Slim2/3
-      - NextJS
-      - ReactJS
+frameworks:
+  - Symfony2
+  - Silex
+  - Slim2/3
+  - NextJS *
+  - ReactJS *
 
-  - title: Other
-    items:
-      - MySQL
-      - Apache
-      - Git
-      - Nginx
-      - Hiawatha
+other:
+  - MySQL *
+  - Apache
+  - Git *
+  - Nginx
+  - Hiawatha
 
-  - title: Methodolgies
-    items:
-      - TDD
-      - BDD
-      - DDD
-      - ADR
-      - BEM
-      - SOA
-      - SOLID
+methodologies:
+  - BDD
+  - TDD
+  - DDD
+  - SOLID

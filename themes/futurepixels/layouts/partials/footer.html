@@ -33,13 +33,6 @@
       </li>
       {{ end }}
 
-      {{ if .Site.Params.email }}
-      <li>
-        <a href="mailto:{{ .Site.Params.email }}">
-          <i class="icon ion-ios-email larger" title="email"></i>
-        </a>
-      </li>{{ end }}
-
       {{ if .Site.RSSLink }}
       <li>
         <a href="{{ .Site.RSSLink }}">

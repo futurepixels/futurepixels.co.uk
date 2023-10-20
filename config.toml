@@ -10,7 +10,6 @@ author = "Nigel Greenway"
 title = "Futurepixels"
 disqusshortname = ""
 pluralizelisttitles = false
-googleAnalytics = "UA-45501754-1"
 
 [permalinks]
 posts = "posts/:slug/"
@@ -18,19 +17,20 @@ posts = "posts/:slug/"
 [params]
 dateform = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description = "Articles on general development and programming along with other findings... oh, and a gallery."
+description = "Articles on general development and programming along with other findings..."
 logofile = "img/logo.png"
 faviconfile = "img/logo.png"
 highlightjs = true
-jobTitle = "Senior Software Engineer"
+jobTitle = "Lead Software Engineer"
 placeOfWork = "drivvn"
 lang = "en"
 github = "NigelGreenway"
 gitlab = "NigelGreenway"
 email = "github@futurepixels.co.uk"
 linkedin = "nigel-greenway-a5710a45"
-primaryOS_href = "https://solus-project.com"
-primaryOS_name = "Solus Project"
+photography_site = "https://500px.com/p/nigelgreenway"
+primaryOS_href = "https://endeavouros.com"
+primaryOS_name = "Endeavour OS"
 
-[markup.goldmark.renderer] 
+[markup.goldmark.renderer]
 unsafe= true

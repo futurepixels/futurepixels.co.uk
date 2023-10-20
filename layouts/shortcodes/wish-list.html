@@ -1,9 +1,0 @@
-<h4>My wish list:</h4>
-
-<ul>
-{{ range $.Site.Data.readingLists.wishList }}
-  <li class="book-list-item">
-      <a href="{{ .url }}" target="_blank">{{ .title }}</a> - <a href="{{ .authorUrl }}" target="_new">{{ .author }}</a>
-  </li>
-{{ end }}
-</ul>

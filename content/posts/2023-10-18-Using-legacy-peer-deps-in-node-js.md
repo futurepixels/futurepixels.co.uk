@@ -10,7 +10,7 @@ At the time of writing this, I'd have been writing code for a little over two de
 
 Why is this important? Well, two weeks ago I was doing a routine update on bumping versions of our NPM packages - as an engineer I understand that keeping packages up-to-date is good practice for reasons like being able to use the latest API’s from packages, as well as ensuring any security holes are filled in when a Common Vulnerabilities and Exposures \[[CVE](https://www.redhat.com/en/topics/security/what-is-cve)\] is created. I have been really keen to keep the code I maintain up-to-date so I know that I am lowering the risk of both the company I work for as well as our clients. Not a bad way to think, right?
 
-Well, a couple of months ago we were updating packages as part of this routine, and out of a reporting tool we use to make us aware of this potential security issues (for the curious readers, we use [Snyk.io](snyk.io)). However, I was presented with this issue:
+Well, a couple of months ago we were updating packages as part of this routine, and out of a reporting tool we use to make us aware of this potential security issues (for the curious readers, we use [Snyk.io](https://snyk.io)\). However, I was presented with this issue:
 
 ```
 npm WARN While resolving: @phenomnomnominal/tsquery@4.1.1

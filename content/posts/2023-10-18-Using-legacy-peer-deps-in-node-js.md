@@ -6,9 +6,9 @@ date = "2023-10-18T22:10:00Z"
 
 ## Let me set the scene…
 
-At the time of writing this, I'd have been writing code for a little over two decades. Professionally, I’ve been doing it for thirteen years, and the past two years I’ve been working purely in the wonderful land of JavaScript as both a senior software engineer and then a lead engineer.  
+At the time of writing this, I'd have been writing code for a little over two decades. Professionally, I have been doing it for fourteen years, and the past two years I have been working purely in the wonderful land of JavaScript as both a senior software engineer and then a lead engineer.  
 
-Why is this important? Well, two weeks ago I was doing a routine update on bumping versions of our NPM packages - as an engineer I understand that keeping packages up-to-date is good practice for reasons like being able to use the latest API’s from packages, as well as ensuring any security holes are filled in when a Common Vulnerabilities and Exposures \[[CVE](https://www.redhat.com/en/topics/security/what-is-cve)\] is created. I’ve been really keen to keep the code I maintain up-to-date so I know that I am lowering the risk of both the company I work for as well as our clients. Not a bad way to think, right?
+Why is this important? Well, two weeks ago I was doing a routine update on bumping versions of our NPM packages - as an engineer I understand that keeping packages up-to-date is good practice for reasons like being able to use the latest API’s from packages, as well as ensuring any security holes are filled in when a Common Vulnerabilities and Exposures \[[CVE](https://www.redhat.com/en/topics/security/what-is-cve)\] is created. I have been really keen to keep the code I maintain up-to-date so I know that I am lowering the risk of both the company I work for as well as our clients. Not a bad way to think, right?
 
 Well, a couple of months ago we were updating packages as part of this routine, and out of a reporting tool we use to make us aware of this potential security issues (for the curious readers, we use [Snyk.io](snyk.io)). However, I was presented with this issue:
 
@@ -76,7 +76,7 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/node/.npm/_logs/2023-10-11T09_37_53_642Z-debug-0.log
 ```
 
-You will notice that there are three things going on in this sea of text. The first half is a warning about conflicting dependencies, the second part is a notice of a new version of npm, and the third is an error - this is the part we are going to focus on.
+You will notice that there are three things going on in this sea of text. The first half is a warning about conflicting dependencies, the second part is a notice of a new version of NPM, and the third is an error - this is the part we are going to focus on.
 
 Like any coder will do, I took to Google and other repositories I had access too for insight. After some [reading](https://github.blog/2021-02-02-npm-7-is-now-generally-available/#peer-dependencies) (and yes, it did involved multiple StackOverflow post’s), I found that this was a “common” problem. However, I failed my stars and stripes I’d earned from my time in the field and took the advice of various posts and examples, and added `--legacy-peer-deps`, I ran the test suite and everything passed - awesome work Nigel \o/!
 
@@ -84,7 +84,7 @@ However, two weeks ago I tried to update some packages, this then presented anot
 
 ## WTF! How?! Why?! FFS NPM!
 
-As you can imagine, the NodeJS/JavaScript/NPM’s eco system  is crazy and were put to blame straight away. So, I called up one of the team and explained the crazy shit that it’s doing and they straight away asked “do you use legacy peer deps?”… "Yeah" - I paused, and continued with “why?”. My delayed response was me realising that I’d blindly used something I was not fully knowledgable about, for various reasons. Unfortunately, the main reason for this was speed - something that’s been reflected on the since as my knowledge on NodeJS/JavaScript is not comparable to what it was when I was a PHP programmer. It was here I realised that I had failed myself as an engineer...
+As you can imagine, the NodeJS/JavaScript/NPM’s eco-system  is crazy and were put to blame straight away. So, I called up one of the team and explained the crazy shit that it’s doing and they straight away asked “do you use legacy peer deps?”… "Yeah" - I paused, and continued with “why?”. My delayed response was me realising that I’d blindly used something I was not fully knowledgable about, for various reasons. Unfortunately, the main reason for this was speed - something that’s been reflected on the since as my knowledge on NodeJS/JavaScript is not comparable to what it was when I was a PHP programmer. It was here I realised that I had failed myself as an engineer...
 
 I had also blamed the tool, that’s not something I should be doing!
 

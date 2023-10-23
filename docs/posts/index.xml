@@ -13,7 +13,7 @@
       <pubDate>Wed, 18 Oct 2023 22:10:00 +0000</pubDate>
       
       <guid>https://futurepixels.co.uk/posts/using-legacy-peer-deps-in-nodejs/</guid>
-      <description>Let me set the scene… At the time of writing this, I&amp;rsquo;d have been writing code for a little over two decades. Professionally, I’ve been doing it for thirteen years, and the past two years I’ve been working purely in the wonderful land of JavaScript as both a senior software engineer and then a lead engineer.
+      <description>Let me set the scene… At the time of writing this, I&amp;rsquo;d have been writing code for a little over two decades. Professionally, I have been doing it for fourteen years, and the past two years I have been working purely in the wonderful land of JavaScript as both a senior software engineer and then a lead engineer.
 Why is this important? Well, two weeks ago I was doing a routine update on bumping versions of our NPM packages - as an engineer I understand that keeping packages up-to-date is good practice for reasons like being able to use the latest API’s from packages, as well as ensuring any security holes are filled in when a Common Vulnerabilities and Exposures [CVE] is created.</description>
     </item>
     

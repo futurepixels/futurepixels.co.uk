@@ -7,7 +7,7 @@ aliases = [
 
 As a Lead Software Engineer, I strive to ensure the correct approach for the end user is delivered whilst providing business value. I am a positive and motivational person who likes to lead a team to build products around motivated individuals and give them the environment and support they need along with the trust to get the task completed. This is done with open communication and utilising the best of peoples skill sets.
 
-My current way of working are Lean but have recently started to implement Agile methodologies to strengthen my ways of working. By working with both the product owner and user experience, we work out the effort vs the value collaboratively and ensure there is no wastage. The value is then delivered fast enough to enable us to learn from the feature whilst also engineered to a quality for ease of adapting when we go through our learnings.
+My current way of working is Lean, but have also implemented Agile methodologies to strengthen my ways of working. By working with both the product owner and user experience, we work out the effort vs the value collaboratively and ensure there is no wastage. The value is then delivered fast enough to enable us to learn from the feature whilst also engineered to a quality for ease of adapting when we go through our learnings.
 
 Documentation is a first class citizen, as is test driven design and quality assurance. Dealing with micro front ends, you can quickly have many to manage so documenting domain knowledge specific to it can help when context switching. This allows the team to have the ability to work on a small codebase quickly, effectively and deliver value quickly.
 
@@ -16,6 +16,8 @@ As a Lead, I believe the need for a single source of truth and a knowledge base 
 ### Whoami
 
 I am a passionate engineer who takes pride in what he delivers. In my spare time I am listening to music, taking my daughter out cycling or teaching her to skateboard. If I'm not doing that, I'm learning how to use my camera, playing games, experimenting with new programming projects and concepts to extend my skill set or writing to reflect on what I've learned. I admit when I'm wrong and question things I don't know or am uncertain of.
+
+I have a passion for CI/CD and have had the fortune of working with project's both within my day job and with hobby projects to further my learning. Being able to create a fast feedback loop both locally and in the pipeline, the developer experience is improved vastly with minimising frustrations on a day-to-day basis. This enables you to react fast to any production issues, but also allows you to work in a lean way by delivering features in smaller chunks and behind feature switches.
 
 Above all, I am loyal and get excited with a good team.
 
@@ -26,6 +28,8 @@ You can <a href="/whoami">read more</a> about me too...
 ### Skills
 
 My skills have adapted and changed over the years. I understand a language should be used for certain tasks and there is not a one size fits all. This is the same for best practice and methodologies. Having worked with Terraform, GoLang and Rust, I can see the benefits of infrastructure as code as well as using GoLang and Rust to help with certain tasks or tool chains.
+
+Whilst my main focus in my day job has been React and Typescript, my heart belongs to API's and (in my opinion) better languages. I started out in PHP and explored design patterns to ensure I was creating good code that was encapsulated, abstracted and well structured. This then got me interested in stronger types in languages and discovered GoLang.
 
 {{% skill-list %}}
 
@@ -61,9 +65,9 @@ It was during my time within this team that I implemented the following:
 - Ensuring I was _not_ the key dependency on the project; this meant I made sure that what ever I could do in the day-to-day work, others could also do - and gave them the confidence and autonomy to do so
 - Worked on a strategy to help improve the value of the product to the business, working with our PTCO on my thinking and results I got to
 
-In recent months I have been part of two other projects. One to help gain domain knowledge on a legacy project and hand it over to a mid-level engineer (who I helped with the interview process) with the ability to mentor and coach them to deliver both high quality code, and the smallest slices to ensure that value is delivered in a timely manner, without features becoming stale. Whilst on this project I also lead the changes required to decommission environments, change the git flow to simplify releases, and ensure releases were safer and easier to enable us to get closer to the CI/CD targets set by the engineering leadership team. The results were being able to release daily (or more on some occasions).
+After a year and half, I have been part of two other projects. One to help gain domain knowledge on a legacy project and hand it over to a mid-level engineer (who I helped with the interview process) with the ability to mentor and coach them to deliver both high quality code, and the smallest slices to ensure that value is delivered in a timely manner, without features becoming stale. Whilst on this project I also lead the changes required to decommission environments, change the git flow to simplify releases, and ensure releases were safer and easier to enable us to get closer to the CI/CD targets set by the engineering leadership team. The results were being able to release daily (or more on some occasions).
 
-The other project has been on a similar theme, but primarily focus on the developer experience and improvements around the ways of working. Whilst this has been difficult, it has allowed me to grow as a leader and a person on how I approach changes with teams. Whilst in this project, I have been able to achieve the following in only a couple of months:
+The latter project has been on a similar theme, but primarily focus on the developer experience and improvements around the ways of working. Whilst this has been difficult, it has allowed me to grow as a leader and a person on how I approach changes with teams. Whilst in this project, I have been able to achieve the following in only a couple of months:
 
 - Introduced bi-weekly retro's
 - Enforced some rules around pull requests; min approvers, all tasks completed, no changes required and so on... (this was something the current devs were missing and appreciated when they were added)
@@ -71,6 +75,8 @@ The other project has been on a similar theme, but primarily focus on the develo
 - Set up Slack integration when pull requests where added or updated
 - Work with the project manager to ensure we have a stand up every day and separate the release calls, move to a kanban style board and change how we signal updates within the team for things like days off and our focus/priority
 - Supported the team on pushing back work items that were not urgent and got the relevant people to action the changes outside of the team
+
+In the background I was part of a small team helping things around our new go services to help with scaling and short times from idea to release where we put a skeleton together which you would clone and run a make command with some arguments and it would update the code base you were in, delete the git repo and re-init git. I have also created a service to help with getting the latest data for fuels to help display the latest average Petrol and Diesel prices (although, sadly not in production yet).
 
 Outside of this I have been part of helping define the culture within the business, where my main impact has been focused on the on boarding of new engineers and trying to ensure new starters can get up and running with ease and quickly, and to allow them to focus on what they enjoy - coding. I have also been using my experience in helping shape relationships between teams and gaining a mutual respect where I have observed people will come to me for confirmation on their thinking/solving of a particular problem, as well as being able to encourage or entice others in doing other things or taking ownership of certain tasks.
 

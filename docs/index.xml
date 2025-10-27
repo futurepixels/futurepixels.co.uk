@@ -2,294 +2,200 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Futurepixels</title>
-    <link>https://futurepixels.co.uk/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Futurepixels</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 18 Oct 2023 22:10:00 +0000</lastBuildDate><atom:link href="https://futurepixels.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 22:10:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using --legacy-peer-deps in NodeJS</title>
-      <link>https://futurepixels.co.uk/posts/using-legacy-peer-deps-in-nodejs/</link>
+      <link>http://localhost:1313/posts/using--legacy-peer-deps-in-nodejs/</link>
       <pubDate>Wed, 18 Oct 2023 22:10:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/using-legacy-peer-deps-in-nodejs/</guid>
-      <description>Let me set the scene… At the time of writing this, I&amp;rsquo;d have been writing code for a little over two decades. Professionally, I have been doing it for fourteen years, and the past two years I have been working purely in the wonderful land of JavaScript as both a senior software engineer and then a lead engineer.
-Why is this important? Well, two weeks ago I was doing a routine update on bumping versions of our NPM packages - as an engineer I understand that keeping packages up-to-date is good practice for reasons like being able to use the latest API’s from packages, as well as ensuring any security holes are filled in when a Common Vulnerabilities and Exposures [CVE] is created.</description>
+      <guid>http://localhost:1313/posts/using--legacy-peer-deps-in-nodejs/</guid>
+      <description>&lt;h2 id=&#34;let-me-set-the-scene&#34;&gt;Let me set the scene…&lt;/h2&gt;&#xA;&lt;p&gt;At the time of writing this, I&amp;rsquo;d have been writing code for a little over two decades. Professionally, I have been doing it for fourteen years, and the past two years I have been working purely in the wonderful land of JavaScript as both a senior software engineer and then a lead engineer.&lt;/p&gt;&#xA;&lt;p&gt;Why is this important? Well, two weeks ago I was doing a routine update on bumping versions of our NPM packages - as an engineer I understand that keeping packages up-to-date is good practice for reasons like being able to use the latest API’s from packages, as well as ensuring any security holes are filled in when a Common Vulnerabilities and Exposures [&lt;a href=&#34;https://www.redhat.com/en/topics/security/what-is-cve&#34;&gt;CVE&lt;/a&gt;] is created. I have been really keen to keep the code I maintain up-to-date so I know that I am lowering the risk of both the company I work for as well as our clients. Not a bad way to think, right?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The golden moment of a Friday delivery in software</title>
-      <link>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</link>
+      <link>http://localhost:1313/posts/the-golden-moment-of-a-friday-delivery-in-software/</link>
       <pubDate>Mon, 19 Jun 2023 21:45:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</guid>
-      <description>Having been in software engineering for around 15 years, there&amp;rsquo;s been a lot of talk around Friday deployments - in that you should be able to do them without worries. This is all well and good, but there are some things that you need, and steps you need to make in order to get to the &amp;ldquo;holy grail&amp;rdquo; of software delivery in my eyes.
-In a recent discussion with someone in our team, it was suggested that they&amp;rsquo;d be more comfortable to wait to deploy on a Monday and not at 4:30 on a sunny Friday afternoon&amp;hellip; understandable.</description>
+      <guid>http://localhost:1313/posts/the-golden-moment-of-a-friday-delivery-in-software/</guid>
+      <description>&lt;p&gt;Having been in software engineering for around 15 years, there&amp;rsquo;s been a lot of talk around Friday deployments - in that you should be able to do them without worries. This is all well and good, but there are some things that you need, and steps you need to make in order to get to the &amp;ldquo;holy grail&amp;rdquo; of software delivery in my eyes.&lt;/p&gt;&#xA;&lt;p&gt;In a recent discussion with someone in our team, it was suggested that they&amp;rsquo;d be more comfortable to wait to deploy on a Monday and not at 4:30 on a sunny Friday afternoon&amp;hellip; understandable.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting a good desk setup</title>
-      <link>https://futurepixels.co.uk/posts/getting-a-good-desk-setup/</link>
+      <link>http://localhost:1313/posts/getting-a-good-desk-setup/</link>
       <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/getting-a-good-desk-setup/</guid>
-      <description>Growing up, I found focusing a real struggle. With distractions everywhere as a kid, it taught me bad habits. As I grew up, I found my mind wandering with mental distractions like thinking about things non important to me at that time, like what I was doing that evening or wondering something obscure&amp;hellip;
-Over the past few years however, I&amp;rsquo;ve been trying to really change that with many things like various online tools like Google Keep, Google Tasks, SimpleNote and Notion and of course physical notebooks, as well as reading self help books and talking to various nerdy friends about it&amp;hellip; however, the one thing that occurred to me a few years back is my desk set up.</description>
+      <guid>http://localhost:1313/posts/getting-a-good-desk-setup/</guid>
+      <description>&lt;p&gt;Growing up, I found focusing a real struggle. With distractions everywhere as a kid, it taught me bad habits. As I grew up, I found my mind wandering with mental distractions like thinking about things non important to me at that time, like what I was doing that evening or wondering something obscure&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Over the past few years however, I&amp;rsquo;ve been trying to really change that with many things like various online tools like Google Keep, Google Tasks, SimpleNote and Notion and of course physical notebooks, as well as reading self help books and talking to various nerdy friends about it&amp;hellip; however, the one thing that occurred to me a few years back is my desk set up. I always felt like I was trapped, closed in or distracted with something whilst sitting at my desk.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adding a mount point on boot under Linux</title>
-      <link>https://futurepixels.co.uk/posts/adding-a-mount-point-on-boot-under-linux/</link>
+      <link>http://localhost:1313/posts/adding-a-mount-point-on-boot-under-linux/</link>
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/adding-a-mount-point-on-boot-under-linux/</guid>
-      <description>Working with linux over the past few years has been fun but it certainly comes with it&amp;rsquo;s frustrations. One of them for me is having to mount the drive when I need it, but this is because its not been that important to me to learn. So, tonight I decided to do a bit of reading up about it and learn then put that learning in to place.
-For myself, I have two drives I would like to mount on boot as it would in Windows and macOS; &amp;ldquo;Linux Games&amp;rdquo; and &amp;ldquo;Media&amp;rdquo;.</description>
+      <guid>http://localhost:1313/posts/adding-a-mount-point-on-boot-under-linux/</guid>
+      <description>&lt;p&gt;Working with linux over the past few years has been fun but it certainly comes with it&amp;rsquo;s frustrations. One of them for me is having to mount the drive when I need it, but this is because its not been that important to me to learn. So, tonight I decided to do a bit of reading up about it and learn then put that learning in to place.&lt;/p&gt;&#xA;&lt;p&gt;For myself, I have two drives I would like to mount on boot as it would in Windows and macOS; &amp;ldquo;Linux Games&amp;rdquo; and &amp;ldquo;Media&amp;rdquo;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Fixing issues with Linux kernel not updating and killing boot sequence</title>
-      <link>https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</link>
+      <link>http://localhost:1313/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</link>
       <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</guid>
-      <description>Over the weekend I updated my favourite rolling release of my Linux distro, Solus-Project. I looked through the updates, like I always do and seen there were some updates - one including the Linux kernel! Later that day I shut the PC down and went about the rest of my day.
-Yesterday I needed to get back on my PC to do something and it wasn&amp;rsquo;t booting - God damn it!</description>
+      <guid>http://localhost:1313/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</guid>
+      <description>&lt;p&gt;Over the weekend I updated my favourite rolling release of my Linux distro, &lt;a href=&#34;https://getsol.us/blog/&#34;&gt;Solus-Project&lt;/a&gt;. I looked through the updates, like I always do and seen there were some updates - one including the Linux kernel! Later that day I shut the PC down and went about the rest of my day.&lt;/p&gt;&#xA;&lt;p&gt;Yesterday I needed to get back on my PC to do something and it wasn&amp;rsquo;t booting - God damn it! Not all is lost though, this is Linux and with the power of Linux there is &lt;em&gt;something&lt;/em&gt; out there on the big web that can help - before I use my small circle of friends if they&amp;rsquo;ve had this.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Becoming a lead, part 2: trials and tribulations</title>
-      <link>https://futurepixels.co.uk/posts/becoming-a-lead-part-2-trials-and-tribulations/</link>
+      <link>http://localhost:1313/posts/becoming-a-lead-part-2-trials-and-tribulations/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/becoming-a-lead-part-2-trials-and-tribulations/</guid>
-      <description>This is part two of a series. Go read part one if you haven&amp;rsquo;t already&amp;hellip;
-Over the next few months we would finish a project which was one of the best projects I was involved in. This was lead by my predecessor. I&amp;rsquo;ve very much been mentored my Leigh the past four years and he has taught me a lot around aspects of my role as an engineer. During this project I pushed for various things within our team; detailed mocks, accessibility as well as other things.</description>
+      <guid>http://localhost:1313/posts/becoming-a-lead-part-2-trials-and-tribulations/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is part two of a series. Go read &lt;a href=&#34;http://localhost:1313/posts/becoming-a-lead-part-1-the-prelude/&#34;&gt;part one&lt;/a&gt; if you haven&amp;rsquo;t already&amp;hellip;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over the next few months we would finish a project which was one of the best projects I was involved in. This was lead by my &lt;a href=&#34;https://www.linkedin.com/in/leigh-mills-606b8b68/&#34;&gt;predecessor&lt;/a&gt;. I&amp;rsquo;ve very much been mentored my Leigh the past four years and he has taught me a lot around aspects of my role as an engineer. During this project I pushed for various things within our team; detailed mocks, accessibility as well as other things. This put us in a good state but looking back it wasn&amp;rsquo;t implemented correctly, however we were lean and very much a team that embraced continuous improvements&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Becoming a lead, part 1: The Prelude</title>
-      <link>https://futurepixels.co.uk/posts/becoming-a-lead-part-1-the-prelude/</link>
+      <link>http://localhost:1313/posts/becoming-a-lead-part-1-the-prelude/</link>
       <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/becoming-a-lead-part-1-the-prelude/</guid>
-      <description>Prelude The past year has been a roller-coaster - for me at least&amp;hellip;
-Back in September 2019, I was promoted to &amp;ldquo;Lead Software Engineer&amp;rdquo;. This was a role I was very much excited about, for many reasons - but one reason stood out the most. This was that I was able to help make a difference to my team, the business and more importantly the customer.
-Anyone who knows me - and knows me well, understands that I am pretty passionate about what I do so I took this seriously but not in a way where I told everyone that they were wrong and we are doing it my way.</description>
+      <guid>http://localhost:1313/posts/becoming-a-lead-part-1-the-prelude/</guid>
+      <description>&lt;h1 id=&#34;prelude&#34;&gt;Prelude&lt;/h1&gt;&#xA;&lt;p&gt;The past year has been a roller-coaster - for me at least&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Back in September 2019, I was promoted to &amp;ldquo;Lead Software Engineer&amp;rdquo;. This was a role I was very much excited about, for many reasons - but one reason stood out the most. This was that I was able to help make a difference to my team, the business and more importantly the customer.&lt;/p&gt;&#xA;&lt;p&gt;Anyone who knows me - and knows me well, understands that I am pretty passionate about what I do so I took this seriously but not in a way where I told everyone that they were wrong and we are doing it my way. They also understand I can loose focus on the end goal to a large extent and help too many people which impacts on my own targets/goals.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Setting up Rancher (with Digital Ocean)</title>
-      <link>https://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</link>
+      <link>http://localhost:1313/posts/setting-up-rancher-with-digital-ocean/</link>
       <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</guid>
-      <description>What is Rancher? Rancher comes in two parts (the first being optional). You have the Rancher Distro and the Rancher Orchestration Tool (I am currently using 1.6, which is where the docs point too).
-The first part is the Rancher Distro. This is pretty awesome. I know, &amp;ldquo;another distro&amp;rdquo; I can hear you say - but this is pretty clever: it is a distro for Docker. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker.</description>
+      <guid>http://localhost:1313/posts/setting-up-rancher-with-digital-ocean/</guid>
+      <description>&lt;h1 id=&#34;what-is-rancher&#34;&gt;&lt;a href=&#34;#what-is-rancher&#34; id=&#34;what-is-rancher&#34;&gt;What is Rancher?&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://rancher.com&#34;&gt;Rancher&lt;/a&gt; comes in two parts (the first being optional). You have the &lt;a href=&#34;https://rancher.com/rancher-os/&#34;&gt;Rancher Distro&lt;/a&gt; and the &lt;a href=&#34;https://rancher.com/docs/rancher/v1.6/en/&#34;&gt;Rancher Orchestration Tool&lt;/a&gt; (I am currently using 1.6, which is where the docs point too).&lt;/p&gt;&#xA;&lt;p&gt;The first part is the &lt;a href=&#34;https://rancher.com/rancher-os/&#34;&gt;Rancher Distro&lt;/a&gt;. This is pretty awesome. I know, &amp;ldquo;&lt;em&gt;another distro&lt;/em&gt;&amp;rdquo; I can hear you say - but this is pretty clever: it is a distro for &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt;. It is built entirely on Docker in that you can replace the core parts of the system with a simple command which swaps the core part out by stopping the current Docker container with the new option running in Docker. Want to use the Debian, Ubuntu or Centos console for example, you can do. Configuration is easy enough too as it uses a &lt;a href=&#34;https://cloud-init.io&#34;&gt;cloud-init&lt;/a&gt; based configuration which is a standard for system templates. &lt;em&gt;Note that this won&amp;rsquo;t be required in this walk through.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>My GitLab CI CD Pipeline overview</title>
-      <link>https://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</link>
+      <link>http://localhost:1313/posts/my-gitlab-ci-cd-pipeline-overview/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</guid>
-      <description>My pipeline This is a continued post from Creating a CI &amp;amp; CD pipeline with GitLab, Rancher and Digital Ocean.
-So, I am using the following tools:
- GitLab Docker  GitLab is an alternative to GitHub. I&amp;rsquo;ve been trying it out for about 6 to 8 months and finding it very well thought out and fully featured. The main bonus is that you can host it yourself so your code can be truly private and controlled.</description>
+      <guid>http://localhost:1313/posts/my-gitlab-ci-cd-pipeline-overview/</guid>
+      <description>&lt;h2 id=&#34;my-pipeline&#34;&gt;My pipeline&lt;/h2&gt;&#xA;&lt;p&gt;This is a continued post from &lt;a href=&#34;http://localhost:1313/posts/creating-a-ci--cd-pipeline-with-gitlab-rancher-and-digital-ocean/&#34;&gt;Creating a CI &amp;amp; CD pipeline with GitLab, Rancher and Digital Ocean&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;So, I am using the following tools:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gitlab.com&#34;&gt;GitLab&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gitlab.com&#34;&gt;GitLab&lt;/a&gt; is an alternative to &lt;a href=&#34;https://github.com&#34;&gt;GitHub&lt;/a&gt;. I&amp;rsquo;ve been trying it out for about 6 to 8 months and finding it very well thought out and fully featured. The main bonus is that you can host it yourself so your code can be truly private and controlled. The features I&amp;rsquo;m using for my pipeline are:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating a CI &amp; CD pipeline with GitLab, Rancher and Digital Ocean</title>
-      <link>https://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</link>
+      <link>http://localhost:1313/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</link>
       <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</guid>
-      <description>Setting the scene Over the past 2 years I&amp;rsquo;ve been working at First Utility and in that time I have worked with an awesome team - which, in turn has allowed me to pick up a lot of useful methods and learn some pretty amazing stuff.
-One thing I got into was running my own servers for things like OwnCloud, GitLab and other useful tools. I have a HP MicroServer which allowed me to practice on but I was fed up of running a server from home with running both a server and a nameserver.</description>
+      <guid>http://localhost:1313/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</guid>
+      <description>&lt;h2 id=&#34;setting-the-scene&#34;&gt;&lt;a href=&#34;#setting-the-scene&#34; id=&#34;setting-the-scene&#34;&gt;Setting the scene&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Over the past 2 years I&amp;rsquo;ve been working at First Utility and in that time I have worked with an awesome team - which, in turn has allowed me to pick up a lot of useful methods and learn some pretty amazing stuff.&lt;/p&gt;&#xA;&lt;p&gt;One thing I got into was running my own servers for things like OwnCloud, GitLab and other useful tools. I have a HP MicroServer which allowed me to practice on but I was fed up of running a server from home with running both a server and a nameserver. So, after much playing around I decided to have a play around with &lt;a href=&#34;https://m.do.co/c/7ceb48d8e994&#34;&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating a Linux virtual machine server with the HP microserver gen 8 server</title>
-      <link>https://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</link>
+      <link>http://localhost:1313/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</link>
       <pubDate>Sat, 01 Jul 2017 01:11:57 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</guid>
-      <description>I am using:
- HP MicroServer Gen 8 Ubuntu Server A laptop with Linux installed as my local machine (This means that I can only provide Linux commands and software that I will be using)  My HP MicroServer  8GB Ram Intel Celeron Processor (2 core) 1x 320 HDD 2x 1TB HDD   Precursor:
-I have set up my server a while ago and am not sure what I did during the config.</description>
+      <guid>http://localhost:1313/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</guid>
+      <description>&lt;p&gt;I am using:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hpe.com/uk/en/product-catalog/servers/proliant-servers/pip.hpe-proliant-microserver-gen8.5379860.html&#34;&gt;HP MicroServer Gen 8&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.ubuntu.com/download/server&#34;&gt;Ubuntu Server&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;A laptop with Linux installed as my local machine (This means that I can only provide Linux commands and software that I will be using)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;my-hp-microserver&#34;&gt;My HP MicroServer&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;8GB Ram&lt;/li&gt;&#xA;&lt;li&gt;Intel Celeron Processor (2 core)&lt;/li&gt;&#xA;&lt;li&gt;1x 320 HDD&lt;/li&gt;&#xA;&lt;li&gt;2x 1TB HDD&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Precursor:&lt;/p&gt;&#xA;&lt;p&gt;I have set up my server a while ago and am not sure what I did during the config.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Thank you to all involved in the 3 PHP South Coast Conferences</title>
-      <link>https://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</link>
+      <link>http://localhost:1313/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</link>
       <pubDate>Wed, 14 Jun 2017 21:31:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</guid>
-      <description>There is no simpler way to say this, but thank you.
-Thank you to all involved in all three PHP South Coast conferences. You have all played a big part in who I am today as a software engineer. The speakers were fantastic and the organisers have been great!
-On a personal level, I want to say thank you as PHP South Coast was my first conference back in 2015 after first getting involved with my local user group PHP Warwickshire.</description>
+      <guid>http://localhost:1313/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</guid>
+      <description>&lt;p&gt;There is no simpler way to say this, but thank you.&lt;/p&gt;&#xA;&lt;p&gt;Thank you to all involved in all three PHP South Coast conferences. You have &lt;em&gt;all&lt;/em&gt; played a big part in who I am today as a software engineer. The speakers were fantastic and the organisers have been great!&lt;/p&gt;&#xA;&lt;p&gt;On a personal level, I want to say thank you as PHP South Coast was my first conference back in 2015 after first getting involved with my local user group &lt;a href=&#34;http://phpwarks.co.uk&#34;&gt;PHP Warwickshire&lt;/a&gt;. That year I also went to &lt;a href=&#34;http://conference.phpnw.org.uk/&#34;&gt;PHP North West&lt;/a&gt; and &lt;a href=&#34;http://london2016.live.symfony.com/&#34;&gt;Symfony Live&lt;/a&gt;. Since then my hunger for knowledge has grown and as a result my career has progressed.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Making a career in programming is hard, enough to kill it</title>
-      <link>https://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</link>
+      <link>http://localhost:1313/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</link>
       <pubDate>Fri, 04 Nov 2016 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</guid>
-      <description>tl;dr People are shit at being people.
-What? Since I started becoming a developer, I have struggled in such a way that I thought I was alone in working with people who are unprofessional by being a bully or just damn right pig headed. I&amp;rsquo;ve wrote a few articles on this, Coming of age as a PHP developer and then Being a professional developer. I have also presented a talk to two local user groups about this exact issue, which was great and had more outcome on the conversations and questions afterwards than I thought it would.</description>
+      <guid>http://localhost:1313/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</guid>
+      <description>&lt;h3 id=&#34;tldr&#34;&gt;tl;dr&lt;/h3&gt;&#xA;&lt;p&gt;People are shit at being people.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what&#34;&gt;What?&lt;/h3&gt;&#xA;&lt;p&gt;Since I started becoming a developer, I have struggled in such a way that I thought I was alone in working with people who are unprofessional by being a bully or just damn right pig headed. I&amp;rsquo;ve wrote a few articles on this, &lt;a href=&#34;http://localhost:1313/experience/coming-of-age-as-a-php-developer&#34;&gt;Coming of age as a PHP developer&lt;/a&gt; and then &lt;a href=&#34;http://localhost:1313/experience/being-a-professional-developer&#34;&gt;Being a professional developer&lt;/a&gt;. I have also presented a talk to two local user groups about this exact issue, which was great and had more outcome on the conversations and questions afterwards than I thought it would.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Saving seconds with an ssh config file</title>
-      <link>https://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</link>
+      <link>http://localhost:1313/posts/saving-seconds-with-an-ssh-config-file/</link>
       <pubDate>Tue, 13 Sep 2016 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</guid>
-      <description>The problem There is nothing more time consuming than typing:
-→ ssh &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&amp;#39;s password: - or -
-→ ssh -i /some/path/to/my/ssh/key &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt; Seriously, do this multiple times a day, with the added annoyance of entering long server hostname&amp;rsquo;s like btables@lower.low.some-env.dept-name.my-company.co.uk along with passwords incorrectly entered (and done so in multiple time&amp;rsquo;s). That, as well as logging into the wrong server can cause lost time and on them rare occasions, headaches caused by working on the wrong server.</description>
+      <guid>http://localhost:1313/posts/saving-seconds-with-an-ssh-config-file/</guid>
+      <description>&lt;h3 id=&#34;the-problem&#34;&gt;The problem&lt;/h3&gt;&#xA;&lt;p&gt;There is nothing more time consuming than typing:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;→ ssh &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;s password:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;- or -&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;→ ssh -i /some/path/to/my/ssh/key &amp;lt;user&amp;gt;@&amp;lt;ip-address/hostname&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Seriously, do this multiple times a day, with the added annoyance of entering long server hostname&amp;rsquo;s like &lt;code&gt;btables@lower.low.some-env.dept-name.my-company.co.uk&lt;/code&gt; along with passwords incorrectly entered (and done so in multiple time&amp;rsquo;s). That, as well as logging into the wrong server can cause lost time and on them rare occasions, headaches caused by working on the wrong server. It happens. It&amp;rsquo;s not something just done by junior sys admins. When you are under stress or just simply not concentrating on what you are doing, you will make mistakes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing an ISO to a USB stick</title>
-      <link>https://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</link>
+      <link>http://localhost:1313/posts/installing-an-iso-to-a-usb-stick/</link>
       <pubDate>Mon, 12 Sep 2016 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</guid>
-      <description>I am working from Linux, please submit a pull request to add instructions for Windows/Mac
- First thing is first, download the iso you want to use as a live disk.
-To install to a usb stick, you run sudo dd if=/location/of/the.iso of=/dev/X, where x is the USB stick. To find the device you want to install, before inserting the stick run [sudo] fdisk -l. You should be given the following:</description>
+      <guid>http://localhost:1313/posts/installing-an-iso-to-a-usb-stick/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;I am working from Linux, please submit a pull request to add instructions for Windows/Mac&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;First thing is first, download the iso you want to use as a live disk.&lt;/p&gt;&#xA;&lt;p&gt;To install to a usb stick, you run &lt;code&gt;sudo dd if=/location/of/the.iso of=/dev/X&lt;/code&gt;, where &lt;code&gt;x&lt;/code&gt; is the USB stick. To find the device you want to install, before inserting the stick run &lt;code&gt;[sudo] fdisk -l&lt;/code&gt;. You should be given the following:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Rewriting your git history</title>
-      <link>https://futurepixels.co.uk/posts/rewriting-your-git-history/</link>
+      <link>http://localhost:1313/posts/rewriting-your-git-history/</link>
       <pubDate>Tue, 06 Sep 2016 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/rewriting-your-git-history/</guid>
-      <description>Editing the latest commit:  Important The following tip is about changing previous commits. If these commits are pushed to the remote, I would strongly advise to not mess with your history as it could break stuff
- Pretty easy to do so as stated on the git scm book#Changing the last commit. But a quick overview shows the simplicity:
-$ git commit --amend &amp;quot;Your new message&amp;quot;  Editing a commit earlier in your commit history That is great for the last commit message you just created, but what about a message type of reword that is after your latest commit message.</description>
+      <guid>http://localhost:1313/posts/rewriting-your-git-history/</guid>
+      <description>&lt;h3 id=&#34;editing-the-latest-commit&#34;&gt;Editing the latest commit:&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;&#xA;The following tip is about changing previous commits. If these commits are pushed to the remote, I would strongly advise to not mess with your history as it could break stuff&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Pretty easy to do so as stated on the &lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-the-Last-Commit&#34;&gt;git scm book#Changing the last commit&lt;/a&gt;. But a quick overview shows the simplicity:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ git commit --amend &amp;quot;Your new message&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;editing-a-commit-earlier-in-your-commit-history&#34;&gt;Editing a commit earlier in your commit history&lt;/h3&gt;&#xA;&lt;p&gt;That is great for the last commit message you just created, but what about a message type of reword that is after your latest commit message.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Thank you to all the people that have helped me</title>
-      <link>https://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</link>
+      <link>http://localhost:1313/posts/thank-you-to-all-the-people-that-have-helped-me/</link>
       <pubDate>Fri, 15 Jan 2016 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</guid>
-      <description>Thank you This is simply a thank you to people, who have got me to where I am today, and are part of the PHP, HTML, CSS and other communities.
-It is basically a list that would take a fair few tweets to do, so I wanted it in one place.
-So, thank you to all the people at PHP Warwickshire and PHP East Midlands as they were the people who have encouraged me to do talks and helped with my initial confidence and my general progression/sanity as a developer.</description>
+      <guid>http://localhost:1313/posts/thank-you-to-all-the-people-that-have-helped-me/</guid>
+      <description>&lt;h1 id=&#34;thank-you&#34;&gt;Thank you&lt;/h1&gt;&#xA;&lt;p&gt;This is simply a thank you to people, who have got me to where I am today, and are part of the PHP, HTML, CSS and other communities.&lt;/p&gt;&#xA;&lt;p&gt;It is basically a list that would take a fair few tweets to do, so I wanted it in one place.&lt;/p&gt;&#xA;&lt;p&gt;So, thank you to all the people at PHP Warwickshire and PHP East Midlands as they were the people who have encouraged me to do talks and helped with my initial confidence and my general progression/sanity as a developer.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Migrating from Mac OS to Linux</title>
-      <link>https://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</link>
+      <link>http://localhost:1313/posts/migrating-from-mac-os-to-linux/</link>
       <pubDate>Thu, 14 Jan 2016 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</guid>
-      <description>Preface I have now been a Mac OS user for around 8 years now. Don&amp;rsquo;t get me wrong, I have enjoyed using it. However, I have recently wanted to change for two reasons.
-The first; I want to advance on my skills as a developer/devops, so I feel like using a pure Linux operating system will help with that in regards to being familiar with the OS, structure, kernel and so on&amp;hellip;</description>
+      <guid>http://localhost:1313/posts/migrating-from-mac-os-to-linux/</guid>
+      <description>&lt;h1 id=&#34;preface&#34;&gt;Preface&lt;/h1&gt;&#xA;&lt;p&gt;I have now been a Mac OS user for around 8 years now. Don&amp;rsquo;t get me wrong, I have enjoyed using it. However, I have recently wanted to change for two reasons.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;The first;&lt;/em&gt; I want to advance on my skills as a developer/devops, so I feel like using a pure Linux operating system will help with that in regards to being familiar with the OS, structure, kernel and so on&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Being a professional developer</title>
-      <link>https://futurepixels.co.uk/posts/being-a-professional-developer/</link>
+      <link>http://localhost:1313/posts/being-a-professional-developer/</link>
       <pubDate>Tue, 25 Aug 2015 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/being-a-professional-developer/</guid>
-      <description>This is something I touched on briefly in my last post, &amp;lsquo;Coming of age as a php developer&amp;rsquo;, but it is something I would like to extend on.
-What do people expect from a developer? Every one has a different view of what to expect from a developer. Me, personally, I expect to be able to approach another developer and gain knowledge from them as well as be able to ask questions or suggest a possible solution to a problem without being treated like I suggested setting up a production server and allowing everyone to use root as the login user.</description>
+      <guid>http://localhost:1313/posts/being-a-professional-developer/</guid>
+      <description>&lt;p&gt;This is something I touched on briefly in my last post, &amp;lsquo;&lt;a href=&#34;http://futurepixels.co.uk/experience/coming-of-age-as-a-php-developer/#from-junior-to-now&#34;&gt;Coming of age as a php developer&lt;/a&gt;&amp;rsquo;, but it is something I would like to extend on.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-do-people-expect-from-a-developer&#34;&gt;What do people expect from a developer?&lt;/h3&gt;&#xA;&lt;p&gt;Every one has a different view of what to expect from a developer. Me, personally, I expect to be able to approach another developer and gain knowledge from them as well as be able to ask questions or suggest a possible solution to a problem without being treated like I suggested setting up a production server and allowing everyone to use &lt;code&gt;root&lt;/code&gt; as the login user.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Coming of age as a PHP developer</title>
-      <link>https://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</link>
+      <link>http://localhost:1313/posts/coming-of-age-as-a-php-developer/</link>
       <pubDate>Sun, 11 Jan 2015 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</guid>
-      <description>Back in 2009, I was fortunate to find an advert in the paper for a junior PHP developer. I had been using PHP for around a year at this point. I had not been to University or collage to learn any programming, it was all self taught. I applied and was a successful candidate and worked there for just over a year and a half.
-Me, a junior? Cool!  I had only really been a hobby developer in my spare time.</description>
+      <guid>http://localhost:1313/posts/coming-of-age-as-a-php-developer/</guid>
+      <description>&lt;p&gt;Back in 2009, I was fortunate to find an advert in the paper for a junior PHP developer. I had been using PHP for around a year at this point. I had not been to University or collage to learn any programming, it was all self taught. I applied and was a successful candidate and worked there for just over a year and a half.&lt;/p&gt;&#xA;&lt;h3 id=&#34;me-a-junior-cool&#34;&gt;Me, a junior? Cool!&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I had only really been a hobby developer in my spare time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Self management</title>
-      <link>https://futurepixels.co.uk/posts/self-management/</link>
+      <link>http://localhost:1313/posts/self-management/</link>
       <pubDate>Tue, 28 Jan 2014 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/self-management/</guid>
-      <description>Self management Why I have written this post Since moving from a hobby developer with the most basic of HTML knowledge since school, I have set targets on improvement of my knowledge within programming. Although my knowledge has improved to a certain degree, along with my workflow, my self management however has got no better. Sure, you can have all the tools you need and within the 4 years (at the time of writing this) of my commercial experience, I think I have only just found the tools that suit me best and I am still learning new tools.</description>
+      <guid>http://localhost:1313/posts/self-management/</guid>
+      <description>&lt;h1 id=&#34;self-management&#34;&gt;Self management&lt;/h1&gt;&#xA;&lt;h4 id=&#34;why-i-have-written-this-post&#34;&gt;Why I have written this post&lt;/h4&gt;&#xA;&lt;p&gt;Since moving from a hobby developer with the most basic of HTML knowledge since school, I have set targets on improvement of my knowledge within programming. Although my knowledge has improved to a certain degree, along with my workflow, my self management however has got no better. Sure, you can have all the tools you need and within the 4 years (at the time of writing this) of my commercial experience, I think I have only just found the tools that suit me best and I am still learning new tools.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>An introduction to using Git</title>
-      <link>https://futurepixels.co.uk/posts/an-introduction-to-using-git/</link>
+      <link>http://localhost:1313/posts/an-introduction-to-using-git/</link>
       <pubDate>Sat, 05 Oct 2013 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/an-introduction-to-using-git/</guid>
-      <description>Setting up Git Installing Git There are few ways to install Git on a mac (I will eventually add guides on Windows and Linux).
-  Install Xcode (and install the command line tools for an added bonus) Simply install via the App Store App.
-  Install via brew Providing you have brew installed (installation instructions on the site), then; once installed run [sudo] brew install git
-  Download direct from git-scm.</description>
+      <guid>http://localhost:1313/posts/an-introduction-to-using-git/</guid>
+      <description>&lt;h1 id=&#34;setting-up-git&#34;&gt;Setting up Git&lt;/h1&gt;&#xA;&lt;h2 id=&#34;installing-git&#34;&gt;Installing Git&lt;/h2&gt;&#xA;&lt;p&gt;There are few ways to install &lt;a href=&#34;http://git-scm.com/&#34;&gt;Git&lt;/a&gt; on a mac (I will eventually add guides on Windows and Linux).&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Install &lt;a href=&#34;https://itunes.apple.com/gb/app/xcode/id497799835?mt=12&#34;&gt;Xcode&lt;/a&gt; (and install the command line tools for an added bonus)&#xA;&lt;em&gt;Simply install via the App Store App.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Install via &lt;a href=&#34;http://brew.sh/&#34;&gt;brew&lt;/a&gt;&#xA;&lt;em&gt;Providing you have &lt;a href=&#34;http://brew.sh/&#34;&gt;brew&lt;/a&gt; installed (installation instructions on the site), then; once installed run &lt;code&gt;[sudo] brew install git&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Download direct from &lt;a href=&#34;http://git-scm.com/download/mac&#34;&gt;git-scm.com&lt;/a&gt;&#xA;&lt;em&gt;As it say&amp;rsquo;s on the tin, download and install.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Welcome to futurepixels.co.uk</title>
-      <link>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</link>
+      <link>http://localhost:1313/posts/welcome-to-futurepixels.co.uk/</link>
       <pubDate>Tue, 26 Feb 2013 10:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</guid>
-      <description>So, this is just a quick hello and to say thank&amp;rsquo;s for visiting. I am currently in between writting some other articles and tutorials at the moment along with at the end of buying a house, so this may take some time as I also need to decorate the house&amp;hellip; all good fun.
-So, a thank you for visiting the site and I hope you come here every now and then, and if you would like to drop me a tweet, you are most welcome.</description>
+      <guid>http://localhost:1313/posts/welcome-to-futurepixels.co.uk/</guid>
+      <description>&lt;p&gt;So, this is just a quick hello and to say thank&amp;rsquo;s for visiting. I am currently in between writting some other articles and tutorials at the moment along with at the end of buying a house, so this may take some time as I also need to decorate the house&amp;hellip; all good fun.&lt;/p&gt;&#xA;&lt;p&gt;So, a thank you for visiting the site and I hope you come here every now and then, and if you would like to drop me a &lt;a href=&#34;&#34; target=&#34;_new&#34;&gt;tweet&lt;/a&gt;, you are most welcome. I will be sure to reply to you.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Book Shelf</title>
-      <link>https://futurepixels.co.uk/bookshelf/</link>
+      <link>http://localhost:1313/bookshelf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/bookshelf/</guid>
-      <description>This is just a list of book that I am wanting to read, am reading and have read.
- The Clean Coder: A Code of Conduct for Professional Programmers
-Author: Robert C Martin  Vagrant Cookbook
-Author: Erika Heidi  Culture Of Respect
-Author: Cal Evans  Build APIs You Won&amp;#39;t Hate
-Author: Phil Sturgeon  Pro Vim
-Author: Mark McDonnell  The Pheonix Poject
-Author: Gene Kim  The Unicorn Poject</description>
+      <guid>http://localhost:1313/bookshelf/</guid>
+      <description>&lt;p&gt;This is just a list of book that I am wanting to read, am reading and have read.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;http://www.amazon.co.uk/dp/0137081073/ref=cm_sw_r_tw_dp_42mHwb1B0SRSK&#34; target=&#34;_blank&#34;&gt;The Clean Coder: A Code of Conduct for Professional Programmers&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Robert C Martin&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;http://www.amazon.co.uk/dp/1326020153/ref=cm_sw_r_tw_dp_R6mHwb008H2X4&#34; target=&#34;_blank&#34;&gt;Vagrant Cookbook&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Erika Heidi&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;https://nomadphp.com/product/culture-of-respect-3/&#34; target=&#34;_blank&#34;&gt;Culture Of Respect&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Cal Evans&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;http://www.amazon.co.uk/dp/0692232699/ref=cm_sw_r_tw_dp_5GoHwb1562GN7&#34; target=&#34;_blank&#34;&gt;Build APIs You Won&amp;#39;t Hate&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Phil Sturgeon&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;http://www.amazon.co.uk/dp/1484202511/ref=cm_sw_r_tw_dp_yOoHwb1HKNTQN&#34; target=&#34;_blank&#34;&gt;Pro Vim&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Mark McDonnell&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;https://www.amazon.co.uk/Phoenix-Project-DevOps-Helping-Business/dp/0988262592&#34; target=&#34;_blank&#34;&gt;The Pheonix Poject&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Gene Kim&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;https://www.amazon.co.uk/Unicorn-Project-Disruption-Redshirts-Overthrowing/dp/1942788762&#34; target=&#34;_blank&#34;&gt;The Unicorn Poject&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Gene Kim&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;https://www.amazon.co.uk/Good-Strategy-Bad-Difference-Matters/dp/1846684811&#34; target=&#34;_blank&#34;&gt;Good Strategy, Bad Strategy&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Richard Rumelt&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;https://gregmckeown.com/books/essentialism/&#34; target=&#34;_blank&#34;&gt;Essentialism: The Disciplined Pursuit of Less&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Greg McKeown&#xA;  &lt;/li&gt;&#xA;  &lt;li class=&#34;book-list-item&#34;&gt;&#xA;    &lt;a href=&#34;https://www.amazon.co.uk/Deep-Work-Focused-Distracted/dp/0349411905/ref=tmm_pap_swatch_0?_encoding=UTF8&amp;amp;qid=1445006467&amp;amp;sr=1-1&#34; target=&#34;_blank&#34;&gt;Deep Work: Rules for Focused Success in a Distracted World&lt;/a&gt;&lt;br /&gt;&#xA;    Author: Cal Newport&#xA;  &lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Curriculum Vitae: Nigel Greenway</title>
-      <link>https://futurepixels.co.uk/cv/</link>
+      <link>http://localhost:1313/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/cv/</guid>
-      <description>As a Lead Software Engineer, I strive to ensure the correct approach for the end user is delivered whilst providing business value. I am a positive and motivational person who likes to lead a team to build products around motivated individuals and give them the environment and support they need along with the trust to get the task completed. This is done with open communication and utilising the best of peoples skill sets.</description>
+      <guid>http://localhost:1313/cv/</guid>
+      <description>&lt;p&gt;As a Lead Software Engineer, I strive to ensure the correct approach for the end user is delivered whilst providing business value. I am a positive and motivational person who likes to lead a team to build products around motivated individuals and give them the environment and support they need along with the trust to get the task completed. This is done with open communication and utilising the best of peoples skill sets.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Skills</title>
-      <link>https://futurepixels.co.uk/skills/</link>
+      <link>http://localhost:1313/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/skills/</guid>
-      <description>Skills set&#39;s I&#39;ve managed to add to my tool belt for front end are the usual; HTML4/5 *, CSS2/3 *, SASS, Javascript *, ReactJS *, Accessibility *. For languages and scripting I am proficient in PHP *, Ruby, Python *, GoLang, Javascript *, NodeJS, Rust, Nix Shell (Bash, ZSH) *, Lua, Typescript *.
-I am a big believer in the DevOps mentality and have learnt the following tools: Ansible, GitLab CI, Jenkins, Rundeck, Terraform, Rancher, ArgoCD *, Azure *, .</description>
+      <guid>http://localhost:1313/skills/</guid>
+      <description>&lt;p&gt;Skills set&#39;s I&#39;ve managed to add to my tool belt for front end are the usual;  HTML4/5 *,  CSS2/3 *,  SASS,  Javascript *,  ReactJS *,  Accessibility *. For languages and scripting I am proficient in PHP *, Ruby, Python *, GoLang, Javascript *, NodeJS, Rust, Nix Shell (Bash, ZSH) *, Lua, Typescript *.&lt;/p&gt;&#xA;&lt;p&gt;I am a big believer in the DevOps mentality and have learnt the following tools: Ansible, GitLab CI, Jenkins, Rundeck, Terraform, Rancher, ArgoCD *, Azure *, .&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Whoami</title>
-      <link>https://futurepixels.co.uk/whoami/</link>
+      <link>http://localhost:1313/whoami/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://futurepixels.co.uk/whoami/</guid>
-      <description>Hi there, I&amp;rsquo;m Nigel, a developer, a father and fan of geeky stuff&amp;hellip;
-A full time web developer for 15 years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.</description>
+      <guid>http://localhost:1313/whoami/</guid>
+      <description>&lt;p&gt;Hi there, I&amp;rsquo;m Nigel, a developer, a father and fan of geeky stuff&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;A full time web developer for 16&#xA; years, I have started with very little knowledge and since then have being lucky to grow my knowledge to a variety of coding languages and practice&amp;rsquo;s. I have a keen interest in Domain Driven Design, Test Driven Development, Behaviour Driven Development and having a mentor and professional like attitude both inside and outside of the workplace.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="HandheldFriendly" content="True">
@@ -17,16 +17,16 @@
 
 </title>
 <script defer data-domain="futurepixels.co.uk" src="https://plausible.io/js/script.js"></script>
-<link rel="canonical" href="https://futurepixels.co.uk/posts/adding-a-mount-point-on-boot-under-linux/">
+<link rel="canonical" href="http://localhost:1313/posts/adding-a-mount-point-on-boot-under-linux/">
 
 
-<link rel="stylesheet" href="https://futurepixels.co.uk/css/style.css">
+<link rel="stylesheet" href="http://localhost:1313/css/style.css">
 
 
 
 <link rel="shortcut icon"
 
-    href="https://futurepixels.co.uk/img/logo.png"
+    href="http://localhost:1313/img/logo.png"
 
 >
 
@@ -40,13 +40,13 @@
 <section class="header">
     <div class="container">
         <div class="content">
-            <a href="https://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <a href="http://localhost:1313/"><div class="name"><h1>Futurepixels</h1></div></a>
             <nav>
                 <ul>
-                    <li ><a href="https://futurepixels.co.uk/posts/">Posts</a></li>
-                    <li ><a href="https://futurepixels.co.uk/bookshelf/">Book Shelf</a></li>
-                    <li ><a href="https://futurepixels.co.uk/whoami/">Whoami</a></li>
-                    <li ><a href="https://futurepixels.co.uk/cv/">CV</a></li>
+                    <li ><a href="http://localhost:1313/posts/">Posts</a></li>
+                    <li ><a href="http://localhost:1313/bookshelf/">Book Shelf</a></li>
+                    <li ><a href="http://localhost:1313/whoami/">Whoami</a></li>
+                    <li ><a href="http://localhost:1313/cv/">CV</a></li>
                 </ul>
             </nav>
         </div>
@@ -78,28 +78,28 @@
 <pre tabindex="0"><code>mkdir /games /photos
 </code></pre><p>The next part is to add the drives to the boot process. This can be done in multiple places, but I am adding them to the <code>/etc/fstab</code> configuration. My reasons being that using <code>/etc/fstab.d</code> doesn&rsquo;t exist on my distribution and using systemd is going to use the <code>/etc/fstab</code> config anyway.</p>
 <p>You will want to first get the details for the drive(s) you are mounting, this is done via <code>blkid</code> which should give an output like so:</p>
-<pre tabindex="0"><code>/dev/loop0: TYPE=&quot;squashfs&quot;
-/dev/loop1: TYPE=&quot;squashfs&quot;
-/dev/loop2: TYPE=&quot;squashfs&quot;
-/dev/loop3: TYPE=&quot;squashfs&quot;
-/dev/loop4: TYPE=&quot;squashfs&quot;
-/dev/loop5: TYPE=&quot;squashfs&quot;
-/dev/loop6: TYPE=&quot;squashfs&quot;
-/dev/nvme0n1p1: UUID=&quot;6EFE-AF5A&quot; TYPE=&quot;vfat&quot; PARTLABEL=&quot;BOOT&quot; PARTUUID=&quot;1e14628f-5553-41bc-b6a5-87bb9bdc5854&quot;
-/dev/nvme0n1p2: UUID=&quot;747adbc0-cf6b-45dc-8be6-4860321a199a&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;7739a89a-7d02-4aae-8b27-36d30111306f&quot;
-/dev/nvme0n1p3: LABEL=&quot;Windows&quot; UUID=&quot;102ADBF10527806C&quot; TYPE=&quot;ntfs&quot; PTTYPE=&quot;dos&quot; PARTUUID=&quot;90483ddd-d0c2-4885-b557-1d5d5255ece5&quot;
-/dev/sdc2: LABEL=&quot;Games&quot; UUID=&quot;50FE5C80FE5C5FF0&quot; TYPE=&quot;ntfs&quot; PARTLABEL=&quot;Windows Games&quot; PARTUUID=&quot;e933c8d2-a825-4186-b077-460e22e861dd&quot;
-/dev/sdc3: LABEL=&quot;Linux Games&quot; UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;09a79ba0-08d4-430d-827a-eb5a382fe7b5&quot;
-/dev/sda1: LABEL=&quot;spare&quot; UUID=&quot;BCB4F111B4F0CEC0&quot; TYPE=&quot;ntfs&quot; PARTLABEL=&quot;home&quot; PARTUUID=&quot;f181f4e0-02b1-48af-8aee-17c3bed3b803&quot;
-/dev/sdb1: LABEL=&quot;media&quot; UUID=&quot;1fe37fc3-d7f0-43c1-8b6c-60dab8792c11&quot; TYPE=&quot;ext4&quot; PARTLABEL=&quot;media&quot; PARTUUID=&quot;279c5731-e0ea-431d-9c43-af3c4a1a142c&quot;
-/dev/sdd: UUID=&quot;6f546c4e-80a9-444d-a83d-668b4183bf2f&quot; TYPE=&quot;ext4&quot;
+<pre tabindex="0"><code>/dev/loop0: TYPE=&#34;squashfs&#34;
+/dev/loop1: TYPE=&#34;squashfs&#34;
+/dev/loop2: TYPE=&#34;squashfs&#34;
+/dev/loop3: TYPE=&#34;squashfs&#34;
+/dev/loop4: TYPE=&#34;squashfs&#34;
+/dev/loop5: TYPE=&#34;squashfs&#34;
+/dev/loop6: TYPE=&#34;squashfs&#34;
+/dev/nvme0n1p1: UUID=&#34;6EFE-AF5A&#34; TYPE=&#34;vfat&#34; PARTLABEL=&#34;BOOT&#34; PARTUUID=&#34;1e14628f-5553-41bc-b6a5-87bb9bdc5854&#34;
+/dev/nvme0n1p2: UUID=&#34;747adbc0-cf6b-45dc-8be6-4860321a199a&#34; TYPE=&#34;ext4&#34; PARTUUID=&#34;7739a89a-7d02-4aae-8b27-36d30111306f&#34;
+/dev/nvme0n1p3: LABEL=&#34;Windows&#34; UUID=&#34;102ADBF10527806C&#34; TYPE=&#34;ntfs&#34; PTTYPE=&#34;dos&#34; PARTUUID=&#34;90483ddd-d0c2-4885-b557-1d5d5255ece5&#34;
+/dev/sdc2: LABEL=&#34;Games&#34; UUID=&#34;50FE5C80FE5C5FF0&#34; TYPE=&#34;ntfs&#34; PARTLABEL=&#34;Windows Games&#34; PARTUUID=&#34;e933c8d2-a825-4186-b077-460e22e861dd&#34;
+/dev/sdc3: LABEL=&#34;Linux Games&#34; UUID=&#34;c4460e59-3741-474d-8cd5-77505cfc4d80&#34; TYPE=&#34;ext4&#34; PARTUUID=&#34;09a79ba0-08d4-430d-827a-eb5a382fe7b5&#34;
+/dev/sda1: LABEL=&#34;spare&#34; UUID=&#34;BCB4F111B4F0CEC0&#34; TYPE=&#34;ntfs&#34; PARTLABEL=&#34;home&#34; PARTUUID=&#34;f181f4e0-02b1-48af-8aee-17c3bed3b803&#34;
+/dev/sdb1: LABEL=&#34;media&#34; UUID=&#34;1fe37fc3-d7f0-43c1-8b6c-60dab8792c11&#34; TYPE=&#34;ext4&#34; PARTLABEL=&#34;media&#34; PARTUUID=&#34;279c5731-e0ea-431d-9c43-af3c4a1a142c&#34;
+/dev/sdd: UUID=&#34;6f546c4e-80a9-444d-a83d-668b4183bf2f&#34; TYPE=&#34;ext4&#34;
 </code></pre><p>It is from this list that you need the <code>UUID</code> and the <code>TYPE</code> for your file system table [fstab] config. To make sure you get the correct data you can do the following:</p>
-<pre tabindex="0"><code>blkid | grep &quot;Linux Games&quot; | xclip -selection clipboard
+<pre tabindex="0"><code>blkid | grep &#34;Linux Games&#34; | xclip -selection clipboard
 </code></pre><p>This will add the following line in this example to your clipboard directly:</p>
-<pre tabindex="0"><code>/dev/sdc3: LABEL=&quot;Linux Games&quot; UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;09a79ba0-08d4-430d-827a-eb5a382fe7b5&quot;
+<pre tabindex="0"><code>/dev/sdc3: LABEL=&#34;Linux Games&#34; UUID=&#34;c4460e59-3741-474d-8cd5-77505cfc4d80&#34; TYPE=&#34;ext4&#34; PARTUUID=&#34;09a79ba0-08d4-430d-827a-eb5a382fe7b5&#34;
 </code></pre><p>With your favourite editor open <code>/etc/fstab</code>, paste the line in your clipboard to the end of the file and create the following lines:</p>
 <pre tabindex="0"><code># /dev/sdc3 at time of setup
-UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; /games ext4 rw,relatime,errors=remount-ro 0 2
+UUID=&#34;c4460e59-3741-474d-8cd5-77505cfc4d80&#34; /games ext4 rw,relatime,errors=remount-ro 0 2
 </code></pre><p>Lets break that down to understand it further.</p>
 <p><em>UUID</em> - Most Linux systems don&rsquo;t use the device as much these days which is why we are using <code>UUID</code> instead of <code>/dev/sdc3</code> (the device) as that is what is preferred<br>
 <em>mount point</em> - This is where the filesystem will attach to; in this case <code>/games</code><br>
@@ -109,16 +109,16 @@ UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; /games ext4 rw,relatime,er
 <em>Integerity test order</em> - This is to indicate which order the <a href="https://en.wikipedia.org/wiki/Fsck">fsck</a> program will check the device for errors. We use <code>2</code> here to check <em>after</em> boot as it&rsquo;s not a root filesystem</p>
 <p>Once we have added all the relevant disks that are permanant, save the file and test it works with <code>sudo mount -a</code>. Once that&rsquo;s run you should be able to access the drive and the content via <code>ls -l /games</code> within the context of this example.</p>
 <p>If you made any errors you will see the following type of error which should give more insight on what to look at fixing:</p>
-<pre tabindex="0"><code>mount: /nopes can't find UUID=&quot;1234&quot;
+<pre tabindex="0"><code>mount: /nopes can&#39;t find UUID=&#34;1234&#34;
 </code></pre>
 
                 <br>
                 <p>
                 
-                    <a href="https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/" style="float:left;">Previous</a>
+                    <a href="http://localhost:1313/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/" style="float:left;">Previous</a>
                 
                 
-                    <a href="https://futurepixels.co.uk/posts/getting-a-good-desk-setup/" style="float:right;">Next</a>
+                    <a href="http://localhost:1313/posts/getting-a-good-desk-setup/" style="float:right;">Next</a>
                 
                 </p>
             </div>
@@ -183,19 +183,11 @@ UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; /games ext4 rw,relatime,er
       </li>
       
 
-      
-      <li>
-        <a href="https://futurepixels.co.uk/index.xml">
-          <i class="icon ion-social-rss larger" title="rss"></i>
-        </a>
-      </li>
-      
-
   </div>
 </section>
 
 
-  <script src="https://futurepixels.co.uk/js/highlight.min.js" defer></script>
+  <script src="http://localhost:1313/js/highlight.min.js" defer></script>
   
 
 
@@ -209,11 +201,6 @@ UUID=&quot;c4460e59-3741-474d-8cd5-77505cfc4d80&quot; /games ext4 rw,relatime,er
     
   };
 </script>
-
-
-
-    
-
 
 
 

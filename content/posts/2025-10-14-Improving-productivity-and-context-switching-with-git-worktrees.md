@@ -91,7 +91,7 @@ For now, here's the above commands I've discussed:
 ```shell
 git clone --bare <your-repository-url>
 git worktree add main
-git worktree add your-worktree -b your-branch
+git worktree add ../your-worktree -b your-branch
 
 cd ./your-worktree
 

@@ -29,8 +29,8 @@ gitlab = "NigelGreenway"
 email = "github@futurepixels.co.uk"
 linkedin = "nigel-greenway-a5710a45"
 photography_site = "https://500px.com/p/nigelgreenway"
-primaryOS_href = "https://endeavouros.com"
-primaryOS_name = "Endeavour OS"
+primaryOS_href = "https://getsol.us/"
+primaryOS_name = "Solus"
 
 [markup.goldmark.renderer]
 unsafe= true

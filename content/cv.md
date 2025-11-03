@@ -53,7 +53,7 @@ Whilst my main focus in my day job has been React and Typescript, my heart belon
 
 ### Employment
 
-#### drivvn _(2019 - present)_
+#### drivvn _(2021 - present)_
 
 Starting as a Senior Software Engineer, I was teamed up with others to build a new tool to help people compare vehicles in a way that would help them understand the benefits from moving from a traditional engine (diesel/petrol) with a hybrid or pure electric engine. I have since then been promoted to Lead Software Engineer. My challenges are always taken head on in a way that the team would be taken on the journey where we ensured collaboration and transparency was key.
 
@@ -80,7 +80,7 @@ In the background I was part of a small team helping things around our new go se
 
 Outside of this I have been part of helping define the culture within the business, where my main impact has been focused on the on boarding of new engineers and trying to ensure new starters can get up and running with ease and quickly, and to allow them to focus on what they enjoy - coding. I have also been using my experience in helping shape relationships between teams and gaining a mutual respect where I have observed people will come to me for confirmation on their thinking/solving of a particular problem, as well as being able to encourage or entice others in doing other things or taking ownership of certain tasks.
 
-#### Shell Energy (First Utility 2015-2019) _(2016 - 2020)_
+#### Shell Energy (First Utility 2016-2019) _(2019 - 2021)_
 
 My time at Shell Energy (formerly First Utility) I was been able to work with many great and talented people where I've been able to extend on current skill sets as well as gain new ones. Starting as a Software Engineer, I was brought in to help with the main functionality of the web site where people would manage their meter readings by submitting online, change their tariff, as well as other general account areas. These are journeys used by hundreds of people a day. I helped deliver new features to the system as well as bug fixes. This was a monolithic PHP MVC application using Symfony and Zend components via Composer and based on the Yii framework as a base. Since then I've supported team members with bigger features like our refer-a-friend, smart awareness and booking portal, loyalty scheme, the display of weekly usage and more. During these products, in recognition of my efforts I've been promoted twice in four years - first to Senior Software Engineer and then to my current role of a Lead Software Engineer.
 

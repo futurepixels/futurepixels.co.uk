@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Futurepixels</description>
     <generator>Hugo</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 18 Oct 2023 22:10:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React and dangerouslySetInnerHTML</title>
+      <link>http://localhost:1313/posts/react-and-dangerouslysetinnerhtml/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/react-and-dangerouslysetinnerhtml/</guid>
+      <description>&lt;p&gt;Injecting HTML into your React components with &lt;code&gt;dangerouslySetInnerHTML&lt;/code&gt; isn&amp;rsquo;t always the answer&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;React has a long and great history of being able to do web development pretty much any way you want. Whether its functional or class based components or in this case being able to allow for a dynamic block of HTML to be injected into your component.&lt;/p&gt;&#xA;&lt;p&gt;As with anything in software engineering, there is always a balance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving my productivity and context switching with git worktrees</title>
+      <link>http://localhost:1313/posts/improving-my-productivity-and-context-switching-with-git-worktrees/</link>
+      <pubDate>Sun, 26 Oct 2025 22:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/improving-my-productivity-and-context-switching-with-git-worktrees/</guid>
+      <description>&lt;h3 id=&#34;let-me-set-the-scene&#34;&gt;Let me set the scene.&lt;/h3&gt;&#xA;&lt;p&gt;You are knee deep in focus with an interesting problem to solve, debugging something that&amp;rsquo;s been bugging you for ages or just in the flow of crafting your code in your project. Now come&amp;rsquo;s along that notification in Slack, Discord, email, what ever else is there to grab you out of your flow telling your that &amp;ldquo;PRODUCTION IS DOWN&amp;rdquo; (or that pesky project manager/product owner asking to &amp;ldquo;INVESTIGATE THIS COOL IDEA!&amp;rdquo;).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Using --legacy-peer-deps in NodeJS</title>
       <link>http://localhost:1313/posts/using--legacy-peer-deps-in-nodejs/</link>

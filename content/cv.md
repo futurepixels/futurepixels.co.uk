@@ -8,7 +8,7 @@ aliases = [
 <div class="columns--left">
 <h2 class="sub-content-heading">// Professional Summary</h2>
 
-<p>A software engineer of 15+ years of experience building scalable web applications and API's, as well as leading cross-functional teams. A strong experience in React and Typescript and DevOps practice, with a proven track record of improving developer experience and delivering business value through lean methodologies.</p>
+<p>A software engineer of 15+ years of experience building scalable web applications and API's, as well as leading cross-functional teams. Strong experience in PHP, React and Typescript and DevOps practice, as well as gaining stronger knowledge with Go and little experience with Rust, with a proven track record of improving developer experience and delivering business value through lean methodologies.</p>
 
 <h2 class="sub-content-heading">// Employment</h2>
 

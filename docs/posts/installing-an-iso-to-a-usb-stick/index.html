@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Articles on general development and programming along with other findings...">
+
+<title>
+
+
+     Futurepixels - Installing an ISO to a USB stick 
+
+</title>
+<script defer data-domain="futurepixels.co.uk" src="https://plausible.io/js/script.js"></script>
+<link rel="canonical" href="http://localhost:1313/posts/installing-an-iso-to-a-usb-stick/">
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+
+
+
+<link rel="shortcut icon"
+
+    href="http://localhost:1313/img/logo.png"
+
+>
+
+
+
+</head>
+
+
+<body>
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="http://localhost:1313/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <nav>
+                <ul>
+                    <li ><a href="http://localhost:1313/posts/">Posts</a></li>
+                    <li ><a href="http://localhost:1313/bookshelf/">Book Shelf</a></li>
+                    <li ><a href="http://localhost:1313/whoami/">Whoami</a></li>
+                    <li ><a href="http://localhost:1313/cv/">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Installing an ISO to a USB stick
+
+</div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Mon Sep 12 2016 10:00:00 UTC">Sep 12, 2016</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    <blockquote>
+<p>I am working from Linux, please submit a pull request to add instructions for Windows/Mac</p>
+</blockquote>
+<p>First thing is first, download the iso you want to use as a live disk.</p>
+<p>To install to a usb stick, you run <code>sudo dd if=/location/of/the.iso of=/dev/X</code>, where <code>x</code> is the USB stick. To find the device you want to install, before inserting the stick run <code>[sudo] fdisk -l</code>. You should be given the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>→ sudo fdisk -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Disk /dev/sda: 119.2 GiB, <span style="color:#ae81ff">128035676160</span> bytes, <span style="color:#ae81ff">250069680</span> sectors
+</span></span><span style="display:flex;"><span>Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">4096</span> bytes
+</span></span><span style="display:flex;"><span>I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">4096</span> bytes / <span style="color:#ae81ff">4096</span> bytes
+</span></span><span style="display:flex;"><span>Disklabel type: gpt
+</span></span><span style="display:flex;"><span>Disk identifier: xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Device        Start       End   Sectors  Size Type
+</span></span><span style="display:flex;"><span>/dev/sda1      <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">58593279</span>  <span style="color:#ae81ff">58591232</span>   28G Linux filesystem
+</span></span><span style="display:flex;"><span>/dev/sda2  <span style="color:#ae81ff">58593280</span>  <span style="color:#ae81ff">58597375</span>      <span style="color:#ae81ff">4096</span>    2M BIOS boot
+</span></span><span style="display:flex;"><span>/dev/sda3  <span style="color:#ae81ff">74217472</span> <span style="color:#ae81ff">250068991</span> <span style="color:#ae81ff">175851520</span> 83.9G Linux filesystem
+</span></span><span style="display:flex;"><span>/dev/sda4  <span style="color:#ae81ff">58597376</span>  <span style="color:#ae81ff">74217471</span>  <span style="color:#ae81ff">15620096</span>  7.5G Linux swap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Partition table entries are not in disk order.
+</span></span></code></pre></div><p>You are looking for the line <code>Disk /dev/xxx: x.xGiB ...</code>. Take note of what is already there&hellip;</p>
+<p>Now, insert your USB stick and run <code>[sudo] fdisk -l</code> again and you should get an extra addition. In my example above, I originally had <code>/dev/sda</code> which is my laptop HDD. After inserting the disk (below), I now have <code>/dev/sda</code> and <code>/dev/sdb</code>. I now have<code>sdb</code> which is my USB stick.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>→ sudo fdisk -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Disk /dev/sda: 119.2 GiB, <span style="color:#ae81ff">128035676160</span> bytes, <span style="color:#ae81ff">250069680</span> sectors
+</span></span><span style="display:flex;"><span>Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">4096</span> bytes
+</span></span><span style="display:flex;"><span>I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">4096</span> bytes / <span style="color:#ae81ff">4096</span> bytes
+</span></span><span style="display:flex;"><span>Disklabel type: gpt
+</span></span><span style="display:flex;"><span>Disk identifier: xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Device        Start       End   Sectors  Size Type
+</span></span><span style="display:flex;"><span>/dev/sda1      <span style="color:#ae81ff">2048</span>  <span style="color:#ae81ff">58593279</span>  <span style="color:#ae81ff">58591232</span>   28G Linux filesystem
+</span></span><span style="display:flex;"><span>/dev/sda2  <span style="color:#ae81ff">58593280</span>  <span style="color:#ae81ff">58597375</span>      <span style="color:#ae81ff">4096</span>    2M BIOS boot
+</span></span><span style="display:flex;"><span>/dev/sda3  <span style="color:#ae81ff">74217472</span> <span style="color:#ae81ff">250068991</span> <span style="color:#ae81ff">175851520</span> 83.9G Linux filesystem
+</span></span><span style="display:flex;"><span>/dev/sda4  <span style="color:#ae81ff">58597376</span>  <span style="color:#ae81ff">74217471</span>  <span style="color:#ae81ff">15620096</span>  7.5G Linux swap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Partition table entries are not in disk order.
+</span></span><span style="display:flex;"><span>Disk /dev/sdb: 29.8 GiB, <span style="color:#ae81ff">32010928128</span> bytes, <span style="color:#ae81ff">62521344</span> sectors
+</span></span><span style="display:flex;"><span>Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Disklabel type: gpt
+</span></span><span style="display:flex;"><span>Disk identifier: xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Device     Start      End  Sectors  Size Type
+</span></span><span style="display:flex;"><span>/dev/sdb1   <span style="color:#ae81ff">2048</span> <span style="color:#ae81ff">62519295</span> <span style="color:#ae81ff">62517248</span> 29.8G Linux filesystem
+</span></span></code></pre></div><p>I can now install my ISO to my usb stick via <code>[sudo] dd if=/home/&lt;username&gt;/Downloads/some-live-disk.iso of=/dev/sdb</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>→ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/home/nigel/Downloads/rancheros.iso of<span style="color:#f92672">=</span>/dev/sdb
+</span></span><span style="display:flex;"><span>83968+0 records in
+</span></span><span style="display:flex;"><span>83968+0 records out
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">42991616</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">43</span> MB<span style="color:#f92672">)</span> copied, 9.68235 s, 4.4 MB/s
+</span></span></code></pre></div><p>You can now see above that the ISO has been copied above. You should now be able to insert onto you server/laptop/desktop and boot directly for that USB stick. Great for testing a new Linux distrubution outside of a virtual machine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo fdisk -l
+</span></span><span style="display:flex;"><span>Disk /dev/sda: 298.1 GiB, <span style="color:#ae81ff">320072933376</span> bytes, <span style="color:#ae81ff">625142448</span> sectors
+</span></span><span style="display:flex;"><span>Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</span></span><span style="display:flex;"><span>Disklabel type: dos
+</span></span><span style="display:flex;"><span>Disk identifier: 0x5bbb7b73
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Device Boot Start End Sectors Size Id Type
+</span></span><span style="display:flex;"><span>/dev/sda1 * <span style="color:#ae81ff">2048</span> <span style="color:#ae81ff">625142447</span> <span style="color:#ae81ff">625140400</span> 298.1G <span style="color:#ae81ff">83</span> Linux
+</span></span></code></pre></div><p>Above, it shows I have a disk that is /dev/sda. I now want to delete this partition. There are two ways of doing this; via command line or a graphical display.</p>
+<p>To do via a graphical display, simply create a live CD/DVD/USB linux disc (think Ubuntu/ElementaryOS live disc) and fire up <a href="http://gparted.org/" target="_blank">GParted</a> and format the disk.</p>
+<p>To do via the command line, I use fdisk.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo fdisk /dev/sda
+</span></span></code></pre></div>
+
+                <br>
+                <p>
+                
+                    <a href="http://localhost:1313/posts/rewriting-your-git-history/" style="float:left;">Previous</a>
+                
+                
+                    <a href="http://localhost:1313/posts/saving-seconds-with-an-ssh-config-file/" style="float:right;">Next</a>
+                
+                </p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="img-viewer" class="image-viewer">
+    <img src="">
+</div>
+
+<script>
+    var articleImages = document.querySelectorAll('section.main img'),
+        imageViewer = document.getElementById('img-viewer');
+
+    articleImages.forEach( function (img) {
+        img.addEventListener('click', function (event) {
+            imageViewer.querySelector('img').src = img.src;
+            imageViewer.style.display="block";
+        });
+    });
+
+    imageViewer.addEventListener('click', function (event) {
+        this.style.display="none";
+    });
+</script>
+
+<section class="footer">
+  <div class="container">
+    <div class="copyright">
+
+      
+
+    </div>
+
+    <ul class="icon-list">
+      
+      <li>
+        <a href="https://gitlab.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon-social-gitlab" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://github.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-github" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://www.linkedin.com/in/nigel-greenway-a5710a45" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-linkedin" title="linkedin"></i>
+        </a>
+      </li>
+      
+
+  </div>
+</section>
+
+
+  <script src="http://localhost:1313/js/highlight.min.js" defer></script>
+  
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+  };
+</script>
+
+
+
+</body>
+</html>
+

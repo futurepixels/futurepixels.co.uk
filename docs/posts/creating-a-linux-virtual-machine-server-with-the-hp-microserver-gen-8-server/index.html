@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Articles on general development and programming along with other findings...">
+
+<title>
+
+
+     Futurepixels - Creating a Linux virtual machine server with the HP microserver gen 8 server 
+
+</title>
+<script defer data-domain="futurepixels.co.uk" src="https://plausible.io/js/script.js"></script>
+<link rel="canonical" href="http://localhost:1313/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/">
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+
+
+
+<link rel="shortcut icon"
+
+    href="http://localhost:1313/img/logo.png"
+
+>
+
+
+
+</head>
+
+
+<body>
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="http://localhost:1313/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <nav>
+                <ul>
+                    <li ><a href="http://localhost:1313/posts/">Posts</a></li>
+                    <li ><a href="http://localhost:1313/bookshelf/">Book Shelf</a></li>
+                    <li ><a href="http://localhost:1313/whoami/">Whoami</a></li>
+                    <li ><a href="http://localhost:1313/cv/">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Creating a Linux virtual machine server with the HP microserver gen 8 server
+
+</div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Sat Jul 1 2017 01:11:57 UTC">Jul 1, 2017</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    <p>I am using:</p>
+<ul>
+<li><a href="https://www.hpe.com/uk/en/product-catalog/servers/proliant-servers/pip.hpe-proliant-microserver-gen8.5379860.html">HP MicroServer Gen 8</a></li>
+<li><a href="https://www.ubuntu.com/download/server">Ubuntu Server</a></li>
+<li>A laptop with Linux installed as my local machine (This means that I can only provide Linux commands and software that I will be using)</li>
+</ul>
+<h2 id="my-hp-microserver">My HP MicroServer</h2>
+<ul>
+<li>8GB Ram</li>
+<li>Intel Celeron Processor (2 core)</li>
+<li>1x 320 HDD</li>
+<li>2x 1TB HDD</li>
+</ul>
+<blockquote>
+<p>Precursor:</p>
+<p>I have set up my server a while ago and am not sure what I did during the config.</p>
+</blockquote>
+<h2 id="step-one---install-the-server">Step one - Install the server</h2>
+<p>Download the Ubuntu Server ISO <a href="https://www.ubuntu.com/download/server">here</a> and follow <a href="futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/">this</a> guide.</p>
+<p>Using a USB input on the server (I used the internal one), insert the USB with the Ubuntu Server installer.</p>
+<p><label> -<input type="checkbox" /> <strong>Ensure you have enabled the <code>Open SSH Server</code> and the <code>Virtual Machine Host</code> option&rsquo;s on installation</strong></label></p>
+<p><label> -<input type="checkbox" /> <strong>Take note of your server&rsquo;s hostname</strong> <input
+type="text"
+name="server-name"
+id="server-name"
+placeholder="Add your server name here"
+title="add your servername here and I will replace '<server-name' to give more context to the article"/>
+</label></p>
+<p>Turn on your server and wait for it to boot - you may need to press <code>F11</code> to boot the USB drive. Follow the on screen instructions to install your Ubuntu Server instance.</p>
+<h3 id="bonus-step">Bonus step</h3>
+<p><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generate your SSH key</a> if you haven&rsquo;t got one and then edit add an entry to your <a href="http://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/">SSH config file</a> with <code>Host &lt;server-name&gt;</code>.</p>
+<p>Login to your server via <code>ssh &lt;server-name&gt;</code> and then enter your password when asked - this is due to the key not being on that server yet - via your main machine to ensure SSH is working correctly. It will ask you to answer <code>(yes/no)</code>, just confirm and you should be in your servers shell. You should now see something similar to the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Welcome to Ubuntu 16.04.2 LTS <span style="color:#f92672">(</span>GNU/Linux 4.4.0-62-generic x86_64<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> * Documentation:  https://help.ubuntu.com
+</span></span><span style="display:flex;"><span> * Management:     https://landscape.canonical.com
+</span></span><span style="display:flex;"><span> * Support:        https://ubuntu.com/advantage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">131</span> packages can be updated.
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">61</span> updates are security updates.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Last login: Fri Jun <span style="color:#ae81ff">30</span> 18:22:57 <span style="color:#ae81ff">2017</span> from &lt;your-client-ip-address&gt;
+</span></span><span style="display:flex;"><span>To run a command as administrator <span style="color:#f92672">(</span>user <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">)</span>, use <span style="color:#e6db74">&#34;sudo &lt;command&gt;&#34;</span>.
+</span></span><span style="display:flex;"><span>See <span style="color:#e6db74">&#34;man sudo_root&#34;</span> <span style="color:#66d9ef">for</span> details.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;user&gt;@&lt;server-name&gt;:~$
+</span></span></code></pre></div><p>Log out by pressing <code>ctrl-d</code> (saves you having to write <code>exit</code> in the servers shell environment) and run the following on you local machines shell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id &lt;server-name&gt;
+</span></span></code></pre></div><p>You should then be able now run <code>ssh &lt;server-name&gt;</code> and gain access straight away - without having to enter your password ever again - unless you have created an SSH key with a password.</p>
+<h2 id="step-two---setup-the-networking">Step two - Setup the networking</h2>
+<p>I simply follow <a href="http://www.havetheknowhow.com/Configure-the-server/Network-Bridge.html">this</a> article as it gives you all you need. I&rsquo;ve settled for relying on DHCP at the moment but I will set it to static IP addresses eventually.</p>
+<h2 id="step-three---setup-my-first-virtual-machine">Step three - Setup my first Virtual Machine</h2>
+<p>First, lets check that <a href="https://www.linux-kvm.org/">KVM</a> has been installed correctly by running <code>virsh --connect qemu:///system list --all</code></p>
+<p>Now, get your OS ISO and run <code>scp /path/to/os.iso &lt;server-name&gt;:/home/&lt;user&gt;/</code> to get the ISO on the server.</p>
+<p>You could use the command line, but I have not gone down that road and will be using <a href="http://virt-manager.org/">virt-manager.org</a> which I&rsquo;ve installed locally. I was installed <a href="http://rancher.com">RancherOS</a> as I want to learn Docker and devops orientated skills, but through <a href="http://virt-manager.org/">virt-manager.org</a> it is</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>As I have stated in the previous step, I said for you to get your chosen OS. My OS will be mainly <a href="http://rancher.com">Rancheros</a> for running <a href="http://docker.com">Docker</a> containers in order for me to extend my skills. As well as writing about installing and configuring <a href="http://rancher.com">Rancheros</a>, I will be writing about getting the RAID array configured to allow for extra storage/persistance for containers.</p>
+<h3 id="caveats">Caveats</h3>
+<ul>
+<li>When using <a href="http://virt-manager.org/">virt-manager.org</a>, ensure you have the <code>Network source</code> set as the bridge, in my case it was <code>Bridge br0: Host device eno1</code>.</li>
+</ul>
+<!-- Reuseable Link shortcuts -->
+<script>
+    var serverName = document.getElementById('server-name'), searchValue = '&lt;server-name&gt;';
+    serverName.addEventListener('blur', function(event) {
+        if (this.value !== "") {
+            var pTags = document.querySelectorAll('p,pre');
+            for (var i=0; i < pTags.length; i++) {
+                var tag = pTags[i];
+                if (tag.innerHTML.search(searchValue) !== -1) {
+                    var replacement = tag.innerHTML.replace(searchValue, this.value);
+                    tag.innerHTML = replacement;
+                }
+            }
+            searchValue = this.value;
+        }
+    });
+    var tasks = document.querySelectorAll('input[type="checkbox"]');
+    for (i=0; i<tasks.length;i++) {
+        var task = tasks[i];
+        task.addEventListener('change', function(event) {
+            if (this.checked === true) {
+                this.parentNode.style.color='#85D385';
+            } else {
+                this.parentNode.style.color='#313537';
+            }
+        });
+    }
+</script>
+
+                <br>
+                <p>
+                
+                    <a href="http://localhost:1313/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/" style="float:left;">Previous</a>
+                
+                
+                    <a href="http://localhost:1313/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/" style="float:right;">Next</a>
+                
+                </p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="img-viewer" class="image-viewer">
+    <img src="">
+</div>
+
+<script>
+    var articleImages = document.querySelectorAll('section.main img'),
+        imageViewer = document.getElementById('img-viewer');
+
+    articleImages.forEach( function (img) {
+        img.addEventListener('click', function (event) {
+            imageViewer.querySelector('img').src = img.src;
+            imageViewer.style.display="block";
+        });
+    });
+
+    imageViewer.addEventListener('click', function (event) {
+        this.style.display="none";
+    });
+</script>
+
+<section class="footer">
+  <div class="container">
+    <div class="copyright">
+
+      
+
+    </div>
+
+    <ul class="icon-list">
+      
+      <li>
+        <a href="https://gitlab.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon-social-gitlab" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://github.com/NigelGreenway" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-github" title="github"></i>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a href="https://www.linkedin.com/in/nigel-greenway-a5710a45" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-linkedin" title="linkedin"></i>
+        </a>
+      </li>
+      
+
+  </div>
+</section>
+
+
+  <script src="http://localhost:1313/js/highlight.min.js" defer></script>
+  
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+  };
+</script>
+
+
+
+</body>
+</html>
+

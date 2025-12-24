@@ -1,3 +1,4 @@
+{{ if .Site.Params.displaySocialIcons }}
     <ul class="icon-list">
       {{ if .Site.Params.gitlab }}
       <li>
@@ -31,4 +32,4 @@
       </li>
       {{ end }}
     </ul>
-
+{{ end }}

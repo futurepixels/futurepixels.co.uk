@@ -37,6 +37,11 @@ columns h3 {
   font-size: 10pt;
 }
 
+.columns p span {
+  color: #428bca;
+}
+
+
 ul.cv-socials {
   display: flex;
   gap: 15px;

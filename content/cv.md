@@ -83,7 +83,8 @@ aliases = [
 - Shell 
 - ReactJS 
 - Typescript 
-- Go  - Rust 
+- Go  
+- Rust 
 - PHP 
 - NodeJS 
 - Python 

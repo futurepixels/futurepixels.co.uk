@@ -15,7 +15,6 @@ pluralizelisttitles = false
 posts = "posts/:slug/"
 
 [params]
-displaySocialIcons = false
 dateform = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
 description = "Articles on general development and programming along with other findings..."

@@ -1,0 +1,34 @@
+    <ul class="icon-list">
+      {{ if .Site.Params.gitlab }}
+      <li>
+        <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank" rel="noreferrer">
+          <i class="icon-social-gitlab" title="github"></i>
+        </a>
+      </li>
+      {{ end }}
+
+      {{ if .Site.Params.github }}
+      <li>
+        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-github" title="github"></i>
+        </a>
+      </li>
+      {{ end }}
+
+      {{ if .Site.Params.linkedin }}
+      <li>
+        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-linkedin" title="linkedin"></i>
+        </a>
+      </li>
+      {{ end }}
+
+      {{ if .Site.Params.mastodon }}
+      <li>
+        <a href="https://mastodon.social/{{ .Site.Params.mastodon }}" target="_blank" rel="noreferrer">
+          <i class="icon ion-social-mastodon" title="linkedin"></i>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+

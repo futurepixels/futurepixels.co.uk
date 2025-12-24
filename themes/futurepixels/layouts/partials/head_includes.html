@@ -1,9 +1,6 @@
 <!-- CSS -->
-
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-{{ range .Site.Params.extracssfiles }}
-  <link rel="stylesheet" href="{{ . | absURL }}">
-{{ end }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.min.css">
 
 <!-- Icon -->
 <link rel="shortcut icon"

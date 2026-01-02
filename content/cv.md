@@ -113,8 +113,8 @@ aliases = [
 
 - Contributed to projects like <a target="_blank" href="https://github.com/slimphp/Twig-View/pulls?q=is%3Apr+author%3ANigelGreenway+is%3Aclosed">SlimPHP</a> and <a target="_blank" href="https://tactician.thephpleague.com/plugins/container/">The PHP League</a>, as well as other open source projects 
 - Renovated my current home where the majority of the work in my kitchen was completed by myself and my partner - outside of using a plumber and electrician 
-- I have built up my own homelab where I am running tooling like Grafana, Loki, Uptime Kuma, PiHole and various build systems - and I also built a tool <a target="_blank" href="https://gitlab.com/NigelGreenway/go-get-server-info">Go Get Server Info</a> where I use it to see what updates are available, the IP address, as well as other info I don't need to SSH into for
-- I completed my first 10k run in under 1 hour (58mins) this year (2025) after looking at what things I would like to achieve this year
-- I have started to learn Rust and built a tool to <a target="_blank" href="https://gitlab.com/NigelGreenway/jump-to-directory">jump around</a> directories with ease
+- Built up my own homelab where I am running tooling like Grafana, Loki, Uptime Kuma, PiHole and various build systems - and I also built a tool <a target="_blank" href="https://gitlab.com/NigelGreenway/go-get-server-info">Go Get Server Info</a> where I use it to see what updates are available, the IP address, as well as other info I don't need to SSH into for
+- Completed my first 10k run in under 1 hour (58mins) this year (2025)
+- Started to learn Rust and built a tool to <a target="_blank" href="https://gitlab.com/NigelGreenway/jump-to-directory">jump around</a> directories with ease
 - After a long time using git, I learnt about git worktree's and built a <a target="_blank" href="https://github.com/NigelGreenway/tmux-git-worktree">plugin</a> for TMUX
 </div>

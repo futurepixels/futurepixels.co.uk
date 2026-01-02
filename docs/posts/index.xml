@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Futurepixels</description>
     <generator>Hugo</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 18 Oct 2023 22:10:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Dec 2025 20:26:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up automated releases with Gitlab pipelines</title>
+      <link>http://localhost:1313/posts/setting-up-automated-releases-with-gitlab-pipelines/</link>
+      <pubDate>Tue, 30 Dec 2025 20:26:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/setting-up-automated-releases-with-gitlab-pipelines/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using Gitlab for a good few years now, and I can honestly say they&amp;rsquo;ve nailed it. Not only is it Open Source &amp;amp; paid for, but they&amp;rsquo;ve managed to encapsulate the tooling, workflow and processes all under one roof.&lt;/p&gt;&#xA;&lt;p&gt;Over the last year I&amp;rsquo;ve been trying to get the holy grail of &lt;del&gt;automation&lt;/del&gt; &lt;del&gt;dev ops&lt;/del&gt; git-ops: ensuring manual intervention for releases in as little - or non-existing, as possible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving my productivity and context switching with git worktrees</title>
+      <link>http://localhost:1313/posts/improving-my-productivity-and-context-switching-with-git-worktrees/</link>
+      <pubDate>Sun, 26 Oct 2025 22:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/improving-my-productivity-and-context-switching-with-git-worktrees/</guid>
+      <description>&lt;h3 id=&#34;let-me-set-the-scene&#34;&gt;Let me set the scene.&lt;/h3&gt;&#xA;&lt;p&gt;You are knee deep in focus with an interesting problem to solve, debugging something that&amp;rsquo;s been bugging you for ages or just in the flow of crafting your code in your project. Now come&amp;rsquo;s along that notification in Slack, Discord, email, what ever else is there to grab you out of your flow telling your that &amp;ldquo;PRODUCTION IS DOWN&amp;rdquo; (or that pesky project manager/product owner asking to &amp;ldquo;INVESTIGATE THIS COOL IDEA!&amp;rdquo;).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Using --legacy-peer-deps in NodeJS</title>
       <link>http://localhost:1313/posts/using--legacy-peer-deps-in-nodejs/</link>

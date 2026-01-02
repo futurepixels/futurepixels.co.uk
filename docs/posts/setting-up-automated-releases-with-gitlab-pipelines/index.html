@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Articles on general development and programming along with other findings...">
+
+<title>
+
+
+     Futurepixels - Setting up automated releases with Gitlab pipelines 
+
+</title>
+<script defer data-domain="futurepixels.co.uk" src="https://plausible.io/js/script.js"></script>
+<link rel="canonical" href="http://localhost:1313/posts/setting-up-automated-releases-with-gitlab-pipelines/">
+
+<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+<link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css">
+
+
+<link rel="shortcut icon"
+
+    href="http://localhost:1313/img/logo.png"
+
+>
+
+
+
+</head>
+
+
+<body>
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="http://localhost:1313/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <nav>
+                <ul>
+                    <li ><a href="http://localhost:1313/posts/">Posts</a></li>
+                    <li ><a href="http://localhost:1313/bookshelf/">Book Shelf</a></li>
+                    <li ><a href="http://localhost:1313/whoami/">Whoami</a></li>
+                    <li ><a href="http://localhost:1313/cv/">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Setting up automated releases with Gitlab pipelines
+
+</div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Tue Dec 30 2025 20:26:00 UTC">Dec 30, 2025</div>
+                    <div class="reading-time"><div class="middot"></div>9 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    <p>I&rsquo;ve been using Gitlab for a good few years now, and I can honestly say they&rsquo;ve nailed it. Not only is it Open Source &amp; paid for, but they&rsquo;ve managed to encapsulate the tooling, workflow and processes all under one roof.</p>
+<p>Over the last year I&rsquo;ve been trying to get the holy grail of <del>automation</del> <del>dev ops</del> git-ops: ensuring manual intervention for releases in as little - or non-existing, as possible.</p>
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGw0Zzd5ZTJyOHNrYXg1N3JkanM1Ymw1ODhhZWg2ZGtjZWRjeXl5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/s239QJIh56sRW/giphy.gif" alt="Ryan Reynolds reacting with 'but why' whilst dressed in hospital clothing" style="width:300px; margin-left: 0px;" />
+<p>Glad you asked. Starting out with a project when you first get into using a git forge tool is overwhelming. You have to learn git, how to manage issues, merge requests and what ever else there is these days. Your projects are/were probably simple and only used by yourself at the start.</p>
+<p>As you move onto bigger projects, you then have to start thinking about things like not introducing breaking changes and you would achieve that by using a pipeline of some sort.</p>
+<p>It&rsquo;s this part where you get an insight into the dev flow of software - and it&rsquo;s this bit I&rsquo;m skipping on this post.. Sorry.</p>
+<p>So, what I am looking to focus on is setting up automating the other end - the release information. In it&rsquo;s simplest form you want to achieve the following flow:</p>
+<p>Tag a commit -&gt; [the normal CI steps of deps, tests and builds] -&gt; Push a build to a package registry -&gt; Create the release notes -&gt; Create the change log -&gt; Update the readme with documentation.</p>
+<p>This example will be based on a program I&rsquo;ve been writing whilst learning Rust. It spits out a binary which I would like to eventually distribute, but to do that I need it in a place <em>to</em> distribute. This will all be achieved within Gitlab (you will get 400 CI runner credits at the time of writing this, but you can bypass this by running your own Gitlab runner. This can be achieved by running it on your local machine, read more <a href="https://docs.gitlab.com/runner" target="_blank">here</a>).</p>
+<h2 id="the-required-steps">The required steps</h2>
+<h3 id="step-1-creating-a-build">Step 1: Creating a build</h3>
+<p>This is fairly easy if you&rsquo;ve done this before, and the code is best for the start of this. I will comment each part..</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># This will ensure that anything that&#39;s built is saved. In this case, saved in the `./target directory with the commit reference</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">cache</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">key</span>: <span style="color:#ae81ff">${CI_COMMIT_REF_SLUG}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">target/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This allows to break up parts into re-usable templates. In this case it&#39;s setting the image to be used, and then installs all the packages needed to build my Rust binary</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.rust-template</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">image</span>: <span style="color:#ae81ff">rust:1.91-slim</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">before_script</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">apt-get update &amp;&amp; apt-get install -y pkg-config libssl-dev libgtk-3-dev libxcb-shape0-dev libxcb-xfixes0-dev gcc-mingw-w64-x86-64 gcc-mingw-w64-i686 mingw-w64 libc6-dev</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Again, like the previous template, but extends for the build state</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">.build-template</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">extends</span>: <span style="color:#ae81ff">.rust-template</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">rustup target add $TARGET</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">RUSTFLAGS=&#34;-C target-feature=+crt-static&#34; cargo build --release --target $TARGET</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Alas, the build step! </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">build-linux</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Use the templates from above</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">extends</span>: <span style="color:#ae81ff">.build-template</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Set this stage to build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">variables</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># set the target stage variable for re-use in the below sections</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">TARGET</span>: <span style="color:#ae81ff">x86_64-unknown-linux-gnu</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># This is where we need to take note. Gitlab CI produces &#34;artifacts&#34;. The paths section in the `cache` part allows us to now save &#34;artifacts&#34; to `./target` with anything we need for future inside, and is shared between stages (will make more sense later)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">artifacts</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">target/$TARGET/release/jd</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expire_in</span>: <span style="color:#ae81ff">never</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;jd--$TARGET--$CI_COMMIT_TAG&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">allow_failure</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># We only want this binary to be built on a commit being tagged</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">if</span>: <span style="color:#e6db74">&#39;$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+$/&#39;</span>
+</span></span></code></pre></div><p>This will build the binary and be available for us to use in the next steps.</p>
+<h3 id="step-2-add-the-artifacts-to-the-package-registry">Step 2: Add the &ldquo;artifacts&rdquo; to the package registry</h3>
+<p>This is one of the steps that took me too long to figure out. Gitlab have a tool, <a href="" target="_blank">glab</a> - written in Go, it allows you to create releases with asset links via the command line interface [CLI]. But, it needs - from what I&rsquo;ve learnt so far, long lived artifacts.</p>
+<p>Cue the next job in the &ldquo;release&rdquo; stage:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">upload_release</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">release</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Use the curl image for the Gitlab runner to send a request to the Gitlab API for your project</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">image</span>: <span style="color:#ae81ff">curlimages/curl:latest</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Gitlab do an awesome job wit the pre defined env vars (anything wrapped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># with ${}, uppercase and starting with `CI_`. The request here is to &#34;put&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># the built binary (from the cache path) into the packages registry. See </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># the `file=@..` part; this is the path from the artifacts path which </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># matches `build-linux.artifacts.paths`. This means it&#39;s getting the file </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># `jd` from that path. Then, it uses the API V4 to create an entry with </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># the version (`${CI_COMMIT_TAG}`.</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#e6db74">&#39;curl --header &#34;JOB-TOKEN: $CI_JOB_TOKEN&#34; --request PUT \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --form &#34;file=@target/x86_64-unknown-linux-gnu/release/jd&#34; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/x86_64-unknown-linux-gnu/$CI_COMMIT_TAG/jd&#34;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Again, we only want this binary to be built on a commit being tagged</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">if</span>: <span style="color:#e6db74">&#39;$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+$/&#39;</span>
+</span></span></code></pre></div><p>This would mean that when run, we would have an entry in <a href="https://gitlab.com/NigelGreenway/jump-to-directory/-/packages" target="_blank">here</a>.</p>
+<p>This is good. We are in a place where we can access these artifacts outside of the pipelines.</p>
+<h3 id="step-3-creating-the-actual-release">Step 3: Creating the actual release</h3>
+<p>First, what do I mean by a release? Well, the usual flow of software is like so; You and the team will plan what you want to put into a release. You will create a milestone or target a set of work items made up of features/bugs and (hopefully) tech debt. These would be &ldquo;batched&rdquo; together for say release <code>v1.2.3</code>. You will then be able to feed back to the business or customers/users via a roadmap that N items will be in this release, and ready for X date.</p>
+<p>This can be a very manual heavy process. You will probably have a check list like so:</p>
+<ul>
+<li>Add all the items to the milestone</li>
+<li>Collaborate with a release date (you might need to inform the front end or API team(s))</li>
+<li>Go through a rigorous quality assurance [QA] flow of testing on a staging area or similar</li>
+<li>Create the build</li>
+<li>Upload the build to package managers</li>
+<li>Create the release notes</li>
+<li>Inform people of the new awesome build and feature/fixes being available</li>
+</ul>
+<p>So, the code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">release</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">release</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Use the Go CLI tool written by Gitlab to manage the release creation</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">image</span>: <span style="color:#ae81ff">registry.gitlab.com/gitlab-org/cli:latest</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># The `needs` key is important here as it tells the Gitlab runner to only run this step in the pipeline _when_ the build is completed </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">needs</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">build-linux</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># As we are using the defined CLI image, we need bash in this case as I&#39;m running a custom script to build out the change log</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">before_script</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">apk add --no-cache --upgrade bash</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># This command is to log in to your Gitlab hosted project to allow for future call&#39;s via the CLI tool</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">glab auth login --hostname $CI_SERVER_HOST --job-token $CI_JOB_TOKEN --api-protocol $CI_SERVER_PROTOCOL</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># This is a call to my script to get the release notes</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">NOTES=$(bash ./release.sh)</span>
+</span></span><span style="display:flex;"><span>    - &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # This is where we create the release. We create it based on the $CI_COMMIT_TAG (v1.2.3), we pass in the $NOTES that were created on the line above, and then we create the assets for the release, which we created in the first step.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      glab release create &#34;$CI_COMMIT_TAG&#34; --notes &#34;$NOTES&#34; --name &#34;$CI_COMMIT_TAG&#34; --assets-links=&#34;[{ \&#34;name\&#34;: \&#34;jd-x86_64-unknown-linux-gnu-$CI_COMMIT_TAG\&#34;, \&#34;url\&#34;: \&#34;https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/packages/generic/x86_64-unknown-linux-gnu/$CI_COMMIT_TAG/jd\&#34;, \&#34;link_type\&#34;: \&#34;package\&#34;}]&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">if</span>: <span style="color:#e6db74">&#39;$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+$/&#39;</span>
+</span></span></code></pre></div><p>This would create something like <a href="https://gitlab.com/NigelGreenway/jump-to-directory/-/releases/0.2.2" target="_blank">this</a>. This contains the assets (the source code up until this commit that has been tagged), the link to the binary that can be downloaded, and then the release notes.</p>
+<p>Up until this point, nothing has had to be done manually other than tagging a commit - winning! This mean&rsquo;s the only effort to be put in is at the start when your development team write good, solid and informative &ldquo;merge&rdquo; commits.</p>
+<p>Step 4: Update documentation with version references (and other stuff)</p>
+<p>This was the other part that had me stumped - for about a day, annoyingly! A lot of searching the web got me parts of this and the other steps, but there were some key parts that were missing for me. So, this should help.</p>
+<p>This step will allow you to update any code and/or content, then commit it back to the project.</p>
+<p>In order for this step to run, you will need to head over to your Gitlab hosted project and go to the following sections:</p>
+<p><code>settings -&gt; access_tokens</code>, and complete the following steps:</p>
+<ul>
+<li>Click &ldquo;Add new token&rdquo;</li>
+<li>Set a token name (I&rsquo;ve used <code>GIT_AUTH_TOKEN</code>)</li>
+<li>Set an expiration date (I&rsquo;ve set it for a year)</li>
+<li>Set the role to &ldquo;Maintainer&rdquo; to ensure permissions work correctly</li>
+<li>Select &ldquo;write_repository&rdquo;</li>
+<li>Submit via the blue button</li>
+</ul>
+<p>You will then be give the value of the new token, but with &ldquo;•&rdquo; instead of letters or numbers. Click on the button to copy this value ready for the next step.</p>
+<p><code>settings -&gt; CI/CD -&gt; variables</code>, then complete the following steps:</p>
+<ul>
+<li>Click &ldquo;Add variable&rdquo;</li>
+<li>Set &ldquo;type&rdquo; to &ldquo;Variable (default)&rdquo;</li>
+<li>Set &ldquo;Environments&rdquo; to &ldquo;All (default)&rdquo;</li>
+<li>Set &ldquo;Visibility&rdquo; to &ldquo;Masked&rdquo;</li>
+<li>Leave the &ldquo;Flags&rdquo; (This got me, if you leave &ldquo;Protect variable&rdquo; as checked, then the pipeline <strong>wouldn&rsquo;t</strong> pick up the variable - hence why I lost most of my day)</li>
+<li>Set the &ldquo;Key&rdquo; (I&rsquo;ve used <code>GIT_AUTH_TOKEN</code>)</li>
+<li>Set the &ldquo;Value&rdquo; with the key we copied in the previous steps</li>
+</ul>
+<p>You now should be good with the next part of the pipeline!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">update_readme</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">release</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># This is just a general image. Alpine is just a small Linux distro containing the bare minimum for light use</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">image</span>: <span style="color:#ae81ff">alpine:latest</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># We don&#39;t want to do this _until_ a release has been completed</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">needs</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">release</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">before_script</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Install git and sed</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">apk add --no-cache git sed</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Set up our git user for the commit message author</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">git config --global user.email ${GITLAB_USER_EMAIL}</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">git config --global user.name ${GITLAB_USER_NAME}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">script</span>:
+</span></span><span style="display:flex;"><span>    - &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # This was fun, as multiple articles gave multiple solutions - but 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # failed to mention how the variables worked. This will now set the 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # remote URL with the correct authentication setup (see the 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # CI_PROJECT_NAME:GIT_AUTH_TOKEN part)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git remote set-url origin https://${CI_PROJECT_NAME}:${GIT_AUTH_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}.git</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># This section will take the tag from the commit, then replace the version </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># value with the new tag from a template I use for my README.md to be </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># updated for the latest version to be installed by the user</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export VERSION=${CI_COMMIT_TAG#v}</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">sed &#34;s|{{VERSION}}|${CI_COMMIT_TAG}|g&#34; .gitlab/README.template.md &gt; README.md</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Then, the golden part - once updated, add the file to the staging area in</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># in git, commit and then push to the main branch</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">git add README.md</span>
+</span></span><span style="display:flex;"><span>    - &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git commit -m &#39;docs: update README download URL&#39;</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">git push origin -o ci.skip HEAD:main</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Once again, we only want this to be update upon a tag creation</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">if</span>: <span style="color:#e6db74">&#39;$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+$/&#39;</span>
+</span></span></code></pre></div><p>This means that now, you don&rsquo;t have to do any of that stuff again! You can just tag a specific point in your git history. No building, no deploying, no writing up release notes. There&rsquo;s other things I need to automate:</p>
+<ul>
+<li>Create and update a <code>CHANGELOG.md</code> with the latest changes</li>
+<li>Ping Slack with a message on the release</li>
+<li>Post to socials with the release</li>
+<li>Push to various package managers to push the latest binary out there for the world to see</li>
+</ul>
+<p>The biggest benefit to all this; it&rsquo;s the same, reproducible steps</p>
+
+
+                <br>
+                <p>
+                
+                    <a href="http://localhost:1313/posts/improving-my-productivity-and-context-switching-with-git-worktrees/" style="float:left;">Previous</a>
+                
+                
+                </p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="img-viewer" class="image-viewer">
+    <img src="">
+</div>
+
+<script>
+    var articleImages = document.querySelectorAll('section.main img'),
+        imageViewer = document.getElementById('img-viewer');
+
+    articleImages.forEach( function (img) {
+        img.addEventListener('click', function (event) {
+            imageViewer.querySelector('img').src = img.src;
+            imageViewer.style.display="block";
+        });
+    });
+
+    imageViewer.addEventListener('click', function (event) {
+        this.style.display="none";
+    });
+</script>
+
+<section class="footer">
+  <div class="container">
+    <div class="copyright">
+
+      
+
+    </div>
+
+    
+
+
+  </div>
+</section>
+
+
+  <script src="http://localhost:1313/js/highlight.min.js" defer></script>
+  
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+  };
+</script>
+
+
+
+</body>
+</html>
+

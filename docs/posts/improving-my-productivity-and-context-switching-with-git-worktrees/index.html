@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Articles on general development and programming along with other findings...">
+
+<title>
+
+
+     Futurepixels - Improving my productivity and context switching with git worktrees 
+
+</title>
+<script defer data-domain="futurepixels.co.uk" src="https://plausible.io/js/script.js"></script>
+<link rel="canonical" href="http://localhost:1313/posts/improving-my-productivity-and-context-switching-with-git-worktrees/">
+
+<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+<link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css">
+
+
+<link rel="shortcut icon"
+
+    href="http://localhost:1313/img/logo.png"
+
+>
+
+
+
+</head>
+
+
+<body>
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="http://localhost:1313/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <nav>
+                <ul>
+                    <li ><a href="http://localhost:1313/posts/">Posts</a></li>
+                    <li ><a href="http://localhost:1313/bookshelf/">Book Shelf</a></li>
+                    <li ><a href="http://localhost:1313/whoami/">Whoami</a></li>
+                    <li ><a href="http://localhost:1313/cv/">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Improving my productivity and context switching with git worktrees
+
+</div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Sun Oct 26 2025 22:10:00 UTC">Oct 26, 2025</div>
+                    <div class="reading-time"><div class="middot"></div>7 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    <h3 id="let-me-set-the-scene">Let me set the scene.</h3>
+<p>You are knee deep in focus with an interesting problem to solve, debugging something that&rsquo;s been bugging you for ages or just in the flow of crafting your code in your project. Now come&rsquo;s along that notification in Slack, Discord, email, what ever else is there to grab you out of your flow telling your that &ldquo;PRODUCTION IS DOWN&rdquo; (or that pesky project manager/product owner asking to &ldquo;INVESTIGATE THIS COOL IDEA!&rdquo;).</p>
+<p>You open up the message and see there is a distraction of some kind. You look at the logs and can&rsquo;t see what&rsquo;s happening. Thinking on your feet you realise running locally might be easier to understand. You go back to your favourite editor and you realise you have files you have modified, created and have got a load of stuff there in your staging area within git. The usual flow would be to take a deep breath, sigh with frustration and then run <code>git stash save</code>. Then you forget you have unstaged files, so you need to <code>git stash apply</code> and then <code>git add .</code> followed by <code>git stash save</code>. Once done you <code>git checkout main</code>, <code>git pull</code> and then clean down your workspace and then rebuild and run locally with your build tools.</p>
+<p>Good work, you completed the task that distracted you. People are clapping you as you walk down the corridor to get that well deserved hot drink you&rsquo;ve been putting off all morning because you&rsquo;ve been in the zone.</p>
+<p>You then you then get back to your desk. And suddenly remember - you made a change in a package that is a dependency, and you don&rsquo;t remember which file it was which took you ages to track it down! You realise you are going to have to do that again! /facepalm</p>
+<p>Okay, this is a silly example, but I&rsquo;m sure you get the picture.</p>
+<h3 id="introducing-worktrees-in-git">Introducing &ldquo;worktree&rdquo;&rsquo;s in git</h3>
+<h4 id="summary">Summary</h4>
+<p>Git &ldquo;worktrees&rdquo; allow you to switch context without you having to &ldquo;close down&rdquo; the context on what you are currently working on.</p>
+<p>For a little more context, when you run <code>git clone git@my-org:my-repo.git</code> you are pulling everything down into a &ldquo;worktree&rdquo;. This will include all your files of your project and put your git setup in a directory of <code>.git</code> within that project.</p>
+<p>Introduced in <code>Git@2.5.6</code>, a &ldquo;worktree&rdquo; is a self contained directory within your git repository that points to a given branch. This allows you to have a directory per branch. The only limitation for you - as the engineer, is that a branch can only be referenced once - meaning that you can&rsquo;t have more than one &ldquo;worktree&rdquo; pointing at the same branch. In it&rsquo;s simplest form, you are copying the contents of a branch and shoving it in a directory.</p>
+<p>Let&rsquo;s get stuck in. For best effect, it&rsquo;s better to use a cloned repository with the <code>--bare</code> flag. This will bring down the repository, but there will be no <code>.git</code> directory. This is because with the <code>--bare</code> flag, your clone of the repository <em>is</em> the git directory. This should make sense shortly ..</p>
+<p>Below is what you would see in a bare repo. Imaging you have the branch on remote; <code>main</code>.</p>
+<pre tabindex="0"><code>drwxrwxr-x  4 nigel nigel  140 Oct 26 23:42 .
+drwxrwxrwt 32 root  root   700 Oct 26 23:43 ..
+-rw-rw-r--  1 nigel nigel 1844 Oct 26 23:42 commit
+-rw-rw-r--  1 nigel nigel   66 Oct 26 23:42 config
+-rw-rw-r--  1 nigel nigel   21 Oct 26 23:42 HEAD
+drwxrwxr-x  4 nigel nigel   80 Oct 26 23:42 objects
+drwxrwxr-x  4 nigel nigel   80 Oct 26 23:42 refs
+</code></pre><p>So, let&rsquo;s get going with the first &ldquo;worktree&rdquo;! Let&rsquo;s imagine you want to have the main branch as a &ldquo;worktree&rdquo;.</p>
+<p><code>git worktree add main</code> would add a directory of <code>main</code> in to the root directory structure and checkout the <code>main</code> branch. Running <code>ls -l</code> will now show the following:</p>
+<pre tabindex="0"><code>total 12
+drwxrwxr-x  6 nigel nigel  180 Oct 26 23:44 .
+drwxrwxrwt 31 root  root   680 Oct 26 23:44 ..
+-rw-rw-r--  1 nigel nigel 1844 Oct 26 23:42 commit
+-rw-rw-r--  1 nigel nigel   66 Oct 26 23:42 config
+-rw-rw-r--  1 nigel nigel   21 Oct 26 23:42 HEAD
+drwxr-xr-x  2 nigel nigel   60 Oct 26 23:44 main &lt;-- New directory of `main` here
+drwxrwxr-x  4 nigel nigel   80 Oct 26 23:42 objects
+drwxrwxr-x  4 nigel nigel   80 Oct 26 23:42 refs
+drwxr-xr-x  3 nigel nigel   60 Oct 26 23:44 worktrees &lt;-- New directory with all of your &#34;worktrees&#34;
+</code></pre><p>If you <code>cd</code> into <code>main</code>, you will now see your code which you can add, delete or modify to your hearts content.</p>
+<p>Now, lets go with one of the above scenarios: you have a production issue and you want to replicate it and possibly need to create a hotfix.</p>
+<p>You are currently in a &ldquo;worktree&rdquo; of &ldquo;Add-cat-gifs&rdquo; with several changes spread across additions and deletions in files, adding of files and deletion of files. Running <code>cd ../main &amp;&amp; git pull &amp;&amp; git worktree ../hotfix -b hotfix-branch</code> will pull down the latest commits from <code>main</code> and generate a new working tree in your git repo. You can then <code>cd ../hotfix</code> into that &ldquo;worktree&rdquo; and you will see that there are no files with any changes - you have a clean staging area!</p>
+<p><em>Notice the <code>../</code> preceding before &ldquo;hotfix&rdquo; with each &ldquo;worktree&rdquo; being it&rsquo;s own directory, you will need to make sure you create a &ldquo;worktree&rdquo; in the correct path. You will always need to run the <code>add</code> command either in the root of you project directory, or prepend <code>../</code> to it if you are create <em>from</em> a worktree that you are in.</em></p>
+<p><em>Another note here is that when you create a new work tree, it will branch off from where you are currently (eg: <code>main</code>). This means that if you had committed three changes to <code>branch-a</code> and ran <code>git worktree add ../hotfix -b hotfix-branch</code>, then you would be bringing them over with the new branch and risk creating a merge request with not only the hotfix changes, but the changes from <code>feature/123--Adds-cat-gifs</code>.</em></p>
+<p>If you want to, you can pass in another argument of a commit hash which will create the new branch for that &ldquo;worktree&rdquo; with that commit hash as the tip like so <code>git worktree add my-worktree -b my-new-branch 42728112</code>.</p>
+<p>In here, you can again make as many changes as you need to get that bug squashed or investigation completed. Then once you are done and have committed &amp; pushed your changes to remote, then you can simply <code>cd ../Add-cat-gifs</code> and carry on with that feature. If you have comments on your merge request, simple change to the hotfix &ldquo;worktree&rdquo; and make the changes, then change back to your &ldquo;Add cat gifs&rdquo; &ldquo;worktree&rdquo;.</p>
+<h4 id="your-development-environment">Your development environment</h4>
+<p>One thing you will need to remember is that when you create a new &ldquo;worktree&rdquo;, you will need to run your local build tasks and set up your <code>.env</code> files. So something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cp ../main/.env ./.env
+</span></span><span style="display:flex;"><span>npm i
+</span></span></code></pre></div><h3 id="roundup">Roundup</h3>
+<p>This is a quick example of a workflow for using git &ldquo;worktree&rdquo;&rsquo;s, but gives you an idea of a simple flow when using a newly cloned repository but with a bare clone.</p>
+<p>Whilst you can start with an already cloned git repository, I would personally advise against this and re-cloning your project as a bare clone. Otherwise, your staging area will be dirty and you will be at risk at committing your project within your project.</p>
+<p>For now, here&rsquo;s the above commands I&rsquo;ve discussed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone --bare &lt;your-repository-url&gt;
+</span></span><span style="display:flex;"><span>git worktree add main
+</span></span><span style="display:flex;"><span>git worktree add ../your-worktree -b your-branch
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd ./your-worktree
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## you do some stuff and need to switch context</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd ../main
+</span></span><span style="display:flex;"><span>git worktree add ../your-new-context -b hotfix/missing-content-bug
+</span></span><span style="display:flex;"><span>cd ../your-new-context
+</span></span></code></pre></div><p>This is a pretty quick tour of the feature, but hopefully gives you enough information to play with this really useful feature!</p>
+
+
+                <br>
+                <p>
+                
+                    <a href="http://localhost:1313/posts/using--legacy-peer-deps-in-nodejs/" style="float:left;">Previous</a>
+                
+                
+                    <a href="http://localhost:1313/posts/setting-up-automated-releases-with-gitlab-pipelines/" style="float:right;">Next</a>
+                
+                </p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="img-viewer" class="image-viewer">
+    <img src="">
+</div>
+
+<script>
+    var articleImages = document.querySelectorAll('section.main img'),
+        imageViewer = document.getElementById('img-viewer');
+
+    articleImages.forEach( function (img) {
+        img.addEventListener('click', function (event) {
+            imageViewer.querySelector('img').src = img.src;
+            imageViewer.style.display="block";
+        });
+    });
+
+    imageViewer.addEventListener('click', function (event) {
+        this.style.display="none";
+    });
+</script>
+
+<section class="footer">
+  <div class="container">
+    <div class="copyright">
+
+      
+
+    </div>
+
+    
+
+
+  </div>
+</section>
+
+
+  <script src="http://localhost:1313/js/highlight.min.js" defer></script>
+  
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+  };
+</script>
+
+
+
+</body>
+</html>
+

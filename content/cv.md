@@ -19,7 +19,7 @@ aliases = [
 - Improved on boarding process enabling new team members to deploy code to production within first week 
 - Worked with the business to use a release train system, which was later optimised to batch delivery achieving 1.5-hour code-to-production cycle across all environments - Eliminated single points of dependency by ensuring team members could perform all day-to-day tasks autonomously without having to rely on a single person - Developed product value strategy in collaboration with Product & Technology Chief Office to improve business impact 
 - Collaborated with the team to create a skeleton framework for new Go services with automated setup via make commands to reduce ideation to production - Built a fuel price service in Go to display latest average petrol and diesel prices by surfacing the data from multiple resources 
-- Contributed to defining company culture, particularly around engineer onboarding
+- Contributed to defining company culture, particularly around engineer on boarding
 
 <h3 class="sub-content-heading">First Utility / Shell Energy, 2015 - 2020<br><span>Lead software engineer</span></h3>
 
@@ -112,7 +112,7 @@ aliases = [
 <h2 class="sub-content-heading">// Personal achievement highlights</h2>
 
 - Contributed to projects like <a target="_blank" href="https://github.com/slimphp/Twig-View/pulls?q=is%3Apr+author%3ANigelGreenway+is%3Aclosed">SlimPHP</a> and <a target="_blank" href="https://tactician.thephpleague.com/plugins/container/">The PHP League</a>, as well as other open source projects 
-- I have renovated my current home where I recently done the majority of the work in my kitchen - outside of using a plumber and electrician 
+- Renovated my current home where the majority of the work in my kitchen was completed by myself and my partner - outside of using a plumber and electrician 
 - I have built up my own homelab where I am running tooling like Grafana, Loki, Uptime Kuma, PiHole and various build systems - and I also built a tool <a target="_blank" href="https://gitlab.com/NigelGreenway/go-get-server-info">Go Get Server Info</a> where I use it to see what updates are available, the IP address, as well as other info I don't need to SSH into for
 - I completed my first 10k run in under 1 hour (58mins) this year (2025) after looking at what things I would like to achieve this year
 - I have started to learn Rust and built a tool to <a target="_blank" href="https://gitlab.com/NigelGreenway/jump-to-directory">jump around</a> directories with ease

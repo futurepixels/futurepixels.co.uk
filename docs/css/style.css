@@ -601,48 +601,6 @@ a {
      margin-bottom: 1rem;
      letter-spacing: none;
 }
- section.main .content .markdown code, section.main .content .markdown pre {
-     font-family: 'Ubuntu Mono', 'Menlo', monospace;
-     font-size: 0.98rem;
-     background-color: #f7f7f7;
-     overflow: auto;
-}
- section.main .content .markdown code {
-     padding: 0.15em 0.5em;
-     border-radius: 2px;
-}
- section.main .content .markdown pre {
-     display: block;
-     margin-top: 1rem;
-     margin-bottom: 2rem;
-     padding: 1rem;
-     line-height: 1.5em;
-     white-space: pre;
-     word-break: break-all;
-     word-wrap: break-word;
-}
-section.main .content .markdown pre code {
-   padding: 0;
-   font-size: 0.9rem;
-}
-section.main .content .markdown pre code.language-diff.hljs {
-   color: #ffffff;
-}
-section.main .content .markdown pre code.language-diff.hljs-deletion {
-   color: #ff4141;
-}
-section.main .content .markdown pre code.language-diff.hljs-deletion {
-   color: #a2e85d;
-}
-section.main .content .markdown pre code.language-diff {
-   background-color: #272822;
-}
- section.main .content .markdown a code {
-     color: #428bca !important;
-}
- section.main .content .markdown a code:hover {
-     text-decoration: underline;
-}
  section.main .content .markdown p {
      font-size: 1em;
      text-align: justify;

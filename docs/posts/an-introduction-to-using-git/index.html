@@ -89,10 +89,10 @@
 </li>
 </ul>
 <p>Once you have found your way of installing <a href="http://git-scm.com/">Git</a>, do a simple test buy running <code>git status</code> which should then return:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>fatal: Not a git repository <span style="color:#f92672">(</span>or any of the parent directories<span style="color:#f92672">)</span>: .git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fatal: Not a git repository <span style="color:#f92672">(</span>or any of the parent directories<span style="color:#f92672">)</span>: .git
 </span></span></code></pre></div><h2 id="setting-up-git-1">Setting up Git</h2>
 <p>Setting up <a href="http://git-scm.com/">Git</a> in it&rsquo;s simplist form is adding your user credentials:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;Joe Smith&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;Joe Smith&#34;</span>
 </span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;joe@smith.com&#34;</span>
 </span></span></code></pre></div><p>You can also also change/add configs within your .gitconfig file which on a Mac can be found in your home directory <code>~/.gitconfig</code>. For an example, your can <a href="https://github.com/smilinmonki666/dotfiles/blob/master/.gitconfig">view</a> mine for extra basic configurable options.</p>
 <h3 id="usefull-tools">Usefull tools</h3>
@@ -108,14 +108,14 @@
 <h4 id="creating-a-repository">Creating a repository</h4>
 <p>Creating a repository is as simple as <code>git init</code> within the desired directory. From there you would create files and <a href="#section:add">Add</a> then <a href="#section:commit">Commit</a> to your repository.</p>
 <p>An example of this would be:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git init
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
 </span></span><span style="display:flex;"><span>touch README.md
 </span></span><span style="display:flex;"><span>git add README.md
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add Readme file for instructions&#34;</span>
 </span></span></code></pre></div><p>Once created, I would suggest creating your <a href="#section:branches">branches</a>. That way you will be able to start getting into a workflow and used to switching between branches.</p>
 <h4 id="cloning-a-repository">Cloning a repository</h4>
 <p>To clone a repository (Assuming you are using <a href="http://github.com">Github.com</a>) run the following in directory you want the project to be stored:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone git@github.com:<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/<span style="color:#f92672">{</span>repository<span style="color:#f92672">}</span>.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone git@github.com:<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/<span style="color:#f92672">{</span>repository<span style="color:#f92672">}</span>.git
 </span></span></code></pre></div><p><em>When using <a href="http://github.com">Github.com</a> as your hosting for your repository, I would suggest following this <a href="https://help.github.com/articles/generating-ssh-keys">guide</a>.</em></p>
 <p>Once you have cloned a repository always work in your own <a href="#section:branches">branches</a> so you don&rsquo;t work in a working repository.</p>
 <h5 id="sidenote">Sidenote</h5>
@@ -123,7 +123,7 @@
 <p>So,for example; if you were to work on a <a href="https://jekyllrb.com">jekyll</a> project you would then run in your desired directory <code>jekyll new my-awesome-site</code>.</p>
 <p>Then you would <a href="#section:commit">Commit</a> before working on the project so you can view the history of file or even revert to that point if needed.</p>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd ~/my/project/path
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/my/project/path
 </span></span><span style="display:flex;"><span>git init
 </span></span><span style="display:flex;"><span>touch README.md
 </span></span><span style="display:flex;"><span>git add README.md
@@ -152,12 +152,12 @@
 <p><code>git fetch</code> is the safer way of managing your repository when working with a <abbr title="Term used when the repository has modified, deleted or added files">dirty</abbr> repository. For example, you are half way through a modification which will could possibly be affected by a change made by another team member, without running the risk of changing anyfiles you have worked on, you would run <code>git fetch</code> on your <abbr title="Term used when the repository has modified, deleted or added files">dirty</abbr> repository knowing you are safe from any unwanted merges.</p>
 <h4 id="branch-management">Branch management</h4>
 <p>Say we want a new feature or a bug fix, instead of working directly on the <code>master</code> branch of the project we create a new branch like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git checkout dev
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout dev
 </span></span><span style="display:flex;"><span>git pull
 </span></span><span style="display:flex;"><span>git branch &lt;branch-name&gt;
 </span></span><span style="display:flex;"><span>git checkout &lt;branch-name&gt;
 </span></span></code></pre></div><p>or we can shorthand this by typing:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git checkout dev
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout dev
 </span></span><span style="display:flex;"><span>git pull
 </span></span><span style="display:flex;"><span>git checkout -b &lt;branch-name&gt;
 </span></span></code></pre></div><p>Now we have our branch we can make changes to the code base.</p>
@@ -166,19 +166,19 @@
 </blockquote>
 <h4 id="git-add">Git add</h4>
 <p>When you have made changes by changing current code or adding files, we need to add it to the staging area when we are happy with our local testing. We can do this by adding all files in one go:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git add *
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add *
 </span></span></code></pre></div><blockquote>
 <p>This is great to add all files in one go, but this is only relative to the directory you are in.</p>
 </blockquote>
 <p>To add specific filenames, we can do the following, again depending where you are on the project tree, you may need to add the full path or <code>cd</code> to the root folder.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git add &lt;filename&gt; &lt;filename&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add &lt;filename&gt; &lt;filename&gt;
 </span></span></code></pre></div><p>Although considered bad practice to make multiple changes to a file or files for different issues or feature enhancements, you can find your self creating a feature by adding modifications that are related but not as one.</p>
 <p>For example; you create a feature that includes a config file and certain functions need to access the config file. However, you have created the <code>config.json</code> and modified 3 functions to access this config, tested it works and are ready to commit. If we add them all in one go and commit all in the staging area, it will be a pain and can cause difficulty to revert to a certain revision. As in this instance, reverting to this commit on production due to a bug can cause these functions to possibly break the site completely. So, instead of <code>git add *</code> we look at the code by adding in <a href="#section:hunks">hunks</a> to further review the code before committing.</p>
 <h4 id="git-commit">Git commit</h4>
 <p>Once your files are added, we can now commit those changes by doing:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;&lt;your-message-message-here&gt;&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;&lt;your-message-message-here&gt;&#34;</span>
 </span></span></code></pre></div><p>For ease of reading commits by another developer, I&rsquo;ve always said to write you commit message like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Capitalized, short (50 chars or less) summary
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Capitalized, short (50 chars or less) summary
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">More detailed explanatory text, if necessary.  Wrap it to about 72 characters or so.  In some contexts, the first line is treated as the subject of an email and the rest of the text as the body.  The blank line separating the summary from the body is critical (unless you omit the body entirely); tools like rebase can get confused if you run the two together.
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
@@ -191,7 +191,7 @@
 </span></span></code></pre></div><p>This way you will be able to look back at bug and feature commits and know exactly what has happend.</p>
 <h4 id="git-merge">Git merge</h4>
 <p>Merging in its simplistic view is grabbing your amended code and merging into your working branch. For example, to merge your feature code into the working <code>dev</code> branch, your would:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git checkout dev
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout dev
 </span></span><span style="display:flex;"><span>git pull
 </span></span><span style="display:flex;"><span>git merge &lt;branch&gt; --no-ff --no-commit
 </span></span></code></pre></div><p>The options are</p>
@@ -225,7 +225,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">+&lt;footer&gt;This is a footer&lt;/footer&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>\ No newline at end of file
 </span></span></code></pre></div><p>As per above, there are several changes in the file, but we only want to add the second section of changes in this commit:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git add -p &lt;filename&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add -p &lt;filename&gt;
 </span></span></code></pre></div><p>You will then be asked what you would like to do with this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>git add -p index.php
 </span></span><span style="display:flex;"><span>diff --git a/index.php b/index.php
@@ -253,7 +253,7 @@
 </span></span><span style="display:flex;"><span>Stage this hunk [y,n,q,a,d,/,K,g,e,?]? y
 </span></span></code></pre></div><p>We then select <code>y</code> and this section of the file changes will be shown in our staging area ready to commit.</p>
 <p>When we do a <code>git status</code> you will see the file will be in both the <code>Changes to be commited:</code> and <code>Changes not staged for commit:</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git status
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git status
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># On branch master</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Changes to be committed:</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#   (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)</span>
@@ -271,7 +271,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+&lt;footer&gt;This is a footer&lt;/footer&gt;
 </span></span></span></code></pre></div><h4 id="git-push">Git push</h4>
 <p>When you have made you changes and are ready to test on another server or make it live, you would then push all commited changes back to the repository like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git push
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push
 </span></span></code></pre></div><h3 id="extra-activities">Extra Activities</h3>
 <p>You can learn <a href="http://git-scm.com/">git</a> outside of, or before your project with <a href="http://github.com">Github&rsquo;s</a> <a href="http://try.github.io/">try github</a>. Alternatively, you can create an empty folder and <code>git init</code> within the folder and play around without effecting any other git repo on your machine&hellip;</p>
 <h3 id="more-reading">More Reading</h3>

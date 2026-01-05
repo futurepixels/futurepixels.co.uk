@@ -2,97 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://futurepixels.co.uk/</loc>
     <lastmod>2025-12-30T20:26:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://futurepixels.co.uk/posts/</loc>
     <lastmod>2025-12-30T20:26:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/setting-up-automated-releases-with-gitlab-pipelines/</loc>
+    <loc>https://futurepixels.co.uk/posts/setting-up-automated-releases-with-gitlab-pipelines/</loc>
     <lastmod>2025-12-30T20:26:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/improving-my-productivity-and-context-switching-with-git-worktrees/</loc>
+    <loc>https://futurepixels.co.uk/posts/improving-my-productivity-and-context-switching-with-git-worktrees/</loc>
     <lastmod>2025-10-26T22:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/using--legacy-peer-deps-in-nodejs/</loc>
+    <loc>https://futurepixels.co.uk/posts/using--legacy-peer-deps-in-nodejs/</loc>
     <lastmod>2023-10-18T22:10:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/the-golden-moment-of-a-friday-delivery-in-software/</loc>
+    <loc>https://futurepixels.co.uk/posts/the-golden-moment-of-a-friday-delivery-in-software/</loc>
     <lastmod>2023-06-19T21:45:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/getting-a-good-desk-setup/</loc>
+    <loc>https://futurepixels.co.uk/posts/getting-a-good-desk-setup/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/adding-a-mount-point-on-boot-under-linux/</loc>
+    <loc>https://futurepixels.co.uk/posts/adding-a-mount-point-on-boot-under-linux/</loc>
     <lastmod>2021-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</loc>
+    <loc>https://futurepixels.co.uk/posts/fixing-issues-with-linux-kernel-not-updating-and-killing-boot-sequence/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/becoming-a-lead-part-2-trials-and-tribulations/</loc>
+    <loc>https://futurepixels.co.uk/posts/becoming-a-lead-part-2-trials-and-tribulations/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/becoming-a-lead-part-1-the-prelude/</loc>
+    <loc>https://futurepixels.co.uk/posts/becoming-a-lead-part-1-the-prelude/</loc>
     <lastmod>2020-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/setting-up-rancher-with-digital-ocean/</loc>
+    <loc>https://futurepixels.co.uk/posts/setting-up-rancher-with-digital-ocean/</loc>
     <lastmod>2018-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-gitlab-ci-cd-pipeline-overview/</loc>
+    <loc>https://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</loc>
+    <loc>https://futurepixels.co.uk/posts/creating-a-ci-cd-pipeline-with-gitlab-rancher-and-digital-ocean/</loc>
     <lastmod>2018-07-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</loc>
+    <loc>https://futurepixels.co.uk/posts/creating-a-linux-virtual-machine-server-with-the-hp-microserver-gen-8-server/</loc>
     <lastmod>2017-07-01T01:11:57+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</loc>
+    <loc>https://futurepixels.co.uk/posts/thank-you-to-all-involved-in-the-3-php-south-coast-conferences/</loc>
     <lastmod>2017-06-14T21:31:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</loc>
+    <loc>https://futurepixels.co.uk/posts/making-a-career-in-programming-is-hard-enough-to-kill-it/</loc>
     <lastmod>2016-11-04T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/saving-seconds-with-an-ssh-config-file/</loc>
+    <loc>https://futurepixels.co.uk/posts/saving-seconds-with-an-ssh-config-file/</loc>
     <lastmod>2016-09-13T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/installing-an-iso-to-a-usb-stick/</loc>
+    <loc>https://futurepixels.co.uk/posts/installing-an-iso-to-a-usb-stick/</loc>
     <lastmod>2016-09-12T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rewriting-your-git-history/</loc>
+    <loc>https://futurepixels.co.uk/posts/rewriting-your-git-history/</loc>
     <lastmod>2016-09-06T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/thank-you-to-all-the-people-that-have-helped-me/</loc>
+    <loc>https://futurepixels.co.uk/posts/thank-you-to-all-the-people-that-have-helped-me/</loc>
     <lastmod>2016-01-15T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/migrating-from-mac-os-to-linux/</loc>
+    <loc>https://futurepixels.co.uk/posts/migrating-from-mac-os-to-linux/</loc>
     <lastmod>2016-01-14T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/being-a-professional-developer/</loc>
+    <loc>https://futurepixels.co.uk/posts/being-a-professional-developer/</loc>
     <lastmod>2015-08-25T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/coming-of-age-as-a-php-developer/</loc>
+    <loc>https://futurepixels.co.uk/posts/coming-of-age-as-a-php-developer/</loc>
     <lastmod>2015-01-11T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/self-management/</loc>
+    <loc>https://futurepixels.co.uk/posts/self-management/</loc>
     <lastmod>2014-01-28T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/an-introduction-to-using-git/</loc>
+    <loc>https://futurepixels.co.uk/posts/an-introduction-to-using-git/</loc>
     <lastmod>2013-10-05T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/welcome-to-futurepixels.co.uk/</loc>
+    <loc>https://futurepixels.co.uk/posts/welcome-to-futurepixels.co.uk/</loc>
     <lastmod>2013-02-26T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>https://futurepixels.co.uk/cv/</loc>
   </url><url>
-    <loc>http://localhost:1313/bookshelf/</loc>
+    <loc>https://futurepixels.co.uk/bookshelf/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://futurepixels.co.uk/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/skills/</loc>
+    <loc>https://futurepixels.co.uk/skills/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://futurepixels.co.uk/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/whoami/</loc>
+    <loc>https://futurepixels.co.uk/whoami/</loc>
   </url>
 </urlset>

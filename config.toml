@@ -22,7 +22,7 @@ description = "Articles on general development and programming along with other 
 logofile = "img/logo.png"
 faviconfile = "img/logo.png"
 highlightjs = true
-jobTitle = "Lead Software Engineer"
+jobTitle = "Engineering Manager"
 placeOfWork = "drivvn"
 lang = "en"
 github = "NigelGreenway"
@@ -31,8 +31,8 @@ mastodon = "@NigelGreenway"
 email = "github@futurepixels.co.uk"
 linkedin = "nigel-greenway-a5710a45"
 photography_site = "https://500px.com/p/nigelgreenway"
-primaryOS_href = "https://getsol.us/"
-primaryOS_name = "Solus"
+primaryOS_href = "https://www.debian.org/"
+primaryOS_name = "Debian"
 
 [markup.goldmark.renderer]
 unsafe= true

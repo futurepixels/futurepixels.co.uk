@@ -1,6 +1,6 @@
 +++
-title = "The age of LLM's and Software Engineering"
-description = "How the world of software engineering is changing in the age of LLM's"
+title = "The age of LLM's and Software Engineering - Part I"
+description = "How the world of software engineering is changing in the age of LLM's - the upside"
 date = "2026-05-30T11:00:00Z"
 +++
 

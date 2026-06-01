@@ -8,14 +8,27 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Articles on general development and programming along with other findings...">
+<meta name="description" content="An initial overview of my GitLab CI pipeline">
+<meta name="author" content="Nigel Greenway">
 
-<title>
+
+<meta property="og:site_name" content="Futurepixels">
+<meta property="og:url" content="https://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/">
+<meta property="og:title" content="My GitLab CI CD Pipeline overview">
+<meta property="og:description" content="An initial overview of my GitLab CI pipeline">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-07-18T00:00:00Z">
+<meta property="article:modified_time" content="2018-07-18T00:00:00Z">
+<meta property="article:author" content="Nigel Greenway">
+<meta property="og:image" content="https://futurepixels.co.uk/img/logo.png">
 
 
-     Futurepixels - My GitLab CI CD Pipeline overview 
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My GitLab CI CD Pipeline overview">
+<meta name="twitter:description" content="An initial overview of my GitLab CI pipeline">
+<meta name="twitter:creator" content="@NigelGreenway">
 
-</title>
+<title>My GitLab CI CD Pipeline overview | Futurepixels</title>
 <script defer data-domain="futurepixels.co.uk" src="https://plausible.io/js/script.js"></script>
 <link rel="canonical" href="https://futurepixels.co.uk/posts/my-gitlab-ci-cd-pipeline-overview/">
 
@@ -31,6 +44,27 @@
 
 
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "\"My GitLab CI CD Pipeline overview\"",
+  "description": "\"An initial overview of my GitLab CI pipeline\"",
+  "datePublished": "2018-07-18T00:00:00Z",
+  "dateModified": "2018-07-18T00:00:00Z",
+  "url": "https:\/\/futurepixels.co.uk\/posts\/my-gitlab-ci-cd-pipeline-overview\/",
+  "author": {
+    "@type": "Person",
+    "name": "\"Nigel Greenway\""
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "\"Nigel Greenway\""
+  }
+}
+</script>
+
 </head>
 
 
@@ -39,7 +73,7 @@
 <section class="header">
     <div class="container">
         <div class="content">
-            <a href="https://futurepixels.co.uk/"><div class="name"><h1>Futurepixels</h1></div></a>
+            <a href="https://futurepixels.co.uk/"><div class="name"><span class="site-title">Futurepixels</span></div></a>
             <nav>
                 <ul>
                     <li ><a href="https://futurepixels.co.uk/posts/">Posts</a></li>
@@ -58,11 +92,11 @@
         <div class="content">
             <div class="front-matter">
                 <div class="title-container">
-                    <div class="page-heading">
+                    <h1 class="page-heading">
 
     My GitLab CI CD Pipeline overview
 
-</div>
+</h1>
                 </div>
                 <div class="meta">
                     <div class="date" title="Wed Jul 18 2018 00:00:00 UTC">Jul 18, 2018</div>
@@ -85,7 +119,7 @@
 <li>The Build service</li>
 <li>The integration services</li>
 </ul>
-<h3 id="linting-and-test-runners"><a href="#linting-and-test-runners" id ="linting-and-test-runners">Linting and test runners</a></h3>
+<h3 id="a-hreflinting-and-test-runners-id-linting-and-test-runnerslinting-and-test-runnersa"><a href="#linting-and-test-runners" id ="linting-and-test-runners">Linting and test runners</a></h3>
 <p>In a basic overview I do the following:</p>
 <pre tabindex="0"><code>Commit code =&gt;
     push to gitlab =&gt;
@@ -130,7 +164,7 @@
 </span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">./__tests__/UI/cypress/videos</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>:
 </span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">test</span>
-</span></span></code></pre></div><h3 id="docker"><a href="#docker" id="docker">Docker</a></h3>
+</span></span></code></pre></div><h3 id="a-hrefdocker-iddockerdockera"><a href="#docker" id="docker">Docker</a></h3>
 <p>Next is the Docker image for my application/site. Using secret keys stored in GitLab, it will login to the configured registry, build the image locally and then push the image to it&rsquo;s registry.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">build_review</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">build</span>
@@ -145,7 +179,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">tags</span>:
 </span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">build</span>
 </span></span></code></pre></div><p>In the preceding code, I am using Docker to build a Docker container via the <code>dind</code> service (Docker in Docker), this allowed me to do what I needed to do, but be aware of <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">this article</a>.</p>
-<h3 id="variables"><a href="#variables" id="variables">Variables</a></h3>
+<h3 id="a-hrefvariables-idvariablesvariablesa"><a href="#variables" id="variables">Variables</a></h3>
 <p>I am then running three scripts, <code>docker login</code>, <code>docker build</code> and <code>docker push</code>. I am using the secret - and built in - variables which are prefixed with <code>CI_</code>, then I have my own variables defined at the top of my file to allow me to create images tagged with the branch name for demos and a timestamp for staging and production. I then use that same tagged image to push it to the registry that is already configured.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">before_script</span>:
 </span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">export TARGET_STACK=gitlab-demo-stack</span>

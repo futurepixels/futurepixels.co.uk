@@ -1,6 +1,6 @@
 +++
 title = "Setting up automated releases with Gitlab pipelines"
-description = "..."
+description = "How I set up fully automated releases in GitLab pipelines, eliminating manual intervention using tags, CI/CD variables, and release automation."
 date = "2025-12-30T20:26:00Z"
 +++
 

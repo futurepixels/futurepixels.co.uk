@@ -1,14 +1,28 @@
 <head>
 {{ partial "meta.html" . }}
-<title>
-{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-{{ if eq $url "" }}
-    {{ .Site.Title }}
-{{ else }}
-    {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Site.Title }} - {{ .Title }} {{ end }}
-{{ end }}
-</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Params.heading }}{{ . }}{{ else }}{{ .Title }}{{ end }} | {{ .Site.Title }}{{ end }}</title>
 <script defer data-domain="futurepixels.co.uk" src="https://plausible.io/js/script.js"></script>
 <link rel="canonical" href="{{ .Permalink }}">
 {{ partial "head_includes.html" . }}
+{{ if and .IsPage (eq .Section "posts") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ (.Params.description | default .Site.Params.description) | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "url": "{{ .Permalink }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.authorName | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ .Site.Params.authorName | jsonify }}
+  }
+}
+</script>
+{{ end }}
 </head>

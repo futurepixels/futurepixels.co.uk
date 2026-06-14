@@ -8,7 +8,7 @@
 <section class="header">
     <div class="container">
         <div class="content">
-            <a href="{{ .Site.BaseURL }}"><div class="name"><h1>{{ .Site.Title }}</h1></div></a>
+            <a href="{{ .Site.BaseURL }}"><div class="name"><span class="site-title">{{ .Site.Title }}</span></div></a>
             <nav>
                 <ul>
                     <li {{ if eq (lower .Title) "posts"}}style="font-weight:900;font-style:underline;"{{ end }}><a href="{{ .Site.BaseURL }}posts/">Posts</a></li>

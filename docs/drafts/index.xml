@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on Futurepixels</title>
+    <link>https://futurepixels.co.uk/drafts/</link>
+    <description>Recent content in Drafts on Futurepixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language><atom:link href="https://futurepixels.co.uk/drafts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Becoming a lead, part 2: ?</title>
+      <link>https://futurepixels.co.uk/drafts/2020-11-26-becoming-a-lead-part-3-twelve-months-later/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://futurepixels.co.uk/drafts/2020-11-26-becoming-a-lead-part-3-twelve-months-later/</guid>
+      <description>October was meant to be the delivery of a brand new micro front end. This was extracting some functionality from our legacy codebase as well as helping tackle an issue within the business. During this time I wanted to limit the dependency on our legacy codebase and get another service out to extract that functionality. On top of that I&amp;rsquo;ve been aware of how long it currently takes to deliver a new micro front end as well as the issues that come with it.</description>
+    </item>
+    
+  </channel>
+</rss>

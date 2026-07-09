@@ -1,7 +1,7 @@
 +++
 title = "The age of LLM's and Software Engineering - Part II"
 description = "How the world of software engineering is changing in the age of LLM's - the downside"
-date = "2026-05-30T11:00:00Z"
+date = "2026-07-09T22:29:00Z"
 +++
 
 I covered my thoughts around <abbr title="Large Language Model">LLM</abbr> usage in [Part I](/posts/the-age-of-llms-and-software-engineering-part-i). That was the upside of the content. This part is the downside of it - ethically.

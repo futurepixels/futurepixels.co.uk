@@ -39,6 +39,6 @@ Another impact has been huge rises in computer components. Both memory (Random A
 
 ### Closing
 
-I am finding that an <abbr title="Large Language Model">LLM</abbr> is a good tool, but understanding the impact of my usage does mean that I certainly don't depend on it for most things. Getting it to scan code and talk something through is powerful, and  doing this myself can be time consuming. Writing the code is something I enjoy and the reason why I got into programming.
+I am finding that an <abbr title="Large Language Model">LLM</abbr> is a good tool, but understanding the impact of my usage does mean that I certainly don't depend on it for most things. Getting it to scan code and talk something through is powerful, and  doing this myself can be time consuming. Writing code is something I enjoy and is the reason why I got into programming.
 
 With using it the last year now, I can see the benefit. However, my next step would be to build out my own model purely for coding, but in an efficient way with smaller and lower powered compute devices. Maybe powered by the sun, and asking permission from the authors of the code and books. Then, being able to run this locally on my machine, or a local server - hopefully something I can do sooner, rather than later!

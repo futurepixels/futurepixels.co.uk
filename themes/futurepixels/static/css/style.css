@@ -793,3 +793,13 @@ a {
  ul.cv-socials li i {
      color: #666666;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #313537;
+  }
+
+  li, .site-title, abbr, .meta, h1, h2, h3, h4, h5, h6, p, span > p {
+    color: #fff!important;
+  }
+}

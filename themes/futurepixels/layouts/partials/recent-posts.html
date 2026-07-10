@@ -1,0 +1,8 @@
+<h2>Recent Posts</h2>
+<ul class="recent-posts">
+  {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
+  <li class="recent-post-item">
+    <a href="{{ .Permalink }}">{{ .Title }}</a> <span>{{ .Date.Format .Site.Params.dateform }}</span>
+  </li>
+  {{ end }}
+</ul>

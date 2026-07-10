@@ -836,6 +836,7 @@ section.main .container .content .recent-post-item > span {
 
   @media (min-width: 700px) {
     display: inline;
+    visibility: visible;
     float: right;
   }
 }

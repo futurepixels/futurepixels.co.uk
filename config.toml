@@ -23,6 +23,7 @@ authorName = "Nigel Greenway"
 logofile = "img/logo.png"
 faviconfile = "img/logo.png"
 highlightjs = true
+jobTitleArticle = "an"
 jobTitle = "Engineering Manager"
 placeOfWork = "drivvn"
 lang = "en"

@@ -793,3 +793,36 @@ a {
  ul.cv-socials li i {
      color: #666666;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #313537;
+  }
+
+  li, .site-title, abbr, .meta, h1, h2, h3, h4, h5, h6, p, span > p {
+    color: #fff!important;
+  }
+}
+
+section.main .container .content .recent-posts {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+section.main .container .content .recent-post-item {
+  display: inline;
+
+  @media (min-width: 700px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding-top: 2px;
+  }
+}
+
+section.main .container .content .recent-post-item > span {
+  display: inline;
+  float: right;
+}
+
